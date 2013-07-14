@@ -154,7 +154,7 @@
 							</a>
 							<ul class="dropdown-menu">
 								<li><a href="#"><i class="icon-user"></i> Profile</a></li>
-								<li><a href="<?php echo base_url(); ?>index.php/login"><i class="icon-off"></i> Logout</a></li>
+								<li><a href="<?php echo base_url(); ?>login"><i class="icon-off"></i> Logout</a></li>
 							</ul>
 						</li>
 						<!-- end: User Dropdown -->
@@ -174,7 +174,7 @@
 			<div class="span2 main-menu-span">
 				<div class="nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
-						<li><a href="<?php echo base_url();?>index.php/main_panel"><i class="icon-home icon-white"></i><span class="hidden-tablet"> Dashboard</span></a></li>
+						<li><a href="<?php echo base_url();?>main_panel"><i class="icon-home icon-white"></i><span class="hidden-tablet"> Dashboard</span></a></li>
 						<li><a href="#"><i class="icon-eye-open icon-white"></i><span class="hidden-tablet"> Monitor</span></a></li>
 						<li><a href="#"><i class="icon-edit icon-white"></i><span class="hidden-tablet"> Control</span></a></li>
 						<li><a href="#"><i class="icon-list-alt icon-white"></i><span class="hidden-tablet"> Add</span></a></li>
@@ -193,7 +193,7 @@
 						<li><a href="#"><i class="icon-th icon-white"></i><span class="hidden-tablet"> Grid</span></a></li>
 						<li><a href="#"><i class="icon-folder-open icon-white"></i><span class="hidden-tablet"> File Manager</span></a></li>
 						
-						<li><a href="<?php echo base_url();?>index.php/create_user"><i class="icon-lock icon-white"></i><span class="hidden-tablet"> Create a User</span></a></li>
+						<li><a href="<?php echo base_url();?>create_user"><i class="icon-lock icon-white"></i><span class="hidden-tablet"> Create a User</span></a></li>
 					</ul>
 				</div><!--/.well -->
 			</div><!--/span-->
