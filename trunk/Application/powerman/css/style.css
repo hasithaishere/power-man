@@ -1136,3 +1136,22 @@ footer p {
     cursor: default;
 }
 /*------------------------------------------switch on/off-------------------------------------*/
+
+/*-----Hasitha Added Start------*/
+.login-box h1 {
+    color: #646464;
+    padding-left: 8%;
+	margin-bottom: 0;
+}
+
+.login-box .button-login2 {
+    float: right;
+    margin-right: 20px;
+}
+
+.login-box p {
+    text-align: justify;
+}
+/*-----Hasitha Added 
+End------*/
+
