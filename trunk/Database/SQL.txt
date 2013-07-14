@@ -1,0 +1,568 @@
+CREATE  TABLE IF NOT EXISTS `powerman`.`power_device` (
+
+  `id` INT(11) NOT NULL ,
+
+  `device_type` VARCHAR(255) NULL DEFAULT NULL ,
+
+  `description` VARCHAR(255) NULL DEFAULT NULL ,
+
+  `ins_url` VARCHAR(255) NULL DEFAULT NULL ,
+
+  `image_path` VARCHAR(255) NULL DEFAULT NULL ,
+
+  `lock` TINYINT(4) NULL DEFAULT NULL ,
+
+  `lock_time` TIME NULL DEFAULT NULL ,
+
+  `status` TINYINT(4) NULL DEFAULT NULL ,
+
+  `created_by` INT(11) NULL DEFAULT NULL ,
+
+  `created_on` DATETIME NULL DEFAULT NULL ,
+
+  `modified_by` INT(11) NULL DEFAULT NULL ,
+
+  `modified_on` DATETIME NULL DEFAULT NULL ,
+
+  PRIMARY KEY (`id`) )
+
+ENGINE = InnoDB
+
+DEFAULT CHARACTER SET = latin1;
+
+
+
+
+CREATE  TABLE IF NOT EXISTS `powerman`.`power_users` (
+
+  `id` INT(11) NOT NULL AUTO_INCREMENT ,
+
+  `fname` VARCHAR(255) NULL DEFAULT NULL ,
+
+  `lname` VARCHAR(255) NULL DEFAULT NULL ,
+
+  `street` VARCHAR(100) NULL DEFAULT NULL ,
+
+  `city` VARCHAR(100) NULL DEFAULT NULL ,
+
+  `phoneno` VARCHAR(100) NULL DEFAULT NULL ,
+
+  `email` VARCHAR(255) NULL DEFAULT NULL ,
+
+  `password` VARCHAR(255) NULL DEFAULT NULL ,
+
+  `lock` TINYINT(4) NULL DEFAULT NULL ,
+
+  `lock_time` TIME NULL DEFAULT NULL ,
+
+  `status` TINYINT(4) NULL DEFAULT NULL ,
+
+  `created_by` INT(11) NULL DEFAULT NULL ,
+
+  `created_on` DATETIME NULL DEFAULT NULL ,
+
+  `modified_by` INT(11) NULL DEFAULT NULL ,
+
+  `modified_on` DATETIME NULL DEFAULT NULL ,
+
+  PRIMARY KEY (`id`) )
+
+ENGINE = InnoDB
+
+DEFAULT CHARACTER SET = latin1;
+
+
+
+
+CREATE  TABLE IF NOT EXISTS `powerman`.`power_images` (
+
+  `id` INT(11) NOT NULL ,
+
+  `description` VARCHAR(255) NULL DEFAULT NULL ,
+
+  `path` VARCHAR(255) NULL DEFAULT NULL ,
+
+  `category` TINYINT(4) NULL DEFAULT NULL ,
+
+  `status` TINYINT(4) NULL DEFAULT NULL ,
+
+  `created_by` INT(11) NULL DEFAULT NULL ,
+
+  `created_on` DATETIME NULL DEFAULT NULL ,
+
+  `modified_by` INT(11) NULL DEFAULT NULL ,
+
+  `modified_on` DATETIME NULL DEFAULT NULL ,
+
+  PRIMARY KEY (`id`) )
+
+ENGINE = InnoDB
+
+DEFAULT CHARACTER SET = latin1;
+
+
+
+CREATE  TABLE IF NOT EXISTS `powerman`.`power_user_device` (
+
+  `id` INT(11) NOT NULL AUTO_INCREMENT ,
+
+  `device_description` VARCHAR(255) NULL DEFAULT NULL ,
+
+  `device_telno` VARCHAR(100) NULL DEFAULT NULL ,
+
+  `device_serialno` VARCHAR(100) NULL DEFAULT NULL ,
+
+  `lock` TINYINT(4) NULL DEFAULT NULL ,
+
+  `locktime` TIME NULL DEFAULT NULL ,
+
+  `status` TINYINT(4) NULL DEFAULT NULL ,
+
+  `created_by` INT(11) NULL DEFAULT NULL ,
+
+  `created_on` DATETIME NULL DEFAULT NULL ,
+
+  `modified_by` INT(11) NULL DEFAULT NULL ,
+
+  `modified_on` DATETIME NULL DEFAULT NULL ,
+
+  `power_users_id` INT(11) NOT NULL ,
+
+  `power_device_id` INT(11) NOT NULL ,
+
+  `power_images_id` INT(11) NOT NULL ,
+
+  PRIMARY KEY (`id`, `power_users_id`, `power_device_id`, `power_images_id`) ,
+
+  INDEX `fk_power_user_device_power_users1_idx` (`power_users_id` ASC) ,
+
+  INDEX `fk_power_user_device_power_device1_idx` (`power_device_id` ASC) ,
+
+  INDEX `fk_power_user_device_power_images1_idx` (`power_images_id` ASC) )
+
+ENGINE = InnoDB
+
+DEFAULT CHARACTER SET = latin1;
+
+
+
+CREATE  TABLE IF NOT EXISTS `powerman`.`power_device_powerlog` (
+
+  `id` INT(11) NOT NULL AUTO_INCREMENT ,
+
+  `start_time` DATETIME NULL DEFAULT NULL ,
+
+  `end_time` DATETIME NULL DEFAULT NULL ,
+
+  `pcon` DOUBLE NULL DEFAULT NULL ,
+
+  `lock` TINYINT(4) NULL DEFAULT NULL ,
+
+  `locktime` DATETIME NULL DEFAULT NULL ,
+
+  `status` TINYINT(4) NULL DEFAULT NULL ,
+
+  `created_by` INT(11) NULL DEFAULT NULL ,
+
+  `created_on` DATETIME NULL DEFAULT NULL ,
+
+  `modified_by` INT(11) NULL DEFAULT NULL ,
+
+  `modified_on` DATETIME NULL DEFAULT NULL ,
+
+  `power_user_device_id` INT(11) NOT NULL ,
+
+  PRIMARY KEY (`id`, `power_user_device_id`) ,
+
+  INDEX `fk_power_device_powerlog_power_user_device1_idx` (`power_user_device_id` ASC) )
+
+ENGINE = InnoDB
+
+DEFAULT CHARACTER SET = latin1;
+
+
+
+
+CREATE  TABLE IF NOT EXISTS `powerman`.`power_packges` (
+
+  `id` INT(11) NOT NULL AUTO_INCREMENT ,
+
+  `name` VARCHAR(255) NULL DEFAULT NULL ,
+
+  `description` VARCHAR(255) NULL DEFAULT NULL ,
+
+  `sms_amount` INT(11) NULL DEFAULT NULL ,
+
+  `duration` INT(11) NULL DEFAULT NULL ,
+
+  `expire_duration` DATETIME NULL DEFAULT NULL ,
+
+  `lock` TINYINT(4) NULL DEFAULT NULL ,
+
+  `lock_time` TIME NULL DEFAULT NULL ,
+
+  `status` TINYINT(4) NULL DEFAULT NULL ,
+
+  `created_by` INT(11) NULL DEFAULT NULL ,
+
+  `created_on` DATETIME NULL DEFAULT NULL ,
+
+  `modified_by` INT(11) NULL DEFAULT NULL ,
+
+  `modified_on` DATETIME NULL DEFAULT NULL ,
+
+  PRIMARY KEY (`id`) )
+
+ENGINE = InnoDB
+
+DEFAULT CHARACTER SET = latin1;
+
+
+
+CREATE  TABLE IF NOT EXISTS `powerman`.`power_roles` (
+
+  `id` INT(11) NOT NULL AUTO_INCREMENT ,
+
+  `role_type` VARCHAR(255) NULL DEFAULT NULL ,
+
+  `description` VARCHAR(255) NULL DEFAULT NULL ,
+
+  `lock` TINYINT(4) NULL DEFAULT NULL ,
+
+  `lock_time` TIME NULL DEFAULT NULL ,
+
+  `status` TINYINT(4) NULL DEFAULT NULL ,
+
+  `created_by` INT(11) NULL DEFAULT NULL ,
+
+  `created_on` DATETIME NULL DEFAULT NULL ,
+
+  `modified_by` INT(11) NULL DEFAULT NULL ,
+
+  `modified_on` DATETIME NULL DEFAULT NULL ,
+
+  PRIMARY KEY (`id`) )
+
+ENGINE = InnoDB
+
+DEFAULT CHARACTER SET = latin1;
+
+
+
+
+CREATE  TABLE IF NOT EXISTS `powerman`.`power_user_subdevices` (
+
+  `id` INT(11) NOT NULL AUTO_INCREMENT ,
+
+  `device_description` VARCHAR(255) NULL DEFAULT NULL ,
+
+  `device_serialno` VARCHAR(100) NULL DEFAULT NULL ,
+
+  `lock` TINYINT(4) NULL DEFAULT NULL ,
+
+  `locktime` TIME NULL DEFAULT NULL ,
+
+  `status` TINYINT(4) NULL ,
+
+  `created_by` INT(11) NULL DEFAULT NULL ,
+
+  `created_on` DATETIME NULL DEFAULT NULL ,
+
+  `modified_by` INT(11) NULL DEFAULT NULL ,
+
+  `modified_on` DATETIME NULL ,
+
+  `power_user_device_power_users_id` INT(11) NOT NULL ,
+
+  `power_user_device_power_device_id` INT(11) NOT NULL ,
+
+  `power_images_id` INT(11) NOT NULL ,
+
+  PRIMARY KEY (`id`, `power_user_device_power_users_id`, `power_user_device_power_device_id`, `power_images_id`) ,
+
+  INDEX `fk_power_user_subdevices_power_user_device1_idx` (`power_user_device_power_users_id` ASC, `power_user_device_power_device_id` ASC) ,
+
+  INDEX `fk_power_user_subdevices_power_images1_idx` (`power_images_id` ASC) )
+
+ENGINE = InnoDB
+
+DEFAULT CHARACTER SET = latin1;
+
+
+
+
+CREATE  TABLE IF NOT EXISTS `powerman`.`power_subdevice_control` (
+
+  `id` INT(11) NOT NULL AUTO_INCREMENT ,
+
+  `control_status` TINYINT(4) NULL DEFAULT NULL ,
+
+  `lock` TINYINT(4) NULL DEFAULT NULL ,
+
+  `status` TINYINT(4) NULL DEFAULT NULL ,
+
+  `created_by` INT(11) NULL DEFAULT NULL ,
+
+  `created_on` DATETIME NULL DEFAULT NULL ,
+
+  `modified_by` INT(11) NULL DEFAULT NULL ,
+
+  `modified_on` DATETIME NULL DEFAULT NULL ,
+
+  `power_user_subdevices_id` INT(11) NOT NULL ,
+
+  PRIMARY KEY (`id`, `power_user_subdevices_id`) ,
+
+  INDEX `fk_power_subdevice_control_power_user_subdevices1_idx` (`power_user_subdevices_id` ASC) )
+
+ENGINE = InnoDB
+
+DEFAULT CHARACTER SET = latin1;
+
+
+
+
+
+CREATE  TABLE IF NOT EXISTS `powerman`.`power_subdevice_log` (
+
+  `id` INT(11) NOT NULL AUTO_INCREMENT ,
+
+  `control_status` TINYINT(4) NULL DEFAULT NULL ,
+
+  `remark` VARCHAR(255) NULL DEFAULT NULL ,
+
+  `log_user` INT(11) NULL DEFAULT NULL ,
+
+  `log_on` DATETIME NULL DEFAULT NULL ,
+
+  `lock` TINYINT NULL ,
+
+  `locktime` TIME NULL ,
+
+  `status` TINYINT NULL ,
+
+  `created_on` INT NULL ,
+
+  `created_by` DATETIME NULL ,
+
+  `modified_on` INT NULL ,
+
+  `modified_by` DATETIME NULL ,
+
+  `power_user_subdevices_id` INT(11) NOT NULL ,
+
+  PRIMARY KEY (`id`, `power_user_subdevices_id`) ,
+
+  INDEX `fk_power_subdevice_log_power_user_subdevices1_idx` (`power_user_subdevices_id` ASC) )
+
+ENGINE = InnoDB
+
+DEFAULT CHARACTER SET = latin1;
+
+
+
+
+
+CREATE  TABLE IF NOT EXISTS `powerman`.`power_user_payment` (
+
+  `id` INT(11) NOT NULL AUTO_INCREMENT ,
+
+  `users_id` INT(11) NULL DEFAULT NULL ,
+
+  `payment` DOUBLE NULL DEFAULT NULL ,
+
+  `start_date` DATETIME NULL DEFAULT NULL ,
+
+  `end_date` DATETIME NULL DEFAULT NULL ,
+
+  `lock` TINYINT(4) NULL DEFAULT NULL ,
+
+  `lock_time` TIME NULL DEFAULT NULL ,
+
+  `status` TINYINT(4) NULL DEFAULT NULL ,
+
+  `created_by` INT(11) NULL DEFAULT NULL ,
+
+  `created_on` DATETIME NULL DEFAULT NULL ,
+
+  `modified_by` INT(11) NULL DEFAULT NULL ,
+
+  `modified_on` DATETIME NULL DEFAULT NULL ,
+
+  PRIMARY KEY (`id`) )
+
+ENGINE = InnoDB
+
+DEFAULT CHARACTER SET = latin1;
+
+
+
+
+
+
+CREATE  TABLE IF NOT EXISTS `powerman`.`power_user_order` (
+
+  `id` INT(11) NOT NULL ,
+
+  `package_id` INT(11) NULL DEFAULT NULL ,
+
+  `device_id` VARCHAR(45) NULL DEFAULT NULL ,
+
+  `start_on` DATETIME NULL DEFAULT NULL ,
+
+  `expire_on` DATETIME NULL DEFAULT NULL ,
+
+  `warn_on` DATETIME NULL DEFAULT NULL ,
+
+  `lock` TINYINT(4) NULL DEFAULT NULL ,
+
+  `lock_time` TIME NULL DEFAULT NULL ,
+
+  `status` TINYINT(4) NULL DEFAULT NULL ,
+
+  `work_status` TINYINT(4) NULL DEFAULT NULL ,
+
+  `created_by` INT(11) NULL DEFAULT NULL ,
+
+  `created_on` DATETIME NULL DEFAULT NULL ,
+
+  `modified_by` INT(11) NULL DEFAULT NULL ,
+
+  `modified_on` DATETIME NULL DEFAULT NULL ,
+
+  `power_users_id` INT(11) NOT NULL ,
+
+  `power_packges_id` INT(11) NOT NULL ,
+
+  `power_user_payment_id` INT(11) NOT NULL ,
+
+  PRIMARY KEY (`id`, `power_users_id`, `power_packges_id`, `power_user_payment_id`) ,
+
+  INDEX `fk_power_user_order_power_users1_idx` (`power_users_id` ASC) ,
+
+  INDEX `fk_power_user_order_power_packges1_idx` (`power_packges_id` ASC) ,
+
+  INDEX `fk_power_user_order_power_user_payment1_idx` (`power_user_payment_id` ASC) )
+
+ENGINE = InnoDB
+
+DEFAULT CHARACTER SET = latin1;
+
+
+
+
+
+
+CREATE  TABLE IF NOT EXISTS `powerman`.`power_user_roles` (
+
+  `id` INT(11) NOT NULL AUTO_INCREMENT ,
+
+  `lock_time` TIME NULL DEFAULT NULL ,
+
+  `lock` TINYINT(4) NULL DEFAULT NULL ,
+
+  `status` TINYINT(4) NULL DEFAULT NULL ,
+
+  `created_by` INT(11) NULL DEFAULT NULL ,
+
+  `created_on` DATETIME NULL DEFAULT NULL ,
+
+  `modified_by` INT(11) NULL DEFAULT NULL ,
+
+  `modified_on` DATETIME NULL DEFAULT NULL ,
+
+  `power_users_id` INT(11) NOT NULL ,
+
+  `power_roles_id` INT(11) NOT NULL ,
+
+  PRIMARY KEY (`id`, `power_users_id`, `power_roles_id`) ,
+
+  INDEX `fk_power_user_roles_power_users_idx` (`power_users_id` ASC) ,
+
+  INDEX `fk_power_user_roles_power_roles1_idx` (`power_roles_id` ASC) )
+
+ENGINE = InnoDB
+
+DEFAULT CHARACTER SET = latin1;
+
+
+
+CREATE  TABLE IF NOT EXISTS `powerman`.`power_user_smscounter` (
+
+  `id` INT(11) NOT NULL AUTO_INCREMENT ,
+
+  `users_id` INT(11) NULL DEFAULT NULL ,
+
+  `device_id` INT(11) NULL DEFAULT NULL ,
+
+  `start_date` DATETIME NULL DEFAULT NULL ,
+
+  `end_date` DATETIME NULL DEFAULT NULL ,
+
+  `description` VARCHAR(255) NULL DEFAULT NULL ,
+
+  `lock` TINYINT(4) NULL DEFAULT NULL ,
+
+  `lock_time` TIME NULL DEFAULT NULL ,
+
+  `status` TINYINT(4) NULL DEFAULT NULL ,
+
+  `created_by` INT(11) NULL DEFAULT NULL ,
+
+  `created_on` DATETIME NULL DEFAULT NULL ,
+
+  `modified_by` INT(11) NULL DEFAULT NULL ,
+
+  `modified_on` DATETIME NULL DEFAULT NULL ,
+
+  `power_users_id` INT(11) NOT NULL ,
+
+  PRIMARY KEY (`id`, `power_users_id`) ,
+
+  INDEX `fk_power_user_smscounter_power_users1_idx` (`power_users_id` ASC) )
+
+ENGINE = InnoDB
+
+DEFAULT CHARACTER SET = latin1;
+
+
+
+
+CREATE  TABLE IF NOT EXISTS `powerman`.`power_schedule` (
+
+  `id` INT NOT NULL AUTO_INCREMENT ,
+
+  `device_id` INT NULL ,
+
+  `subdevice_id` INT NULL ,
+
+  `triggerstart_time` DATETIME NULL ,
+
+  `triggerend_time` DATETIME NULL ,
+
+  `trigger_duration` DOUBLE NULL ,
+
+  `lock` TINYINT NULL ,
+
+  `locktime` TIME NULL ,
+
+  `status` TINYINT NULL ,
+
+  `workstatus` TINYINT NULL ,
+
+  `created_by` INT NULL ,
+
+  `created_on` DATETIME NULL ,
+
+  `modified_by` INT NULL ,
+
+  `modified_on` DATETIME NULL ,
+
+  `power_users_id` INT(11) NOT NULL ,
+
+  PRIMARY KEY (`id`, `power_users_id`) ,
+
+  INDEX `fk_power_schedule_power_users1_idx` (`power_users_id` ASC) )
+
+ENGINE = InnoDB;
+
