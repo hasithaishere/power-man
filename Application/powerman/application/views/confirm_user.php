@@ -95,18 +95,21 @@
 		<div class="modal-body">
 			 <div>
              	<label for="pass1">Password</label>
-				 <input id="pass1" name="pass1" type="password" />
+				 <input id="model_pass1" name="model_pass1" type="password" />
                 <span id="pass1Details">8 characters or more please</span>
              </div>
              <div>
              	<label for="pass2">Confirm Password</label>
-				 <input id="pass2" name="pass2" type="password" />
+				 <input id="model_pass2" name="model_pass2" type="password" />
                 <span id="pass2Details">Same as above</span>
              </div>
+			 <div class="alert alert-error" id="pass_error_holder">
+		    	
+		     </div>
 		</div>
 		<div class="modal-footer">
 		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-		<a href="#Confirmemail" role="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal">Change Password &raquo;</a>
+		<a href="#Confirmemail" role="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" id="model_changepassword">Change Password &raquo;</a>
 		</div>
 		</div>
 	<!-- Modals End -->
@@ -121,13 +124,16 @@
 		
 		<div>
              	<label for="pass1">Activation Code</label>
-				 <input id="pass1" name="pass1" type="password" />
+				 <input id="model_emailcode" name="model_emailcode" type="text" />
                 <span id="pass1Details">Enter email activation code here.</span>
         </div>
+			<div class="alert alert-error" id="email_error_holder">
+		    	
+		     </div>
 		</div>
 		<div class="modal-footer">
 		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-		<a href="#Confirmtelno" role="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal">Validate Email &raquo;</a>
+		<a href="#Confirmtelno" role="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" id="model_activateemail">Validate Email &raquo;</a>
 		</div>
 		</div>
 	<!-- Modals End -->
@@ -141,7 +147,7 @@
 		<p>Please enter you phone number and click send,after few second you will recieved activation code. If you didn't received the code please try it again. After recieved a code enter and check it. For more details contact Powercare administrator.</p>
 		<div>
              	<label for="pass1">Telephone Number</label>
-				 <input id="pass1" name="pass1" type="text" />
+				 <input id="model_telon" name="model_telon" type="text" />
                 <span id="pass1Details">Enter your phone Number ex- +9471XXXXXXX</span>
         </div>
 		<div>
@@ -150,16 +156,19 @@
 		<p></p>
 		<div>
              	<label for="pass1">Activation Code</label>
-				 <input id="pass1" name="pass1" type="text" />
+				 <input id="model_telcode" name="model_telcode" type="text" />
                 <span id="pass1Details">Enter activation code here.</span>
         </div>
 		<div>
 		<button class="btn" aria-hidden="true">Check</button>
 		</div>
+			<div class="alert alert-error" id="telno_error_holder">
+		    	
+		    </div>
 		</div>
 		<div class="modal-footer">
 		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-		<a href="#" role="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal">Validate Phone Number &raquo;</a>
+		<a href="#" role="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" id="model_activatetelno">Validate Phone Number &raquo;</a>
 		</div>
 		</div>
 	<!-- Modals End -->
@@ -167,6 +176,7 @@
 	<!-- start: JavaScript-->
 
 		<script src="<?php echo base_url(); ?>js/jquery-1.9.1.min.js"></script>
+	
 	<script src="<?php echo base_url(); ?>js/jquery-migrate-1.0.0.min.js"></script>
 	
 		<script src="<?php echo base_url(); ?>js/jquery-ui-1.10.0.custom.min.js"></script>
@@ -214,6 +224,57 @@
 		<script src="<?php echo base_url(); ?>js/jquery.sparkline.min.js"></script>
 
 		<script src="<?php echo base_url(); ?>js/custom.js"></script>
+		
+		<script type="text/javascript" charset="utf-8">
+			$(document).ready(function(){
+				$('#pass_error_holder').hide();
+				$('#email_error_holder').hide();
+				$('#telno_error_holder').hide();
+				
+				$('#model_changepassword').click(function(){
+					if($('#model_pass1').val() == '' || $('#model_pass2').val() == '')
+					{
+						$('#pass_error_holder').show();
+						$('#pass_error_holder').empty();
+						$('#pass_error_holder').append('<p>Password fields are empty.</p>');
+						return false;
+					}
+					else
+					{
+						if($('#model_pass1').val() != $('#model_pass2').val())
+						{
+							$('#pass_error_holder').show();
+							$('#pass_error_holder').empty();
+							$('#pass_error_holder').append('<p>Password not match, please check the password again.</p>');
+							return false;
+						}
+						else
+						{
+							$('#pass_error_holder').empty();
+							$('#pass_error_holder').hide();
+							
+							var form_data = {
+								password: $("#model_pass1").val()
+							};
+							
+							 $.ajax({
+				                type: "POST",
+				                url: "<?php echo site_url('confirm_user/change_password'); ?>",
+				                data: form_data,
+				                success: function(msg){
+									$('#model_pass1').val() = '';
+									$('#model_pass2').val() = '';
+								}
+				            });
+											
+						}	
+					}
+					
+				});
+				
+			});
+		
+		</script>
 		<!-- end: JavaScript-->
 	
 </body>

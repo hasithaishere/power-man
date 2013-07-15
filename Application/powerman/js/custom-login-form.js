@@ -34,7 +34,7 @@ $(document).ready(function() {
 			name.addClass("error");
 			nameDetails.text("Your name isn't that short. Make it 5 characters or more.");
 			nameDetails.addClass("error");
-			return false;
+			return true;
 		}else{
 			name.removeClass("error");
 			nameDetails.text("What's your name?");
@@ -80,18 +80,15 @@ $(document).ready(function() {
 		
 	function validatePass2(){
 		if(pass1.val() !== pass2.val()){
-			 pass2.addClass("error");
+			pass2.addClass("error");
 			pass2Details.text("Passwords do not match!");
 			pass2Details.addClass("error");
-			return true;
-
+			return false;	
 		}else{
-
-
-                        pass2.removeClass("error");
-			pass2Details.text("Same as above");
+			pass2.removeClass("error");
+			pass2Details.text("Passwords do not match!");
 			pass2Details.removeClass("error");
-			return false;
+			return true;	
 		}
 		
 	}
