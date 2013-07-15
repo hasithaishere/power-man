@@ -1152,6 +1152,11 @@ footer p {
 .login-box p {
     text-align: justify;
 }
+
+.button-login2 a{
+	margin-bottom: 7px;
+    margin-top: -14px;
+}
 /*-----Hasitha Added 
 End------*/
 

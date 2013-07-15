@@ -59,7 +59,7 @@
 						<a href="#"><i class="icon-cog"></i></a>
 					</div>
 					<h1>User Confirmation</h1>
-					<form class="form-horizontal" action="<?php echo base_url();?>main_panel" method="post">
+					
 						<fieldset>
 							
 							<div class="input-prepend" title="Username">
@@ -71,14 +71,13 @@
 							
 							
 							<hr>
-							<div class="button-login2">	
-								<button type="submit" class="btn btn-primary">Start Over</button>
+							<div class="button-login2">																<a href="#Changepassword" role="button" class="btn btn-primary" data-toggle="modal">Start Over</a>
 							</div>
 							<div class="clearfix"></div>
 							
 							
 							</fieldset>
-					</form>
+					
 						
 				</div><!--/span-->
 			</div><!--/row-->
@@ -86,7 +85,85 @@
 				</div><!--/fluid-row-->
 				
 	</div><!--/.fluid-container-->
-
+	
+	<!-- Modals Start -->
+		<div id="Changepassword" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		<h3 id="myModalLabel">Change Password</h3>
+		</div>
+		<div class="modal-body">
+			 <div>
+             	<label for="pass1">Password</label>
+				 <input id="pass1" name="pass1" type="password" />
+                <span id="pass1Details">8 characters or more please</span>
+             </div>
+             <div>
+             	<label for="pass2">Confirm Password</label>
+				 <input id="pass2" name="pass2" type="password" />
+                <span id="pass2Details">Same as above</span>
+             </div>
+		</div>
+		<div class="modal-footer">
+		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+		<a href="#Confirmemail" role="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal">Change Password &raquo;</a>
+		</div>
+		</div>
+	<!-- Modals End -->
+	<!-- Modals Start -->
+		<div id="Confirmemail" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		<h3 id="myModalLabel">Activate Your Email Account</h3>
+		</div>
+		<div class="modal-body">
+		<p>Please enter the email activation code which has been given by the Powerman administrator. If you haven't recieved activation email yet please check the email spam box in your account or Contact Powercare adminstrator.</p>
+		
+		<div>
+             	<label for="pass1">Activation Code</label>
+				 <input id="pass1" name="pass1" type="password" />
+                <span id="pass1Details">Enter email activation code here.</span>
+        </div>
+		</div>
+		<div class="modal-footer">
+		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+		<a href="#Confirmtelno" role="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal">Validate Email &raquo;</a>
+		</div>
+		</div>
+	<!-- Modals End -->
+	<!-- Modals Start -->
+		<div id="Confirmtelno" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		<h3 id="myModalLabel">Activate your mobile phone number</h3>
+		</div>
+		<div class="modal-body">
+		<p>Please enter you phone number and click send,after few second you will recieved activation code. If you didn't received the code please try it again. After recieved a code enter and check it. For more details contact Powercare administrator.</p>
+		<div>
+             	<label for="pass1">Telephone Number</label>
+				 <input id="pass1" name="pass1" type="text" />
+                <span id="pass1Details">Enter your phone Number ex- +9471XXXXXXX</span>
+        </div>
+		<div>
+		<button class="btn" aria-hidden="true">Send</button>
+		</div>
+		<p></p>
+		<div>
+             	<label for="pass1">Activation Code</label>
+				 <input id="pass1" name="pass1" type="text" />
+                <span id="pass1Details">Enter activation code here.</span>
+        </div>
+		<div>
+		<button class="btn" aria-hidden="true">Check</button>
+		</div>
+		</div>
+		<div class="modal-footer">
+		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+		<a href="#" role="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal">Validate Phone Number &raquo;</a>
+		</div>
+		</div>
+	<!-- Modals End -->
+	
 	<!-- start: JavaScript-->
 
 		<script src="<?php echo base_url(); ?>js/jquery-1.9.1.min.js"></script>
