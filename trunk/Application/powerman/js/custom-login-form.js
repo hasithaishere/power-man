@@ -86,7 +86,7 @@ $(document).ready(function() {
 			return false;	
 		}else{
 			pass2.removeClass("error");
-			pass2Details.text("Passwords do not match!");
+			pass2Details.text("Passwords matched!");
 			pass2Details.removeClass("error");
 			return true;	
 		}
