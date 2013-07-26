@@ -6994,21 +6994,15 @@
 			</treenode>
 			<treenode node="confirm_user;PHP:Class Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\confirm_user.php;f0;2;1;17;;;;vpos;;vCI_Controller;;c;;r;;d0,3;;b0,0;;m">
 				<treenode node="change_password;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\confirm_user.php;f1;9;2;16;;;;vpos;;v;;r;;d1,10;;b0,0;;m">
-					<treenode node="data;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\confirm_user.php;f2;13;7;13;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\confirm_user.php;f2;11;7;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
 				</treenode>
 				<treenode node="index;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\confirm_user.php;f1;4;2;7;;;;vpos;;v;;r;;d1,5;;b0,0;;m">
-					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\confirm_user.php;f2;6;7;6;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
 				</treenode>
 			</treenode>
 			<treenode node="confirm_user_model;PHP:Class Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\models\Codelobster0.php;f0;2;1;11;;C:\My Work Bench\Projects\Power Man\Application\powerman\application\models\confirm_user_model.php;f0;2;1;11;;;;vpos;;vCI_Model;;c;;r;;d0,3;;b0,0;;m">
 				<treenode node="update_password;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\models\Codelobster0.php;f1;4;2;10;;C:\My Work Bench\Projects\Power Man\Application\powerman\application\models\confirm_user_model.php;f1;4;2;10;;;;vpos;;v;;r;;d1,5;;b0,0;;mdata;;p">
 					<treenode node="data;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\models\Codelobster0.php;f26;4;31;4;;C:\My Work Bench\Projects\Power Man\Application\powerman\application\models\confirm_user_model.php;f26;4;31;4;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\models\Codelobster0.php;f2;7;7;7;;C:\My Work Bench\Projects\Power Man\Application\powerman\application\models\confirm_user_model.php;f2;7;7;7;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\models\Codelobster0.php;f2;7;7;7;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
 			</treenode>
@@ -24930,6 +24924,66 @@
 				<treenode node="window;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f19163;5;19169;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f26952;5;26958;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
+			<treenode node="t;JS:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f9346;5;9558;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f12714;5;19448;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f21070;5;21102;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22394;5;22774;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f26882;5;27170;5;;;;vpos;;v;;r;;d203373,5;;b0,0;;me;;p">
+				<treenode node="a;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.cleditor.min.js;f253;21;254;21;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="area;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.cleditor.min.js;f266;21;270;21;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="body;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f19403;5;19407;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="c;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f176;29;177;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="checkPosition;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f27183;5;27196;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="e;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery-ui-1.10.0.custom.min.js;f203371;5;203372;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f1283;5;1284;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f2527;5;2528;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f5471;5;5472;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f9452;5;9453;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f12725;5;12726;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22442;5;22443;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f26911;5;26912;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="element;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery-ui-1.10.0.custom.min.js;f203466;5;203473;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f1257;5;1264;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f2338;5;2345;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f5445;5;5452;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f9383;5;9390;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f21089;5;21096;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22416;5;22423;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f27136;5;27143;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="highlighter;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22579;5;22590;5;;;;vpost;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="i;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f19143;5;19144;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="indicators;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f2357;5;2367;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="L;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f219;29;220;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="m;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f181;29;182;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="matcher;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22486;5;22493;5;;;;vpost;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="menu;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22720;5;22724;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="n;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f1248;5;1249;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f2329;5;2330;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f5436;5;5437;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f9359;5;9360;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f19107;5;19108;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22407;5;22408;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f26895;5;26896;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="options;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f1275;5;1282;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f2416;5;2423;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f5463;5;5470;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f9367;5;9374;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f19183;5;19190;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22434;5;22441;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f26903;5;26910;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="parent;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f5537;5;5543;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="r;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f19114;5;19115;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="s;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f19176;5;19177;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="scrollElement;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f19236;5;19249;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="selector;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f19292;5;19300;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="setState;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f1332;5;1340;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="shown;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22751;5;22756;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="sorter;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22534;5;22540;5;;;;vpost;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="t;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery-ui-1.10.0.custom.min.js;f203396;5;203397;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f1246;5;1247;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f2327;5;2328;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f5434;5;5435;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f9357;5;9358;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f12727;5;12728;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f21081;5;21082;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22405;5;22406;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f26893;5;26894;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="toggle;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f1615;5;1621;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="U;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f179;29;180;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="updater;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22639;5;22646;5;;;;vpost;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="window;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f19163;5;19169;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f26952;5;26958;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
 			<treenode node="_touchStart;JS:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.ui.touch-punch.js;f13;68;3;91;;;;vpos;;v;;r;;d44,68;;b0,0;;mevent;;p">
 				<treenode node="event;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.ui.touch-punch.js;f37;68;42;68;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
@@ -25484,7 +25538,7 @@
 				<treenode node="windowAlert;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.noty.js;f19;220;30;220;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="t;JS:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f9346;5;9558;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f12714;5;19448;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f21070;5;21102;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22394;5;22774;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f26882;5;27170;5;;;;vpos;;v;;r;;d203373,5;;b0,0;;me;;p">
+			<treenode node="t;JS:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f12714;5;19448;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f21070;5;21102;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22394;5;22774;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f26882;5;27170;5;;;;vpos;;v;;r;;d203373,5;;b0,0;;me;;p">
 				<treenode node="a;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.cleditor.min.js;f253;21;254;21;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="area;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.cleditor.min.js;f266;21;270;21;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
@@ -25621,26 +25675,26 @@
 			<treenode node="y;JS:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.cleditor.min.js;f303;15;374;15;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f272;29;221;30;;;;vpos;;v;;r;;d316,15;;b0,0;;ma;;p">
 				<treenode node="a;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.cleditor.min.js;f314;15;315;15;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="c;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f283;29;284;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f283;29;284;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f283;29;284;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="c;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f283;29;284;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f283;29;284;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f283;29;284;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f283;29;284;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="H;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f292;29;293;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f292;29;293;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f292;29;293;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="H;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f292;29;293;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f292;29;293;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f292;29;293;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f292;29;293;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="K;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f348;29;349;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f348;29;349;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f348;29;349;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="K;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f348;29;349;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f348;29;349;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f348;29;349;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f348;29;349;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="l;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.cleditor.min.js;f320;15;321;15;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="L;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f294;29;295;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f294;29;295;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f294;29;295;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="L;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f294;29;295;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f294;29;295;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f294;29;295;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f294;29;295;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="T;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f303;29;304;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f303;29;304;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f303;29;304;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="T;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f303;29;304;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f303;29;304;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f303;29;304;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f303;29;304;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="X;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f305;29;306;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f305;29;306;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f305;29;306;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="X;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f305;29;306;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f305;29;306;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f305;29;306;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f305;29;306;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="ya;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f328;29;330;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f328;29;330;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f328;29;330;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="ya;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f328;29;330;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f328;29;330;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f328;29;330;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f328;29;330;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="z;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f290;29;291;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f290;29;291;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f290;29;291;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="z;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f290;29;291;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f290;29;291;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f290;29;291;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f290;29;291;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="t;JS:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f12714;5;19448;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f21070;5;21102;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22394;5;22774;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f26882;5;27170;5;;;;vpos;;v;;r;;d203373,5;;b0,0;;me;;p">
+			<treenode node="t;JS:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f21070;5;21102;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22394;5;22774;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f26882;5;27170;5;;;;vpos;;v;;r;;d203373,5;;b0,0;;me;;p">
 				<treenode node="body;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f19403;5;19407;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="checkPosition;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f27183;5;27196;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
@@ -25688,7 +25742,7 @@
 				<treenode node="window;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f19163;5;19169;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f26952;5;26958;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="t;JS:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f21070;5;21102;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22394;5;22774;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f26882;5;27170;5;;;;vpos;;v;;r;;d203373,5;;b0,0;;me;;p">
+			<treenode node="t;JS:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22394;5;22774;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f26882;5;27170;5;;;;vpos;;v;;r;;d203373,5;;b0,0;;me;;p">
 				<treenode node="body;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f19403;5;19407;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="checkPosition;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f27183;5;27196;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
@@ -26346,7 +26400,7 @@
 			</treenode>
 			<treenode node="Bn;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery-1.9.1.min.js;f16147;4;16149;4;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery-1.10.1.min.js;f16545;5;16547;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="body;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\views\index.php;f2;309;6;309;;C:\My Work Bench\Projects\Power Man\Application\powerman\application\views\main_panel.php;f2;309;6;309;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f19553;5;19557;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\application\views\create_user.php;f2;331;6;331;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="body;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\views\index.php;f2;309;6;309;;C:\My Work Bench\Projects\Power Man\Application\powerman\application\views\main_panel.php;f2;309;6;309;;C:\My Work Bench\Projects\Power Man\Application\powerman\application\views\create_user.php;f2;331;6;331;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f19553;5;19557;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="BODY;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery-1.9.1.min.js;f1010;4;1014;4;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery-1.10.1.min.js;f1228;5;1232;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -26754,7 +26808,7 @@
 			</treenode>
 			<treenode node="docType;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.cleditor.min.js;f94;24;101;24;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="document;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\views\confirm_user.php;f5;228;13;228;;C:\My Work Bench\Projects\Power Man\Application\powerman\user_guide\nav\prototype.lite.js;f13;40;21;40;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.uploadify-3.1.min.js;f14454;15;14462;15;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.ui.touch-punch.js;f36;13;44;13;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.sparkline.min.js;f3223;4;3231;4;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.elfinder.min.js;f453;11;461;11;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.dataTables.min.js;f331;153;339;153;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery-ui-1.10.0.custom.min.js;f3418;5;3426;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery-migrate-1.0.0.min.js;f530;1;538;1;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\excanvas.js;f5;35;13;35;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\custom.js;f2;0;10;0;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\custom-login-form.js;f2;0;10;0;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="document;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\views\confirm_user.php;f5;228;13;228;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\custom-login-form.js;f2;0;10;0;;C:\My Work Bench\Projects\Power Man\Application\powerman\user_guide\nav\prototype.lite.js;f13;40;21;40;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.uploadify-3.1.min.js;f14454;15;14462;15;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.ui.touch-punch.js;f36;13;44;13;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.sparkline.min.js;f3223;4;3231;4;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.elfinder.min.js;f453;11;461;11;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.dataTables.min.js;f331;153;339;153;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery-ui-1.10.0.custom.min.js;f3418;5;3426;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery-migrate-1.0.0.min.js;f530;1;538;1;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\excanvas.js;f5;35;13;35;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\custom.js;f2;0;10;0;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="domain;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.elfinder.min.js;f1173;12;1179;12;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -27226,7 +27280,7 @@
 			</treenode>
 			<treenode node="ht;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery-1.9.1.min.js;f24090;3;24092;3;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery-1.10.1.min.js;f24249;4;24251;4;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="html;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\views\index.php;f2;310;6;310;;C:\My Work Bench\Projects\Power Man\Application\powerman\application\views\main_panel.php;f2;310;6;310;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f17648;5;17652;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\application\views\create_user.php;f2;332;6;332;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="html;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\views\index.php;f2;310;6;310;;C:\My Work Bench\Projects\Power Man\Application\powerman\application\views\main_panel.php;f2;310;6;310;;C:\My Work Bench\Projects\Power Man\Application\powerman\application\views\create_user.php;f2;332;6;332;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f17648;5;17652;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="HTTP_ERROR;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.uploadify-3.1.min.js;f10862;15;10872;15;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
