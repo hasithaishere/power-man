@@ -144,19 +144,33 @@ $(document).ready(function() {
 	}
 	
 	function validateZipcode(){
-		var zipRegex = /^\d{5}$/;
-		if (!zipRegex.test(zipcode)){
-			zipcode.addClass("error");
-			zipcodeDetails.text("Enter 5 numbers only");
-			zipcodeDetails.addClass("error");
-			return true;
-		}else{
-			zipcode.removeClass("error");
-			zipcodeDetails.text("What's the zip code of your province?");
-			zipcodeDetails.removeClass("error");
-			return true;
-		}
-	}
+		
+		$(function(){
+			$('#zipcode').keydown(function(e) {
+				if (e.shiftKey || e.ctrlKey || e.altKey) {
+					e.preventDefault();
+				} else {
+					var key = e.keyCode;
+					if (!((key == 8) || (key == 46) || (key >= 35 && key <= 40) || (key >= 48 && key <= 57) || (key >= 96 && key <= 105))) 			{
+					e.preventDefault();
+				}
+				}
+				})
+			})
+}
+		
+		//if (zipcode.val().length<5){
+			//zipcode.addClass("error");
+			//zipcodeDetails.text("Enter 5 numbers only");
+			//zipcodeDetails.addClass("error");
+			//return true;
+		//else{
+			//zipcode.removeClass("error");
+			//zipcodeDetails.text("What's the zip code of your province?");
+			//zipcodeDetails.removeClass("error");
+			//return true;
+		//}
+	//}
 	
 	function validateEmail(){
 		var a = email.val();
