@@ -5,7 +5,7 @@
 	<!-- start: Meta -->
 	<meta charset="utf-8">
 	<title>Domore Technologies | Power Man</title>
-	<meta name="description" content="Perfectum Dashboard Bootstrap Admin Template.">
+	<meta name="description" content="Domore Technologies.">
 	<meta name="author" content="Powerman Team">
 	<!-- end: Meta -->
 	
