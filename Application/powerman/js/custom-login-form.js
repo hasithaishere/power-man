@@ -1,8 +1,20 @@
 $(document).ready(function() {
 //	alert("a");
     var form = $("#contact_form");
-	var name = $("#name");
+	var fname = $("#fname");
 	var nameDetails = $("#nameDetails");
+	var lname = $("#lname");
+	var lnameDetails = $("#lnameDetails");
+	var name = $("#name");
+	var addressDetails1 = $("#addressDetails1");
+	var address2 = $("#address2");
+	var addressDetails2 = $("#addressDetails2");
+	var city = $("#city");
+	var cityDetails = $("#cityDetails");
+	var province = $("#province");
+	var provinceDetails = $("#provinceDetails");
+	var zipcode = $("#zipcode");
+	var zipcodeDetails = $("#zipcodeDetails");
 	var email = $("#email");
 	var emailDetails = $("#emailDetails");
 	var pass1 = $("#pass1");
@@ -11,12 +23,24 @@ $(document).ready(function() {
 	var pass2Details = $("#pass2Details");
 	var message = $("#message");
 	
+	fname.blur(validateFname);
+	lname.blur(validateLname);
 	name.blur(validateName);
+	address2.blur(validateAddress);
+	city.blur(validateCity);
+	province.blur(validateProvince);
+	zipcode.blur(validateZipcode);
 	email.blur(validateEmail);
 	pass1.blur(validatePass1);
 	pass2.blur(validatePass2);
 	
+	fname.keyup(validateFname);
+	lname.keyup(validateLname);
 	name.keyup(validateName);
+	address2.keyup(validateAddress);
+	city.keyup(validateCity);
+	province.keyup(validateProvince);
+	zipcode.keyup(validateZipcode);
 	email.keyup(validateEmail);
 	pass1.keyup(validatePass1);
 	pass2.keyup(validatePass2);
@@ -29,20 +53,111 @@ $(document).ready(function() {
 				return false;
 			}
 		});
-	function validateName(){
-		if(name.val().length<5){
-			name.addClass("error");
+	
+	function validateFname(){
+		if(fname.val().length<5){
+			fname.addClass("error");
 			nameDetails.text("Your name isn't that short. Make it 5 characters or more.");
 			nameDetails.addClass("error");
 			return true;
 		}else{
-			name.removeClass("error");
-			nameDetails.text("What's your name?");
+			fname.removeClass("error");
+			nameDetails.text("What's your Last name?");
 			nameDetails.removeClass("error");
 			return true;
 			
 		}
 	}
+	
+	function validateLname(){
+		if(lname.val().length<5){
+			lname.addClass("error");
+			lnameDetails.text("Your name isn't that short. Make it 5 characters or more.");
+			lnameDetails.addClass("error");
+			return true;
+		}else{
+			lname.removeClass("error");
+			lnameDetails.text("What's your Last name?");
+			lnameDetails.removeClass("error");
+			return true;
+			
+		}
+	}
+	
+	function validateName(){
+		if(name.val().length<5){
+			name.addClass("error");
+			addressDetails1.text("Your address isn't that short. Make it 5 characters or more.");
+			addressDetails1.addClass("error");
+			return true;
+		}else{
+			name.removeClass("error");
+			addressDetails1.text("What's your Address?");
+			addressDetails1.removeClass("error");
+			return true;
+			
+		}
+	}
+	
+	function validateAddress(){
+		if(address2.val().length<5){
+			address2.addClass("error");
+			addressDetails2.text("Your address isn't that short. Make it 5 characters or more.");
+			addressDetails2.addClass("error");
+			return true;
+		}else{
+			address2.removeClass("error");
+			addressDetails2.text("Address line 2 ?");
+			addressDetails2.removeClass("error");
+			return true;
+			
+		}
+	}
+	
+	function validateCity(){
+		if(city.val().length<5){
+			city.addClass("error");
+			cityDetails.text("Invalied City. Enter correct one.");
+			cityDetails.addClass("error");
+			return true;
+		}else{
+			city.removeClass("error");
+			cityDetails.text("What's your city ?");
+			cityDetails.removeClass("error");
+			return true;
+			
+		}
+	}
+	
+	function validateProvince(){
+		if(province.val().length<5){
+			province.addClass("error");
+			provinceDetails.text("Invalied province, Enter correct one");
+			provinceDetails.addClass("error");
+			return true;
+		}else{
+			province.removeClass("error");
+			provinceDetails.text("What's your Province/Region?");
+			provinceDetails.removeClass("error");
+			return true;
+		}
+	}
+	
+	function validateZipcode(){
+		var zipRegex = /^\d{5}$/;
+		if (!zipRegex.test(zipcode)){
+			zipcode.addClass("error");
+			zipcodeDetails.text("Enter 5 numbers only");
+			zipcodeDetails.addClass("error");
+			return true;
+		}else{
+			zipcode.removeClass("error");
+			zipcodeDetails.text("What's the zip code of your province?");
+			zipcodeDetails.removeClass("error");
+			return true;
+		}
+	}
+	
 	function validateEmail(){
 		var a = email.val();
 		//var regexp = /^[a-zA-Z0-9]+[a-zA-Z0-9_.-]+[a-zA-Z0-9_-]+@[a-zA-Z0-9]+[a-zA-Z0-9.-]+[a-zA-Z0-9]+.[a-z][2,4]$/;
