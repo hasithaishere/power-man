@@ -4,7 +4,18 @@
 					<ul class="nav nav-tabs nav-stacked main-menu">
 						<li><a href="<?php echo base_url(); ?>main_panel"><i class="icon-home icon-white"></i><span class="hidden-tablet"> Dashboard</span></a></li>
 						<li><a href="#"><i class="icon-eye-open icon-white"></i><span class="hidden-tablet"> Monitor</span></a></li>
-						<li><a href="#"><i class="icon-edit icon-white"></i><span class="hidden-tablet"> Control</span></a></li>
+						<li><a class="dropmenu" href="#"><i class="icon-edit icon-white"></i><span class="hidden-tablet"> Control</span></a>
+                        
+                        <ul>
+								<li><a class="submenu" href="<?php echo base_url(); ?>Upgrade_Package"><i class="fa-icon-file-alt"></i><span class="hidden-tablet">Upgrade Package</span></a></li>
+								<li><a class="submenu" href="#"><i class="fa-icon-file-alt"></i><span class="hidden-tablet"> Add Main Device</span></a></li>
+								<li><a class="submenu" href="#"><i class="fa-icon-file-alt"></i><span class="hidden-tablet"> Add Sensor</span></a></li>
+							</ul>	
+                        
+                        
+                        
+                        
+                        </li>
 						<li>
 							<a class="dropmenu" href="#"><i class="icon-list-alt icon-white"></i><span class="hidden-tablet"> Add</span></a>
 							<ul>
@@ -18,7 +29,7 @@
 							<ul>
 								<li><a class="submenu" href="#"><i class="fa-icon-file-alt"></i><span class="hidden-tablet"> My Profile</span></a></li>
 								<li><a class="submenu" href="#"><i class="fa-icon-file-alt"></i><span class="hidden-tablet"> Sensor Settings</span></a></li>
-								<li><a class="submenu" href="#"><i class="fa-icon-file-alt"></i><span class="hidden-tablet"> User Settings</span></a></li>
+								<li><a class="submenu" href="<?php echo base_url(); ?>users"><i class="fa-icon-file-alt"></i><span class="hidden-tablet"> User Settings</span></a></li>
                                 <li><a class="submenu" href="#"><i class="fa-icon-file-alt"></i><span class="hidden-tablet"> Device Settings</span></a></li>
 							</ul>	
 						</li>
