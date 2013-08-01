@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>	
- <?php include 'head.php'; ?>			
+ <?php include 'includes/head.php'; ?>			
 </head>
 
 <body>
 		
 	
 	<!-- start: Header Menu -->
-		<?php include 'headerbar.php'; ?>
+		<?php include 'includes/headerbar.php'; ?>
 <!-- end: Header Menu -->
 	
 	
@@ -16,7 +16,7 @@
 		<div class="row-fluid">
 				
 			<!-- start: Main Menu -->
-            <?php include 'Main_menu.php'; ?>
+            <?php include 'includes/Main_menu.php'; ?>
 			<!-- end: Main Menu -->
 			
 			
@@ -27,17 +27,17 @@
 				<hr>
 				<ul class="breadcrumb">
 					<li>
-						<a href="#">Home</a> <span class="divider">/</span>
+						<a href="<?php echo base_url(); ?>main_panel">Home</a> <span class="divider">/</span>
 					</li>
 					<li>
-						<a href="#">Dashboard</a>
+						<a href="<?php echo base_url(); ?>main_panel">Dashboard</a>
 					</li>
 				</ul>
 				
 			</div>
 			  <hr>
                        <!-- start: Quick button Menu -->
-            <?php include 'quick_buttons.php'; ?>
+            <?php include 'includes/quick_buttons.php'; ?>
 			<!-- end: Quick button Menu -->
                         <hr>
 			
@@ -75,7 +75,7 @@
 		<div class="clearfix"></div>
 		
 		<!-- start: footer-->
-		<?php include 'footer.php'; ?>
+		<?php include 'includes/footer.php'; ?>
 		<!-- end: footer-->
 				
 	</div><!--/.fluid-container-->
