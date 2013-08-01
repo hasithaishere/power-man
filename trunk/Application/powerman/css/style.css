@@ -947,7 +947,7 @@ ul.dashboard-list li .avatar img{
 .login-box h3 {
 	color: #646464;
 	margin-left: 30px;
-	font-family: monaco;
+	font-family: helvetica;
 	font-weight: normal;
 }
 
@@ -1006,9 +1006,17 @@ ul.dashboard-list li .avatar img{
 	float: right;
 }
 
+.login-box input[type="checkbox"]{
+	margin-top:0px !important;
+	margin-right:2px !important;
+	position:relative;
+  top:-2px;	
+}
+
+.login-box #company-logo{
+	margin-top:5px;
 	
-
-
+}
 
 /* Footer
 =================================================================== */

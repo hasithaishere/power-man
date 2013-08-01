@@ -41,7 +41,10 @@
 	<!-- end: Favicon -->
 	
 			<style type="text/css">
-			body { background: url(<?php echo base_url(); ?>img/bg-login.jpg) !important; }
+			body { background: url(<?php echo base_url(); ?>img/bg-login.jpg) !important;
+			background-repeat:repeat-y;
+			
+			 }
 		</style>
 		
 		
@@ -50,34 +53,36 @@
 
 <body>
 		<div class="container-fluid">
+        
 		<div class="row-fluid">
 					
 			<div class="row-fluid">
 				<div class="login-box">
+              <center>  <div id="company-logo"><img src="<?php echo base_url();?>img/login-bg.png" /></div> </center>
 					<div class="icons">
 						<a href="index.html"><i class="icon-home"></i></a>
 						<a href="#"><i class="icon-cog"></i></a>
 					</div>
-					<h2>Login to your account</h2>
+					<h2>Login to Your Account</h2>
 					<form class="form-horizontal" action="<?php echo base_url();?>login/validate_user" method="post">
 						<fieldset>
 							
 							<div class="input-prepend" title="Username">
 								<span class="add-on"><i class="icon-user"></i></span>
-								<input class="input-large span10" name="username" id="username" type="text" placeholder="type username"/>
+								<input class="input-large span10" name="username" id="username" type="text" placeholder="Type Username"/>
 							</div>
 							<div class="clearfix"></div>
 
 							<div class="input-prepend" title="Password">
 								<span class="add-on"><i class="icon-lock"></i></span>
-								<input class="input-large span10" name="password" id="password" type="password" placeholder="type password"/>
+								<input class="input-large span10" name="password" id="password" type="password" placeholder="Type Password"/>
 							</div>
 							<div class="clearfix"></div>
 							
 							<label class="remember" for="remember"><input type="checkbox" id="remember" />Remember me</label>
 
 							<div class="button-login">	
-								<button type="submit" class="btn btn-primary"><i class="icon-off icon-white"></i> Login</button>
+								<button type="submit" class="btn btn-success"><i class="icon-off icon-white"></i> Login</button>
 							</div>
 							<div class="clearfix"></div>
 					</form>
