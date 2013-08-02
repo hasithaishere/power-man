@@ -54,6 +54,7 @@ $(document).ready(function() {
 			}
 		});
 	
+
 	function validateFname(){
 		if(fname.val().length<5){
 			fname.addClass("error");
