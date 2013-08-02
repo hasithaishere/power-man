@@ -59,7 +59,7 @@ $(document).ready(function() {
 			fname.addClass("error");
 			nameDetails.text("Your name isn't that short. Make it 5 characters or more.");
 			nameDetails.addClass("error");
-			return true;
+			return false;
 		}else{
 			fname.removeClass("error");
 			nameDetails.text("What's your Last name?");
@@ -74,7 +74,7 @@ $(document).ready(function() {
 			lname.addClass("error");
 			lnameDetails.text("Your name isn't that short. Make it 5 characters or more.");
 			lnameDetails.addClass("error");
-			return true;
+			return false;
 		}else{
 			lname.removeClass("error");
 			lnameDetails.text("What's your Last name?");
@@ -87,9 +87,9 @@ $(document).ready(function() {
 	function validateName(){
 		if(name.val().length<5){
 			name.addClass("error");
-			addressDetails1.text("Your address isn't that short. Make it 5 characters or more.");
+			addressDetails1.text("Your address isn't that short.");
 			addressDetails1.addClass("error");
-			return true;
+			return false;
 		}else{
 			name.removeClass("error");
 			addressDetails1.text("What's your Address?");
@@ -102,9 +102,9 @@ $(document).ready(function() {
 	function validateAddress(){
 		if(address2.val().length<5){
 			address2.addClass("error");
-			addressDetails2.text("Your address isn't that short. Make it 5 characters or more.");
+			addressDetails2.text("Your address isn't that short.");
 			addressDetails2.addClass("error");
-			return true;
+			return false;
 		}else{
 			address2.removeClass("error");
 			addressDetails2.text("Address line 2 ?");
@@ -119,7 +119,7 @@ $(document).ready(function() {
 			city.addClass("error");
 			cityDetails.text("Invalied City. Enter correct one.");
 			cityDetails.addClass("error");
-			return true;
+			return false;
 		}else{
 			city.removeClass("error");
 			cityDetails.text("What's your city ?");
@@ -134,7 +134,7 @@ $(document).ready(function() {
 			province.addClass("error");
 			provinceDetails.text("Invalied province, Enter correct one");
 			provinceDetails.addClass("error");
-			return true;
+			return false;
 		}else{
 			province.removeClass("error");
 			provinceDetails.text("What's your Province/Region?");
@@ -143,20 +143,25 @@ $(document).ready(function() {
 		}
 	}
 	
-	function validateZipcode(){
+		function validateZipcode(){
 		
 		$(function(){
 			$('#zipcode').keydown(function(e) {
 				if (e.shiftKey || e.ctrlKey || e.altKey) {
 					e.preventDefault();
+					
 				} else {
 					var key = e.keyCode;
 					if (!((key == 8) || (key == 46) || (key >= 35 && key <= 40) || (key >= 48 && key <= 57) || (key >= 96 && key <= 105))) 			{
 					e.preventDefault();
 				}
 				}
+
 				})
 			})
+		
+				
+				
 }
 		
 		//if (zipcode.val().length<5){
@@ -222,4 +227,20 @@ $(document).ready(function() {
 		
 	}
 	
+	// $('#send').attr("disabled", true);
+	
+	var $input = $('input:text'),
+    $send = $('#send');    
+	$send.attr('disabled', true);
+
+	$input.keyup(function() {
+    var trigger = false;
+    $input.each(function() {
+        if (!$(this).val()) {
+            trigger = true;
+        }
+    });
+    trigger ? $send.attr('disabled', true) : $send.removeAttr('disabled');
+});
+
 });
