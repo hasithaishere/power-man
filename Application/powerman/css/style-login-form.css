@@ -1,5 +1,5 @@
 
-/* CSS Document */
+/* ------------------------------ Create User ------------------------- */
 
 #container{
 	width:600px;
@@ -77,3 +77,66 @@ border:1px solid #cecece;
 	list-style-position:inside;
 	line-height:1.6em;
 }
+
+
+/*-----------------------Upgrade Form-----------------------------------*/
+#upgrade_form{
+	padding:0 10px 10px;
+}
+#upgrade_form label{
+	display:block;
+	color:#797979;
+	font-weight:700;
+	line-height:1.4em
+}
+#upgrade_form input{
+	width:220px;
+	padding:6px;
+	color:#949494;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	border:1px solid #cecece;
+}
+#upgrade_form input.error{
+	background:#f8dbdb;
+	border-color:#e77776;
+}
+#upgrade_form text{
+width:550px;
+height:80px;
+padding:6px;
+color:#adaeae;
+font-family:Arial, Helvetica, sans-serif;
+font-style:italic;
+font-size:12px;
+border:1px solid #cecece;
+}
+#upgrade_form textarea.error{
+	background:#f8dbdb;
+	border-color:#e77776;
+}
+#upgrade_form div{
+	margin-bottom:15px;
+}
+#upgrade_form div span{
+	margin-left:10px;
+	color:#b1b1b1;
+	font-size:11px;
+	font-style:italic;
+}
+#upgrade_form div span.error{
+	color:#e46c6e;
+}
+
+#upgrade_form #upgrade{
+	background:#6f9ff1;
+	color:#fff;
+	font-weight:700;
+	font-style:normal;
+	border:0;
+	cursor:pointer;
+}
+#upgrade_form #upgrade:hover{
+	background:#79a7f1;
+}
+/*-----------------------Upgrade Form-----------------------------------*/
