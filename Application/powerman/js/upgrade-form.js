@@ -5,11 +5,11 @@ $(document).ready(function() {
 	var descriptionDetails = $("#descriptionDetails");
 
 	
-	description.blur(validateDescriotion);
-	description.keyup(validateDescriotion);
+	description.blur(validateDescription);
+	description.keyup(validateDescription);
 
 	upgrade_form.submit(function(){
-			if(validateDescriotion() & Serialnumber()){
+			if(validateDescription() & Serialnumber()){
 			return true;
 			}else{
 				return false;
@@ -17,7 +17,7 @@ $(document).ready(function() {
 		});
 	
 
-	function validateDescriotion(){
+	function validateDescription(){
 		if(description.val().length<10){
 			description.addClass("error");
 			descriptionDetails.text("Your description is too short. Make it 10 characters or more.");
