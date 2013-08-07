@@ -15,6 +15,9 @@
 	<link id="base-style-responsive" href="<?php echo base_url(); ?>css/style-responsive.css" rel="stylesheet">
 	<link id="base-style-responsive" href="<?php echo base_url(); ?>css/style-login-form.css" rel="stylesheet">
     <link id="base-style-responsive" href="<?php echo base_url(); ?>css/font-awesome.css" rel="stylesheet">
+    <link id="base-style-responsive" href="<?php echo base_url(); ?>css/jquery-ui-1.8.21.custom.css" rel="stylesheet">
+    <link id="base-style-responsive" href="<?php echo base_url(); ?>css/bootstrap-switch.css" rel="stylesheet">
+    
     
 	<!--[if lt IE 7 ]>
 	<link id="ie-style" href="<?php echo base_url(); ?>css/style-ie.css" rel="stylesheet">
@@ -43,7 +46,8 @@
 		<script src="<?php echo base_url();?>js/jquery-1.9.1.min.js"></script>
 
 		<script src="<?php echo base_url();?>js/jquery-ui-1.10.0.custom.min.js"></script>
-	
+		
+        <script src="<?php echo base_url();?>js/jquery-migrate-1.0.0.min.js"></script>
 		
 	
 		<script src="<?php echo base_url();?>js/bootstrap.min.js"></script>
@@ -52,5 +56,47 @@
 		<script src="<?php echo base_url();?>js/custom.js"></script>
         <script src="<?php echo base_url();?>js/custom-login-form.js"></script>
         <script src="<?php echo base_url();?>js/upgrade-form.js"></script>
+        
+      
+	
+		
+	
+		<script src="<?php echo base_url();?>js/jquery.ui.touch-punch.js"></script>
+	
+		<script src='<?php echo base_url();?>js/jquery.dataTables.min.js'></script>
+
+		<script src="<?php echo base_url();?>js/excanvas.js"></script>
+	<script src="<?php echo base_url();?>js/jquery.flot.min.js"></script>
+	<script src="<?php echo base_url();?>js/jquery.flot.pie.min.js"></script>
+	<script src="<?php echo base_url();?>js/jquery.flot.stack.js"></script>
+	<script src="<?php echo base_url();?>js/jquery.flot.resize.min.js"></script>
+	
+		<script src="<?php echo base_url();?>js/jquery.chosen.min.js"></script>
+	
+		<script src="<?php echo base_url();?>js/jquery.uniform.min.js"></script>
+		
+		<script src="<?php echo base_url();?>js/jquery.cleditor.min.js"></script>
+	
+		<script src="<?php echo base_url();?>js/jquery.noty.js"></script>
+	
+		<script src="<?php echo base_url();?>js/jquery.elfinder.min.js"></script>
+	
+		<script src="<?php echo base_url();?>js/jquery.raty.min.js"></script>
+	
+		<script src="<?php echo base_url();?>js/jquery.iphone.toggle.js"></script>
+	
+		<script src="<?php echo base_url();?>js/jquery.uploadify-3.1.min.js"></script>
+	<script src="<?php echo base_url();?>js/bootstrap-switch.js"></script>
+		
+	
+		<script src="<?php echo base_url();?>js/jquery.imagesloaded.js"></script>
+	
+		<script src="<?php echo base_url();?>js/jquery.masonry.min.js"></script>
+	
+		<script src="<?php echo base_url();?>js/jquery.knob.js"></script>
+	
+		<script src="<?php echo base_url();?>js/jquery.sparkline.min.js"></script>
+
+		
 
 <!-- end: JavaScript-->	

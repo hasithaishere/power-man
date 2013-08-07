@@ -68,7 +68,37 @@
   <span class="label label-important">Deactivated</span></center>
      <img src="<?php echo base_url(); ?>img/user.jpg" alt="">
       <div class="caption">
-        <h3>Home Base Pacckage</h3>
+        <h3>Home Base Package</h3>
+        <p>Domore Technology Office Area</p>
+        <p><a href="#" class="btn btn-primary">Edit</a> <a href="#" class="btn btn-default">Active</a> <a href="#" class="btn btn-default">Deactivate</a></p>
+       
+      </div>
+    </div>
+  </div> 
+  
+  
+  <div class="box span3">
+  <div class="thumbnail">
+  <center><h3>Domore Office</h3>
+  <span class="label label-important">Deactivated</span></center>
+     <img src="<?php echo base_url(); ?>img/user.jpg" alt="">
+      <div class="caption">
+        <h3>Home Base Package</h3>
+        <p>Domore Technology Office Area</p>
+        <p><a href="#" class="btn btn-primary">Edit</a> <a href="#" class="btn btn-default">Active</a> <a href="#" class="btn btn-default">Deactivate</a></p>
+       
+      </div>
+    </div>
+  </div> 
+  
+  
+  <div class="box span3">
+  <div class="thumbnail">
+  <center><h3>Domore Office</h3>
+  <span class="label label-important">Deactivated</span></center>
+     <img src="<?php echo base_url(); ?>img/user.jpg" alt="">
+      <div class="caption">
+        <h3>Home Base Package</h3>
         <p>Domore Technology Office Area</p>
         <p><a href="#" class="btn btn-primary">Edit</a> <a href="#" class="btn btn-default">Active</a> <a href="#" class="btn btn-default">Deactivate</a></p>
        
