@@ -2,6 +2,7 @@
 
 class login extends CI_Controller
 {
+
 	function index()
 	{
 		$this->load->view('login_form');
@@ -16,13 +17,49 @@ class login extends CI_Controller
 		{		
 			foreach($result->result() as $rows)
 			{
+				$user_id = $rows->id;
 				$role = $rows->role;
 				$adminstatus = $rows->adminstatus;
 				$status = $rows->status;
 				$registerstatus = $rows->registerstatus;
+				$change_pass = $rows->change_pass;
+				$validate_email = $rows->validate_email;
+				$validate_phone = $rows->validate_phone;
 			}
 			
-			if($role == 1)
+			$data = array(
+				"user_id" => $user_id,
+				"role" => $role,
+				"adminstatus" => $adminstatus,
+				"status" => $status,
+				"registerstatus" => $registerstatus,
+				"change_pass" => $change_pass,
+				"validate_email" => $validate_email,
+				"validate_phone" => $validate_phone,
+				"is_logged_in" => TRUE
+			);
+			
+			$this->session->set_userdata($data);
+			
+			if($status == 1)
+			{
+				if($registerstatus == 1)
+				{
+					redirect('main_panel');
+				}
+				else
+				{
+					redirect('confirm_user');
+				}
+			}
+			else
+			{
+				$this->session->unset_userdata($data);
+				$this->session->sess_destroy();
+				redirect('error_user');
+			}
+			
+			/*if($role == 1)
 			{
 				redirect('main_panel');
 			}
@@ -43,11 +80,16 @@ class login extends CI_Controller
 				{
 					redirect('error_user');	
 				}
-			}
+			}*/
+			
+			
+			
 		}
 		else
 		{
-			$this->index();
+			redirect('login_form_error');
 		}
 	}
+	
+	
 }
