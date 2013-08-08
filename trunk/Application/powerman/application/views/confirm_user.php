@@ -71,7 +71,7 @@
 							
 							
 							<hr>
-							<div class="button-login2">																<a href="#Changepassword" role="button" class="btn btn-primary" data-toggle="modal">Start Over</a>
+							<div class="button-login2">																<a href="<?php echo $link1;?>" role="button" class="btn btn-primary" data-toggle="modal">Start Over</a>
 							</div>
 							<div class="clearfix"></div>
 							
@@ -103,13 +103,17 @@
 				 <input id="model_pass2" name="model_pass2" type="password" />
                 <span id="pass2Details">Same as above</span>
              </div>
+			 <div>
+				<button class="btn" aria-hidden="true" id="btn_changepass">Change Password</button>
+			 </div>
+			 </div>
 			 <div class="alert alert-error" id="pass_error_holder">
 		    	
 		     </div>
-		</div>
+		
 		<div class="modal-footer">
 		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-		<a href="#Confirmemail" role="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" id="model_changepassword">Change Password &raquo;</a>
+		<a href="<?php echo $link2;?>" role="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" id="model_changepassword">Next &raquo;</a>
 		</div>
 		</div>
 	<!-- Modals End -->
@@ -127,13 +131,16 @@
 				 <input id="model_emailcode" name="model_emailcode" type="text" />
                 <span id="pass1Details">Enter email activation code here.</span>
         </div>
+			<div>
+				<button class="btn" aria-hidden="true" id="btn_activeemail">Validate Email</button>
+			</div></div>
 			<div class="alert alert-error" id="email_error_holder">
 		    	
-		     </div>
-		</div>
+		    </div>
+		
 		<div class="modal-footer">
 		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-		<a href="#Confirmtelno" role="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" id="model_activateemail">Validate Email &raquo;</a>
+		<a href="<?php echo $link3;?>" role="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" id="model_activateemail">Next &raquo;</a>
 		</div>
 		</div>
 	<!-- Modals End -->
@@ -153,22 +160,24 @@
 		<div>
 		<button class="btn" aria-hidden="true">Send</button>
 		</div>
-		<p></p>
+		<p><div class="alert alert-error" id="telno_error_holder2">
+
+		    </div></p>
 		<div>
              	<label for="pass1">Activation Code</label>
 				 <input id="model_telcode" name="model_telcode" type="text" />
                 <span id="pass1Details">Enter activation code here.</span>
         </div>
-		<div>
-		<button class="btn" aria-hidden="true">Check</button>
-		</div>
-			<div class="alert alert-error" id="telno_error_holder">
+			<div>
+				<button class="btn" aria-hidden="true" id="btn_activetelno">Validate Phone No</button></div>
+			<p><div class="alert alert-error" id="telno_error_holder">
 		    	
-		    </div>
-		</div>
+		    </div></p>
+		
+			</div>
 		<div class="modal-footer">
 		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-		<a href="#" role="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" id="model_activatetelno">Validate Phone Number &raquo;</a>
+		<a href="#" role="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" id="model_activatetelno">Next &raquo;</a>
 		</div>
 		</div>
 	<!-- Modals End -->
@@ -227,11 +236,19 @@
 		
 		<script type="text/javascript" charset="utf-8">
 			$(document).ready(function(){
+			
+				var act_changepassword = 0;
+				var act_emailvalid = 0;
+				var act_phonevalid = 0;
+			
 				$('#pass_error_holder').hide();
 				$('#email_error_holder').hide();
 				$('#telno_error_holder').hide();
+				$('#telno_error_holder2').hide();
 				
-				$('#model_changepassword').click(function(){
+				///////////////START OF CHANGE PASSWORD AJAX/////////////////////////
+				
+				$('#btn_changepass').click(function(){
 					if($('#model_pass1').val() == '' || $('#model_pass2').val() == '')
 					{
 						$('#pass_error_holder').show();
@@ -254,22 +271,139 @@
 							$('#pass_error_holder').hide();
 							
 							var form_data = {
-								password: $("#model_pass1").val()
+								password: $("#model_pass1").val(),
+								change_pass: '1'
 							};
 							
 							 $.ajax({
 				                type: "POST",
 				                url: "<?php echo site_url('confirm_user/change_password'); ?>",
+								dataType: 'json',
+								async: false,
 				                data: form_data,
 				                success: function(msg){
-									$('#model_pass1').val() = '';
-									$('#model_pass2').val() = '';
+									//alert(msg.t2);
+									
+									//$.each(msg, function(index,value){
+							            //process your data by index, in example
+							        //    alert(value.t1);
+							        //});
+									if(msg.r1 == true)
+									{
+										$('#model_pass1').val('');
+										$('#model_pass2').val('');
+										$('#pass_error_holder').removeClass( "alert alert-error" ).addClass( "alert alert-success" );
+										$('#pass_error_holder').show();
+										$('#pass_error_holder').empty();
+										$('#pass_error_holder').append('<p>Password successfully updated.</p>');
+										act_changepassword = 1;
+									}
+									else
+									{
+										alert('not ok');
+									}
+									
+									//$('#btn_changepass').prop("disabled", true);
 								}
 				            });
 											
 						}	
 					}
 					
+				});
+				
+				///////////////END OF CHANGE PASSWORD AJAX/////////////////////////
+				
+				//////////////START OF VALIDATE EMAIL AJAX///////////////////////
+				
+				$('#btn_activeemail').click(function(){
+					
+						if($('#model_emailcode').val() == '')
+						{
+							$('#email_error_holder').show();
+							$('#email_error_holder').empty();
+							$('#email_error_holder').append('<p>Email code filed is empty.</p>');
+							return false;
+						}
+						else
+						{
+							$('#email_error_holder').empty();
+							$('#email_error_holder').hide();
+							
+							var form_data = {
+								email_code: $("#model_emailcode").val(),
+								validate_email: '1'
+							};
+							
+							 $.ajax({
+				                type: "POST",
+				                url: "<?php echo site_url('confirm_user/validate_email'); ?>",
+								dataType: 'json',
+								async: false,
+				                data: form_data,
+				                success: function(msg){
+									//alert(msg.t2);
+									
+									//$.each(msg, function(index,value){
+							            //process your data by index, in example
+							        //    alert(value.t1);
+							        //});
+									if(msg.r1 == true)
+									{
+										$('#model_emailcode').val('');
+										$('#email_error_holder').removeClass( "alert alert-error" ).addClass( "alert alert-success" );
+										$('#email_error_holder').show();
+										$('#email_error_holder').empty();
+										$('#email_error_holder').append('<p>Your email succesfully validated.</p>');
+										act_emailvalid = 1;
+									}
+									else
+									{
+										$('#model_emailcode').val('');
+										$('#email_error_holder').removeClass( "alert alert-success" ).addClass( "alert alert-error" );
+										$('#email_error_holder').show();
+										$('#email_error_holder').empty();
+										$('#email_error_holder').append('<p>Email activation code is wrong please check the code and reenter.</p>');
+										act_emailvalid = 0;
+									}
+									
+									//$('#btn_changepass').prop("disabled", true);
+								}
+				            });
+											
+						}	
+					
+					
+				});
+				//////////////END OF VALIDATE EMAIL AJAX///////////////////////
+				
+				
+				$('#model_changepassword').click(function(e) {
+
+					if(act_changepassword == 0)
+					{
+						$('#pass_error_holder').removeClass( "alert alert-success" ).addClass( "alert alert-error" );
+										$('#pass_error_holder').show();
+										$('#pass_error_holder').empty();
+										$('#pass_error_holder').append('<p>First you have to change the current tempory password.</p>');
+						return false;
+					}
+					
+				   				   
+				});
+				
+				$('#model_activateemail').click(function(e) {
+
+					if(act_emailvalid == 0)
+					{
+						$('#email_error_holder').removeClass( "alert alert-success" ).addClass( "alert alert-error" );
+										$('#email_error_holder').show();
+										$('#email_error_holder').empty();
+										$('#email_error_holder').append('<p>First you have to validate your email using given email activation code.</p>');
+						return false;
+					}
+					
+				   				   
 				});
 				
 			});
