@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 	<?php include 'includes/head.php'; ?>		
+    <script src="SpryAssets/SpryValidationSelect.js" type="text/javascript"></script>
+    <link href="SpryAssets/SpryValidationSelect.css" rel="stylesheet" type="text/css">
+    
 </head>
 
 <body>
@@ -47,13 +50,12 @@
     	<form action="" method="post" id="upgrade_form">
         	<div>
                 <label for="cpackage">Current Package</label>
-                <select name="pack">
-                    <option value="empty" selected></option>
+                <select name="pack1" id="pack1">
                 <option value="home">Home Edition</option>
                 <option value="business">Small Business Edition</option>
                 <option value="company" >Company Edition</option>
 
-                </select>
+            </select>
                 <span id="CPackage_Details">What's your current package name?</span>
             </div>
              
@@ -72,15 +74,31 @@
              
              <div>
                 <label for="npackage">New Package Type</label>
-                <select name="pack">
-                    <option value="empty" selected></option>
-                <option value="home">Home Edition</option>
+                <select name="pack2" id="pack2">
                 <option value="business">Small Business Edition</option>
                 <option value="company" >Company Edition</option>
+                <option value="home">Home Edition</option>
 
                 </select>
-                <span id="NPackage_Details">What's your New package name?</span>
-            </div>
+                <span id="NPackage_Details">What's your New package name?</span>  
+          <div>          
+            <span id="spryselect1">
+                <label>Number of devices</label>
+            <select name="devices" id="select">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+            </select>
+             
+          <span class="selectRequiredMsg">Please select an item.</span></span>
+             </div>
              
              <div>
              	<input id="upgrade" name="upgrade" type="submit" value="Upgrade" />
@@ -100,5 +118,10 @@
 	
 	
 	
+    <script type="text/javascript">
+<!--
+var spryselect1 = new Spry.Widget.ValidationSelect("spryselect1");
+//-->
+    </script>
 </body>
 </html>
