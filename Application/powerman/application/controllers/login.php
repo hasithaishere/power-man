@@ -5,6 +5,9 @@ class login extends CI_Controller
 
 	function index()
 	{
+		//$this->load->library('sms_sender');
+		//$data = array('phone_no'=>'0716305702','message'=>'hasitha hallo');
+		//$this->sms_sender->send_sms($data);
 		$this->load->view('login_form');
 	}
 	

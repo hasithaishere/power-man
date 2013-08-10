@@ -15,6 +15,7 @@
 |
 */
 $config['base_url']	= 'http://powerman.my:81';
+$config['server_root']	= $_SERVER['DOCUMENT_ROOT'];
 
 /*
 |--------------------------------------------------------------------------

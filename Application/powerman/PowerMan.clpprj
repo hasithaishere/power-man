@@ -54,8 +54,8 @@
 			</treenode>
 			<treenode node="SYSDIR;PHP:PHP Word;C:\My Work Bench\Projects\Power Man\Application\powerman\index.php;f9;175;15;175;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="access_denied;PHP:Class Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\Codelobster0.php;f0;2;1;9;;;;vpos;;vCI_Controller;;c;;r;;d0,3;;b0,0;;m">
-				<treenode node="index;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\Codelobster0.php;f1;4;2;7;;;;vpos;;v;;r;;d1,5;;b0,0;;m">
+			<treenode node="access_denied;PHP:Class Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\Codelobster0.php;f0;2;1;9;;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\access_denied.php;f0;2;1;9;;;;vpos;;vCI_Controller;;c;;r;;d0,3;;b0,0;;m">
+				<treenode node="index;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\Codelobster0.php;f1;4;2;7;;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\access_denied.php;f1;4;2;7;;;;vpos;;v;;r;;d1,5;;b0,0;;m">
 					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\Codelobster0.php;f2;6;7;6;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
@@ -3668,47 +3668,161 @@
 				<treenode node="__construct;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;85;2;98;;;;vpos;;v;;r;;d1,86;;b1,0;;mconfig;;p">
 					<treenode node="config;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f29;85;36;85;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f3;89;8;89;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="_build_headers;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;960;2;967;;;;vpos;;vstring;;r Build final headers;;d1,961;;b2,0;;m">
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;962;7;962;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="_build_message;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;1012;2;1182;;;;vpos;;vvoid;;r Build Final Body and attachments;;d1,1013;;b2,0;;m">
+					<treenode node="attachment;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1134;13;1134;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="basename;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f3;1141;12;1141;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="body;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1023;7;1023;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="ctype;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f3;1142;9;1142;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="file;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f3;1157;8;1157;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="filename;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f3;1140;12;1140;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="fp;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f10;1159;13;1159;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="h;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f3;1150;5;1150;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="hdr;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1022;6;1022;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="i;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f7;1138;9;1138;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f6;1014;11;1014;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="z;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1136;4;1136;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="_get_alt_message;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;820;2;853;;;;vpos;;vstring;;r Build alternative plain text message;;d1,821;;b2,0;;m">
+					<treenode node="body;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f3;829;8;829;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="i;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f7;840;9;840;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="match;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f64;827;70;827;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="n;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f3;842;5;842;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f6;822;11;822;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="x;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;844;10;844;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="_get_content_type;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;673;2;691;;;;vpos;;vstring;;r Get content type (text /html /attachment);;d1,674;;b2,0;;m">
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f6;675;11;675;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="_get_encoding;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;647;2;663;;;;vpos;;vstring;;r Get Mail Encoding;;d1,648;;b2,0;;mreturn;;p">
+					<treenode node="charset;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f36;651;44;651;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 					<treenode node="return;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f34;647;41;647;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;649;7;649;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
 				<treenode node="_get_hostname;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;1889;2;1892;;;;vpos;;vstring;;r Get Hostname;;d1,1890;;b2,0;;m">
+					<treenode node="_SERVER;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f16;1891;24;1891;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="_get_ip;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;1902;2;1934;;;;vpos;;vstring;;r Get IP;;d1,1903;;b2,0;;m">
+					<treenode node="_SERVER;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f16;1909;24;1909;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="cip;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1909;6;1909;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="fip;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1911;6;1911;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="rip;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1910;6;1910;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f6;1904;11;1904;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="x;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f3;1920;5;1920;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="_get_message_id;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;609;2;616;;;;vpos;;vstring;;r Get the Message ID;;d1,610;;b2,0;;m">
+					<treenode node="from;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;611;7;611;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f10;611;15;611;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="_get_mime_message;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;719;2;722;;;;vpos;;vstring;;r Mime message;;d1,720;;b2,0;;m">
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f56;721;61;721;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="_get_protocol;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;627;2;636;;;;vpos;;vstring;;r Get Mail Protocol;;d1,628;;b2,0;;mreturn;;p">
 					<treenode node="return;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f34;627;41;627;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;629;7;629;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="_get_smtp_data;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;1864;2;1879;;;;vpos;;vstring;;r Get SMTP data;;d1,1865;;b2,0;;m">
+					<treenode node="data;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1866;7;1866;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="str;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f9;1868;13;1868;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f22;1868;27;1868;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="_mime_types;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;1993;2;2085;;;;vpos;;vstring;;r Mime Types;;d1,1994;;b2,0;;mext;;p">
 					<treenode node="ext;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f32;1993;36;1993;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
+					<treenode node="mimes;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1995;8;1995;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="_prep_q_encoding;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;1290;2;1347;;;;vpos;;vstr;;r Prep Q Encoding;;d1,1291;;b2,0;;mstr;;pfrom;;p">
+					<treenode node="ascii;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f3;1314;9;1314;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="char;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f3;1313;8;1313;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="convert;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1299;10;1299;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 					<treenode node="from;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f43;1290;48;1290;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="i;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f7;1310;9;1310;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="length;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f15;1310;22;1310;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="limit;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1296;8;1296;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="output;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1307;9;1307;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 					<treenode node="str;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f37;1290;41;1290;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
+					<treenode node="temp;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1308;7;1308;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f27;1296;32;1296;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="_prep_quoted_printable;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;1197;2;1275;;;;vpos;;vstring;;r Prep Quoted Printable;;d1,1198;;b2,0;;mstr;;pcharlim;;p">
+					<treenode node="ascii;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f4;1241;10;1241;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="char;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f4;1240;9;1240;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 					<treenode node="charlim;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f49;1197;57;1197;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
+					<treenode node="escape;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1226;9;1226;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="i;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;1237;10;1237;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="length;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f3;1231;10;1231;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="line;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f21;1229;26;1229;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="lines;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1224;8;1224;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="output;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1227;9;1227;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 					<treenode node="str;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f43;1197;47;1197;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="temp;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f3;1232;8;1232;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f30;1259;35;1259;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
 				<treenode node="_remove_nl_callback;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;1471;2;1479;;;;vpos;;vstring;;r Strip line-breaks via callback;;d1,1472;;b2,0;;mmatches;;p">
@@ -3720,23 +3834,57 @@
 					</treenode>
 					<treenode node="data;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f40;1718;45;1718;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
+					<treenode node="reply;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1763;8;1763;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="resp;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f6;1729;11;1729;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f9;1724;14;1724;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="_send_data;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;1843;2;1854;;;;vpos;;vbool;;r Send SMTP data;;d1,1844;;b2,0;;mdata;;p">
 					<treenode node="data;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f31;1843;36;1843;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f16;1845;21;1845;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="_send_with_mail;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;1534;2;1561;;;;vpos;;vbool;;r Send using mail();;d1,1535;;b2,0;;m">
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f6;1536;11;1536;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="_send_with_sendmail;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;1571;2;1599;;;;vpos;;vbool;;r Send using Sendmail;;d1,1572;;b2,0;;m">
+					<treenode node="fp;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1573;5;1573;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="status;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1584;9;1584;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f15;1573;20;1573;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="_send_with_smtp;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;1609;2;1668;;;;vpos;;vbool;;r Send using SMTP;;d1,1610;;b2,0;;m">
+					<treenode node="reply;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1656;8;1656;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f6;1611;11;1611;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="val;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f33;1622;37;1622;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="_set_boundaries;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;595;2;599;;;;vpos;;vvoid;;r Set Message Boundary;;d1,596;;b2,0;;m">
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;597;7;597;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="_set_date;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;701;2;709;;;;vpos;;vstring;;r Set RFC 822 Date;;d1,702;;b2,0;;m">
+					<treenode node="operator;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;704;11;704;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="timezone;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;703;11;703;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="_set_error_message;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;1969;2;1982;;;;vpos;;vstring;;r Set Message;;d1,1970;;b2,0;;mmsg;;pval;;p">
+					<treenode node="CI;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1971;5;1971;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="line;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f50;1974;55;1974;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 					<treenode node="msg;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f39;1969;43;1969;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f3;1976;8;1976;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 					<treenode node="val;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f45;1969;49;1969;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
@@ -3744,106 +3892,200 @@
 				<treenode node="_set_header;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;425;2;428;;;;vpos;;vvoid;;r Add a Header Item;;d1,426;;b2,0;;mheader;;pvalue;;p">
 					<treenode node="header;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f32;425;39;425;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;427;7;427;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 					<treenode node="value;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f41;425;47;425;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
 				<treenode node="_smtp_authenticate;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;1789;2;1833;;;;vpos;;vbool;;r SMTP Authenticate;;d1,1790;;b2,0;;m">
+					<treenode node="reply;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1804;8;1804;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f9;1791;14;1791;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="_smtp_connect;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;1679;2;1706;;;;vpos;;vstring;;r SMTP Connect;;d1,1680;;b2,0;;m">
+					<treenode node="errno;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f10;1686;16;1686;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="errstr;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f10;1687;17;1687;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="ssl;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1681;6;1681;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f6;1682;11;1682;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="_spool_email;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;1489;2;1524;;;;vpos;;vbool;;r Spool mail to the mail server;;d1,1490;;b2,0;;m">
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1491;7;1491;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="_str_to_array;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;439;2;454;;;;vpos;;varray;;r Convert a String to an Array;;d1,440;;b2,0;;memail;;p">
 					<treenode node="email;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f34;439;40;439;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
 				<treenode node="_unwrap_specials;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;1458;2;1461;;;;vpos;;vvoid;;r Unwrap special elements;;d1,1459;;b2,0;;m">
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1460;7;1460;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="_write_headers;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;977;2;1002;;;;vpos;;vvoid;;r Write Headers as a string;;d1,978;;b2,0;;m">
+					<treenode node="key;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f30;988;34;988;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f6;979;11;979;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="val;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f38;988;42;988;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="attach;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;407;2;413;;;;vpos;;vvoid;;r Assign file attachments;;d1,408;;b1,0;;mfilename;;pdisposition;;p">
 					<treenode node="disposition;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f35;407;47;407;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 					<treenode node="filename;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f24;407;33;407;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;409;7;409;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="batch_bcc_send;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;1400;2;1448;;;;vpos;;vbool;;r Batch Bcc Send.  Sends groups of BCCs in batches;;d1,1401;;b1,0;;m">
+					<treenode node="bcc;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f9;1431;13;1431;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="chunk;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1406;8;1406;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="float;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1402;8;1402;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="i;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f7;1408;9;1408;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="set;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1404;6;1404;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f11;1402;16;1402;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="bcc;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;327;2;353;;;;vpos;;vvoid;;r Set BCC;;d1,328;;b1,0;;mbcc;;plimit;;p">
 					<treenode node="bcc;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f21;327;25;327;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 					<treenode node="limit;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f27;327;33;327;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f3;331;8;331;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="cc;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;297;2;315;;;;vpos;;vvoid;;r Set CC;;d1,298;;b1,0;;mcc;;p">
 					<treenode node="cc;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f20;297;23;297;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;299;13;299;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="clean_email;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;776;2;805;;;;vpos;;vstring;;r Clean Extended Email Address: Joe Smith &lt;joe@smith.com&gt;;;d1,777;;b1,0;;memail;;p">
+					<treenode node="addy;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f21;792;26;792;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="clean_email;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;790;14;790;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 					<treenode node="email;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f29;776;35;776;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="match;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f40;780;46;780;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
 				<treenode node="clear;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;143;2;167;;;;vpos;;vvoid;;r Initialize the Email Data;;d1,144;;b1,0;;mclear_attachments;;p">
 					<treenode node="clear_attachments;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f23;143;41;143;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;145;7;145;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="from;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;179;2;210;;;;vpos;;vvoid;;r Set FROM;;d1,180;;b1,0;;mfrom;;pname;;p">
 					<treenode node="from;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f22;179;27;179;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
+					<treenode node="match;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f39;181;45;181;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 					<treenode node="name;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f29;179;34;179;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f6;186;11;186;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
 				<treenode node="initialize;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;109;2;133;;;;vpos;;vvoid;;r Initialize preferences;;d1,110;;b1,0;;mconfig;;p">
 					<treenode node="config;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f28;109;35;109;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
+					<treenode node="key;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f22;111;26;111;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="method;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f4;115;11;115;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f13;113;18;113;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="val;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f30;111;34;111;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="message;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;380;2;396;;;;vpos;;vvoid;;r Set Body;;d1,381;;b1,0;;mbody;;p">
 					<treenode node="body;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f25;380;30;380;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;382;7;382;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="print_debugger;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;1944;2;1958;;;;vpos;;vstring;;r Get Debug Message;;d1,1945;;b1,0;;m">
+					<treenode node="msg;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;1946;6;1946;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f12;1948;17;1948;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="val;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f33;1950;37;1950;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="reply_to;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;222;2;248;;;;vpos;;vvoid;;r Set Reply-to;;d1,223;;b1,0;;mreplyto;;pname;;p">
+					<treenode node="match;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f42;224;48;224;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 					<treenode node="name;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f36;222;41;222;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 					<treenode node="replyto;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f26;222;34;222;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f6;229;11;229;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="send;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;1357;2;1390;;;;vpos;;vbool;;r Send Email;;d1,1358;;b1,0;;m">
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f6;1359;11;1359;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="set_alt_message;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;465;2;469;;;;vpos;;vvoid;;r Set Multipart Value;;d1,466;;b1,0;;mstr;;p">
 					<treenode node="str;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f33;465;37;465;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;467;7;467;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
 				<treenode node="set_crlf;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;574;2;585;;;;vpos;;vvoid;;r Set CRLF;;d1,575;;b1,0;;mcrlf;;p">
 					<treenode node="crlf;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f26;574;31;574;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f3;578;8;578;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="set_mailtype;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;480;2;484;;;;vpos;;vvoid;;r Set Mailtype;;d1,481;;b1,0;;mtype;;p">
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;482;7;482;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 					<treenode node="type;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f30;480;35;480;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
 				<treenode node="set_newline;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;552;2;563;;;;vpos;;vvoid;;r Set Newline Character;;d1,553;;b1,0;;mnewline;;p">
 					<treenode node="newline;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f29;552;37;552;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f3;556;8;556;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="set_priority;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;525;2;541;;;;vpos;;vvoid;;r Set Priority;;d1,526;;b1,0;;mn;;p">
 					<treenode node="n;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f30;525;32;525;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f3;529;8;529;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
 				<treenode node="set_protocol;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;510;2;514;;;;vpos;;vvoid;;r Set Protocol;;d1,511;;b1,0;;mprotocol;;p">
 					<treenode node="protocol;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f30;510;39;510;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;512;7;512;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="set_wordwrap;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;495;2;499;;;;vpos;;vvoid;;r Set Wordwrap;;d1,496;;b1,0;;mwordwrap;;p">
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;497;7;497;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 					<treenode node="wordwrap;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f30;495;39;495;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
 				<treenode node="subject;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;364;2;369;;;;vpos;;vvoid;;r Set Email Subject;;d1,365;;b1,0;;msubject;;p">
 					<treenode node="subject;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f25;364;33;364;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f13;366;18;366;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="to;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;259;2;286;;;;vpos;;vvoid;;r Set Recipients;;d1,260;;b1,0;;mto;;p">
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;261;13;261;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 					<treenode node="to;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f20;259;23;259;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
@@ -3854,11 +4096,33 @@
 				<treenode node="validate_email;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;733;2;751;;;;vpos;;vbool;;r Validate Email Address;;d1,734;;b1,0;;memail;;p">
 					<treenode node="email;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f32;733;38;733;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f3;737;8;737;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="val;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f21;741;25;741;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
 				<treenode node="word_wrap;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;865;2;949;;;;vpos;;vstring;;r Word Wrap;;d1,866;;b1,0;;mstr;;pcharlim;;p">
 					<treenode node="charlim;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f33;865;41;865;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
+					<treenode node="i;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f8;887;10;887;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="key;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f23;942;27;942;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="line;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f34;901;39;901;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="matches;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f60;885;68;885;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="output;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;900;9;900;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 					<treenode node="str;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f27;865;31;865;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="temp;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f3;911;8;911;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f15;870;20;870;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="unwrap;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f2;884;9;884;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="val;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f31;942;35;942;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
 				<treenode node="_alt_boundary;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\libraries\Email.php;f5;58;19;58;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
@@ -7076,39 +7340,37 @@
 			</treenode>
 			<treenode node="error_user;PHP:Class Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\error_user.php;f0;2;1;8;;;;vpos;;vCI_Controller;;c;;r;;d0,3;;b0,0;;m">
 				<treenode node="index;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\error_user.php;f1;4;2;7;;;;vpos;;v;;r;;d1,5;;b0,0;;m">
-					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\error_user.php;f2;6;7;6;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
 				</treenode>
 			</treenode>
-			<treenode node="login;PHP:Class Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f0;2;1;94;;;;vpos;;vCI_Controller;;c;;r;;d0,3;;b0,0;;m">
-				<treenode node="index;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f1;5;2;8;;;;vpos;;v;;r;;d1,6;;b0,0;;m">
-					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f2;7;7;7;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="login;PHP:Class Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f0;2;1;97;;;;vpos;;vCI_Controller;;c;;r;;d0,3;;b0,0;;m">
+				<treenode node="index;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f1;5;2;11;;;;vpos;;v;;r;;d1,6;;b0,0;;m">
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f2;10;7;10;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="validate_user;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f1;10;2;91;;;;vpos;;v;;r;;d1,11;;b0,0;;m">
-					<treenode node="adminstatus;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f4;21;16;21;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="validate_user;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f1;13;2;94;;;;vpos;;v;;r;;d1,14;;b0,0;;m">
+					<treenode node="adminstatus;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f4;24;16;24;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="change_pass;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f4;24;16;24;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="change_pass;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f4;27;16;27;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="data;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f3;29;8;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="data;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f3;32;8;32;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="registerstatus;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f4;23;19;23;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="registerstatus;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f4;26;19;26;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="result;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f2;13;9;13;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="result;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f2;16;9;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="role;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f4;20;9;20;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="role;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f4;23;9;23;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="rows;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f32;17;37;17;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="rows;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f32;20;37;20;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="status;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f4;22;11;22;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="status;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f4;25;11;25;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f2;12;7;12;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f2;15;7;15;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="user_id;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f4;19;12;19;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="user_id;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f4;22;12;22;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="validate_email;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f4;25;19;25;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="validate_email;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f4;28;19;28;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="validate_phone;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f4;26;19;26;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="validate_phone;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php;f4;29;19;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
 			</treenode>
@@ -7130,15 +7392,31 @@
 				<treenode node="index;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\main_panel.php;f1;4;2;7;;;;vpos;;v;;r;;d1,5;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="Sms_sender;PHP:Class Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\Smsgenerator.php;f0;2;1;19;;;;vpos;;v;;r;;d17,2;;b0,0;;m">
-				<treenode node="send_sms;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\Smsgenerator.php;f11;4;5;18;;;;vpos;;v;;r;;d4,5;;b1,0;;mdata;;p">
-					<treenode node="ch;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\Smsgenerator.php;f2;9;5;9;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="sms_sender;PHP:Class Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\Sms_sender.php;f0;2;1;25;;;;vpos;;v;;r;;d17,2;;b0,0;;m">
+				<treenode node="send_sms;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\Sms_sender.php;f11;4;5;24;;;;vpos;;v;;r;;d4,5;;b1,0;;mdata;;p">
+					<treenode node="ch;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\Sms_sender.php;f2;15;5;15;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="CI;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\Sms_sender.php;f8;7;11;7;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="data;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\Sms_sender.php;f29;4;34;4;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="output;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\Sms_sender.php;f8;22;15;22;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="server_url;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\Sms_sender.php;f2;12;13;12;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+				</treenode>
+			</treenode>
+			<treenode node="Sms_sender;PHP:Class Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\Smsgenerator.php;f0;2;1;19;;C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\sms_sender.php;f0;2;1;18;;;;vpos;;v;;r;;d17,2;;b0,0;;m">
+				<treenode node="send_sms;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\Smsgenerator.php;f11;4;5;18;;C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\Sms_sender.php;f11;4;5;17;;C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\sms_sender.php;f11;4;5;17;;;;vpos;;v;;r;;d4,5;;b1,0;;m">
+					<treenode node="ch;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\Smsgenerator.php;f2;9;5;9;;C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\Sms_sender.php;f2;8;5;8;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 					<treenode node="data;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\Smsgenerator.php;f29;4;34;4;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="output;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\Smsgenerator.php;f8;16;15;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="output;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\Smsgenerator.php;f8;16;15;16;;C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\Sms_sender.php;f8;15;15;15;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="str;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\Smsgenerator.php;f2;6;6;6;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="server_url;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\Sms_sender.php;f2;6;13;6;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="str;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\Smsgenerator.php;f2;6;6;6;;C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\Sms_sender.php;f38;11;42;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
 			</treenode>
@@ -7152,8 +7430,6 @@
 			</treenode>
 			<treenode node="users;PHP:Class Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\users.php;f0;2;1;8;;;;vpos;;vCI_Controller;;c;;r;;d0,3;;b0,0;;m">
 				<treenode node="index;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\users.php;f1;4;2;7;;;;vpos;;v;;r;;d1,5;;b0,0;;m">
-					<treenode node="this;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\users.php;f2;6;7;6;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
 				</treenode>
 			</treenode>
 			<treenode node="Welcome;PHP:Class Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\welcome.php;f0;2;1;23;;;;vpos;;vCI_Controller;;c;;r;;d36,2;;b0,0;;m">
@@ -7469,9 +7745,29 @@
 				</treenode>
 			</treenode>
 			<treenode node="DB;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\database\DB.php;f0;26;1;156;;;;vpos;;v;;r;;d0,27;;b0,0;;mparams;;pactive_record_override;;p">
+				<treenode node="active_group;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\database\DB.php;f3;49;16;49;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="active_record;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\database\DB.php;f2;117;16;117;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
 				<treenode node="active_record_override;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\database\DB.php;f27;26;50;26;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
+				<treenode node="db;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\database\DB.php;f15;42;18;42;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="DB;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\database\DB.php;f1;143;4;143;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="dns;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\database\DB.php;f7;69;11;69;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="driver;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\database\DB.php;f1;142;8;142;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="extra;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\database\DB.php;f28;85;34;85;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="file_path;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\database\DB.php;f49;32;59;32;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="key;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\database\DB.php;f22;87;26;87;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
 				<treenode node="params;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\database\DB.php;f13;26;20;26;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="val;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\database\DB.php;f30;87;34;87;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="delete_cookie;PHP:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\helpers\cookie_helper.php;f1;94;2;97;;;;vpos;;vvoid;;r Delete a COOKIE;;d1,95;;b0,0;;mname;;pdomain;;ppath;;pprefix;;p">
@@ -8234,6 +8530,8 @@
 			</treenode>
 			<treenode node="_doctypes;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\config\doctypes.php;f0;2;10;2;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
+			<treenode node="_SERVER;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\config\config.php;f25;17;33;17;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			</treenode>
 			<treenode node="active_group;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\config\database.php;f0;47;13;47;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="active_record;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\config\database.php;f0;48;14;48;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
@@ -8254,7 +8552,7 @@
 			</treenode>
 			<treenode node="class;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\system\core\CodeIgniter.php;f1;263;7;263;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="config;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\config\migration.php;f0;10;7;10;;C:\My Work Bench\Projects\Power Man\Application\powerman\application\config\config.php;f0;16;7;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="config;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\config\migration.php;f0;10;7;10;;C:\My Work Bench\Projects\Power Man\Application\powerman\application\config\Codelobster0.php;f0;2;7;2;;C:\My Work Bench\Projects\Power Man\Application\powerman\application\config\config.php;f0;16;7;16;;C:\My Work Bench\Projects\Power Man\Application\powerman\application\config\sms.php;f0;2;7;2;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="db;PHP:Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\config\database.php;f0;50;3;50;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -25176,6 +25474,66 @@
 				<treenode node="window;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f19163;5;19169;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f26952;5;26958;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
+			<treenode node="t;JS:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f12714;5;19448;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f21070;5;21102;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22394;5;22774;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f26882;5;27170;5;;;;vpos;;v;;r;;d203373,5;;b0,0;;me;;p">
+				<treenode node="a;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.cleditor.min.js;f253;21;254;21;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="area;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.cleditor.min.js;f266;21;270;21;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="body;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f19403;5;19407;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="c;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f176;29;177;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="checkPosition;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f27183;5;27196;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="e;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery-ui-1.10.0.custom.min.js;f203371;5;203372;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f1283;5;1284;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f2527;5;2528;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f5471;5;5472;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f9452;5;9453;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f12725;5;12726;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22442;5;22443;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f26911;5;26912;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="element;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery-ui-1.10.0.custom.min.js;f203466;5;203473;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f1257;5;1264;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f2338;5;2345;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f5445;5;5452;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f9383;5;9390;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f21089;5;21096;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22416;5;22423;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f27136;5;27143;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="highlighter;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22579;5;22590;5;;;;vpost;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="i;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f19143;5;19144;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="indicators;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f2357;5;2367;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="L;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f219;29;220;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="m;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f181;29;182;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="matcher;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22486;5;22493;5;;;;vpost;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="menu;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22720;5;22724;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="n;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f1248;5;1249;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f2329;5;2330;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f5436;5;5437;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f9359;5;9360;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f19107;5;19108;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22407;5;22408;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f26895;5;26896;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="options;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f1275;5;1282;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f2416;5;2423;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f5463;5;5470;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f9367;5;9374;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f19183;5;19190;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22434;5;22441;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f26903;5;26910;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="parent;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f5537;5;5543;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="r;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f19114;5;19115;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="s;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f19176;5;19177;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="scrollElement;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f19236;5;19249;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="selector;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f19292;5;19300;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="setState;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f1332;5;1340;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="shown;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22751;5;22756;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="sorter;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22534;5;22540;5;;;;vpost;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="t;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery-ui-1.10.0.custom.min.js;f203396;5;203397;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f1246;5;1247;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f2327;5;2328;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f5434;5;5435;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f9357;5;9358;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f12727;5;12728;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f21081;5;21082;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22405;5;22406;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f26893;5;26894;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="toggle;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f1615;5;1621;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="U;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f179;29;180;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="updater;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f22639;5;22646;5;;;;vpost;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="window;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f19163;5;19169;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\bootstrap.min.js;f26952;5;26958;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
 			<treenode node="_touchStart;JS:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.ui.touch-punch.js;f13;68;3;91;;;;vpos;;v;;r;;d44,68;;b0,0;;mevent;;p">
 				<treenode node="event;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.ui.touch-punch.js;f37;68;42;68;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
@@ -25975,23 +26333,23 @@
 			<treenode node="y;JS:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.cleditor.min.js;f303;15;374;15;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f272;29;221;30;;;;vpos;;v;;r;;d316,15;;b0,0;;ma;;p">
 				<treenode node="a;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.cleditor.min.js;f314;15;315;15;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="c;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f283;29;284;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f283;29;284;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f283;29;284;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f283;29;284;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="c;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f283;29;284;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f283;29;284;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f283;29;284;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f283;29;284;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f283;29;284;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="H;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f292;29;293;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f292;29;293;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f292;29;293;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f292;29;293;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="H;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f292;29;293;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f292;29;293;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f292;29;293;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f292;29;293;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f292;29;293;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="K;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f348;29;349;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f348;29;349;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f348;29;349;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f348;29;349;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="K;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f348;29;349;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f348;29;349;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f348;29;349;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f348;29;349;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f348;29;349;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 				<treenode node="l;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.cleditor.min.js;f320;15;321;15;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="L;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f294;29;295;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f294;29;295;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f294;29;295;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f294;29;295;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="L;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f294;29;295;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f294;29;295;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f294;29;295;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f294;29;295;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f294;29;295;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="T;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f303;29;304;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f303;29;304;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f303;29;304;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f303;29;304;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="T;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f303;29;304;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f303;29;304;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f303;29;304;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f303;29;304;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f303;29;304;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="X;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f305;29;306;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f305;29;306;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f305;29;306;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f305;29;306;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="X;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f305;29;306;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f305;29;306;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f305;29;306;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f305;29;306;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f305;29;306;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="ya;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f328;29;330;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f328;29;330;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f328;29;330;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f328;29;330;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="ya;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f328;29;330;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f328;29;330;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f328;29;330;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f328;29;330;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f328;29;330;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="z;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f290;29;291;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f290;29;291;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f290;29;291;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f290;29;291;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="z;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f290;29;291;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f290;29;291;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f290;29;291;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f290;29;291;29;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f290;29;291;29;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="yb;JS:Function Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\fullcalendar.min.js;f194;35;366;35;;;;vpos;;v;;r;;d214,35;;b0,0;;ma;;pb;;pe;;pd;;p">
@@ -26832,7 +27190,7 @@
 			</treenode>
 			<treenode node="docType;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.cleditor.min.js;f94;24;101;24;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="document;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\user_guide\nav\prototype.lite.js;f13;40;21;40;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\upgrade-form.js;f2;0;10;0;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.uploadify-3.1.min.js;f14454;15;14462;15;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.ui.touch-punch.js;f36;13;44;13;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.sparkline.min.js;f3223;4;3231;4;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.elfinder.min.js;f453;11;461;11;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.dataTables.min.js;f331;153;339;153;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery-ui-1.10.0.custom.min.js;f3418;5;3426;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery-migrate-1.0.0.min.js;f530;1;538;1;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\excanvas.js;f5;35;13;35;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\custom.js;f2;0;10;0;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\custom-login-form.js;f2;0;10;0;;C:\My Work Bench\Projects\Power Man\Application\powerman\application\views\confirm_user.php;f5;237;13;237;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="document;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\application\views\confirm_user.php;f5;237;13;237;;C:\My Work Bench\Projects\Power Man\Application\powerman\user_guide\nav\prototype.lite.js;f13;40;21;40;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\upgrade-form.js;f2;0;10;0;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.uploadify-3.1.min.js;f14454;15;14462;15;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.ui.touch-punch.js;f36;13;44;13;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.sparkline.min.js;f3223;4;3231;4;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.elfinder.min.js;f453;11;461;11;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.dataTables.min.js;f331;153;339;153;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery-ui-1.10.0.custom.min.js;f3418;5;3426;5;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery-migrate-1.0.0.min.js;f530;1;538;1;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\excanvas.js;f5;35;13;35;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\custom.js;f2;0;10;0;;C:\My Work Bench\Projects\Power Man\Application\powerman\js\custom-login-form.js;f2;0;10;0;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="domain;JS:JS Var Name;C:\My Work Bench\Projects\Power Man\Application\powerman\js\jquery.elfinder.min.js;f1173;12;1179;12;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -29106,7 +29464,7 @@
 		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\models\index.html" crc="-1574479902"/>
 		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\models\confirm_user_model.php" crc="33784013"/>
 		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\logs\index.html" crc="-1574479902"/>
-		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\Sms_sender.php" crc="-1347074275"/>
+		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\sms_sender.php" crc="-1456284036"/>
 		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\libraries\index.html" crc="-1574479902"/>
 		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\language\english\index.html" crc="-1574479902"/>
 		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\hooks\index.html" crc="-1574479902"/>
@@ -29122,7 +29480,7 @@
 		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\Upgrade_Package.php" crc="-1578932111"/>
 		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\main_panel.php" crc="856579556"/>
 		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login_form_error.php" crc="-1816091659"/>
-		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php" crc="-1213880371"/>
+		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\login.php" crc="-1871057969"/>
 		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\index.html" crc="-1574479902"/>
 		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\error_user.php" crc="-176076947"/>
 		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\device_on_off.php" crc="-788997036"/>
@@ -29130,6 +29488,7 @@
 		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\confirm_user.php" crc="1090688602"/>
 		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\controllers\access_denied.php" crc="33932766"/>
 		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\config\user_agents.php" crc="-484381080"/>
+		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\config\sms.php" crc="-639197828"/>
 		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\config\smileys.php" crc="-749249654"/>
 		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\config\routes.php" crc="-1702805569"/>
 		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\config\profiler.php" crc="806934376"/>
@@ -29141,8 +29500,8 @@
 		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\config\doctypes.php" crc="796808004"/>
 		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\config\database.php" crc="-1463009647"/>
 		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\config\constants.php" crc="1276116486"/>
-		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\config\config.php" crc="-2047489428"/>
-		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\config\autoload.php" crc="1662668036"/>
+		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\config\config.php" crc="340630570"/>
+		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\config\autoload.php" crc="627891968"/>
 		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\cache\index.html" crc="-1574479902"/>
 		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\cache\.htaccess" crc="1792548129"/>
 		<file name="C:\My Work Bench\Projects\Power Man\Application\powerman\application\index.html" crc="-1574479902"/>
