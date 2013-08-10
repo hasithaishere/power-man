@@ -8,7 +8,18 @@ class login extends CI_Controller
 		//$this->load->library('sms_sender');
 		//$data = array('phone_no'=>'0716305702','message'=>'hasitha hallo');
 		//$this->sms_sender->send_sms($data);
-		$this->load->view('login_form');
+		
+		if(!($this->session->userdata('is_logged_in')))
+		{
+			$this->load->view('login_form');
+		}
+		
+		if($this->session->userdata('adminstatus') == 1)
+		{
+			redirect('main_panel');
+		}
+		
+		
 	}
 	
 	function validate_user()
@@ -57,9 +68,7 @@ class login extends CI_Controller
 			}
 			else
 			{
-				$this->session->unset_userdata($data);
-				$this->session->sess_destroy();
-				redirect('error_user');
+				redirect('signout');
 			}
 			
 			/*if($role == 1)
