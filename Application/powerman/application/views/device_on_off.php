@@ -120,11 +120,13 @@
                    
                     <div class="caption">
                    
-                   <div class="switch"  id="on_off_switch" data-on="success" data-off="danger">
-                    <input type="checkbox" checked />
-                    
-                    </div>
-                    </div>
+                   <div class="switch"  id="on_off_switch" data-on="success" data-off="danger" data-toggle="model">
+                    <input type="checkbox" checked /> 
+                   </div>
+                  
+                  
+                  
+                   </div>
                    
  				 </div>
  			</div> 

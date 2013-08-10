@@ -44,7 +44,7 @@
                         <hr>
 			
                      
-			<div class="row-fluid">
+<div class="row-fluid">
 <div class="row">
 
   <div class="box span3">
@@ -56,7 +56,7 @@
       <div class="caption">
         <h3>Company Package</h3>
         <p>Domore Technology Office Area</p>
-        <p><a href="#" class="btn btn-primary">Edit</a> <a href="#" class="btn btn-default">Active</a>  <a href="#" class="btn btn-default">Deactivate</a></p>
+        <p><a href="#" class="btn btn-primary">Edit</a> <a href="#" class="btn btn-default">Active</a>  
       </div>
     </div>
   </div>
@@ -70,7 +70,7 @@
       <div class="caption">
         <h3>Home Base Package</h3>
         <p>Domore Technology Office Area</p>
-        <p><a href="#" class="btn btn-primary">Edit</a> <a href="#" class="btn btn-default">Active</a> <a href="#" class="btn btn-default">Deactivate</a></p>
+        <p><a href="#" class="btn btn-primary">Edit</a> <a href="#" class="btn btn-default">Active</a> 
        
       </div>
     </div>
@@ -85,7 +85,7 @@
       <div class="caption">
         <h3>Home Base Package</h3>
         <p>Domore Technology Office Area</p>
-        <p><a href="#" class="btn btn-primary">Edit</a> <a href="#" class="btn btn-default">Active</a> <a href="#" class="btn btn-default">Deactivate</a></p>
+        <p><a href="#" class="btn btn-primary">Edit</a> <a href="#" class="btn btn-default">Active</a>
        
       </div>
     </div>
@@ -100,7 +100,7 @@
       <div class="caption">
         <h3>Home Base Package</h3>
         <p>Domore Technology Office Area</p>
-        <p><a href="#" class="btn btn-primary">Edit</a> <a href="#" class="btn btn-default">Active</a> <a href="#" class="btn btn-default">Deactivate</a></p>
+        <p><a href="#" class="btn btn-primary">Edit</a> <a href="#" class="btn btn-default">Active</a> 
        
       </div>
     </div>

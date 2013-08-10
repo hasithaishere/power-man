@@ -32,7 +32,7 @@
 						<a href="<?php echo base_url(); ?>main_panel">Home</a> <span class="divider">/</span>
 					</li>
 					<li>
-						<a href="#">Dashboard</a>
+						<a href="#">Upgrade Packages</a>
 					</li>
 				</ul>
 				
@@ -115,13 +115,15 @@
 		<?php include 'includes/footer.php'; ?>		
 	</div><!--/.fluid-container-->
 
-	
+
 	
 	
     <script type="text/javascript">
+	
 <!--
 var spryselect1 = new Spry.Widget.ValidationSelect("spryselect1");
 //-->
     </script>
+    
 </body>
 </html>
