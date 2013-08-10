@@ -1,6 +1,6 @@
     <div class="sortable row-fluid">
 
-				<a class="quick-button span2">
+				<a href="<?php echo base_url(); ?>users_details" class="quick-button span2">
 					<i class="fa-icon-group"></i>
 					<p>Users</p>
 					<span class="notification">1.367</span>
