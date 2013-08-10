@@ -98,6 +98,16 @@ class confirm_user extends CI_Controller
 		
 	}
 	
+	function validate_phone()
+	{
+		$this->load->model('confirm_user_model');
+		
+		$data = array('phone_code' => $this->input->post('phone_code'),'validate_phone'=> $this->input->post('validate_phone'));
+		
+		$result = $this->confirm_user_model->validate_phone($data);
+		
+	}
+	
 	function is_logged_in()
 	{
 		$is_logged_in = $this->session->userdata('is_logged_in');
@@ -109,4 +119,18 @@ class confirm_user extends CI_Controller
 		}
 		
 	}
+	
+	function send_sms_code()
+	{
+		$this->load->model('confirm_user_model');
+		$this->confirm_user_model->get_userdata();
+	}
+	
+	function checked_confirm_user()
+	{
+		$this->load->model('confirm_user_model');
+		$result = $this->confirm_user_model->checked_confirm_user();
+		
+	}
+	
 }

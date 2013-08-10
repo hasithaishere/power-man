@@ -64,7 +64,7 @@
 						<a href="#"><i class="icon-cog"></i></a>
 					</div>
 					<h2>Login to Your Account</h2>
-					<form class="form-horizontal" action="<?php echo base_url();?>login/validate_user" method="post">
+					<form class="form-horizontal" action="<?php echo base_url();?>index.php/login/validate_user" method="post">
 						<fieldset>
 							
 							<div class="input-prepend" title="Username">

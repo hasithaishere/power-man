@@ -88,9 +88,10 @@
                 <span id="zipcodeDetails">What's your zip code</span>
              </div>
         
-         <div>    
+         <div>  
          <label for="country">Country </label> 
              <select id="countries" name="countries">
+
 <option value="AF">Afghanistan</option>
 <option value="AX">Åland Islands</option>
 <option value="AL">Albania</option>

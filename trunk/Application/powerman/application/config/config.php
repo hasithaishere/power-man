@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://powerman.my:81';
+$config['base_url']	= 'http://powerman.hp';
 $config['server_root']	= $_SERVER['DOCUMENT_ROOT'];
 
 /*

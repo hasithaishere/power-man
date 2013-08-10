@@ -71,7 +71,8 @@
 							
 							
 							<hr>
-							<div class="button-login2">																<a href="<?php echo $link1;?>" role="button" class="btn btn-primary" data-toggle="modal">Start Over</a>
+							<div class="button-login2">	
+								<a href="<?php echo $link1;?>" role="button" class="btn btn-primary" data-toggle="modal" id="model_userconfirm_mainbtn">Start Over</a>
 							</div>
 							<div class="clearfix"></div>
 							
@@ -158,7 +159,7 @@
                 <span id="pass1Details">Enter your phone Number ex- +9471XXXXXXX</span>
         </div>
 		<div>
-		<button class="btn" aria-hidden="true">Send</button>
+		<button class="btn" aria-hidden="true" id="btn_sendactivecode">Send</button>
 		</div>
 		<p><div class="alert alert-error" id="telno_error_holder2">
 
@@ -236,15 +237,19 @@
 		
 		<script type="text/javascript" charset="utf-8">
 			$(document).ready(function(){
-			
+
 				var act_changepassword = 0;
 				var act_emailvalid = 0;
 				var act_phonevalid = 0;
+				var send_phonecode = 0;
+				var act_go_over = 0;
 			
 				$('#pass_error_holder').hide();
 				$('#email_error_holder').hide();
 				$('#telno_error_holder').hide();
 				$('#telno_error_holder2').hide();
+				
+				$('#btn_activetelno').attr("disabled", "disabled");
 				
 				///////////////START OF CHANGE PASSWORD AJAX/////////////////////////
 				
@@ -297,6 +302,9 @@
 										$('#pass_error_holder').empty();
 										$('#pass_error_holder').append('<p>Password successfully updated.</p>');
 										act_changepassword = 1;
+										
+										check_confirm_user();
+										
 									}
 									else
 									{
@@ -356,6 +364,9 @@
 										$('#email_error_holder').empty();
 										$('#email_error_holder').append('<p>Your email succesfully validated.</p>');
 										act_emailvalid = 1;
+										
+										check_confirm_user();
+										
 									}
 									else
 									{
@@ -377,15 +388,172 @@
 				});
 				//////////////END OF VALIDATE EMAIL AJAX///////////////////////
 				
+				//////////////START OF SEND SMS VALIDATION CODE PHONE AJAX///////////////////////
+				
+				$('#btn_sendactivecode').click(function(){
+					
+						if($('#model_telon').val() == '')
+						{
+							$('#telno_error_holder2').show();
+							$('#telno_error_holder2').empty();
+							$('#telno_error_holder2').append('<p>Phone number filed is empty.</p>');
+							return false;
+						}
+						else
+						{
+							var reg_exp =  /^[0-9-+]+$/;
+							
+							if(reg_exp.test($('#model_telon').val()) && $("#model_telon").val().length == 12)
+							{
+								$('#telno_error_holder2').empty();
+								$('#telno_error_holder2').hide();
+								
+								var form_data = {
+									phoneno: $("#model_telon").val().replace("+","")
+								};
+								
+								 $.ajax({
+					                type: "POST",
+					                url: "<?php echo site_url('confirm_user/send_sms_code'); ?>",
+									dataType: 'json',
+									async: false,
+					                data: form_data,
+					                success: function(msg){
+										//alert(msg.t2);
+										
+										//$.each(msg, function(index,value){
+								            //process your data by index, in example
+								        //    alert(value.t1);
+								        //});
+										if(msg.r1 == true)
+										{
+											$('#model_telon').val('');
+											$('#telno_error_holder2').removeClass( "alert alert-error" ).addClass( "alert alert-success" );
+											$('#telno_error_holder2').show();
+											$('#telno_error_holder2').empty();
+											$('#telno_error_holder2').append('<p>Activation code succesfully send to your phone.</p>');
+											$('#btn_activetelno').removeAttr("disabled");
+											send_phonecode = 1;
+										}
+										else
+										{
+											$('#model_telon').val('');
+											$('#telno_error_holder2').removeClass( "alert alert-success" ).addClass( "alert alert-error" );
+											$('#telno_error_holder2').show();
+											$('#telno_error_holder2').empty();
+											$('#telno_error_holder2').append('<p>Sending activation code is failed.</p>');
+											$('#btn_activetelno').attr("disabled", "disabled");
+											send_phonecode = 0;
+										}
+										
+										if(msg.r2 == false)
+										{
+											$('#model_telon').val('');
+											$('#telno_error_holder2').removeClass( "alert alert-success" ).addClass( "alert alert-error" );
+											$('#telno_error_holder2').show();
+											$('#telno_error_holder2').empty();
+											$('#telno_error_holder2').append('<p>Phone number is invalid. Please check the number and resend.</p>');
+											$('#btn_activetelno').attr("disabled", "disabled");
+											send_phonecode = 0;
+										}
+										
+									}
+					            });
+							}
+							else
+							{
+								$('#model_telon').val('');
+								$('#telno_error_holder2').removeClass( "alert alert-success" ).addClass( "alert alert-error" );
+								$('#telno_error_holder2').show();
+								$('#telno_error_holder2').empty();
+								$('#telno_error_holder2').append('<p>Phone number is not valied.</p>');
+								$('#btn_activetelno').attr("disabled", "disabled");
+								return false;
+								send_phonecode = 0;
+							}
+											
+						}	
+					
+					
+				});
+				//////////////END OF SEND SMS VALIDATION CODE AJAX///////////////////////
+				
+				//////////////START OF VALIDATE PHONE AJAX///////////////////////
+				
+				$('#btn_activetelno').click(function(){
+					
+						if($('#model_telcode').val() == '')
+						{
+							$('#telno_error_holder').show();
+							$('#telno_error_holder').empty();
+							$('#telno_error_holder').append('<p>Email code filed is empty.</p>');
+							return false;
+						}
+						else
+						{
+							$('#telno_error_holder').empty();
+							$('#telno_error_holder').hide();
+							
+							var form_data = {
+								phone_code: $("#model_telcode").val(),
+								validate_phone: '1'
+							};
+							
+							 $.ajax({
+				                type: "POST",
+				                url: "<?php echo site_url('confirm_user/validate_phone'); ?>",
+								dataType: 'json',
+								async: false,
+				                data: form_data,
+				                success: function(msg){
+									//alert(msg.t2);
+									
+									//$.each(msg, function(index,value){
+							            //process your data by index, in example
+							        //    alert(value.t1);
+							        //});
+									if(msg.r1 == true)
+									{
+										$('#model_telcode').val('');
+										$('#telno_error_holder').removeClass( "alert alert-error" ).addClass( "alert alert-success" );
+										$('#telno_error_holder').show();
+										$('#telno_error_holder').empty();
+										$('#telno_error_holder').append('<p>Your phone succesfully activated.</p>');
+										act_phonevalid = 1;
+										
+										check_confirm_user();
+										
+									}
+									else
+									{
+										$('#model_telcode').val('');
+										$('#telno_error_holder').removeClass( "alert alert-success" ).addClass( "alert alert-error" );
+										$('#telno_error_holder').show();
+										$('#telno_error_holder').empty();
+										$('#telno_error_holder').append('<p>Your activation code is wrong please check the code and reenter.</p>');
+										act_phonevalid = 0;
+									}
+									
+									//$('#btn_changepass').prop("disabled", true);
+								}
+				            });
+											
+						}	
+					
+					
+				});
+				
+				//////////////END OF VALIDATE PHONE AJAX///////////////////////
+			
 				
 				$('#model_changepassword').click(function(e) {
 
 					if(act_changepassword == 0)
 					{
 						$('#pass_error_holder').removeClass( "alert alert-success" ).addClass( "alert alert-error" );
-										$('#pass_error_holder').show();
-										$('#pass_error_holder').empty();
-										$('#pass_error_holder').append('<p>First you have to change the current tempory password.</p>');
+						$('#pass_error_holder').show();
+						$('#pass_error_holder').empty();
+						$('#pass_error_holder').append('<p>First you have to change the current tempory password.</p>');
 						return false;
 					}
 					
@@ -397,16 +565,73 @@
 					if(act_emailvalid == 0)
 					{
 						$('#email_error_holder').removeClass( "alert alert-success" ).addClass( "alert alert-error" );
-										$('#email_error_holder').show();
-										$('#email_error_holder').empty();
-										$('#email_error_holder').append('<p>First you have to validate your email using given email activation code.</p>');
+						$('#email_error_holder').show();
+						$('#email_error_holder').empty();
+						$('#email_error_holder').append('<p>First you have to validate your email using given email activation code.</p>');
 						return false;
 					}
 					
 				   				   
 				});
 				
+				$('#model_activatetelno').click(function(e) {
+
+					if(send_phonecode == 0)
+					{
+						$('#telno_error_holder').removeClass( "alert alert-success" ).addClass( "alert alert-error" );
+						$('#telno_error_holder').show();
+						$('#telno_error_holder').empty();
+						$('#telno_error_holder').append('<p>First you have to enter phone number and send activation code to your phone.</p>');
+						return false;					
+						
+					}	
+					
+					if(act_phonevalid == 0)
+					{
+						$('#telno_error_holder').removeClass( "alert alert-success" ).addClass( "alert alert-error" );
+						$('#telno_error_holder').show();
+						$('#telno_error_holder').empty();
+						$('#telno_error_holder').append('<p>You have to activate your phone, using recieved activation code through SMS.</p>');
+						return false;
+					}				
+							   
+				});
+				
+				$('#model_userconfirm_mainbtn').click(function(e) {
+
+					if(act_go_over == 1)
+					{
+						return false;
+					}		
+							   
+				});
+				
+				
 			});
+			
+			function check_confirm_user()
+			{
+				$.ajax({
+				type: "POST",
+				url: "<?php echo site_url('confirm_user/checked_confirm_user'); ?>",
+				dataType: 'json',
+				async: false,
+				success: function(msg){
+					
+					if(msg.r1 == true)
+					{
+						$('#model_userconfirm_mainbtn').attr("href", "<?php echo base_url()."/signout"; ?>");
+						$('#model_userconfirm_mainbtn').removeClass( "btn btn-prima" ).addClass( "btn btn-success" );
+						$('#model_userconfirm_mainbtn').text('Go Over');
+						act_go_over = 1;
+					}
+					else
+					{
+						act_go_over = 0;
+					}									
+				}
+				});	                
+			}
 		
 		</script>
 		<!-- end: JavaScript-->
