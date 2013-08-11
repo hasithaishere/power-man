@@ -140,3 +140,10 @@ border:1px solid #cecece;
 	background:#79a7f1;
 }
 /*-----------------------Upgrade Form-----------------------------------*/
+
+.modal-body .intro{
+	margin-left:10px;
+	color:#b1b1b1;
+	font-size:11px;
+	font-style:italic;
+}
