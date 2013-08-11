@@ -41,8 +41,8 @@
 	<!-- end: Favicon -->
 	
 			<style type="text/css">
-			body { background: url(<?php echo base_url(); ?>img/bg-login.jpg) !important;
-			background-repeat:repeat-y;
+			body { background: url(<?php echo base_url(); ?>img/bg.jpg) !important;
+			background-repeat:repeat;
 			
 			 }
 		</style>
@@ -89,6 +89,7 @@
 								<button type="submit" class="btn btn-success"><i class="icon-off icon-white"></i> Login</button>
 							</div>
 							<div class="clearfix"></div>
+                            </fieldset>
 					</form>
 					<hr>
 					<h3>Forgot Password?</h3>

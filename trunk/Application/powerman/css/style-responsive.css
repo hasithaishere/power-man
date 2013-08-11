@@ -511,3 +511,10 @@
 	}
 	
 }
+@media only screen and (min-width: 240px) and (max-width: 480px){
+	
+	.login-box{width:260px !important;}
+	
+	
+  
+}

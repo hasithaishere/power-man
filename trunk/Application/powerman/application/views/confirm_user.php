@@ -41,7 +41,7 @@
 	<!-- end: Favicon -->
 	
 			<style type="text/css">
-			body { background: url(<?php echo base_url(); ?>img/bg-login.jpg) !important; }
+			body { background: url(<?php echo base_url(); ?>img/bg.jpg) !important; background-repeat:repeat; }
 		</style>
 		
 		
@@ -54,16 +54,17 @@
 					
 			<div class="row-fluid">
 				<div class="login-box">
+                <center>  <div id="company-logo"><img src="<?php echo base_url();?>img/login-bg.png" /></div> </center>
 					<div class="icons">
 						<a href="index.html"><i class="icon-home"></i></a>
 						<a href="#"><i class="icon-cog"></i></a>
 					</div>
 					<h1>User Confirmation</h1>
 					
-						<fieldset>
+						
 							
 							<div class="input-prepend" title="Username">
-								<img class="img-rounded" data-src="holder.js/140x140" alt="140x140" style="width: 400px; height: 140px;" src="<?php echo base_url();?>img/confirmprocess.png">
+								<img class="img-responsive" src="<?php echo base_url();?>img/confirmprocess.png"/>
 							</div>
 							<div class="clearfix"></div>
 							<p>You have to complete this user validation. If you will complete these three steps sucessfully, Our Domore PowerMan system automatically activate you as a valid customer. Please follow the given instruction carefully. Press Start Over button to begin. </p>
@@ -77,7 +78,7 @@
 							<div class="clearfix"></div>
 							
 							
-							</fieldset>
+							
 					
 						
 				</div><!--/span-->
