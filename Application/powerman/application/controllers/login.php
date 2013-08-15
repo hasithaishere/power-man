@@ -13,11 +13,19 @@ class login extends CI_Controller
 		{
 			$this->load->view('login_form');
 		}
-		
-		if($this->session->userdata('adminstatus') == 1)
-		{
-			redirect('main_panel');
+		else 
+		{			
+			if($this->session->userdata('registerstatus') == 1)
+			{
+				redirect('main_panel');
+			}
+			else 
+			{
+				redirect('signout');				
+			}
 		}
+		
+		
 		
 		
 	}
@@ -41,6 +49,8 @@ class login extends CI_Controller
 				$validate_phone = $rows->validate_phone;
 			}
 			
+			$result1 = $this->login_model->get_user_roles($user_id);
+			
 			$data = array(
 				"user_id" => $user_id,
 				"role" => $role,
@@ -50,7 +60,8 @@ class login extends CI_Controller
 				"change_pass" => $change_pass,
 				"validate_email" => $validate_email,
 				"validate_phone" => $validate_phone,
-				"is_logged_in" => TRUE
+				"is_logged_in" => TRUE,
+				"user_roles" => $result1
 			);
 			
 			$this->session->set_userdata($data);

@@ -417,7 +417,6 @@
 					                type: "POST",
 					                url: "<?php echo site_url('confirm_user/send_sms_code'); ?>",
 									dataType: 'json',
-									async: false,
 					                data: form_data,
 					                success: function(msg){
 										//alert(msg.t2);
