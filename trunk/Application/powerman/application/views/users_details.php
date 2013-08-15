@@ -55,14 +55,67 @@
 							  <tr>
 								  <th>User Name</th>
 								  <th>Email</th>
-								  <th>Role</th>
-								  <th>Status</th>
+								  <th>Phone No</th>
+								  <th>Package</th>
+								  <th>Admin Status</th>
+								  <th>Register Status</th>
 								  <th>Actions</th>
 							  </tr>
 						  </thead>   
 						  <tbody>
-							<tr>
-								<td>Admin</td>
+							
+								<?php
+
+									foreach($content as $rows)
+									{
+											echo "<tr><td>".$rows['fname']." ".$rows['lname']."</td>";
+											echo "<td class=\"center\">". $rows['email']."</td>";
+											echo "<td class=\"center\">". $rows['phoneno']."</td>";
+											if($rows['package'] == 1)
+											{
+												echo "<td class=\"center\">Home Edition</td>";
+											}
+											else 
+											{
+												if($rows['package'] == 2)
+												{
+													echo "<td class=\"center\">Small Business Edition</td>";
+												}	
+												else 
+												{
+													echo "<td class=\"center\">Enterprise Edition</td>";
+												}
+											}
+											
+											if($rows['adminstatus'] == 1)
+											{
+												echo "<td class=\"center\"><span class=\"label label-success\">Active</span></td>";
+											}
+											else 	
+											{
+												echo "<td class=\"center\"><span class=\"label label-important\">Deactive</span></td>";
+											}
+											
+											if($rows['registerstatus'] == 1)
+											{
+												echo "<td class=\"center\"><span class=\"label label-success\">Active</span></td>";
+											}
+											else 	
+											{
+												echo "<td class=\"center\"><span class=\"label label-important\">Deactive</span></td>";
+											}
+											
+											echo "<td class=\"center\"><a class=\"btn btn-success\" href=\"#\"><i class=\"icon-zoom-in icon-white\"></i></a>";
+											echo "<a class=\"btn btn-info\" href=\"#\"><i class=\"icon-edit icon-white\"></i></a>";
+											echo "<a class=\"btn btn-danger\" href=\"#\"><i class=\"icon-trash icon-white\"></i></a></td></tr>";
+																				
+										
+									}
+									//echo "<td>Admin</td>";
+									
+								?>
+								
+								<!--<td>Admin</td>
 								<td class="center">Admin@gmail.com</td>
 								<td class="center">Administrator</td>
 								<td class="center">
@@ -80,8 +133,8 @@
                                         
 									</a>
 								</td>
-							</tr>
-							<tr>
+							</tr>-->
+							<!--<tr>
 								<td>Domore Technologies</td>
 								<td class="center">Domore@gmail.com</td>
 								<td class="center">Customer</td>
@@ -99,7 +152,7 @@
 										<i class="icon-trash icon-white"></i> 
 									</a>
 								</td>
-							</tr>
+							</tr>-->
                             </tbody>
                         </table>
                            

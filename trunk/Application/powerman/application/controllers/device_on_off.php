@@ -9,7 +9,7 @@ class device_on_off extends CI_Controller
 		//$this->load->helper('randomgenerator');
 		//sendemail(array('from'=>'ruslpowerman@gmail.com','to'=>'hasitha.hpmax@gmail.com','subject'=>'test mail 1','message'=>'hi hasitha'));
 		
-					$this->load->library('email_sender');
+					/*$this->load->library('email_sender');
 					
 					$data1 = array(
 						'email' =>  'hasitha@gmail.com',
@@ -25,14 +25,48 @@ class device_on_off extends CI_Controller
 					if($result2)
 					{
 						echo "Ohh Yheee";
-					}
+					}*/
 			
 		//die(randomPassword()."====".randomPhoneCode());
-		//$this->load->view('device_on_off');
-
+		$this->load->view('device_on_off');
+		
+		///////////////////////////////////////////////////////////////////
+		//$data = array('name'=>'hasitha','arr1'=>$this->session->userdata('user_roles'));
+		//$this->load->view('error_user',$data);
+		///////////////////////////////////////////////////////////////////
 		
 		
+/*
+		$this->load->model('login_model');
+		$result = $this->login_model->validate1();
+				
 		
+		if($result->num_rows == 1)
+		{
+			$id_array = array();
+			$i = 0;		
+					
+			foreach($result->result() as $rows)
+			{
+				$id_array[$i] = (int)($rows->id);
+				$i++;
+				
+			}
+			print_r($id_array);
+			
+			$arr1 = array('1'=>'name','2'=>$id_array);
+			
+			if(in_array(2, $arr1['2']))
+			{
+				echo "OK";
+			}
+			else 
+			{
+				echo "NOT OK";	
+			}
+		}
+		
+*/		
 	}
 	
 	

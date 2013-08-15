@@ -10,7 +10,67 @@ class sms_sender {
         // get config file
         $CI->config->load('sms', TRUE);
 		
-		$server_url = $CI->config->item('sms_server_url')."?USER=".$CI->config->item('sms_username')."&PWD=".$CI->config->item('sms_password')."&NUM=".$data['phone_no']."&MSG=".urlencode($data['message']);
+		//$this->load->libraries('error_user');
+		$client = new nusoap_client($CI->config->item('sms_server_url'));
+		// Check for an error
+		$err = $client->getError();
+	
+		if ($err) 
+		{
+	 	   // Display the error
+	 	   //echo '<h2>Constructor error</h2><pre>' . $err . '</pre>';
+	 	   // At this point, you know the call that follows will fail
+	 	   
+	 	   return FALSE;
+	 	   
+		}
+	
+		// Call the SOAP method
+		$result = $client->call('send_sms', array('phoneno'=>$data['phone_no'],'message'=>$data['message'],'code'=>$CI->config->item('sms_code')));
+	
+		// Check for a fault	
+		if ($client->fault) 
+		{
+	    		//echo '<h2>Fault</h2><pre>';
+	    		//print_r($result);
+	    		//echo '</pre>';
+				return FALSE;
+		}
+		 else
+		 {
+	    
+			// Check for errors
+	    		$err = $client->getError();
+	    		if ($err) 
+				{
+	        		// Display the error
+	        		//echo '<h2>Error</h2><pre>' . $err . '</pre>';
+	        		return FALSE;
+	    		}
+				else 
+				{
+	        		// Display the result
+	        		//echo '<h2>Result</h2><pre>';
+	        		//print_r($result);
+	    			//echo '</pre>';
+					return TRUE;
+				}
+		}
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* TEMPORARY SHUT DOWN DUE TO CURL ERRORS Commented
 		$ch = curl_init();
@@ -30,7 +90,7 @@ class sms_sender {
             return TRUE;
 
  */
- 		return TRUE;
+ 		//return TRUE;
     }
 
 }

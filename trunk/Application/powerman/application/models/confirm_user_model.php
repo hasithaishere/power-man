@@ -87,7 +87,15 @@ class confirm_user_model extends CI_Model
 		$phoneno = $this->input->post('phoneno');
 				
 		if($result->num_rows == 1)
-			{		
+			{
+				
+				$data = array('phoneno' => $phoneno );
+			
+				$this->db->where('id', $this->session->userdata('user_id'));
+		
+				$this->db->update('power_users', $data);
+				
+						
 				foreach($result->result() as $rows)
 				{
 					$fname = $rows->fname;
