@@ -4,6 +4,13 @@ class Users extends CI_Controller
 {
 	function index()
 	{
-		$this->load->view('users');
+		if(!($this->session->userdata('is_logged_in')))
+		{
+			$this->load->view('access_denied');
+		}
+		else 
+		{
+			$this->load->view('users');
+		}
 	}	
 }

@@ -108,7 +108,7 @@
 							</a>
 							<ul class="dropdown-menu">
 								<li><a href="#"><i class="icon-user"></i> Profile</a></li>
-								<li><a href="<?php echo base_url(); ?>login"><i class="icon-off"></i> Logout</a></li>
+								<li><a href="<?php echo base_url(); ?>signout"><i class="icon-off"></i> Logout</a></li>
 							</ul>
 						</li>
 						<!-- end: User Dropdown -->
