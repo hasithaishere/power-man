@@ -9,6 +9,14 @@ class Locations extends CI_Controller
 		
 		$data = array('content'=>$result,'user_roles_arr'=>$this->session->userdata('user_roles'));
 		
-		$this->load->view('locations',$data);
+		
+		if(!($this->session->userdata('is_logged_in')))
+		{
+			$this->load->view('access_denied');
+		}
+		else 
+		{
+			$this->load->view('locations',$data);
+		}
 	}	
 }

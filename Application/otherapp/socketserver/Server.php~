@@ -9,7 +9,7 @@ set_time_limit (0);
 
 // Set the ip and port we will listen on 
 $address = '192.168.0.129'; 
-$port = 80; 
+$port = 4444; 
 $max_clients = 10; 
 
 // Array that will hold client information 
@@ -76,7 +76,11 @@ while (true) {
 
                     if(preg_match("/<\/frm>/",$output))
                     {
-	                    storeData($outval);
+						if (!preg_match("/Socket o/i", $outval))
+						{
+							storeData($outval);
+						}						
+	                    //storeData($outval);
                         $outval = "";
                     }
 				 
@@ -194,6 +198,7 @@ function storeData($requestXML)
 					else
 					{
 						$query2 .= "'0',";
+						$query4 .=  "0' ";
 					}
 				}
 				
@@ -254,9 +259,20 @@ function storeData($requestXML)
 	mysql_select_db(DBNAME);
 	$retval = mysql_query( $query1, $conn );
 	$retval = mysql_query( $query2, $conn );
-	$retval = mysql_query( $query3, $conn );
-	$retval = mysql_query( $query4, $conn );
 	
+	//if (!preg_match("/Socket o/i", $query3)) 
+	//{
+		$retval = mysql_query( $query3, $conn );
+	//}
+	
+	//if (!preg_match("/Socket o/i", $query4)) 
+	//{
+		$retval = mysql_query( $query4, $conn );
+	//}
+	
+	//echo $query3;
+	//echo '<br/>';
+	//echo $query4;
 	if(! $retval )
 	{
 	  die('Could not enter data: ' . mysql_error());

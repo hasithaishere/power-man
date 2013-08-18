@@ -264,59 +264,69 @@
 					}
 					else
 					{
-						if($('#model_pass1').val() != $('#model_pass2').val())
+						if($('#model_pass1').val().length >= 8)
+						{
+							if($('#model_pass1').val() != $('#model_pass2').val())
+							{
+								$('#pass_error_holder').show();
+								$('#pass_error_holder').empty();
+								$('#pass_error_holder').append('<p>Password not match, please check the password again.</p>');
+								return false;
+							}
+							else
+							{
+								$('#pass_error_holder').empty();
+								$('#pass_error_holder').hide();
+								
+								var form_data = {
+									password: $("#model_pass1").val(),
+									change_pass: '1'
+								};
+								
+								 $.ajax({
+					                type: "POST",
+					                url: "<?php echo site_url('confirm_user/change_password'); ?>",
+									dataType: 'json',
+									async: false,
+					                data: form_data,
+					                success: function(msg){
+										//alert(msg.t2);
+										
+										//$.each(msg, function(index,value){
+								            //process your data by index, in example
+								        //    alert(value.t1);
+								        //});
+										if(msg.r1 == true)
+										{
+											$('#model_pass1').val('');
+											$('#model_pass2').val('');
+											$('#pass_error_holder').removeClass( "alert alert-error" ).addClass( "alert alert-success" );
+											$('#pass_error_holder').show();
+											$('#pass_error_holder').empty();
+											$('#pass_error_holder').append('<p>Password successfully updated.</p>');
+											act_changepassword = 1;
+											
+											check_confirm_user();
+											
+										}
+										else
+										{
+											alert('not ok');
+										}
+										
+										//$('#btn_changepass').prop("disabled", true);
+									}
+					            });
+												
+							}
+						}	
+						else
 						{
 							$('#pass_error_holder').show();
 							$('#pass_error_holder').empty();
-							$('#pass_error_holder').append('<p>Password not match, please check the password again.</p>');
+							$('#pass_error_holder').append('<p>Please enter a password more than 8 characters.</p>');
 							return false;
 						}
-						else
-						{
-							$('#pass_error_holder').empty();
-							$('#pass_error_holder').hide();
-							
-							var form_data = {
-								password: $("#model_pass1").val(),
-								change_pass: '1'
-							};
-							
-							 $.ajax({
-				                type: "POST",
-				                url: "<?php echo site_url('confirm_user/change_password'); ?>",
-								dataType: 'json',
-								async: false,
-				                data: form_data,
-				                success: function(msg){
-									//alert(msg.t2);
-									
-									//$.each(msg, function(index,value){
-							            //process your data by index, in example
-							        //    alert(value.t1);
-							        //});
-									if(msg.r1 == true)
-									{
-										$('#model_pass1').val('');
-										$('#model_pass2').val('');
-										$('#pass_error_holder').removeClass( "alert alert-error" ).addClass( "alert alert-success" );
-										$('#pass_error_holder').show();
-										$('#pass_error_holder').empty();
-										$('#pass_error_holder').append('<p>Password successfully updated.</p>');
-										act_changepassword = 1;
-										
-										check_confirm_user();
-										
-									}
-									else
-									{
-										alert('not ok');
-									}
-									
-									//$('#btn_changepass').prop("disabled", true);
-								}
-				            });
-											
-						}	
 					}
 					
 				});

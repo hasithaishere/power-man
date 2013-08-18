@@ -111,7 +111,6 @@ function storeData($requestXML)
 	$query1 = "INSERT INTO power_device_powerlog (pcon,log_on,log_user,device_id,mac,created_on,created_by) VALUES ";
 	$query2 = "INSERT INTO power_subdevice_powerlog (device_id,pcon,temp,control_status,log_on,log_user,created_on,created_by) VALUES ";
 	$query3 = "UPDATE power_subdevice_control SET control_status = CASE ";
-	$query4 = "UPDATE power_subdevice_control SET pcon = CASE ";
 
 	$parent1_count = 1;
 	$main_pcon = 0; 
@@ -166,7 +165,6 @@ function storeData($requestXML)
 				{
 					$query2 .= "'" . $child1 . "',";
 					$query3 .= "WHEN device_id = '" . $child1 . "' THEN '";
-					$query4 .= "WHEN device_id = '" . $child1 . "' THEN '";
 				}
 				
 				if($parent2_count == 2)
@@ -178,7 +176,6 @@ function storeData($requestXML)
                             $tempDeviceVal1 = (double)(preg_replace('/kw/','', $child1)) * 1000;
 
                             $query2 .= "'" . $tempDeviceVal1 . "',";
-							$query4 .=  $tempDeviceVal2 . "' ";
 						    $main_pcon += $tempDeviceVal1;
                         }
                         else 
@@ -186,7 +183,6 @@ function storeData($requestXML)
                             $tempDeviceVal2 = (double)(preg_replace('/w/','', $child1));
 
                             $query2 .= "'" . $tempDeviceVal2 . "',";
-							$query4 .=  $tempDeviceVal2 . "' ";
 						    $main_pcon += $tempDeviceVal2;
                         }
 						
@@ -242,7 +238,6 @@ function storeData($requestXML)
 	  
 	  $query1 .= "('". $main_pcon . "','" . $log_on . "','" .  $log_user . "','" . $main_device_id . "','" . $mac . "','" . $created_on . "','" . $created_by  . "')";
 	  $query3 .= "ELSE control_status END";
-	  $query4 .= "ELSE pcon END";
 	  $query2 = rtrim($query2,',');
 	
 	$conn = mysql_connect(DBHOST, DBUSER, DBPASS);
@@ -255,7 +250,6 @@ function storeData($requestXML)
 	$retval = mysql_query( $query1, $conn );
 	$retval = mysql_query( $query2, $conn );
 	$retval = mysql_query( $query3, $conn );
-	$retval = mysql_query( $query4, $conn );
 	
 	if(! $retval )
 	{

@@ -9,7 +9,7 @@
                         <ul>
                         <li><a class="submenu" href="<?php echo base_url(); ?>locations"><i class="fa-icon-file-alt"></i><span class="hidden-tablet">Locations</span></a></li>
 								<li><a class="submenu" href="<?php echo base_url(); ?>Upgrade_Package"><i class="fa-icon-file-alt"></i><span class="hidden-tablet">Upgrade Package</span></a></li>
-								<li><a class="submenu" href="<?php echo base_url(); ?>device_on_off"><i class="fa-icon-file-alt"></i><span class="hidden-tablet"> Device On/Off</span></a></li>
+								<li><a class="submenu" href="#"><i class="fa-icon-file-alt"></i><span class="hidden-tablet"> Device On/Off</span></a></li>
 								
 							</ul>	
                    

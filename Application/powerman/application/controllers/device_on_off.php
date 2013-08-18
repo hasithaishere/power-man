@@ -2,8 +2,24 @@
 
 class device_on_off extends CI_Controller
 {
-	function index()
+	function index($maindevice_id)
 	{
+		$this->load->model('deviceonoff_model');
+		$result = $this->deviceonoff_model->get_subdevices($maindevice_id);	
+		$result2 = $this->deviceonoff_model->get_subdevices_control($maindevice_id);	
+		
+		
+		$data = array('content'=>$result,'content2'=>$result2,'user_roles_arr'=>$this->session->userdata('user_roles'));
+		
+		if(!($this->session->userdata('is_logged_in')))
+		{
+			$this->load->view('access_denied');
+		}
+		else 
+		{
+			$this->load->view('device_on_off',$data);
+		}
+		
 		//$CI =& get_instance();
 		
 		//$this->load->helper('randomgenerator');
@@ -28,7 +44,7 @@ class device_on_off extends CI_Controller
 					}*/
 			
 		//die(randomPassword()."====".randomPhoneCode());
-		$this->load->view('device_on_off');
+		//$this->load->view('device_on_off');
 		
 		///////////////////////////////////////////////////////////////////
 		//$data = array('name'=>'hasitha','arr1'=>$this->session->userdata('user_roles'));
@@ -67,6 +83,12 @@ class device_on_off extends CI_Controller
 		}
 		
 */		
+	}
+
+	function switch_device()
+	{
+		$this->load->model('deviceonoff_model');
+		$this->deviceonoff_model->switch_device();
 	}
 	
 	

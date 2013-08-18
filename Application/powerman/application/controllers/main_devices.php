@@ -9,7 +9,14 @@ class Main_devices extends CI_Controller
 		
 		$data = array('content'=>$result,'user_roles_arr'=>$this->session->userdata('user_roles'));
 		
-		$this->load->view('main_devices',$data);
+		if(!($this->session->userdata('is_logged_in')))
+		{
+			$this->load->view('access_denied');
+		}
+		else 
+		{
+			$this->load->view('main_devices',$data);
+		}
 	}
 	
 }

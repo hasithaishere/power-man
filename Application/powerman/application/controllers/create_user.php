@@ -4,7 +4,14 @@ class create_user extends CI_Controller
 {
 	function index()
 	{
-		$this->load->view('create_user');
+		if(!($this->session->userdata('is_logged_in')))
+		{
+			$this->load->view('access_denied');
+		}
+		else 
+		{
+			$this->load->view('create_user');
+		}
 	}
 	
 	function add_new_user()
