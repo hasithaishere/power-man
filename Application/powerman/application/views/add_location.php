@@ -81,8 +81,8 @@
              </div>            
                         
              
-             
-             <a id="save_location" href="#" role="button" class="btn btn-primary"><i class="icon-share icon-white"></i><span class="break"></span> Save Location</a>
+             <i class="icon-share icon-white"></i><input type="submit" id="save_location" class="btn btn-primary" value="Save Location" />
+           <!--  <a id="save_location" href="#" role="button" class="btn btn-primary"><i class="icon-share icon-white"></i><span class="break"></span> Save Location</a>-->
              </form>
                 <hr>
              

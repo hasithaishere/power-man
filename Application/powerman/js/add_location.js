@@ -9,22 +9,28 @@
 	var sub_nameDetails = $("#sub_nameDetails");
 	var location_description = $("#location_description");
 	var location_descriptionDetails = $("#location_descriptionDetails");
+	
  
  location_name.blur(validateLocationname);
  sub_name.blur(validatesubLocationname);
  location_description.blur(validateLocationDescription);
  
+ 
  location_name.keyup(validateLocationname);
  sub_name.keyup(validatesubLocationname);
  location_description.keyup(validateLocationDescription);
  
+ $("input[type=submit]").attr("disabled", "disabled");
 	
  
  lform.submit(function(){
 			if(validateLocationname() && validatesubLocationname() && validateLocationDescription() ){
+				$("input[type=submit]").removeAttr("disabled");
 			return true;
 			
 			}else{
+				
+				$("input[type=submit]").attr("disabled", "disabled");
 				return false;
 				
 			}
@@ -81,7 +87,7 @@
 	
 	
 	
-	
+/*	
 	
 	var $input = $('input:text'),
     $send = $('#save_location');    
@@ -96,7 +102,7 @@
     });
     trigger ? $send.attr('disabled', true) : $send.removeAttr('disabled');
 });
-	
+	*/
 	
 	
  });
@@ -137,12 +143,16 @@ $(function() {
         success: function() {
 			   $send = $('#save_location');    
 	$send.attr('disabled', false);
+	
+	
             return true;
         },
         error: function() {
 			
+		
     $send = $('#save_location');    
 	$send.attr('disabled', true);
+	
             return false;
         }
     });
