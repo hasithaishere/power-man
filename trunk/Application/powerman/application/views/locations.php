@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>	
- <?php include 'includes/head.php'; ?>			
+ <?php include 'includes/head.php'; ?>	
+ 
+		
 </head>
 
 <body>
@@ -43,7 +45,8 @@
 			
                      
 			<div class="row-fluid">
-				
+				<a href="<?php echo base_url(); ?>add_location" role="button" class="btn btn-primary"><i class="icon-plus-sign icon-white"></i><span class="break"></span> ADD New Location</a>
+                <hr>
 			<?php
 				$i = 0;
 				foreach($content as $rows)
@@ -86,20 +89,19 @@
 									//echo "<td>Admin</td>";
 			?>
            
-			<!--<div class="row">
+		<!-- <div class="row">
             
             
-              <div class="box span3">
-              <div class="thumbnail">
-              <center><h3>Domore Office Location</h3>
-              <span class="label label-success">Active</span>
+             <div class="box span3">
+              <div class="thumbnail" id="add_thumbnail">
+              <center><h3>Add New Location</h3>
+              
               </center>
-                 <img src="<?php echo base_url(); ?>img/user.jpg" alt="">
-                  <div class="caption">
-                    <h3>Company Package</h3>
-                    <p>Domore Technology Office Area</p>
-                   <a href="<?php echo base_url(); ?>main_devices" class="btn btn-primary">Main Device</a>
-                   <a href="<?php echo base_url(); ?>sub_devices" class="btn btn-primary">Sub Device</a> 
+                 <img src="<?php echo base_url(); ?>img/add.jpg" alt="">
+                  <div class="caption"> 
+                    
+                  <center><a href="#add_new_location" role="button" class="btn btn-primary" data-toggle="modal"><i class="icon-plus-sign icon-white"></i><span class="break"></span> ADD Location</a></center>
+                   
                   </div>
                 </div>
               </div>
@@ -119,8 +121,6 @@
 		<!-- end: footer-->
 				
 	</div><!--/.fluid-container-->
-
-	
 	
 	
 </body>
