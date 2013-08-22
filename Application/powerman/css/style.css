@@ -1192,3 +1192,11 @@ background-color: #cb9800;
   max-width: 100%;
   width:300px !important;
 }
+/*------------------------------------add_thumbnail--------------------*/
+
+#add_thumbnail{
+	background-color:#373737;
+}
+#add_thumbnail h3{
+	color:#ffffff;
+}

@@ -9,6 +9,7 @@
 	<!-- end: Mobile Specific -->
 	
 	<!-- start: CSS -->
+    
 	<link id="bootstrap-style" href="<?php echo base_url(); ?>css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?php echo base_url(); ?>css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link id="base-style" href="<?php echo base_url(); ?>css/style.css" rel="stylesheet">
@@ -17,7 +18,7 @@
     <link id="base-style-responsive" href="<?php echo base_url(); ?>css/font-awesome.css" rel="stylesheet">
     <link id="base-style-responsive" href="<?php echo base_url(); ?>css/jquery-ui-1.8.21.custom.css" rel="stylesheet">
     <link id="base-style-responsive" href="<?php echo base_url(); ?>css/bootstrap-switch.css" rel="stylesheet">
-    
+    <link id="base-style-responsive" href="<?php echo base_url(); ?>css/bootstrap-fileupload.css" rel="stylesheet">
     
 	<!--[if lt IE 7 ]>
 	<link id="ie-style" href="<?php echo base_url(); ?>css/style-ie.css" rel="stylesheet">
@@ -96,6 +97,6 @@
 		<script src="<?php echo base_url();?>js/jquery.knob.js"></script>
 	
 		<script src="<?php echo base_url();?>js/jquery.sparkline.min.js"></script>
-
+<script src="<?php echo base_url();?>js/bootstrap-fileupload.js"></script>
 
 <!-- end: JavaScript-->	
