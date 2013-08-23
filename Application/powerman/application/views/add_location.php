@@ -48,7 +48,7 @@
 		
 <div id="container">
 	<h1>Create a New Location</h1>
-    	<form method="post" id="add_location_form" action="<?php echo base_url();?>index.php/create_user/add_new_user">
+    	<form method="post" id="add_location_form" action="<?php echo base_url();?>index.php/add_location/add_new_location" >
         	<div>
             	<label for="location_name">Location Name </label>
                 <input id="location_name" name="location_name" type="text" />
@@ -74,7 +74,10 @@
             <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
             <div>
             <span id="imgDetails">Upload a image for your Location</span>
-            <span class="btn btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file" name="image" id="image" /></span>
+            <span class="btn btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span>
+           
+            <?php echo form_open_multipart('upload/do_upload');?>
+            <input type="file" name="image" id="image" /></span>
             <a href="#" class="btn btn-file fileupload-exists" data-dismiss="fileupload">Remove</a>
             </div>
             </div>
@@ -83,6 +86,9 @@
              
              <i class="icon-share icon-white"></i><input type="submit" id="save_location" class="btn btn-primary" value="Save Location" />
            <!--  <a id="save_location" href="#" role="button" class="btn btn-primary"><i class="icon-share icon-white"></i><span class="break"></span> Save Location</a>-->
+           <div>
+             	<?php echo validation_errors('<div class="alert alert-danger">');?>
+             </div>
              </form>
                 <hr>
              
