@@ -13,11 +13,11 @@ class add_location_model extends CI_Model
 			'image_url' => 'user.jpg',
 			//'image_url' => $this->$data['file_name'],
 			'user_id' => '2'
-			 
+			// 'user_id' =>$this->session->userdata('id')
 		);
 		
 		$return_val = $this->db->insert('power_location',$location_data);
-		
+		return $return_val;
 		
 		
 		

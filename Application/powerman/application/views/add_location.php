@@ -2,7 +2,7 @@
 <html lang="en">
 <head>	
  <?php include 'includes/head.php'; ?>	
- 		<script src="<?php echo base_url();?>js/add_location.js"></script>
+ 	<!--	<script src="<?php echo base_url();?>js/add_location.js"></script>-->
 </head>
 
 <body>
@@ -31,7 +31,10 @@
 						<a href="<?php echo base_url(); ?>main_panel">Home</a> <span class="divider">/</span>
 					</li>
 					<li>
-						<a href="<?php echo base_url(); ?>locations">Locations</a>
+						<a href="<?php echo base_url(); ?>locations">Locations</a> <span class="divider">/</span>
+					</li>
+                    <li>
+						<a href="<?php echo base_url(); ?>add_location">Add Location</a>
 					</li>
 				</ul>
 				
@@ -48,7 +51,13 @@
 		
 <div id="container">
 	<h1>Create a New Location</h1>
-    	<form method="post" id="add_location_form" action="<?php echo base_url();?>index.php/add_location/add_new_location" >
+    
+     <?php if(validation_errors()):?>
+                <div class='alert alert-error span12'><?php echo validation_errors(); ?></div>
+                <?php endif;?>
+                
+                <hr>
+    	<form method="post" id="add_location_form" action="<?php echo base_url();?>add_location/add_new_location" >
         	<div>
             	<label for="location_name">Location Name </label>
                 <input id="location_name" name="location_name" type="text" />
@@ -76,20 +85,20 @@
             <span id="imgDetails">Upload a image for your Location</span>
             <span class="btn btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span>
            
-            <?php echo form_open_multipart('upload/do_upload');?>
-            <input type="file" name="image" id="image" /></span>
+            <?php echo form_open_multipart('add_location/do_upload');?>
+            <input type="file" name="userfile" id="image" /></span>
             <a href="#" class="btn btn-file fileupload-exists" data-dismiss="fileupload">Remove</a>
             </div>
             </div>
              </div>            
                         
              
-             <i class="icon-share icon-white"></i><input type="submit" id="save_location" class="btn btn-primary" value="Save Location" />
+             <input type="submit" id="save_location" class="btn btn-primary" value="Save Location" />
            <!--  <a id="save_location" href="#" role="button" class="btn btn-primary"><i class="icon-share icon-white"></i><span class="break"></span> Save Location</a>-->
-           <div>
-             	<?php echo validation_errors('<div class="alert alert-danger">');?>
-             </div>
+          
              </form>
+             
+             
                 <hr>
              
  </div>	
