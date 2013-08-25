@@ -4,13 +4,17 @@ class create_user extends CI_Controller
 {
 	function index()
 	{
+		$this->load->model('create_user_model');
+		$result_packages = $this->create_user_model->get_packages();
+		$data['packages'] = $result_packages;
+		
 		if(!($this->session->userdata('is_logged_in')))
 		{
 			$this->load->view('access_denied');
 		}
 		else 
 		{
-			$this->load->view('create_user');
+			$this->load->view('create_user',$data);
 		}
 	}
 	

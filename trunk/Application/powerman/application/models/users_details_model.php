@@ -10,4 +10,26 @@ class users_details_model extends CI_Model
 		return $result;
 	}
 	
+	function delete_user($user_id)
+	{
+		$data = array('status' => '0');
+		
+		$this->db->where('id', $user_id);
+		
+		$this->db->update('power_users', $data);
+		
+		redirect("users_details");
+	}
+	
+	function change_state_user($user_id,$admin_state)
+	{
+		$data = array('adminstatus' => $admin_state);
+		
+		$this->db->where('id', $user_id);
+		
+		$this->db->update('power_users', $data);
+		
+		redirect("users_details");
+	}
+	
 }

@@ -1,6 +1,7 @@
-<?xml version=1.0 encoding=UTF-8 ?>
+<?xml version="1.0" encoding="utf-8"?>
+<countries>
 <country><code>AF</code><name>Afghanistan</name></country>
-<country><code>AX</code><name>Åland Islands</name></country>
+<country><code>AX</code><name>Aland Islands</name></country>
 <country><code>AL</code><name>Albania</name></country>
 <country><code>DZ</code><name>Algeria</name></country>
 <country><code>AS</code><name>American Samoa</name></country>
@@ -243,3 +244,4 @@
 <country><code>YE</code><name>Yemen</name></country>
 <country><code>ZM</code><name>Zambia</name></country>
 <country><code>ZW</code><name>Zimbabwe</name></country>
+</countries>

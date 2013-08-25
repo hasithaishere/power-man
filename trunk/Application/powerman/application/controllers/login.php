@@ -68,18 +68,25 @@ class login extends CI_Controller
 			
 			if($status == 1)
 			{
-				if($registerstatus == 1)
+				if($adminstatus == 1)
 				{
-					redirect('main_panel');
+					if($registerstatus == 1)
+					{
+						redirect('main_panel');
+					}
+					else
+					{
+						redirect('confirm_user');
+					}
 				}
 				else
 				{
-					redirect('confirm_user');
+					redirect('error_user');
 				}
 			}
 			else
 			{
-				redirect('signout');
+				redirect('error_user');
 			}
 			
 			/*if($role == 1)
