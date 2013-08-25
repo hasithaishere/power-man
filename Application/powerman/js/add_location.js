@@ -139,7 +139,7 @@
 
 $(function() {
     $('#image').checkFileType({
-        allowedExtensions: ['jpg', 'jpeg','png','gif'],
+        allowedExtensions: ['jpg', 'jpeg'],
         success: function() {
 			   $send = $('#save_location');    
 	$send.attr('disabled', false);
