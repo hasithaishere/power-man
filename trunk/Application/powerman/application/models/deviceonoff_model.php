@@ -6,9 +6,17 @@ class deviceonoff_model extends CI_Model
 	{
 		$this->db->where('status','1');
 		$this->db->where('maindevice_id',$maindevice_id);
-		$result = $this->db->get('power_user_subdevices')->result_array();
+		$result = $this->db->get('power_user_subdevices');
 		
-		return $result;
+		if($result->num_rows > 0)
+		{
+			return $result->result_array();
+		}
+		else 
+		{
+			redirect("locations");	
+		}	
+		
 	}
 	
 	function get_subdevices_control($maindevice_id)

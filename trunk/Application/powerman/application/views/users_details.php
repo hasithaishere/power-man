@@ -116,7 +116,7 @@
 											echo "<a class=\"btn btn-info dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\"><span class=\"caret\"></span></a>";
 									        echo "<ul class=\"dropdown-menu\" style=\"min-width:88px;\">";
 											
-									        echo "<li><a href=\"". base_url() ."edit_user/index/" . $rows['id'] . "\" user_id=\"". $rows['id'] ."\"><i class=\"icon-pencil\"></i> Profile</a></li>";
+									        echo "<li><a href=\"". base_url() ."edit_user/index/" . $this->encrypt_data->encode($rows['id']) . "\" user_id=\"". $rows['id'] ."\"><i class=\"icon-pencil\"></i> Profile</a></li>";
 									        echo "<li><a href=\"#change_status_user\" user_id=\"". $rows['id'] ."\" admin_s=\"" .$rows['adminstatus'] . "\" class=\"changestatus_s\" data-toggle=\"modal\"><i class=\"icon-ban-circle\"></i> " . $val_admin_s . "</a></li>";
 									        
 									        echo "<li class=\"divider\"></li>";
@@ -233,7 +233,7 @@
 				
 				$(".deluser_s").click(function(){
 					
-					$("#model_btn_deluser").attr('href',"users_details/delete_user/" + $(this).attr('user_id'));
+					$("#model_btn_deluser").attr('href',"<?php echo base_url();?>users_details/delete_user/" + $(this).attr('user_id'));
 				
 				});
 				
@@ -260,7 +260,7 @@
 						}
 					}
 
-					$("#model_btn_csuser").attr('href',"users_details/change_state_user/" + $(this).attr('user_id') + "/" + enable_temp_val);
+					$("#model_btn_csuser").attr('href',"<?php echo base_url();?>users_details/change_state_user/" + $(this).attr('user_id') + "/" + enable_temp_val);
 				
 				});
 
