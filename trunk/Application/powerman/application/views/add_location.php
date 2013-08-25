@@ -2,7 +2,7 @@
 <html lang="en">
 <head>	
  <?php include 'includes/head.php'; ?>	
- 	<!--	<script src="<?php echo base_url();?>js/add_location.js"></script>-->
+ 		<!--<script src="<?php echo base_url();?>js/add_location.js"></script>-->
 </head>
 
 <body>
@@ -54,10 +54,19 @@
     
      <?php if(validation_errors()):?>
                 <div class='alert alert-error span12'><?php echo validation_errors(); ?></div>
+                 
                 <?php endif;?>
                 
+                <?php echo $error;?>
+      
+              
+              
                 <hr>
-    	<form method="post" id="add_location_form" action="<?php echo base_url();?>add_location/add_new_location" >
+                
+                 <?php
+				 $attributes = array('id' => 'add_location_form');
+				  echo form_open_multipart('add_location/do_upload', $attributes);?>
+    	<!--<form method="post" id="add_location_form" action="<?php echo base_url();?>add_location/add_new_location" >-->
         	<div>
             	<label for="location_name">Location Name </label>
                 <input id="location_name" name="location_name" type="text" />
@@ -78,16 +87,17 @@
              
              <div>
              <label for="imageUpload">Location Image </label>
-             <div class="fileupload fileupload-new" data-provides="fileupload">
+            <div class="fileupload fileupload-new" data-provides="fileupload">
             <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;"><img src="<?php echo base_url();?>img/no+image.gif" /></div>
             <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
             <div>
             <span id="imgDetails">Upload a image for your Location</span>
             <span class="btn btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span>
            
-            <?php echo form_open_multipart('add_location/do_upload');?>
+           
             <input type="file" name="userfile" id="image" /></span>
-            <a href="#" class="btn btn-file fileupload-exists" data-dismiss="fileupload">Remove</a>
+           
+          <a href="#" class="btn btn-file fileupload-exists" data-dismiss="fileupload">Remove</a>
             </div>
             </div>
              </div>            
