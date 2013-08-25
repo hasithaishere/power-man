@@ -17,5 +17,18 @@ class Users_details extends CI_Controller
 		{
 			$this->load->view('users_details',$data);
 		}
-	}	
+	}
+	
+	function delete_user($user_id)
+	{
+		$this->load->model('users_details_model');
+		$this->users_details_model->delete_user($user_id);
+	}
+	
+	function change_state_user($user_id,$admin_state)
+	{
+		$this->load->model('users_details_model');
+		$this->users_details_model->change_state_user($user_id,$admin_state);
+	}
+	
 }

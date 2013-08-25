@@ -52,4 +52,13 @@ class create_user_model extends CI_Model
 		
 		
 	}
+
+	function get_packages()
+	{
+		$this->db->where('status','1');
+		$result = $this->db->get('power_packges')->result_array();
+
+		return $result;
+	}
+
 }
