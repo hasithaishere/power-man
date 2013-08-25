@@ -52,7 +52,7 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array('database','session','email','nusoap_base','encrypt');
+$autoload['libraries'] = array('database','session','email','nusoap_base','encrypt_data');
 
 
 /*
