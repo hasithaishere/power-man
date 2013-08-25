@@ -65,7 +65,7 @@
                   	echo "<div class=\"caption\">";
                     echo "<h3>" . $rows['sub_name'] . "</h3>";
                     echo "<p>" . $rows['description'] . "</p>";
-                    echo "<a href=\"" . base_url() . "main_devices/index/" . $rows['id'] . "\" class=\"btn btn-primary\">Main Device</a>";
+                    echo "<a href=\"" . base_url() . "main_devices/index/" . $this->encrypt_data->encode($rows['id']) . "\" class=\"btn btn-primary\">Main Device</a>";
                   	echo "</div></div></div>";
 					
 					if($i == 3)

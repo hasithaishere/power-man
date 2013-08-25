@@ -4,6 +4,8 @@ class device_on_off extends CI_Controller
 {
 	function index($maindevice_id)
 	{
+		$maindevice_id = $this->encrypt_data->decode($maindevice_id);
+		
 		$this->load->model('deviceonoff_model');
 		$result = $this->deviceonoff_model->get_subdevices($maindevice_id);	
 		$result2 = $this->deviceonoff_model->get_subdevices_control($maindevice_id);	

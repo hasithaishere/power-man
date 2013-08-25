@@ -4,6 +4,8 @@ class edit_user extends CI_Controller
 {
 	function index($user_id)
 	{
+		$user_id = $this->encrypt_data->decode($user_id);
+		
 		$this->load->model('create_user_model');
 		$result_packages = $this->create_user_model->get_packages();
 		$data['packages'] = $result_packages;

@@ -294,7 +294,6 @@
 				                type: "POST",
 				                url: "<?php echo site_url('device_on_off/switch_device'); ?>",
 								dataType: 'json',
-								async: false,
 				                data: form_data,
 				                success: function(msg){
 									//alert(msg.t2);

@@ -2,13 +2,6 @@
 
 class encrypt_data {
 	
-	function __construct()
-	{
-		parent::__construct();
-		$CI = &get_instance();
-		$skey = $this->config->item('encryption_key'); 
-	}	
-	
     public  function safe_b64encode($string) {
 	
         $data = base64_encode($string);
@@ -27,21 +20,25 @@ class encrypt_data {
 	
     public function encode($value){ 
 		
+		$CI = &get_instance();
+		
 	    if(!$value){return false;}
         $text = $value;
         $iv_size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_ECB);
         $iv = mcrypt_create_iv($iv_size, MCRYPT_RAND);
-        $crypttext = mcrypt_encrypt(MCRYPT_RIJNDAEL_256, $this->skey, $text, MCRYPT_MODE_ECB, $iv);
+        $crypttext = mcrypt_encrypt(MCRYPT_RIJNDAEL_256, $CI->config->item('encryption_key'), $text, MCRYPT_MODE_ECB, $iv);
         return trim($this->safe_b64encode($crypttext)); 
     }
     
     public function decode($value){
 		
+		$CI = &get_instance();
+		
         if(!$value){return false;}
         $crypttext = $this->safe_b64decode($value); 
         $iv_size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_ECB);
         $iv = mcrypt_create_iv($iv_size, MCRYPT_RAND);
-        $decrypttext = mcrypt_decrypt(MCRYPT_RIJNDAEL_256, $this->skey, $crypttext, MCRYPT_MODE_ECB, $iv);
+        $decrypttext = mcrypt_decrypt(MCRYPT_RIJNDAEL_256, $CI->config->item('encryption_key'), $crypttext, MCRYPT_MODE_ECB, $iv);
         return trim($decrypttext);
     }
 	
