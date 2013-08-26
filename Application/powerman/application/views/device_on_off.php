@@ -96,6 +96,7 @@
 		                    echo "<span>" . $rows2['pcon'] . "</span>";
 							
 							echo "</div><div class=\"caption\">";
+							echo "<a class=\"btn btn-success\"><i class=\"icon-signal icon-white icon-2x\" ></i> Log</a>";
 		                    echo "<div class=\"switch\"  id=\"on_off_switch\" data-on=\"success\" data-off=\"danger\">";
 		                    
 							$on_off_val = "";
