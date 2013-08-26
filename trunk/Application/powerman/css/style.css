@@ -1171,15 +1171,16 @@ background-color: #cb9800;
 =================================================================== */
 
 #device-thumbnail .progress{
-	width:70% !important;
+	width:90% !important;
 	margin: 0 auto;	
 }
 
 #on_off_switch{
 	position:relative;
-	margin-top:10px;
+/*	margin-top:10px;
+	margin-right:25px; */
 	float:right;
-	margin-right:25px;
+	
 	
 }
 #device-thumbnail .caption{

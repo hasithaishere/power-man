@@ -56,35 +56,41 @@
                 <div class='alert alert-error span12'><?php echo validation_errors(); ?></div>
                  
                 <?php endif;?>
-                
-                <?php echo $error;?>
-                
-      
-              
-              
+
                 <hr>
                 
                  <?php
-				 $attributes = array('id' => 'add_location_form');
-				  echo form_open_multipart('add_location/do_upload', $attributes);?>
+				 $attributes = array('id' => 'add_mainDevice_form');
+				  echo form_open('add_newMainDevice/do_upload', $attributes);?>
     	<!--<form method="post" id="add_location_form" action="<?php echo base_url();?>add_location/add_new_location" >-->
         	<div>
-            	<label for="location_name">Location Name </label>
-                <input id="location_name" name="location_name" type="text" />
-                <span id="location_nameDetails">What's your Location name?</span>
+            	<label for="main_device_title">Device Title </label>
+                <input id="main_device_title" name="main_device_title" type="text" />
+                <span id="main_device_titleDetails">What's your Main Device Title?</span>
              </div>
              
              <div>
-            	<label for="sub_name">Sub Name </label>
-                <input id="sub_name" name="sub_name" type="text" />
-                <span id="sub_nameDetails">What's your location's sub name?</span>
+            	<label for="main_device_id">Device ID </label>
+                <input id="main_device_id" name="main_device_id" type="text" />
+                <span id="main_device_idDetails">What's your Device ID?</span>
+             </div>
+             
+             <div>
+            	<label for="main_device_serialno">Device Serial No </label>
+                <input id="main_device_serialno" name="main_device_serialno" type="text" />
+                <span id="main_device_serialnoDetails">What's your Device Serial No?</span>
              </div>
              
               <div>
-            	<label for="location_description">Description </label>
-                <textarea name="location_description" id="location_description" cols="45" rows="5" tabindex="1"></textarea>
-                <span id="location_descriptionDetails">Description about the new Location?</span>
-             </div>
+                <label for="main_device_type">Device Type</label>
+                <select name="main_device_type2" id="main_device_type2">
+                <option value="business">Main Device Type 1</option>
+                <option value="company" >Main Device Type 2</option>
+                <option value="home">Main Device Type 3</option>
+
+                </select>
+                <span id="main_device_type_Details">What's your Main Device Type?</span>  
+          <div> 
              
              <div>
              <label for="imageUpload">Location Image </label>
@@ -104,7 +110,7 @@
              </div>            
                         
              
-             <input type="submit" id="save_location" class="btn btn-primary" value="Save Location" />
+             <input type="submit" id="save_mainDevice" class="btn btn-primary" value="Save Main Device" />
            <!--  <a id="save_location" href="#" role="button" class="btn btn-primary"><i class="icon-share icon-white"></i><span class="break"></span> Save Location</a>-->
           
              </form>
@@ -114,28 +120,7 @@
              
  </div>	
            
-		<!-- <div class="row">
-            
-            
-             <div class="box span3">
-              <div class="thumbnail" id="add_thumbnail">
-              <center><h3>Add New Location</h3>
-              
-              </center>
-                 <img src="<?php echo base_url(); ?>img/add.jpg" alt="">
-                  <div class="caption"> 
-                    
-                  <center><a href="#add_new_location" role="button" class="btn btn-primary" data-toggle="modal"><i class="icon-plus-sign icon-white"></i><span class="break"></span> ADD Location</a></center>
-                   
-                  </div>
-                </div>
-              </div>
-              
-              
-            </div>
-              
-              
-			<hr>-->
+		
 			
 			
 		
