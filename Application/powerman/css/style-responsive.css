@@ -127,6 +127,9 @@
 /* Higher than 960 (desktop devices)
 ====================================================================== */
 @media only screen and (min-width: 980px) and (max-width: 1199px){
+	#on_off_switch_icon{
+	width:50.7179%!important;	
+}
 	
 	#content {
 		-webkit-box-shadow: -3px -1px 2px rgba(0,0,0,0.95);
@@ -259,6 +262,10 @@
 /* Tablet Portrait (devices and browsers)
 ====================================================================== */
 @media only screen and (min-width: 768px) and (max-width: 979px) {
+	
+	#on_off_switch_icon{
+	width:50.7179%!important;	
+}
 	
 	#content {
 		-webkit-box-shadow: -2px -1px 2px rgba(0,0,0,0.95);

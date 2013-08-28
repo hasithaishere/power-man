@@ -1175,14 +1175,9 @@ background-color: #cb9800;
 	margin: 0 auto;	
 }
 
-#on_off_switch{
-	position:relative;
-/*	margin-top:10px;
-	margin-right:25px; */
-	float:right;
-	
-	
-}
+/*#on_off_switch_icon{
+	width:50.7179%!important;	
+}*/
 #device-thumbnail .caption{
 	overflow:hidden;
 }
@@ -1201,3 +1196,72 @@ background-color: #cb9800;
 #add_thumbnail h3{
 	color:#ffffff;
 }
+/* Circle stats
+=================================================================== */
+
+.circleStats {text-align: center; position: relative;}
+.circleStatsItem {
+	position: relative;
+	background:#FFF;
+	-webkit-box-shadow: inset 0 0px 0 2px rgba(0,0,0,.2), 0 0px 0 4px rgba(0,0,0,.1);
+	   -moz-box-shadow: inset 0 0px 0 2px rgba(0,0,0,.2), 0 0px 0 4px rgba(0,0,0,.1);
+	        box-shadow: inset 0 0px 0 2px rgba(0,0,0,.2), 0 0px 0 4px rgba(0,0,0,.1);
+	-webkit-border-radius: 50em;
+	   -moz-border-radius: 50em;
+	      	border-radius: 50em; 
+	width:120px; 
+	height: 120px;
+	margin: 10px auto;
+}
+	
+	
+.circleStatsItem i {
+	font-size: 30px; 
+	position: absolute; 
+	top:30%; 
+	margin-top: 0px; 
+	width: 100%; 
+	text-align: center
+}
+
+.circleStatsItem.orange, .circleStatsItem.orange i {color:#FA5833; }
+.circleStatsItem.lightorange, .circleStatsItem.lightorange i {color:#f4a70c; }
+.circleStatsItem.blue, .circleStatsItem.blue i {color:#2FABE9; }
+.circleStatsItem.green, .circleStatsItem.green i {color:#b9e672; }
+.circleStatsItem.yellow, .circleStatsItem.yellow i {color:#e7e572; }
+.circleStatsItem.pink, .circleStatsItem.pink i {color:#e42b75; }
+		
+.circleStatsItem input {
+	cursor: default;
+	box-shadow: none;
+	border: none;
+	height: auto;
+	position: absolute;
+	top:20px;
+	left: 120px;
+	border-color: rgba(0, 0, 0, 0.8);
+}
+	
+.circleStatsItem .plus {
+	font-size: 16px; 
+	position: absolute; 
+	top:55%; 
+	margin-left: 30px;
+}
+
+.circleStatsItem .percent {
+	font-size: 14px;
+	position: absolute;
+	top:57%; 
+	margin-left: 78px;
+}
+	
+	
+.circleStatsItem input:focus {
+	outline: 0;
+	outline: thin dotted 0;
+  	-webkit-box-shadow: none;
+       -moz-box-shadow: none;
+         	box-shadow: none;
+}
+

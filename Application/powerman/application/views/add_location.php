@@ -57,7 +57,7 @@
                  
                 <?php endif;?>
                 
-                <?php echo $error;?>
+                <?php echo "<div class=\"alert alert-error span12\">".$error."</div>";?>
                 
       
               

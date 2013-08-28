@@ -93,18 +93,7 @@
           <div> 
              
              <div>
-             <label for="imageUpload">Location Image </label>
-            <div class="fileupload fileupload-new" data-provides="fileupload">
-            <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;"><img src="<?php echo base_url();?>img/no+image.gif" /></div>
-            <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
-            <div>
-            <span id="imgDetails">Upload a image for your Location</span>
-            <span class="btn btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span>
-           
-           
-            <input type="file" name="userfile" id="image" /></span>
-           
-          <a href="#" class="btn btn-file fileupload-exists" data-dismiss="fileupload">Remove</a>
+             <img src="<?php echo base_url(); ?>img/no+image.gif" class="img-rounded" />
             </div>
             </div>
              </div>            
