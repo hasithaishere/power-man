@@ -258,7 +258,7 @@ $(function () {
                         ,'fgColor' : $this.data('fgcolor') || '#87CEEB'
                         ,'cgColor' : $this.data('cgcolor') || $this.data('fgcolor') || '#87CEEB'
                         ,'bgColor' : $this.data('bgcolor') || '#EEEEEE'
-                        ,'tickColor' : $this.data('tickColor') || $this.data('fgcolor') || '#DDDDDD'
+                        ,'tickColor' : $this.data('tickColor') || $this.data('fgcolor') || '#FFFFFF'
                         ,'ticks' : $this.data('ticks') || 0
                         ,'tickLength' : $this.data('tickLength') || 0
                         ,'tickWidth' : $this.data('tickWidth') || 0.02

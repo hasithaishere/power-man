@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>	
- <?php include 'includes/head.php'; ?>			
+ <?php include 'includes/head.php'; ?>	
+	
 </head>
 
 <body>
@@ -43,6 +44,70 @@
                     
                         <hr>
 			
+                     <div class="row-fluid">
+				
+				<!--
+				<div class="circleStats">
+                    
+					<div class="span2" onTablet="span4" onDesktop="span2">
+                    	<div class="circleStatsItem red">
+							<i class="fa-icon-thumbs-up"></i>
+							<span class="plus">+</span>
+							<span class="percent">%</span>
+                        	<input type="text" value="58" class="orangeCircle" />
+                    	</div>
+						<div class="box-small-title">User satisfaction</div>
+					</div>
+					<div class="span2" onTablet="span4" onDesktop="span2">
+                    	<div class="circleStatsItem blue">
+                        	<i class="fa-icon-bullhorn"></i>
+							<span class="plus">+</span>
+							<span class="percent">%</span>
+                        	<input type="text" value="8" class="blueCircle" />
+                    	</div>
+						<div class="box-small-title">Popularity</div>
+					</div>
+					<div class="span2" onTablet="span4" onDesktop="span2">
+						<div class="circleStatsItem yellow">
+                        	<i class="fa-icon-user"></i>
+							<span class="plus">+</span>
+							<span class="percent">%</span>
+                        	<input type="text" value="12" class="yellowCircle" />
+                    	</div>
+						<div class="box-small-title">New users</div>
+					</div>
+					<div class="noMargin span2" onTablet="span4" onDesktop="span2">
+						<div class="circleStatsItem pink">
+                        	<i class="fa-icon-globe"></i>
+							<span class="plus">+</span>
+							<span class="percent">%</span>
+                        	<input type="text" value="23" class="pinkCircle" />
+                    	</div>
+						<div class="box-small-title">Visits</div>
+					</div>
+					<div class="span2" onTablet="span4" onDesktop="span2">
+                    	<div class="circleStatsItem green">
+                        	<i class="fa-icon-bar-chart"></i>
+							<span class="plus">+</span>
+							<span class="percent">%</span>
+                        	<input type="text" value="34" class="greenCircle" />
+                    	</div>
+						<div class="box-small-title">Income</div>
+					</div>
+					<div class="span2" onTablet="span4" onDesktop="span2">
+						<div class="circleStatsItem lightorange">
+                        	<i class="fa-icon-shopping-cart"></i>
+							<span class="plus">+</span>
+							<span class="percent">%</span>
+                        	<input type="text" value="42" class="lightOrangeCircle" />
+                    	</div>
+						<div class="box-small-title">Sales</div>
+					</div>
+
+                </div>-->
+			
+			</div>
+                     
                      
 			<div class="row-fluid">
 				
@@ -138,21 +203,75 @@
 				
 				
 				
+			<div class="row">
+            	<div class="span3 thumbnail" style="background-color:#373737;padding: 9px 9px 9px 9px;">
+                	<div class="row">
+                    	<div class="span8" style="color:#fff;"> 	
+                            Domore Office / Rathamalane
+                        </div>
+                        <div class="span4" style="#FFF">
+                        <img src="<?php echo base_url(); ?>img/small_washing_machin.jpg" alt=""> 
+                        </div>
+                        
+                        <div class="row" style="color:#FFF;">
+                        	<center>Washing Machine</center>
+                            <div class="circleStatsItem red">
+							<i class="fa-icon-thumbs-up"></i>
+							<span class="plus">+</span>
+							<span class="percent">%</span>
+                        	<input type="text" value="58" class="orangeCircle" />
+                    	</div>
+                        <div class="row">
+                        	<div class="span6" id="on_off_switch_icon" >
+                            
+                            <div class="switch"   data-on="success" data-off="danger">
+                   				 <input type="checkbox" checked /> 
+                           </div>
+                                 
+                    </div>
+                    
+                           
+                            <div class="span6" id="sub_device_icons">
+                             <span class="badge badge-warning"><i class="icon-warning-sign icon-white"></i></span>
+                            <span class="badge badge-important"><i class="icon-ok icon-white"></i></span>
+                            <span class="badge badge-success"><i class="icon-refresh icon-white"></i></span>
+                           		
+                            
+                             </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>	
 				
 				
 				
 				
-				
-<!--			<div class="row">
+	<!--		<div class="row">
 
               <div class="span3">
               <div class="thumbnail" id="device-thumbnail">
               
 					<center><div class="device-header"><p>LED BULB</p></div> </center>
-                   <img src="<?php echo base_url(); ?>img/bulb_off.jpg" alt=""> 
+                    <ul class="breadcrumb">
+					<li>
+						<a href="#">Domore Office</a> <span class="divider">/</span>
+					</li>
+					<li>
+						<a href="#">User Settings</a>
+					</li>
+				</ul>
+                    
+              <img src="<?php echo base_url(); ?>img/bulb_off.jpg" alt=""> 
                                <div class="progress">
                     <div class="bar" style="width: 50%"></div>
                     <span>50 W</span>
+                    <div class="circleStatsItem red">
+							<i class="fa-icon-thumbs-up"></i>
+							<span class="plus">+</span>
+							<span class="percent">%</span>
+                        	<input type="text" value="58" class="orangeCircle" />
+                    	
                 </div>
                    <div class="caption">
                    
@@ -162,99 +281,9 @@
                     </div>
                     </div>
  				 </div>
- 			</div>
+ 			</div>-->
 
- 			  <div class="span3">
-              <div class="thumbnail" id="device-thumbnail">
-					<center><div class="device-header"><p>WASHING MACHIN</p></div> </center>
-                   <img src="<?php echo base_url(); ?>img/washing_machin_off.jpg" alt=""> 
-                               <div class="progress">
-                    <div class="bar" style="width: 70%"></div>
-                    <span>70 W</span>
-                </div>
-                  
-                   <div class="caption">
-                   
-                   <div class="switch"  id="on_off_switch" data-on="success" data-off="danger">
-                    <input type="checkbox" checked />
-                    
-                    </div>
-                    </div>
-                  
-                   
- 				 </div>
- 			</div>
-            
-  			 <div class="span3">
-              <div class="thumbnail" id="device-thumbnail">
-					<center><div class="device-header"><p>REFRIGERATOR</p></div> </center>
-                   <img src="<?php echo base_url(); ?>img/refrigerator_off.jpg" alt=""> 
-                               <div class="progress">
-                    <div class="bar" style="width: 60%"></div>
-                    <span>60 W</span>
-                </div>
-                   
-                   
-                    <div class="caption">
-                   
-                   <div class="switch"  id="on_off_switch" data-on="success" data-off="danger">
-                    <input type="checkbox" checked />
-                    
-                    </div>
-                    </div>
-                   
- 				 </div>
- 			</div>  
-  
-  			<div class="span3">
-              <div class="thumbnail" id="device-thumbnail">
-					<center><div class="device-header"><p>FAN</p></div> </center>
-                   <img src="<?php echo base_url(); ?>img/fan_off.jpg" alt=""> 
-                               <div class="progress progress-danger progress-striped">
-                    <div class="bar" style="width: 80%"></div>
-                    <span>80 W</span>
-                </div>
-                   
-                   
-                    <div class="caption">
-                   
-                   <div class="switch"  id="on_off_switch" data-on="success" data-off="danger" data-toggle="model">
-                    <input type="checkbox" checked /> 
-                   </div>
-                  
-                  
-                  
-                   </div>
-                   
- 				 </div>
- 			</div> 
-  
-
-		
-    </div>  
-    <div class="row">
-    	<div class="span3">
-              <div class="thumbnail" id="device-thumbnail">
-					<center><div class="device-header"><p>FAN</p></div> </center>
-                   <img src="<?php echo base_url(); ?>img/fan_off.jpg" alt=""> 
-                               <div class="progress progress-danger progress-striped">
-                    <div class="bar" style="width: 80%"></div>
-                    <span>80 W</span>
-                </div>
-                   
-                    <div class="caption">
-                   
-                   <div class="switch"  id="on_off_switch" data-on="success" data-off="danger">
-                    <input type="checkbox" checked />
-                    
-                    </div>
-                    </div>
-                   
- 				 </div>
- 			</div> 
-  
-    </div>
-    ------->
+    
     
                   
 </div>

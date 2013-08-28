@@ -1,11 +1,10 @@
 // JavaScript Document
 
- $('.fileupload').fileupload();
  $(document).ready(function() {
- var lform = $("#add_location_form");
-	var location_name = $("#location_name");
-	var location_nameDetails = $("#location_nameDetails");
-	var sub_name = $("#sub_name");
+ var mainDevice_form = $("#add_mainDevice_form");
+	var main_device_title = $("#main_device_title");
+	var main_device_id = $("#main_device_id");
+	var main_device_serialno = $("#main_device_serialno");
 	var sub_nameDetails = $("#sub_nameDetails");
 	var location_description = $("#location_description");
 	var location_descriptionDetails = $("#location_descriptionDetails");
@@ -36,7 +35,7 @@
 			}
 		});
  
- function validateLocationname(){
+	 function validateLocationname(){
 		if(location_name.val().length<5){
 			location_name.addClass("error");
 			location_nameDetails.text("Your Location name isn't that short. Make it 5 characters or more.");
@@ -106,58 +105,9 @@
 	
 	
  });
-(function($) {
-    $.fn.checkFileType = function(options) {
-        var defaults = {
-            allowedExtensions: [],
-            success: function() {},
-            error: function() {}
-        };
-        options = $.extend(defaults, options);
 
-        return this.each(function() {
 
-            $(this).on('change', function() {
-                var value = $(this).val(),
-                    file = value.toLowerCase(),
-                    extension = file.substring(file.lastIndexOf('.') + 1);
 
-                if ($.inArray(extension, options.allowedExtensions) == -1) {
-                    options.error();
-                    $(this).focus();
-                } else {
-                    options.success();
-
-                }
-
-            });
-
-        });
-    };
-
-})(jQuery);
-
-$(function() {
-    $('#image').checkFileType({
-        allowedExtensions: ['jpg', 'jpeg','png','gif'],
-        success: function() {
-			   $send = $('#save_location');    
-	$send.attr('disabled', false);
-	
-	
-            return true;
-        },
-        error: function() {
-			
-		
-    $send = $('#save_location');    
-	$send.attr('disabled', true);
-	
-            return false;
-        }
-    });
-
-});
  
  
 

@@ -197,3 +197,13 @@ border:1px solid #cecece;
 #add_location_form div span.error{
 	color:#e46c6e;
 }
+/*--------------------------Add_new_main_device---------------------------------*/
+#add_mainDevice_form div span{
+	margin-left:10px;
+	color:#b1b1b1;
+	font-size:11px;
+	font-style:italic;
+}
+#add_mainDevice_form div span.error{
+	color:#e46c6e;
+}
