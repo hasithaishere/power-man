@@ -243,6 +243,47 @@
                     </div>
                 </div>
             </div>	
+            
+            <div class="row">
+            	<div class="span3 thumbnail" style="background-color:#373737;padding: 9px 9px 9px 9px;">
+                	<div class="row">
+                    	<div class="span8" style="color:#fff;"> 	
+                            Domore Office / Colombo
+                        </div>
+                        <div class="span4" style="#FFF">
+                        <img src="<?php echo base_url(); ?>img/small_microware.jpg" alt=""> 
+                        </div>
+                        
+                        <div class="row" style="color:#FFF;">
+                        	<center>Microwave</center>
+                           <div class="circleStatsItem green">
+                        	<i class="fa-icon-bar-chart"></i>
+							<span class="plus">+</span>
+							<span class="percent">%</span>
+                        	<input type="text" value="34" class="greenCircle" />
+                    	</div>
+                        <div class="row">
+                        	<div class="span6" id="on_off_switch_icon" >
+                            
+                            <div class="switch"   data-on="success" data-off="danger">
+                   				 <input type="checkbox" checked /> 
+                           </div>
+                                 
+                    </div>
+                    
+                           
+                            <div class="span6" id="sub_device_icons">
+                             <span class="badge badge-warning"><i class="icon-warning-sign icon-white"></i></span>
+                            <span class="badge badge-important"><i class="icon-ok icon-white"></i></span>
+                            <span class="badge badge-success"><i class="icon-refresh icon-white"></i></span>
+                           		
+                            
+                             </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>	
 				
 				
 				
