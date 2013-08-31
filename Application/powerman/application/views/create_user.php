@@ -95,7 +95,7 @@
 			<?php
 			
 					$xmlDoc = new DOMDocument();
-					$xmlDoc->load($this->config->item('server_root') . "/xml/countries.xml");
+					$xmlDoc->load(base_url() . "/xml/countries.xml");
 					
 					$searchNode = $xmlDoc->getElementsByTagName( "country" );
 					

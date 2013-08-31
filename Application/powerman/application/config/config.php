@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://powerman.my:81';
+$config['base_url']	= 'http://powerman.hp';
 $config['server_root']	= $_SERVER['DOCUMENT_ROOT'];
 
 $config['admin_email']	= 'ruslpowerman@gmail.com';
@@ -30,7 +30,7 @@ $config['admin_email_name']	= 'Powerman Admin';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
