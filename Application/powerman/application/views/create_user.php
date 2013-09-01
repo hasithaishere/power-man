@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 
-<?php include 'includes/head.php'; ?>		
+<?php include 'includes/head.php'; ?>
+	
+		
 		
 </head>
 
@@ -156,6 +158,8 @@
              <div>
              	<?php echo validation_errors('<div class="alert alert-danger">');?>
              </div>
+             
+             
              </form>
 
 </div>

@@ -43,7 +43,9 @@ class create_user extends CI_Controller
 			if($query = $this->create_user_model->add_user())
 			{
 				$this->load->view('create_user');
+				
 			}
+			
 		}
 		
 	}

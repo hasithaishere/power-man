@@ -207,3 +207,64 @@ border:1px solid #cecece;
 #add_mainDevice_form div span.error{
 	color:#e46c6e;
 }
+
+/*-----------------------Add_new_package Form-----------------------------------*/
+#add_newPackage_form{
+	padding:0 10px 10px;
+}
+#add_newPackage_form label{
+	display:block;
+	color:#797979;
+	font-weight:700;
+	line-height:1.4em
+}
+#add_newPackage_form input{
+	width:220px;
+	padding:6px;
+	color:#949494;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	border:1px solid #cecece;
+}
+#add_newPackage_form input.error{
+	background:#f8dbdb;
+	border-color:#e77776;
+}
+#add_newPackage_form text{
+width:550px;
+height:80px;
+padding:6px;
+color:#adaeae;
+font-family:Arial, Helvetica, sans-serif;
+font-style:italic;
+font-size:12px;
+border:1px solid #cecece;
+}
+#add_newPackage_form textarea.error{
+	background:#f8dbdb;
+	border-color:#e77776;
+}
+#add_newPackage_form div{
+	margin-bottom:15px;
+}
+#add_newPackage_form div span{
+	margin-left:10px;
+	color:#b1b1b1;
+	font-size:11px;
+	font-style:italic;
+}
+#add_newPackage_form div span.error{
+	color:#e46c6e;
+}
+
+#add_newPackage_form #add{
+	background:#6f9ff1;
+	color:#fff;
+	font-weight:700;
+	font-style:normal;
+	border:0;
+	cursor:pointer;
+}
+#add_newPackage_form #add:hover{
+	background:#79a7f1;
+}
