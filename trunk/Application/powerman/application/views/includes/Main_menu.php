@@ -20,6 +20,11 @@
 							<ul>
 								<li><a class="submenu" href="#"><i class="fa-icon-file-alt"></i><span class="hidden-tablet"> Add User</span></a></li>
 								<li><a class="submenu" href="#"><i class="fa-icon-file-alt"></i><span class="hidden-tablet"> Add Location</span></a></li>
+                                <?php // if(in_array(1,$user_roles_arr))
+						//{?>
+                                <li><a class="submenu" href="<?php echo base_url(); ?>add_newPackage"><i class="fa-icon-file-alt"></i><span class="hidden-tablet"> Add New Package</span></a></li>
+                        <?php // } ?>
+                                
 								<li><a class="submenu" href="#"><i class="fa-icon-file-alt"></i><span class="hidden-tablet"> Add Main Device</span></a></li>
 							</ul>	
 						</li>
