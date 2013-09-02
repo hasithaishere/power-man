@@ -45,7 +45,7 @@
              </div>
              <div>
             	<label for="description">Description </label>
-                <textarea name="description" id="description" cols="45" rows="5" tabindex="1"></textarea>
+                <textarea name="Description" id="description" cols="45" rows="5" tabindex="1"></textarea>
                 <span id="descriptionDetails">Descrbe the features of the package</span>
              </div>
              <div>
@@ -66,16 +66,18 @@
              <div>
             	<label for="duration">Duration </label>
                 <input id="duration" name="duration" type="text" />
-                <span id="durationDetails">what is the duration of this package?</span>
+                <span id="durationDetails">what is the duration of this package(in days)?</span>
              </div>
               <div>
-            	<label for="expire_duration">Expire Duration </label>
+            	<label for="expire_duration">Expire Date </label>
                 <input id="eDuration" name="eDuration" type="text" />
-                <span id="expire_durationDetails">Expire duration of this package?</span>
+                <span id="expire_durationDetails">Expire date of this package in mm/dd/yyyy or mm-dd-yyyy?</span>
              </div>
               <div>
              	<input id="add" name="add" type="submit" value="Add package" />
              </div>
+             
+             
              </form>
              </div>
               

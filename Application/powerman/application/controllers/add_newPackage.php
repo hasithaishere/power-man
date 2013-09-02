@@ -5,7 +5,6 @@ class add_newPackage extends CI_Controller
 	function index()
 	{
 	
-	
 		$this->load->model('add_newPackage_model');
 
 		$new_packages = $this->add_newPackage_model->add_package();
@@ -20,7 +19,6 @@ class add_newPackage extends CI_Controller
 			$this->load->view('add_newPackage',$data);
 		}
 	}
-	
 	
 	
 }
