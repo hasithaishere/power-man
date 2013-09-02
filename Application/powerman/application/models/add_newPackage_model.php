@@ -4,7 +4,7 @@ class add_newPackage_model extends CI_Model
 {
 	function add_package()
 	{
-		 $this->load->database();
+		 
 		$package_data = array(
 		   		
 			'name' => $this->input->post('nPackage'),
@@ -15,10 +15,10 @@ class add_newPackage_model extends CI_Model
 			'duration' => $this->input->post('duration'),
             'expire_duration' => $this->input->post('eDuration'),
             );
-            $this->db->insert('power_packges',$package_data);
+            //$this->db->insert('power_packges',$package_data);
             
-          //  $return_val = $this->db->insert('power_packges',$package_data);
-           // return $return_val;
+            $return_val = $this->db->insert('power_packges',$package_data);
+            return $return_val;
 
       }
             
