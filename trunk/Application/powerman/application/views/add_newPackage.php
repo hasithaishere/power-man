@@ -37,7 +37,7 @@
                         <hr>
 <div id="container">
 	<h1>Add new package</h1>
-        	<form method="post" id="add_newPackage_form" action="<?php echo base_url();?>index.php/add_newPackage/new_package">
+        	<form method="post" id="add_newPackage_form" action="<?php echo base_url();?>index.php/add_newPackage/index">
             <div>
             	<label for="new_package">Package name </label>
                 <input id="nPackage" name="nPackage" type="text" />
