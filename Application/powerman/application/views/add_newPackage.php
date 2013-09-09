@@ -37,7 +37,7 @@
                         <hr>
 <div id="container">
 	<h1>Add new package</h1>
-        	<form method="post" id="add_newPackage_form" action="<?php echo base_url();?>index.php/add_newPackage/index">
+        	<form method="post" id="add_newPackage_form" action="<?php echo base_url();?>index.php/add_newPackage/add_new_package">
             <div>
             	<label for="new_package">Package name </label>
                 <input id="nPackage" name="nPackage" type="text" />
@@ -45,8 +45,8 @@
              </div>
              <div>
             	<label for="description">Description </label>
-                <textarea name="Description" id="description" cols="45" rows="5" tabindex="1"></textarea>
-                <span id="descriptionDetails">Descrbe the features of the package</span>
+                <textarea name="details" id="details" cols="45" rows="5" tabindex="1"></textarea>
+                <span id="dDetails">Descrbe the features of the package</span>
              </div>
              <div>
             	<label for="main_devices">Number of main devices </label>
@@ -71,13 +71,15 @@
               <div>
             	<label for="expire_duration">Expire Date </label>
                 <input id="eDuration" name="eDuration" type="text" />
-                <span id="expire_durationDetails">Expire date of this package in mm/dd/yyyy or mm-dd-yyyy?</span>
+                <span id="expire_durationDetails">Expire date of this package in YYYY-MM-DD?</span>
              </div>
               <div>
              	<input id="add" name="add" type="submit" value="Add package" />
              </div>
              
-             
+              <div>
+             	<?php echo validation_errors('<div class="alert alert-danger">');?>
+             </div>
              </form>
              </div>
               
