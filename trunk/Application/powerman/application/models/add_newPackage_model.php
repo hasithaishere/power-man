@@ -8,7 +8,7 @@ class add_newPackage_model extends CI_Model
 		$package_data = array(
 		   		
 			'name' => $this->input->post('nPackage'),
-			'description' => $this->input->post('description'),
+			'description' => $this->input->post('details'),
 			'main_devices' => $this->input->post('mDevices'),
 			'sub_devices' => $this->input->post('sDevices'),
 			'sms_amount' => $this->input->post('smsAmount'),
@@ -21,5 +21,14 @@ class add_newPackage_model extends CI_Model
             return $return_val;
 
       }
-            
+     
+	
+	function get_packages()
+	{
+		$this->db->where('status','1');
+		$result = $this->db->get('power_packges')->result_array();
+
+		return $result;
+	}
+			
 }

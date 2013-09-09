@@ -3,8 +3,8 @@ $(document).ready(function() {
     var form = $("#add_newPackage_form");
 	var nPackage = $("#nPackage");
 	var packageDetails = $("#packageDetails");
-	var description = $("#description");
-	var descriptionDetails = $("#descriptionDetails");
+	var description = $("#details");
+	var descriptionDetails = $("#dDetails");
 	var mDevices = $("#mDevices");
 	var mDeviceDetails = $("#mDeviceDetails");
 	var sDevices = $("#sDevices");
@@ -246,7 +246,7 @@ $(document).ready(function() {
 		
 		var dtValue = eDuration.val();
 		var dtRegex = new RegExp(/\b\d{1,2}[\/-]\d{1,2}[\/-]\d{4}\b/);
-		
+		//var dtRegex = new RegExp();
 		
 		if(dtRegex.test(dtValue)){
 			eDuration.removeClass("error");
@@ -316,18 +316,18 @@ $(document).ready(function() {
 	//}
 	
 		// $('#send').attr("disabled", true);
-	var $input = $('input:text'),
-    $add = $('#add');    
-	$add.attr('disabled', true);
+//	var $input = $('input:text'),
+  //  $add = $('#add');    
+	//$add.attr('disabled', true);
 
-	$input.keyup(function() {
-    var trigger = false;
-    $input.each(function() {
-        if (!$(this).val()) {
-            trigger = true;
-        }
-    });
-    trigger ? $add.attr('disabled', true) : $add.removeAttr('disabled');
-	});
+	//$input.keyup(function() {
+    //var trigger = false;
+    //$input.each(function() {
+      //  if (!$(this).val()) {
+        //    trigger = true;
+        //}
+    //});
+    //trigger ? $add.attr('disabled', true) : $add.removeAttr('disabled');
+	//});
 	
 });
