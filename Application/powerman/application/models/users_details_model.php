@@ -32,4 +32,5 @@ class users_details_model extends CI_Model
 		redirect("users_details");
 	}
 	
+	
 }
