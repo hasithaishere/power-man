@@ -3,7 +3,7 @@
 				<div class="nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
 						<li><a href="<?php echo base_url(); ?>main_panel"><i class="icon-home icon-white"></i><span class="hidden-tablet"> Dashboard</span></a></li>
-						<li><a href="#"><i class="icon-eye-open icon-white"></i><span class="hidden-tablet"> Monitor</span></a></li>
+						<li><a href="<?php echo base_url(); ?>power_monitoring"><i class="icon-eye-open icon-white"></i><span class="hidden-tablet"> Monitor</span></a></li>
 						<li><a class="dropmenu" href="#"><i class="icon-edit icon-white"></i><span class="hidden-tablet"> Control</span></a>
                         
                         <ul>
@@ -18,14 +18,14 @@
 						<li>
 							<a class="dropmenu" href="#"><i class="icon-list-alt icon-white"></i><span class="hidden-tablet"> Add</span></a>
 							<ul>
-								<li><a class="submenu" href="#"><i class="fa-icon-file-alt"></i><span class="hidden-tablet"> Add User</span></a></li>
+								
 								<li><a class="submenu" href="#"><i class="fa-icon-file-alt"></i><span class="hidden-tablet"> Add Location</span></a></li>
                                 <?php // if(in_array(1,$user_roles_arr))
 						//{?>
                                 <li><a class="submenu" href="<?php echo base_url(); ?>add_newPackage"><i class="fa-icon-file-alt"></i><span class="hidden-tablet"> Add New Package</span></a></li>
                         <?php // } ?>
                                 
-								<li><a class="submenu" href="#"><i class="fa-icon-file-alt"></i><span class="hidden-tablet"> Add Main Device</span></a></li>
+								<li><a class="submenu" href="<?php echo base_url(); ?>main_devices"><i class="fa-icon-file-alt"></i><span class="hidden-tablet"> Add Main Device</span></a></li>
 							</ul>	
 						</li>
                         <?php // if(in_array(5,$user_roles_arr))

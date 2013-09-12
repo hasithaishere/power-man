@@ -2,6 +2,8 @@
 <html lang="en">
 <head>	
  <?php include 'includes/head.php'; ?>	
+ 	
+
  		
 </head>
 
@@ -44,7 +46,7 @@
 			<!-- end: Quick button Menu -->
                         <hr>
 			
-            <div class="row-fluid sortable">
+          <!--  <div class="row-fluid sortable">
 			<div class="box span12">
 				<div class="box-header">
 					<h2><i class="icon-list-alt"></i><span class="break"></span>Realtime</h2>
@@ -59,11 +61,13 @@
 		</div><!--/row-->
 		
 		
-					<hr>
-                    
-			
-			
-		
+					
+           <div class="row-fluid sortable">   
+           <div class="box span12">      
+			<div id="charts" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+			</div>
+		</div>
+        <hr>
 		<div class="clearfix"></div>
 		
 		<!-- start: footer-->

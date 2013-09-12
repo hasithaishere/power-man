@@ -31,4 +31,6 @@ class Users_details extends CI_Controller
 		$this->users_details_model->change_state_user($user_id,$admin_state);
 	}
 	
+	
+	
 }
