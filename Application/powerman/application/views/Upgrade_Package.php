@@ -47,7 +47,14 @@
 
 <div id="container">
 	<h1>Request for Upgrade Package</h1>
-    	<form action="" method="post" id="upgrade_form">
+    <div>
+             	<?php if(validation_errors()):?>
+                <div class='alert alert-error span12'><?php echo validation_errors(); ?></div>
+                 
+                <?php endif;?>
+             </div>
+    	<form method="post" id="upgrade_form" action="<?php echo base_url();?>index.php/Upgrade_Package/upgrade">
+        
         	<div>
                 <label for="cpackage">Current Package</label>
                 <select name="pack1" id="pack1">
@@ -103,6 +110,7 @@
              <div>
              	<input id="upgrade" name="upgrade" type="submit" value="Upgrade" />
              </div>
+             
              </form>
 
 </div>
