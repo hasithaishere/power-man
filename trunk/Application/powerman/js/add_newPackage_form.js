@@ -13,8 +13,8 @@ $(document).ready(function() {
 	var sms_amountDetails = $("#sms_amountDetails");
 	var duration = $("#duration");
 	var durationDetails = $("#durationDetails");
-	var eDuration = $("#eDuration");
-	var expire_durationDetails = $("#expire_durationDetails");
+	//var eDuration = $("#eDuration");
+	//var expire_durationDetails = $("#expire_durationDetails");
 	
 	nPackage.blur(validate_nPackage);
 	description.blur(validate_description);
@@ -22,7 +22,7 @@ $(document).ready(function() {
 	sDevices.blur(validate_sDevices);
 	smsAmount.blur(validate_smsAmount);
 	duration.blur(validate_duration);
-	eDuration.blur(validate_eDuration);
+	//eDuration.blur(validate_eDuration);
 	
 	
 	nPackage.keyup(validate_nPackage);
@@ -31,7 +31,7 @@ $(document).ready(function() {
 	sDevices.keyup(validate_sDevices);
 	smsAmount.keyup(validate_smsAmount);
 	duration.keyup(validate_duration);
-	eDuration.keyup(validate_eDuration);
+	//eDuration.keyup(validate_eDuration);
 	
 	
 	
@@ -58,7 +58,7 @@ $(document).ready(function() {
 			
 		}
 	}
-	
+
 	function validate_description(){
 		if(description.val().length<25)
 		{
@@ -77,6 +77,7 @@ $(document).ready(function() {
 			
 		}
 	}
+
 	function validate_mDevices(){
 		
 		$(function(){
@@ -117,7 +118,7 @@ $(document).ready(function() {
 		
 				
 	}
-	
+
 	function validate_sDevices(){
 		
 		$(function(){
@@ -158,7 +159,7 @@ $(document).ready(function() {
 		
 				
 	}
-	
+
 	function validate_smsAmount(){
 		
 		$(function(){
@@ -199,7 +200,7 @@ $(document).ready(function() {
 		
 				
 	}
-	
+
 	function validate_duration(){
 		
 		$(function(){
@@ -217,7 +218,7 @@ $(document).ready(function() {
 					var key = e.keyCode;
 					if (!((key == 8) || (key == 46) || (key >= 35 && key <= 40) || (key >= 48 && key <= 57) || (key >= 96 && key <= 105))) 		
 					{
-					//alert ("Enter only numbers");	
+					//alert ("Enter only numbers");	/
 					duration.addClass("error");
 					durationDetails.text("Enter only numbers");
 					durationDetails.addClass("error");
@@ -241,12 +242,12 @@ $(document).ready(function() {
 				
 	}
 	
-		
+
 	function validate_eDuration(){
 		
 		var dtValue = eDuration.val();
 		var dtRegex = new RegExp(/\b\d{1,2}[\/-]\d{1,2}[\/-]\d{4}\b/);
-		//var dtRegex = new RegExp();
+		
 		
 		if(dtRegex.test(dtValue)){
 			eDuration.removeClass("error");
@@ -261,7 +262,23 @@ $(document).ready(function() {
 		}
 			
 	}
-		
+	 $('#send').attr("disabled", true);
+	var $input = $('input:text'),
+    $add = $('#add');    
+	$add.attr('disabled', true);
+
+	$input.keyup(function() {
+    var trigger = false;
+    $input.each(function() {
+        if (!$(this).val()) {
+            trigger = true;
+        }
+    });
+    trigger ? $add.attr('disabled', true) : $add.removeAttr('disabled');
+	});
+	
+});
+<!--------------------------------------------------------------------------------------------------------------------------------->
 		//$(function(){
 			//$('#eDuration').keydown(function(e) {
 				//if (e.shiftKey || e.ctrlKey || e.altKey) 
@@ -315,19 +332,5 @@ $(document).ready(function() {
 		//}
 	//}
 	
-		// $('#send').attr("disabled", true);
-//	var $input = $('input:text'),
-  //  $add = $('#add');    
-	//$add.attr('disabled', true);
-
-	//$input.keyup(function() {
-    //var trigger = false;
-    //$input.each(function() {
-      //  if (!$(this).val()) {
-        //    trigger = true;
-        //}
-    //});
-    //trigger ? $add.attr('disabled', true) : $add.removeAttr('disabled');
-	//});
-	
-});
+		
+//});
