@@ -1,0 +1,4 @@
+
+Device ID : dev123
+Sub Device log : 432fdefw4ewfdvczx
+Main Device log : 4324fedfsdf
