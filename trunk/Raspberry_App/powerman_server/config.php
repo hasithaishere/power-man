@@ -2,7 +2,7 @@
 define('DBHOST','localhost');
 define('DBUSER','root');
 define('DBPASS','123');
-define('DBNAME','call_center');
+define('DBNAME','powerman');
 
 define('TIMEOUT',40);
 
