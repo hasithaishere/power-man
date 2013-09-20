@@ -10,11 +10,14 @@ package powerman_rpi;
  * @author Hasitha
  */
 import java.io.IOException;
+import java.io.StringReader;
 import java.sql.ResultSet;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Iterator;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.soap.*;
 import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMResult;
@@ -28,6 +31,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
 
 public class SOAPClient {
 
@@ -140,7 +144,7 @@ public class SOAPClient {
         }
         
         ackr_query = ackr_query.substring(0, ackr_query.length()-1) + ")";
-        System.out.println(ackr_query);
+        //System.out.println(ackr_query);
         
         String sd_data = jobj_1.toString();
         String md_data = jobj_md.toString();
@@ -149,7 +153,7 @@ public class SOAPClient {
         System.out.println(md_data);
         
         
-        String code = "45436574tgdfg5e";
+        String code = "2702cb5b964b0962ac590707152d234b";
         
         MessageFactory messageFactory = MessageFactory.newInstance();
         SOAPMessage soapMessage = messageFactory.createMessage();
@@ -192,11 +196,11 @@ public class SOAPClient {
         
         if(md_data.equals("{}"))
         {
-            soapBodyElem1.addTextNode("");
+            soapBodyElem2.addTextNode("");
         }
         else
         {
-            soapBodyElem1.addTextNode(md_data);
+            soapBodyElem2.addTextNode(md_data);
         }
         
         SOAPElement soapBodyElem3 = soapBodyElem.addChildElement("code", "ws");
@@ -219,7 +223,7 @@ public class SOAPClient {
 
             // Send SOAP Message to SOAP Server
             //String url = "http://localhost:81/wsdl/s2.php";
-            String url = "http://localhost:81/powerman_server/push_data.php";
+            String url = "http://pmlite.hp/push_data.php";
             //SOAPMessage req = (createSOAPRequest_pushData("dev123","432fdefw4ewfdvczx","4324fedfsdf","6f78079088bd1bbc06cc277af294951a"));
 
             SOAPMessage soapResponse = soapConnection.call(soapMessage, url);
@@ -227,11 +231,18 @@ public class SOAPClient {
             // Process the SOAP Response
             printSOAPResponse(soapResponse);
             
-            XPathFactory xpathFactory = XPathFactory.newInstance();
-            XPath xpath = xpathFactory.newXPath();
-
-            String tmp_result = xpath.evaluate("/Envelope/Body/push_dataResponse/status", toDocument(soapResponse));
+            String tmp_result = "0";
             
+            try 
+            {
+                Document doc = toDocument(soapResponse);
+                tmp_result = doc.getElementsByTagName("status").item(0).getTextContent();
+            } 
+            catch (Exception e) 
+            {
+                System.out.println("XML Response Read Error : " + e);
+            }
+
             if(tmp_result.equals("1"))
             {
                 db_con.change(ackr_query);
@@ -262,7 +273,7 @@ public class SOAPClient {
         SOAPEnvelope envelope = soapPart.getEnvelope();
         envelope.addNamespaceDeclaration("ws", serverURI);
 
-        String code = "dfas43245rr";
+        String code = "2702cb5b964b0962ac590707152d234b";
         
         /*
         Constructed SOAP Request Message:
@@ -313,7 +324,7 @@ public class SOAPClient {
 
             // Send SOAP Message to SOAP Server
             //String url = "http://localhost:81/wsdl/s2.php";
-            String url = "http://localhost:81/powerman_server/get_signal.php";
+            String url = "http://pmlite.hp/get_signal.php";
             //SOAPMessage req = (createSOAPRequest_pushData("dev123","432fdefw4ewfdvczx","4324fedfsdf","6f78079088bd1bbc06cc277af294951a"));
 
             SOAPMessage soapResponse = soapConnection.call(soapMessage, url);
@@ -321,9 +332,7 @@ public class SOAPClient {
             // Process the SOAP Response
             printSOAPResponse(soapResponse);
             
-            signeltoDb(soapResponse,db_con);         
-            
-            
+            signeltoDb(soapResponse,db_con);
             
             soapConnection.close();
         }
@@ -360,21 +369,22 @@ public class SOAPClient {
         
         try 
         {
+            
             XPathFactory xpathFactory = XPathFactory.newInstance();
             XPath xpath = xpathFactory.newXPath();
 
-            Document xml_doc = toDocument(soapResponse);
+            org.w3c.dom.Document xml_doc = toDocument(soapResponse);
             
-            String tmp_result = xpath.evaluate("/Envelope/Body/push_dataResponse/status", xml_doc);
-          
-            if(xpath.evaluate("/Envelope/Body/get_signalResponse/active_req", xml_doc).equals("1"))
+            Document doc = toDocument(soapResponse);
+            
+            if(doc.getElementsByTagName("active_req").item(0).getTextContent().equals("1"))
             {
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                 String current_time = sdf.format(new Date());
                 
-                if(xpath.evaluate("/Envelope/Body/get_signalResponse/c_status", xml_doc).equals("1"))
+                if(doc.getElementsByTagName("c_status").item(0).getTextContent().equals("1"))
                 {
-                    String js = "{\"val\":"+ xpath.evaluate("/Envelope/Body/get_signalResponse/c_signal", xml_doc) + "}";
+                    String js = "{\"val\":"+ doc.getElementsByTagName("c_signal").item(0).getTextContent() + "}";
         
                     JSONObject jobj1 = new JSONObject(js);
                     JSONArray jarr1 = jobj1.getJSONArray("val");
@@ -404,13 +414,13 @@ public class SOAPClient {
                     }
                     
                     c_signal_query = c_signal_query.substring(0, c_signal_query.length()-1);
-                    
+                    //System.out.println(c_signal_query);
                     db_con.change(c_signal_query);
                 }
                 
-                if(xpath.evaluate("/Envelope/Body/get_signalResponse/p_status", xml_doc).equals("1"))
+                if(doc.getElementsByTagName("p_status").item(0).getTextContent().equals("1"))
                 {
-                    String js = "{\"val\":"+ xpath.evaluate("/Envelope/Body/get_signalResponse/p_signal", xml_doc) + "}";
+                    String js = "{\"val\":"+ doc.getElementsByTagName("p_signal").item(0).getTextContent() + "}";
         
                     JSONObject jobj1 = new JSONObject(js);
                     JSONArray jarr1 = jobj1.getJSONArray("val");
@@ -440,13 +450,13 @@ public class SOAPClient {
                     }
                     
                     p_signal_query = p_signal_query.substring(0, p_signal_query.length()-1);
-                    
+                    //System.out.println(p_signal_query);
                     db_con.change(p_signal_query);
                 }
                 
-                if(xpath.evaluate("/Envelope/Body/get_signalResponse/sc_status", xml_doc).equals("1"))
+                if(doc.getElementsByTagName("sc_status").item(0).getTextContent().equals("1"))
                 {
-                    String js = "{\"val\":"+ xpath.evaluate("/Envelope/Body/get_signalResponse/sc_signal", xml_doc) + "}";
+                    String js = "{\"val\":"+ doc.getElementsByTagName("sc_signal").item(0).getTextContent() + "}";
         
                     JSONObject jobj1 = new JSONObject(js);
                     JSONArray jarr1 = jobj1.getJSONArray("val");
@@ -476,9 +486,11 @@ public class SOAPClient {
                     }
                     
                     sc_signal_query = sc_signal_query.substring(0, sc_signal_query.length()-1);
-                    
+                    //System.out.println(sc_signal_query);
                     db_con.change(sc_signal_query);
                 }
+                
+                send_getsignalAck(doc.getElementsByTagName("uid_list").item(0).getTextContent(),db_con);                
                 
             }
             
@@ -488,6 +500,77 @@ public class SOAPClient {
             System.out.println("signeltoDb - errors : " + e);
         }
   
+        
+    }
+
+    private static void send_getsignalAck(String ack_ids, DBConnector db_con) throws SOAPException, IOException {
+        
+        MessageFactory messageFactory = MessageFactory.newInstance();
+        SOAPMessage soapMessage = messageFactory.createMessage();
+        SOAPPart soapPart = soapMessage.getSOAPPart();
+
+        String serverURI = "http://ws.cdyne.com/";
+        
+        // SOAP Envelope
+        SOAPEnvelope envelope = soapPart.getEnvelope();
+        envelope.addNamespaceDeclaration("ws", serverURI);
+
+        String code = "2702cb5b964b0962ac590707152d234b";
+        
+        /*
+        Constructed SOAP Request Message:
+        <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:example="http://ws.cdyne.com/">
+            <SOAP-ENV:Header/>
+            <SOAP-ENV:Body>
+                <example:VerifyEmail>
+                    <example:email>mutantninja@gmail.com</example:email>
+                    <example:LicenseKey>123</example:LicenseKey>
+                </example:VerifyEmail>
+            </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+         */
+        
+        // SOAP Body
+        SOAPBody soapBody = envelope.getBody();
+        SOAPElement soapBodyElem = soapBody.addChildElement("ack_signal", "ws");
+        SOAPElement soapBodyElem1 = soapBodyElem.addChildElement("ack_ids", "ws");
+        soapBodyElem1.addTextNode(ack_ids);
+        SOAPElement soapBodyElem2 = soapBodyElem.addChildElement("code", "ws");
+        soapBodyElem2.addTextNode(code);
+
+        MimeHeaders headers = soapMessage.getMimeHeaders();
+        headers.addHeader("SOAPAction", serverURI  + "ack_signal");
+
+        soapMessage.saveChanges();
+
+        /* Print the request message */
+        System.out.print("Request SOAP Message = ");
+        soapMessage.writeTo(System.out);
+        System.out.println();
+
+        try 
+        {
+            SOAPConnectionFactory soapConnectionFactory = SOAPConnectionFactory.newInstance();
+            SOAPConnection soapConnection = soapConnectionFactory.createConnection();
+
+            // Send SOAP Message to SOAP Server
+            //String url = "http://localhost:81/wsdl/s2.php";
+            String url = "http://pmlite.hp/ack_signel.php";
+            //SOAPMessage req = (createSOAPRequest_pushData("dev123","432fdefw4ewfdvczx","4324fedfsdf","6f78079088bd1bbc06cc277af294951a"));
+
+            SOAPMessage soapResponse = soapConnection.call(soapMessage, url);
+
+            // Process the SOAP Response
+            printSOAPResponse(soapResponse);
+            
+            signeltoDb(soapResponse,db_con); 
+            
+            soapConnection.close();
+        }
+        catch (Exception e) 
+        {
+            System.out.println("SOAP Request Error (Get Signal) : " + e);
+        }
         
     }
    

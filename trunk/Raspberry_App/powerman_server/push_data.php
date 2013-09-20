@@ -39,7 +39,7 @@ function push_data($sd_data,$md_data,$code){
 					$sd_data_query = "INSERT INTO power_subdevice_powerlog (log_on,device_id,maindevice_id,pcon) VALUES ";
 					
 					foreach ($temp_sddata as $key1 => $value1) {
-					
+					//echo "dsds";die();
 						$sd_data_query .= "(";
 					
 						$tmp_sdq_p1 = "";
@@ -50,11 +50,13 @@ function push_data($sd_data,$md_data,$code){
 						
 						}
 						$sd_data_query .= rtrim($tmp_sdq_p1,',');
-						$sd_data_query .= "),";		
+						$sd_data_query .= "),";
+						
 					}
 					
 					$sd_data_query = rtrim($sd_data_query,',');		
-					//echo $sd_data_query;			
+					//echo $sd_data_query;
+					//die();	
 					$return_ack = db_insert($sd_data_query);
 					
 				}
