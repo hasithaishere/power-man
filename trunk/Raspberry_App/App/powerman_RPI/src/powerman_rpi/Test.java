@@ -26,7 +26,8 @@ import org.xml.sax.SAXException;
  * @author hasitha
  */
 public class Test {
-    public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException, XPathExpressionException, ParseException {
+    public static void main(String[] args){
+        
         
     }
 }

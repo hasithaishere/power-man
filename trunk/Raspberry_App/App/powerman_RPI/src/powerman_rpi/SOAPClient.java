@@ -38,52 +38,11 @@ public class SOAPClient {
     /**
      * Starting point for the SAAJ - SOAP Client Testing
      */
-    public static void main(String args[]) {
-        try {
-            
-            createSOAPRequest_getSignal(new DBConnector());
-            
-            // Create SOAP Connection
-            //SOAPConnectionFactory soapConnectionFactory = SOAPConnectionFactory.newInstance();
-            //SOAPConnection soapConnection = soapConnectionFactory.createConnection();
 
-            // Send SOAP Message to SOAP Server
-            //String url = "http://localhost:81/wsdl/s2.php";
-            //String url = "http://localhost:81/powerman_server/push_data.php";
-        //createSOAPRequest_pushData("dev123","432fdefw4ewfdvczx","4324fedfsdf","6f78079088bd1bbc06cc277af294951a");
-            
-            //SOAPMessage soapResponse = soapConnection.call(req, url);
-
-            // Process the SOAP Response
-            //printSOAPResponse(soapResponse);
-            
-          
-	/*Document doc = toDocument(soapResponse);
-        
-            try {
-                    System.out.println("");
-                    System.out.println(doc.getElementsByTagName("return").item(0).getTextContent());
-
-                    NodeList list = doc.getElementsByTagName("*");
-                    System.out.println("XML Elements: ");
-                    for (int i=0; i<list.getLength(); i++) {
-                    // Get element
-                    Element element = (Element)list.item(i);
-                    System.out.println(element.getNodeName()); 
-                    System.out.println("First Name : " + element.getElementsByTagName("return").item(0).getTextContent());
-                }
-            } catch (Exception e) {
-           }*/
-            //soapConnection.close();
-        } catch (Exception e) {
-            System.err.println("Error occurred while sending SOAP Request to Server");
-            e.printStackTrace();
-        }
-    }
 
     //---------------------------------PUSH DATA TO WEB SERVER------------------------------------
     
-    private static void createSOAPRequest_pushData(DBConnector db_con) throws Exception {
+    public static void createSOAPRequest_pushData(DBConnector db_con) throws Exception {
         
         String ackr_query = "UPDATE power_send_out SET send_status='1' WHERE id IN (";
         
@@ -262,7 +221,7 @@ public class SOAPClient {
     
     //------------------------------GET SIGNAL FROM WEB SERVER-----------------------------------
     
-    private static void createSOAPRequest_getSignal(DBConnector db_con) throws Exception {
+    public static void createSOAPRequest_getSignal(DBConnector db_con) throws Exception {
         MessageFactory messageFactory = MessageFactory.newInstance();
         SOAPMessage soapMessage = messageFactory.createMessage();
         SOAPPart soapPart = soapMessage.getSOAPPart();

@@ -8,6 +8,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
+import static java.lang.Thread.sleep;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Date;
@@ -19,12 +20,28 @@ import java.util.logging.Logger;
  * @author Domore
  */
 public class RequestCatcher {
-    public static void main(String[] args) throws Exception {
+    public static void start() throws Exception {
     ServerSocket m_ServerSocket = new ServerSocket(50005);
     int id = 0;
-       
-    test1 t1 = new test1();
-    t1.start();
+    
+    DBConnector db_con = new DBConnector();
+    HTTPRequest httpr = new HTTPRequest();
+    SOAPClient soapc = new SOAPClient();
+    
+    thread_pushData th_pd = new thread_pushData(db_con,soapc);
+    th_pd.start();
+    
+    thread_getSignal th_gs = new thread_getSignal(db_con,soapc);
+    th_gs.start();
+    
+    thread_excontrol th_exc = new thread_excontrol(db_con,httpr);
+    th_exc.start(); 
+    
+    thread_exschedule th_exs = new thread_exschedule(db_con,httpr);
+    th_exs.start();
+    
+    thread_expair th_exp = new thread_expair(db_con,httpr);
+    th_exp.start();
     
     while (true) {
         
@@ -83,15 +100,25 @@ class ClientServiceThread extends Thread {
 }
 //------------------END OF LISTEN SOCK THREAD CLASS--------------------
 
-class test1 extends Thread
+
+class thread_pushData extends Thread
 {
+    DBConnector db_contemp;
+    SOAPClient soapc_temp;
+    
+    public thread_pushData(DBConnector db_con,SOAPClient soapc)
+    {
+        db_contemp = db_con;
+        soapc_temp = soapc;        
+    }    
+    
     public void run()
     {
         try {
             while(true)
             {
-                System.out.println(new Date());
-                sleep(3000);
+                soapc_temp.createSOAPRequest_pushData(db_contemp);
+                sleep(15000);
             }
         } 
         catch (Exception e) {
@@ -100,15 +127,107 @@ class test1 extends Thread
     }
 }
 
-class test2 extends Thread
+class thread_getSignal extends Thread
 {
+    DBConnector db_contemp;
+    SOAPClient soapc_temp;
+    
+    public thread_getSignal(DBConnector db_con,SOAPClient soapc)
+    {
+        db_contemp = db_con;
+        soapc_temp = soapc;
+    }
+    
     public void run()
     {
-        System.out.println("--------------------");
         try {
-            sleep(1000);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(test2.class.getName()).log(Level.SEVERE, null, ex);
+            while(true)
+            {
+                soapc_temp.createSOAPRequest_getSignal(db_contemp);
+                sleep(2000);
+            }
+        } 
+        catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+
+class thread_excontrol extends Thread
+{
+    DBConnector db_contemp;
+    HTTPRequest httpr_temp;
+    
+    public thread_excontrol(DBConnector db_con,HTTPRequest httpr)
+    {
+        db_contemp = db_con;
+        httpr_temp = httpr;
+    }
+    
+    public void run()
+    {
+        try {
+            while(true)
+            {
+                httpr_temp.controlDevice(db_contemp);
+                sleep(1000);
+            }
+        } 
+        catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+
+class thread_exschedule extends Thread
+{
+    DBConnector db_contemp;
+    HTTPRequest httpr_temp;
+    
+    public thread_exschedule(DBConnector db_con,HTTPRequest httpr)
+    {
+        db_contemp = db_con;
+        httpr_temp = httpr;
+    }
+    
+    public void run()
+    {
+        try {
+            while(true)
+            {
+                httpr_temp.scheduleDevice(db_contemp);
+                sleep(1000);
+            }
+        } 
+        catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+
+class thread_expair extends Thread
+{
+    DBConnector db_contemp;
+    HTTPRequest httpr_temp;
+    
+    public thread_expair(DBConnector db_con,HTTPRequest httpr)
+    {
+        db_contemp = db_con;
+        httpr_temp = httpr;
+    }
+    
+    public void run()
+    {
+        try 
+        {
+            while(true)
+            {
+                httpr_temp.pairDevice(db_contemp);
+                sleep(1000);
+            }
+        } 
+        catch (Exception e) {
+            System.out.println(e);
         }
     }
 }

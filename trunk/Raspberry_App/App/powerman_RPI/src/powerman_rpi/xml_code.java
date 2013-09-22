@@ -78,7 +78,7 @@ public class xml_code {
             String query2 = "INSERT INTO power_subdevice_powerlog (device_id,pcon,temp,control_status,log_on,token,mainDevice_id) VALUES ";
 
             //---Query(UPDATE)----
-            String query3 = "UPDATE power_subdevice_control SET control_on = '" + log_on + "', control_status = CASE device_id";
+            String query3 = "UPDATE power_subdevice_control SET control_on = '" + log_on + "', mainDevice_id = '" + main_device_id + "', control_status = CASE device_id";
             String query3_p2 = " pcon = CASE device_id";
             String query3_p3 = "WHERE device_id IN (";
             String query3_p4 = "seq = CASE device_id";
