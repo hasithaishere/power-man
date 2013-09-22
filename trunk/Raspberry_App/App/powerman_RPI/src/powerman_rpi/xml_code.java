@@ -30,6 +30,8 @@ import org.xml.sax.SAXException;
  */
 public class xml_code {
     
+    private static Error_logging elog = new Error_logging();
+    
     public void generate_sql(String xml, DBConnector db_con) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException {
         
         //String xml = "<message>HELLO!</message>";
@@ -207,7 +209,7 @@ public class xml_code {
         } 
         catch (Exception e) 
         {
-            System.out.println("XML Response Errors : " + e);
+            elog.save_log("XML Response Errors : " + e);
         }
         
         

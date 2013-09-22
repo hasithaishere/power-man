@@ -35,11 +35,11 @@ import org.xml.sax.InputSource;
 
 public class SOAPClient {
 
+    private static Error_logging elog = new Error_logging();
+    private static Con_config conf = new Con_config();
     /**
      * Starting point for the SAAJ - SOAP Client Testing
      */
-
-
     //---------------------------------PUSH DATA TO WEB SERVER------------------------------------
     
     public static void createSOAPRequest_pushData(DBConnector db_con) throws Exception {
@@ -108,11 +108,11 @@ public class SOAPClient {
         String sd_data = jobj_1.toString();
         String md_data = jobj_md.toString();
         
-        System.out.println(sd_data);
-        System.out.println(md_data);
+        //System.out.println(sd_data);
+        //System.out.println(md_data);
         
         
-        String code = "2702cb5b964b0962ac590707152d234b";
+        String code = conf.read_config(6);
         
         MessageFactory messageFactory = MessageFactory.newInstance();
         SOAPMessage soapMessage = messageFactory.createMessage();
@@ -171,9 +171,9 @@ public class SOAPClient {
         soapMessage.saveChanges();
 
         /* Print the request message */
-        System.out.print("Request SOAP Message = ");
-        soapMessage.writeTo(System.out);
-        System.out.println();
+        //System.out.print("Request SOAP Message = ");
+        //soapMessage.writeTo(System.out);
+        //System.out.println();
 
         try 
         {
@@ -182,13 +182,13 @@ public class SOAPClient {
 
             // Send SOAP Message to SOAP Server
             //String url = "http://localhost:81/wsdl/s2.php";
-            String url = "http://pmlite.hp/push_data.php";
+            String url = conf.read_config(7);
             //SOAPMessage req = (createSOAPRequest_pushData("dev123","432fdefw4ewfdvczx","4324fedfsdf","6f78079088bd1bbc06cc277af294951a"));
 
             SOAPMessage soapResponse = soapConnection.call(soapMessage, url);
 
             // Process the SOAP Response
-            printSOAPResponse(soapResponse);
+            //printSOAPResponse(soapResponse);
             
             String tmp_result = "0";
             
@@ -199,7 +199,7 @@ public class SOAPClient {
             } 
             catch (Exception e) 
             {
-                System.out.println("XML Response Read Error : " + e);
+                elog.save_log("XML Response Read Error : " + e);
             }
 
             if(tmp_result.equals("1"))
@@ -212,7 +212,7 @@ public class SOAPClient {
         }
         catch (Exception e) 
         {
-            System.out.println("SOAP Request Error (Push Data) : " + e);
+            elog.save_log("SOAP Request Error (Push Data) : " + e);
         }
     }
     
@@ -232,7 +232,7 @@ public class SOAPClient {
         SOAPEnvelope envelope = soapPart.getEnvelope();
         envelope.addNamespaceDeclaration("ws", serverURI);
 
-        String code = "2702cb5b964b0962ac590707152d234b";
+        String code = conf.read_config(6);
         
         /*
         Constructed SOAP Request Message:
@@ -272,9 +272,9 @@ public class SOAPClient {
         soapMessage.saveChanges();
 
         /* Print the request message */
-        System.out.print("Request SOAP Message = ");
-        soapMessage.writeTo(System.out);
-        System.out.println();
+        //System.out.print("Request SOAP Message = ");
+        //soapMessage.writeTo(System.out);
+        //System.out.println();
 
         try 
         {
@@ -283,13 +283,13 @@ public class SOAPClient {
 
             // Send SOAP Message to SOAP Server
             //String url = "http://localhost:81/wsdl/s2.php";
-            String url = "http://pmlite.hp/get_signal.php";
+            String url = conf.read_config(8);
             //SOAPMessage req = (createSOAPRequest_pushData("dev123","432fdefw4ewfdvczx","4324fedfsdf","6f78079088bd1bbc06cc277af294951a"));
 
             SOAPMessage soapResponse = soapConnection.call(soapMessage, url);
 
             // Process the SOAP Response
-            printSOAPResponse(soapResponse);
+            //printSOAPResponse(soapResponse);
             
             signeltoDb(soapResponse,db_con);
             
@@ -297,7 +297,7 @@ public class SOAPClient {
         }
         catch (Exception e) 
         {
-            System.out.println("SOAP Request Error (Get Signal) : " + e);
+            elog.save_log("SOAP Request Error (Get Signal) : " + e);
         }
     }
 
@@ -456,7 +456,7 @@ public class SOAPClient {
         }
         catch (Exception e) 
         {
-            System.out.println("signeltoDb - errors : " + e);
+            elog.save_log("signeltoDb - errors : " + e);
         }
   
         
@@ -474,7 +474,7 @@ public class SOAPClient {
         SOAPEnvelope envelope = soapPart.getEnvelope();
         envelope.addNamespaceDeclaration("ws", serverURI);
 
-        String code = "2702cb5b964b0962ac590707152d234b";
+        String code = conf.read_config(6);
         
         /*
         Constructed SOAP Request Message:
@@ -503,9 +503,9 @@ public class SOAPClient {
         soapMessage.saveChanges();
 
         /* Print the request message */
-        System.out.print("Request SOAP Message = ");
-        soapMessage.writeTo(System.out);
-        System.out.println();
+        //System.out.print("Request SOAP Message = ");
+        //soapMessage.writeTo(System.out);
+        //System.out.println();
 
         try 
         {
@@ -514,13 +514,13 @@ public class SOAPClient {
 
             // Send SOAP Message to SOAP Server
             //String url = "http://localhost:81/wsdl/s2.php";
-            String url = "http://pmlite.hp/ack_signel.php";
+            String url = conf.read_config(9);
             //SOAPMessage req = (createSOAPRequest_pushData("dev123","432fdefw4ewfdvczx","4324fedfsdf","6f78079088bd1bbc06cc277af294951a"));
 
             SOAPMessage soapResponse = soapConnection.call(soapMessage, url);
 
             // Process the SOAP Response
-            printSOAPResponse(soapResponse);
+            //printSOAPResponse(soapResponse);
             
             signeltoDb(soapResponse,db_con); 
             
@@ -528,7 +528,7 @@ public class SOAPClient {
         }
         catch (Exception e) 
         {
-            System.out.println("SOAP Request Error (Get Signal) : " + e);
+            elog.save_log("SOAP Request Error (Get Signal) : " + e);
         }
         
     }

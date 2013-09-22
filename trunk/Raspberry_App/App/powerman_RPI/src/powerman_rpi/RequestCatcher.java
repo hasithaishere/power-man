@@ -19,8 +19,10 @@ import java.util.logging.Logger;
  *
  * @author Domore
  */
-public class RequestCatcher {
+public class RequestCatcher {   
+    
     public static void start() throws Exception {
+
     ServerSocket m_ServerSocket = new ServerSocket(50005);
     int id = 0;
     
@@ -55,6 +57,7 @@ public class RequestCatcher {
 
 //------------------START OF LISTEN SOCK THREAD CLASS--------------------
 class ClientServiceThread extends Thread {
+  public static Error_logging elog = new Error_logging();
   Socket clientSocket;
   int clientID = -1;
   boolean running = true;
@@ -94,7 +97,7 @@ class ClientServiceThread extends Thread {
         //thread_id++;
       }
     } catch (Exception e) {
-      e.printStackTrace();
+      elog.save_log("Request Catcher Socket Thread : " + e.toString());
     }
   }
 }
@@ -103,6 +106,7 @@ class ClientServiceThread extends Thread {
 
 class thread_pushData extends Thread
 {
+    public static Error_logging elog = new Error_logging();
     DBConnector db_contemp;
     SOAPClient soapc_temp;
     
@@ -117,18 +121,20 @@ class thread_pushData extends Thread
         try {
             while(true)
             {
+                //System.out.println("1");
                 soapc_temp.createSOAPRequest_pushData(db_contemp);
                 sleep(15000);
             }
         } 
         catch (Exception e) {
-            System.out.println(e);
+            elog.save_log("Request Catcher thread_pushData : " + e.toString());
         }
     }
 }
 
 class thread_getSignal extends Thread
 {
+    public static Error_logging elog = new Error_logging();
     DBConnector db_contemp;
     SOAPClient soapc_temp;
     
@@ -143,18 +149,20 @@ class thread_getSignal extends Thread
         try {
             while(true)
             {
+                //System.out.println("2");
                 soapc_temp.createSOAPRequest_getSignal(db_contemp);
                 sleep(2000);
             }
         } 
         catch (Exception e) {
-            System.out.println(e);
+            elog.save_log("Request Catcher thread_getSignal : " + e.toString());
         }
     }
 }
 
 class thread_excontrol extends Thread
 {
+    public static Error_logging elog = new Error_logging();
     DBConnector db_contemp;
     HTTPRequest httpr_temp;
     
@@ -169,18 +177,20 @@ class thread_excontrol extends Thread
         try {
             while(true)
             {
+                //System.out.println("3");
                 httpr_temp.controlDevice(db_contemp);
                 sleep(1000);
             }
         } 
         catch (Exception e) {
-            System.out.println(e);
+            elog.save_log("Request Catcher thread_excontrol : " + e.toString());
         }
     }
 }
 
 class thread_exschedule extends Thread
 {
+    public static Error_logging elog = new Error_logging();
     DBConnector db_contemp;
     HTTPRequest httpr_temp;
     
@@ -195,18 +205,20 @@ class thread_exschedule extends Thread
         try {
             while(true)
             {
+                //System.out.println("4");
                 httpr_temp.scheduleDevice(db_contemp);
                 sleep(1000);
             }
         } 
         catch (Exception e) {
-            System.out.println(e);
+            elog.save_log("Request Catcher thread_exschedule : " + e.toString());
         }
     }
 }
 
 class thread_expair extends Thread
 {
+    public static Error_logging elog = new Error_logging();
     DBConnector db_contemp;
     HTTPRequest httpr_temp;
     
@@ -222,12 +234,13 @@ class thread_expair extends Thread
         {
             while(true)
             {
+                //System.out.println("5");
                 httpr_temp.pairDevice(db_contemp);
                 sleep(1000);
             }
         } 
         catch (Exception e) {
-            System.out.println(e);
+            elog.save_log("Request Catcher thread_expair : " + e.toString());
         }
     }
 }
