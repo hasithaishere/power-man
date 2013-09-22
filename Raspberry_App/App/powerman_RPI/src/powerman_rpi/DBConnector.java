@@ -18,21 +18,25 @@ import java.sql.SQLException;
  */
 public class DBConnector {
     private static Connection con;
+    private static Error_logging elog = new Error_logging();
 
     public static Connection getconn(){
        try{
            //EncryptDecrypt ed = new EncryptDecrypt();
            //Crossconnector cc = new Crossconnector();
-
+           
+       Con_config conf = new Con_config();    
+           
        Class.forName("com.mysql.jdbc.Driver");
        //con=DriverManager.getConnection("jdbc:mysql://"+ed.Decrypt(cc.read(0))+":"+ed.Decrypt(cc.read(1))+"/"+ed.Decrypt(cc.read(2)),ed.Decrypt(cc.read(3)),ed.Decrypt(cc.read(4)));
-       con=DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/pm_lite","root","123");
+       con=DriverManager.getConnection("jdbc:mysql://"+ conf.read_config(0) +":"+ conf.read_config(1) +"/"+ conf.read_config(2),conf.read_config(3),conf.read_config(4));
 
        }catch(Exception e){
-           System.out.println("getcon\n"+e);
+           elog.save_log("Database class - getcon : " +  e.toString());
        }
        return con;
     }
+    
 public static void change(String s){
     if (con==null) {
         getconn();  
@@ -40,7 +44,7 @@ public static void change(String s){
     try {
         con.createStatement().executeUpdate(s);
     } catch (Exception e) {
-        System.out.println("change\n"+e);
+        elog.save_log("Database class - change : " +  e.toString());
     }
     
      
