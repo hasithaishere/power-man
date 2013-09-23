@@ -57,7 +57,7 @@
             <div class="row-fluid sortable">		
 				<div class="box span12">
 					<div class="box-header" style="margin-bottom:5px;" data-original-title>
-						<a href="#new_subdevice_details" role="button" class="btn btn-primary" data-toggle="modal"><i class="icon-plus-sign icon-white"></i><span class="break"></span> ADD Sub Devices</a>
+						<a href="#new_subdevice_details" role="button" class="btn btn-success" data-toggle="modal"><i class="icon-plus-sign icon-white"></i><span class="break"></span> ADD New Device</a>
 					
 					</div>
 					<div class="box-content">
@@ -65,8 +65,8 @@
 						  <thead>
 							  <tr>
 								  <th>Sub Device</th>
-								  <th>Location</th>
-								  <th>Main Device</th>
+								  <th>Serial Number</th>
+								  <th>Device Description</th>
 								  <th>Status</th>
 								  <th>Actions</th>
 							  </tr>
@@ -74,8 +74,8 @@
 						  <tbody>
 							<tr>
 								<td>Television</td>
-								<td class="center">Domore Office Area</td>
-								<td class="center">Main Device 01</td>
+								<td class="center">SD001</td>
+								<td class="center">LCD panel wide screen TV</td>
 								<td class="center">
 									<span class="label label-success">Active</span>
 								</td>
@@ -94,8 +94,8 @@
 							</tr>
 							<tr>
 								<td>LED Bulb</td>
-								<td class="center">Domore Office Area</td>
-								<td class="center">Main Device 01</td>
+								<td class="center">SD002</td>
+								<td class="center">14w LED Bulb</td>
 								<td class="center">
 									<span class="label label-success">Active</span>
 								</td>
@@ -147,33 +147,43 @@
         </div>
         
         <div>
+  				 <label for="icon"> Device Image </label> 
+   				<img width="60px" height="60px" id="sensor_icon_24" src="<?php echo base_url(); ?>img/small_washing_machin.jpg" class="btn-success">
+               
+   
+</div>
+
+<div>
+    
+    <select class="defaultDevice" required="required" devid="24" id="defaultDevice">
+         <option value="-"> - select -</option>
+              <option value="device1">Washing Machine</option>
+  
+              <option value="device2">Microwave</option>
+  
+          </select>
+           <span id="Defaultsubdevice_name" class="intro">Select the default name of the sub device</span>
+</div>
+        
+        <div>
              	<label for="subdevice_serialno">Serial Number of the device</label>
 				 <input id="modal_subdevice_serialno" name="modal_subdevice_serialno" type="text" />
                 <span id="subdevice_serialno" class="intro">Enter your Sub Device Serial Number</span>
         </div>
         
+                
         <div>
-             	<label for="subdevice_location">Sub Device Location</label>
-				 <input id="modal_subdevice_location" name="modal_subdevice_location" type="text" />
-                <span id="subdevice_location" class="intro">Sub Device Location</span>
+             	<label for="subdevice_description">Device Description</label>
+				 <textarea id="modal_subdevice_description" name="modal_subdevice_description" type="text"  cols="45" rows="5" tabindex="1" ></textarea>
+                <span id="subdevice_description" class="intro">Description about the new Sub Device</span>
         </div>
         
-        <div>
-             	<label for="subdevice_maindevice">Main device</label>
-				 <input id="modal_subdevice_maindevice" name="modal_subdevice_maindevice" type="text" />
-                <span id="subdevice_maindevice" class="intro">Which Main device you're hoping to add this Sub Device</span>
-        </div>
         
-         <div>
-             	<label for="voltage_limitaion">Voltage Limitaion</label>
-				 <input id="modal_voltage_limitaion" name="modal_voltage_limitaion" type="text" />
-                <span id="subdevice_voltage_limitaion" class="intro">Voltage limit for Sub Device</span>
-        </div>
         
 </div>
 <div class="modal-footer">
 <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-<button class="btn btn-primary">Add Sub Device</button>
+<button class="btn btn-success">Add Sub Device</button>
 </div>
 </div>
 	

@@ -45,7 +45,7 @@
 			
                      
 			<div class="row-fluid">
-				<a href="<?php echo base_url(); ?>add_location" role="button" class="btn btn-primary"><i class="icon-plus-sign icon-white"></i><span class="break"></span> ADD New Location</a>
+				<a href="<?php echo base_url(); ?>add_location" role="button" class="btn btn-success"><i class="icon-plus-sign icon-white"></i><span class="break"></span> ADD New Location</a>
                 <hr>
 			<?php
 				$i = 0;
@@ -65,7 +65,7 @@
                   	echo "<div class=\"caption\">";
                     echo "<h3>" . $rows['sub_name'] . "</h3>";
                     echo "<p>" . $rows['description'] . "</p>";
-                    echo "<a href=\"" . base_url() . "main_devices/index/" . $this->encrypt_data->encode($rows['id']) . "\" class=\"btn btn-primary\">Main Device</a>";
+                    echo "<a href=\"" . base_url() . "main_devices/index/" . $this->encrypt_data->encode($rows['id']) . "\" class=\"btn btn-success\">Main Device</a>";
                   	echo "</div></div></div>";
 					
 					if($i == 3)
@@ -122,6 +122,7 @@
 				
 	</div><!--/.fluid-container-->
 	
-	
+ 
+
 </body>
 </html>
