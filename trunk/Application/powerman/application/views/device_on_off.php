@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>	
- <?php include 'includes/head.php'; ?>	
-	
+ <?php include 'includes/head.php'; ?>
+
 </head>
 
 <body>
@@ -31,7 +31,14 @@
 						<a href="<?php echo base_url(); ?>main_panel">Home</a> <span class="divider">/</span>
 					</li>
 					<li>
-						<a href="<?php echo base_url(); ?>users">User Settings</a>
+						<a href="<?php echo base_url(); ?>locations">Locations</a><span class="divider">/</span>
+					</li>
+                    
+					<li>
+						<a href="<?php echo base_url(); ?>main_devices">Main Devices</a><span class="divider">/</span>
+					</li>
+					<li>
+						<a href="<?php echo base_url(); ?>device_on_off">Sub Device Controlling</a>
 					</li>
 				</ul>
 				
@@ -45,66 +52,9 @@
                         <hr>
 			
                      <div class="row-fluid">
+                     <a id="#subdevice_Modal" href="#add_subdevice_Modal" role="button" class="btn btn-primary" data-toggle="modal">Add New Sub Device</a>
 				
-				<!--
-				<div class="circleStats">
-                    
-					<div class="span2" onTablet="span4" onDesktop="span2">
-                    	<div class="circleStatsItem red">
-							<i class="fa-icon-thumbs-up"></i>
-							<span class="plus">+</span>
-							<span class="percent">%</span>
-                        	<input type="text" value="58" class="orangeCircle" />
-                    	</div>
-						<div class="box-small-title">User satisfaction</div>
-					</div>
-					<div class="span2" onTablet="span4" onDesktop="span2">
-                    	<div class="circleStatsItem blue">
-                        	<i class="fa-icon-bullhorn"></i>
-							<span class="plus">+</span>
-							<span class="percent">%</span>
-                        	<input type="text" value="8" class="blueCircle" />
-                    	</div>
-						<div class="box-small-title">Popularity</div>
-					</div>
-					<div class="span2" onTablet="span4" onDesktop="span2">
-						<div class="circleStatsItem yellow">
-                        	<i class="fa-icon-user"></i>
-							<span class="plus">+</span>
-							<span class="percent">%</span>
-                        	<input type="text" value="12" class="yellowCircle" />
-                    	</div>
-						<div class="box-small-title">New users</div>
-					</div>
-					<div class="noMargin span2" onTablet="span4" onDesktop="span2">
-						<div class="circleStatsItem pink">
-                        	<i class="fa-icon-globe"></i>
-							<span class="plus">+</span>
-							<span class="percent">%</span>
-                        	<input type="text" value="23" class="pinkCircle" />
-                    	</div>
-						<div class="box-small-title">Visits</div>
-					</div>
-					<div class="span2" onTablet="span4" onDesktop="span2">
-                    	<div class="circleStatsItem green">
-                        	<i class="fa-icon-bar-chart"></i>
-							<span class="plus">+</span>
-							<span class="percent">%</span>
-                        	<input type="text" value="34" class="greenCircle" />
-                    	</div>
-						<div class="box-small-title">Income</div>
-					</div>
-					<div class="span2" onTablet="span4" onDesktop="span2">
-						<div class="circleStatsItem lightorange">
-                        	<i class="fa-icon-shopping-cart"></i>
-							<span class="plus">+</span>
-							<span class="percent">%</span>
-                        	<input type="text" value="42" class="lightOrangeCircle" />
-                    	</div>
-						<div class="box-small-title">Sales</div>
-					</div>
-
-                </div>-->
+			
 			
 			</div>
                      
@@ -222,22 +172,27 @@
                         	<input type="text" value="58" class="orangeCircle" />
                     	</div>
                         <div class="row">
-                        	<div class="span6" id="on_off_switch_icon" >
+                        <center>
+                        	<div class="span12" id="on_off_switch_icon" >
                             
                             <div class="switch"   data-on="success" data-off="danger">
                    				 <input type="checkbox" checked /> 
                            </div>
                                  
                     </div>
+                    </center>
+                    </div>
+                    <div class="row">
                     
-                           
-                            <div class="span6" id="sub_device_icons">
-                             <span class="badge badge-warning"><i class="icon-warning-sign icon-white"></i></span>
-                            <span class="badge badge-important"><i class="icon-ok icon-white"></i></span>
-                            <span class="badge badge-success"><i class="icon-refresh icon-white"></i></span>
+                           <center>
+                            <div class="span12" id="sub_device_icons">
+                             <span class="badge badge-warning"><a href="#"><i class="icon-warning-sign icon-white"></i></a></span>
+                            <span class="badge badge-important"><a href="#"><i class="icon-ok icon-white"></i></a></span>
+                            <span class="badge badge-success"><a href="#"><i class="icon-refresh icon-white"></i></a></span>
                            		
                             
                              </div>
+                             </center>
                         </div>
                         </div>
                     </div>
@@ -263,22 +218,26 @@
                         	<input type="text" value="34" class="greenCircle" />
                     	</div>
                         <div class="row">
-                        	<div class="span6" id="on_off_switch_icon" >
+                        <center>
+                        	<div class="span12" id="on_off_switch_icon" >
                             
                             <div class="switch"   data-on="success" data-off="danger">
                    				 <input type="checkbox" checked /> 
                            </div>
                                  
                     </div>
+                    </center>
                     
-                           
-                            <div class="span6" id="sub_device_icons">
-                             <span class="badge badge-warning"><i class="icon-warning-sign icon-white"></i></span>
-                            <span class="badge badge-important"><i class="icon-ok icon-white"></i></span>
-                            <span class="badge badge-success"><i class="icon-refresh icon-white"></i></span>
+                    <div class="row">
+                           <center>
+                            <div class="span12" id="sub_device_icons">
+                             <span class="badge badge-warning"><a href="#"><i class="icon-warning-sign icon-white"></i></a></span>
+                            <span class="badge badge-important"><a href="#"><i class="icon-ok icon-white"></i></a></span>
+                            <span class="badge badge-success"><a href="#"><i class="icon-refresh icon-white"></i></a></span>
                            		
                             
                              </div>
+                             </center>
                         </div>
                         </div>
                     </div>
@@ -288,41 +247,6 @@
 				
 				
 				
-	<!--		<div class="row">
-
-              <div class="span3">
-              <div class="thumbnail" id="device-thumbnail">
-              
-					<center><div class="device-header"><p>LED BULB</p></div> </center>
-                    <ul class="breadcrumb">
-					<li>
-						<a href="#">Domore Office</a> <span class="divider">/</span>
-					</li>
-					<li>
-						<a href="#">User Settings</a>
-					</li>
-				</ul>
-                    
-              <img src="<?php echo base_url(); ?>img/bulb_off.jpg" alt=""> 
-                               <div class="progress">
-                    <div class="bar" style="width: 50%"></div>
-                    <span>50 W</span>
-                    <div class="circleStatsItem red">
-							<i class="fa-icon-thumbs-up"></i>
-							<span class="plus">+</span>
-							<span class="percent">%</span>
-                        	<input type="text" value="58" class="orangeCircle" />
-                    	
-                </div>
-                   <div class="caption">
-                   
-                   <div class="switch"  id="on_off_switch" data-on="success" data-off="danger">
-                    <input type="checkbox" checked />
-                    
-                    </div>
-                    </div>
- 				 </div>
- 			</div>-->
 
     
     
@@ -341,7 +265,12 @@
 	</div><!--/.fluid-container-->
 	
 	<script type="text/javascript" charset="utf-8">
+	
 			$(document).ready(function(){
+				$('#subdevice_Modal').click(function(){
+					$('#add_subdevice_Modal').modal('options');
+					
+				});
 				
 				$(".onoff_btn").change(function() {
 				    if(this.checked) 
@@ -386,10 +315,26 @@
 								}
 				            });
 				});
+				
 			});
 	</script>
 
-	
+<div id="add_subdevice_Modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body…</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary">Save changes</button>
+  </div>
+</div>
+		
+ 
+
 	
 	
 </body>
