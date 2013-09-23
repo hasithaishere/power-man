@@ -111,7 +111,7 @@
              </div>            
                         
              
-             <input type="submit" id="save_mainDevice" class="btn btn-primary" value="Save Main Device" />
+             <input type="submit" id="save_mainDevice" class="btn btn-success" value="Save Main Device" />
            <!--  <a id="save_location" href="#" role="button" class="btn btn-primary"><i class="icon-share icon-white"></i><span class="break"></span> Save Location</a>-->
           
              </form>

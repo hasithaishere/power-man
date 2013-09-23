@@ -52,8 +52,9 @@
                         <hr>
 			
                      <div class="row-fluid">
-                     <a id="#subdevice_Modal" href="#add_subdevice_Modal" role="button" class="btn btn-primary" data-toggle="modal">Add New Sub Device</a>
-				
+                     
+				<a href="<?php echo base_url(); ?>sub_devices" role="button" class="btn btn-success" data-toggle="modal">Add Sub Device</a>
+                
 			
 			
 			</div>
@@ -267,11 +268,8 @@
 	<script type="text/javascript" charset="utf-8">
 	
 			$(document).ready(function(){
-				$('#subdevice_Modal').click(function(){
-					$('#add_subdevice_Modal').modal('options');
-					
-				});
-				
+				//$('#subDeviceModal').modal(options)
+				 
 				$(".onoff_btn").change(function() {
 				    if(this.checked) 
 				    {
@@ -317,25 +315,61 @@
 				});
 				
 			});
+			
 	</script>
 
-<div id="add_subdevice_Modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  
+
+ 
+<!-- Modal -->
+<!--
+<div id="subDeviceModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">Modal header</h3>
+    <h3 id="myModalLabel">Add New Sub Device</h3>
   </div>
+  
   <div class="modal-body">
-    <p>One fine body…</p>
-  </div>
-  <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-    <button class="btn btn-primary">Save changes</button>
-  </div>
-</div>
-		
- 
 
-	
-	
+    
+<div>
+   <label for="sub_device_name"> Device Name </label> 
+ 	<input id="subDevice" type="text" name="subdevice_name" />
+</div>
+<div>
+   <label for="icon"> Device Image </label> 
+   <img width="60px" height="60px" id="sensor_icon_24" src="<?php echo base_url(); ?>img/small_washing_machin.jpg" class="btn-success">
+   
+</div>
+<div>
+    
+    <select class="defaultDevice" required="required" devid="24" id="defaultDevice">
+         <option value="-"> - select -</option>
+              <option value="device1">Washing Machine</option>
+  
+              <option value="device2">Microwave</option>
+  
+          </select>
+</div>
+<div> 
+    
+    <label for="device"> Controll ID </label>
+    <select required="required" id="control_id">
+
+<option value="1"> 1 </option>
+<option value="2"> 2 </option>
+<option value="3"> 3 </option>
+<option value="4"> 4 </option>
+<option value="5"> 5 </option>
+ </select>   
+</div>   
+</div>
+
+
+ <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-success">Save changes</button>
+  </div>
+</div>-->
 </body>
 </html>
