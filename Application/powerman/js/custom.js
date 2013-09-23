@@ -4,7 +4,7 @@ $(document).ready(function(){
 	$("#main-page-box1,#main-page-box2,#main-page-box3,#main-page-box4").click(function(){
      window.location=$(this).find("a").attr("href"); 
      return false;
-	 
+	
 	 
 	 
 	 
