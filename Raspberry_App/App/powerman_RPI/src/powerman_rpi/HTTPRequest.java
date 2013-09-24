@@ -71,7 +71,7 @@ public class HTTPRequest {
                     String USER_AGENT = "Mozilla/5.0";
                     
                     String url = "http://" + device_ip + "/setsocket.xml?num=" + device_seq + "&set=" + tmp_cstatus + "&ran=" + generateRandom();
-                    URL obj = new URL("http://pmlite.hp/ack_signel.php");
+                    URL obj = new URL(url);
                     HttpURLConnection con = (HttpURLConnection) obj.openConnection();
                     // optional default is GET
                     con.setRequestMethod("GET");
@@ -153,7 +153,7 @@ public class HTTPRequest {
                     String USER_AGENT = "Mozilla/5.0";
                     
                     String url = "http://" + device_ip + "/setsocket.xml?num=" + device_seq + "&set=" + tmp_cstatus + "&ran=" + generateRandom();
-                    URL obj = new URL("http://pmlite.hp/ack_signel.php");
+                    URL obj = new URL(url);
                     HttpURLConnection con = (HttpURLConnection) obj.openConnection();
                     // optional default is GET
                     con.setRequestMethod("GET");
@@ -211,9 +211,7 @@ public class HTTPRequest {
                 String url = "";
                 String tmp_ps  = rs1.getString("pair_status");
                 
-                if(tmp_ps.equals("0"))
-                {
-                    ResultSet rs3 = db_con.search("SELECT seq FROM power_subdevice_control WHERE mainDevice_id = '"+ rs1.getString("mainDevice_id") +"' AND device_id = '"+ rs1.getString("device_id") +"'");
+                ResultSet rs3 = db_con.search("SELECT seq FROM power_subdevice_control WHERE mainDevice_id = '"+ rs1.getString("mainDevice_id") +"' AND device_id = '"+ rs1.getString("device_id") +"'");
                 
                     String device_seq = "";
                     
@@ -221,14 +219,16 @@ public class HTTPRequest {
                     {
                         device_seq = rs3.getString("seq");
                     }
-                    
-                    url = "http://" + device_ip + "/setsocket.xml?num=" + device_seq + "&set=0&ran=" + generateRandom();
+                
+                if(tmp_ps.equals("0"))
+                {   
+                    url = "http://" + device_ip + "/deletesonser.xml?num=" + device_seq + "&ran=" + generateRandom();
                 }
                 else
                 {
                     if(tmp_ps.equals("1"))
                     {
-                        url = "http://" + device_ip + "/setsocket.xml?&ran=" + generateRandom();
+                        url = "http://" + device_ip + "/addsonser.xml?num=" + device_seq + "&rad=" + generateRandom();
                     }
                 }
                 
