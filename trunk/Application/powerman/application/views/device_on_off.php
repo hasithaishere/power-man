@@ -62,7 +62,7 @@
                      
 			<div class="row-fluid">
 				
-				<?php
+				<!--<?php
 				$i = 0;
 				foreach($content as $rows)
 				{
@@ -150,46 +150,115 @@
 				}
 
 									//echo "<td>Admin</td>";
+			?>-->
+				
+			<?php
+				$i = 0;
+				foreach($content as $rows)
+				{
+					if($i == 0)
+					{
+						echo "<div class=\"row\">"; // For creating rows - 4 columns for one row - start div
+					}
+				
+				
+					echo "<div class=\"span3 thumbnail\" style=\"background-color:#373737;padding: 9px 9px 9px 9px;\">";
+                	echo "<div class=\"row\">";
+                    echo "<div class=\"span8\" style=\"color:#fff;\">Domore Office / Rathamalane</div>";
+                    echo "<div class=\"span4\" style=\"#FFF\">";
+                    echo "<img src=\"". base_url() ."img/small_washing_machin.jpg\" alt=\"\"></div>";
+                    echo "<div class=\"row\" style=\"color:#FFF;\">";
+                    echo "<center>Washing Machine</center>";
+                    echo "<div class=\"circleStatsItem red\">";
+					echo "<i class=\"fa-icon-thumbs-up\"></i>";
+					echo "<span class=\"plus\">+</span>";
+					echo "<span class=\"percent\">%</span>";
+                    echo "<input type=\"text\" value=\"58\" class=\"orangeCircle\" />";
+                    echo "</div>";
+                    echo "<div class=\"row\">";
+                    echo "<center>";
+                    echo "<div class=\"span12\" id=\"on_off_switch_icon\" >";
+                    echo "<div class=\"switch\"   data-on=\"success\" data-off=\"danger\">";
+                   	echo "<input type=\"checkbox\" checked />";
+                    echo "</div>";
+                                 
+                    echo "</div>";
+                    echo "</center>";
+                    echo "</div>";
+                    echo "<div class=\"row\">";
+                    
+                    echo "<center>";
+                    echo "<div class=\"span12\" id=\"sub_device_icons\">";
+                    echo "<span class=\"badge badge-warning\"><a href=\"#\"><i class=\"icon-warning-sign icon-white\"></i></a></span>";
+                    echo "<span class=\"badge badge-important\"><a href=\"#\"><i class=\"icon-ok icon-white\"></i></a></span>";
+                    echo "<span class=\"badge badge-success\"><a href=\"#\"><i class=\"icon-refresh icon-white\"></i></a></span>";
+                           		
+                            
+                    echo "</div>";
+                    echo "</center>";
+                    echo "</div>";
+                    echo "</div>";
+                    echo "</div>";
+                	echo "</div>";
+				
+					
+				
+					if($i == 3)
+					{
+						echo "</div><hr>";// For creating rows - 4 columns for one row - end div
+					}
+					
+					$i++;
+					
+					if($i==4)
+					{
+						$i = 0;
+					}					
+					
+				}
+				if($i != 3)
+				{
+					echo "</div><hr>";// For creating rows - 4 columns for one row - end div
+				}
 			?>
 				
-				
-				
+			<!--	
 			<div class="row">
-            	<div class="span3 thumbnail" style="background-color:#373737;padding: 9px 9px 9px 9px;">
-                	<div class="row">
-                    	<div class="span8" style="color:#fff;"> 	
+            	<div class=/"span3 thumbnail/" style=/"background-color:#373737;padding: 9px 9px 9px 9px;/">
+                	<div class=/"row/">
+                    	<div class=/"span8/" style=/"color:#fff;/"> 	
                             Domore Office / Rathamalane
                         </div>
-                        <div class="span4" style="#FFF">
-                        <img src="<?php echo base_url(); ?>img/small_washing_machin.jpg" alt=""> 
+                        <div class=/"span4/" style=/"#FFF/">
+                        <img src=/"<?php echo base_url(); ?>img/small_washing_machin.jpg/" alt=/"/"> 
                         </div>
                         
-                        <div class="row" style="color:#FFF;">
+                        <div class=/"row/" style=/"color:#FFF;/">
                         	<center>Washing Machine</center>
-                            <div class="circleStatsItem red">
-							<i class="fa-icon-thumbs-up"></i>
-							<span class="plus">+</span>
-							<span class="percent">%</span>
-                        	<input type="text" value="58" class="orangeCircle" />
+                            <div class=/"circleStatsItem red/">
+							<i class=/"fa-icon-thumbs-up/"></i>
+							<span class=/"plus/">+</span>
+							<span class=/"percent/">%</span>
+                        	<input type=/"text/" value=/"58/" class=/"orangeCircle/" />
                     	</div>
-                        <div class="row">
+                        <div class=/"row/">
                         <center>
-                        	<div class="span12" id="on_off_switch_icon" >
+                        	<div class=/"span12/" id=/"on_off_switch_icon/" >
                             
-                            <div class="switch"   data-on="success" data-off="danger">
-                   				 <input type="checkbox" checked /> 
+                            <div class=/"switch/"   data-on=/"success/" data-off=/"danger/">
+                   				 <input type=/"checkbox/" checked /> 
                            </div>
                                  
                     </div>
                     </center>
                     </div>
-                    <div class="row">
+                    <div class=/"row/">
                     
                            <center>
-                            <div class="span12" id="sub_device_icons">
-                             <span class="badge badge-warning"><a href="#"><i class="icon-warning-sign icon-white"></i></a></span>
-                            <span class="badge badge-important"><a href="#"><i class="icon-ok icon-white"></i></a></span>
-                            <span class="badge badge-success"><a href="#"><i class="icon-refresh icon-white"></i></a></span>
+                            <div class=/"span12/" id=/"sub_device_icons/">
+                             <span class=/"badge badge-warning/"><a href=/"#/"><i class=/"icon-warning-sign icon-white/"></i></a></span>
+                            <span class=/"badge badge-important/"><a href=/"#/"><i class=/"icon-ok icon-white/"></i></a></span>
+                            <span class=/"badge badge-success/"><a href=/"#/"><i class=/"icon-refresh icon-white/"></i></a></span>
                            		
                             
                              </div>
@@ -243,7 +312,7 @@
                         </div>
                     </div>
                 </div>
-            </div>	
+            </div>	-->
 				
 				
 				

@@ -70,7 +70,7 @@
                   	echo "<div class=\"caption\">";
                     echo "<h3>" . $rows['device_id'] . "</h3>";
                     echo "<p>" . $rows['device_description'] . "</p>";
-                    echo "<a href=\"" . base_url() . "device_on_off/index/" . $this->encrypt_data->encode($rows['id']) . "\" class=\"btn btn-success\">Main Device</a>";
+                    echo "<a href=\"" . base_url() . "device_on_off/index/" . $this->encrypt_data->encode($rows['device_id']) . "\" class=\"btn btn-success\">Main Device</a>";
                   	echo "</div></div></div>";
 					
 					if($i == 3)
