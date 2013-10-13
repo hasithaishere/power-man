@@ -110,7 +110,7 @@ public class HTTPRequest {
             Boolean breaker = true;
             int skipper = 0;
            
-            ResultSet rs1  =  db_con.search("SELECT id,mainDevice_id,device_id,control_status FROM `power_schedule_log` WHERE DATE(schedule_on) <= DATE(NOW()) AND check_status = '0'");
+            ResultSet rs1  =  db_con.search("SELECT id,mainDevice_id,device_id,control_status FROM `power_schedule_log` WHERE schedule_on <= NOW() AND check_status = '0'");
            
             while(rs1.next())
             {
