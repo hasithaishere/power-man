@@ -164,38 +164,76 @@
 				
 					echo "<div class=\"span3 thumbnail\" style=\"background-color:#373737;padding: 9px 9px 9px 9px;\">";
                 	echo "<div class=\"row\">";
-                    echo "<div class=\"span8\" style=\"color:#fff;\">Domore Office / Rathamalane</div>";
+					
+					echo "<div class=\"span8\" style=\"color:#fff;\">".$content3['loc_name']." / ".$content3['loc_subname']." / ".$content3['main_devicetitle']."</div>";
+					
+                    //echo "<div class=\"span8\" style=\"color:#fff;\">Domore Office / Rathamalane</div>";
                     echo "<div class=\"span4\" style=\"#FFF\">";
-                    echo "<img src=\"". base_url() ."img/small_washing_machin.jpg\" alt=\"\"></div>";
+                    echo "<img src=\"". base_url() . "img/" . $rows['image_url'] ."\" alt=\"\"></div>";
+                    //echo "<img src=\"". base_url() ."img/small_washing_machin.jpg\" alt=\"\"></div>";
                     echo "<div class=\"row\" style=\"color:#FFF;\">";
-                    echo "<center>Washing Machine</center>";
-                    echo "<div class=\"circleStatsItem red\">";
-					echo "<i class=\"fa-icon-thumbs-up\"></i>";
-					echo "<span class=\"plus\">+</span>";
-					echo "<span class=\"percent\">%</span>";
-                    echo "<input type=\"text\" value=\"58\" class=\"orangeCircle\" />";
-                    echo "</div>";
-                    echo "<div class=\"row\">";
-                    echo "<center>";
-                    echo "<div class=\"span12\" id=\"on_off_switch_icon\" >";
-                    echo "<div class=\"switch\"   data-on=\"success\" data-off=\"danger\">";
-                   	echo "<input type=\"checkbox\" checked />";
-                    echo "</div>";
-                                 
-                    echo "</div>";
-                    echo "</center>";
-                    echo "</div>";
-                    echo "<div class=\"row\">";
+                    echo "<center>". $rows['device_title'] ."</center>";
                     
-                    echo "<center>";
-                    echo "<div class=\"span12\" id=\"sub_device_icons\">";
-                    echo "<span class=\"badge badge-warning\"><a href=\"#\"><i class=\"icon-warning-sign icon-white\"></i></a></span>";
-                    echo "<span class=\"badge badge-important\"><a href=\"#\"><i class=\"icon-ok icon-white\"></i></a></span>";
-                    echo "<span class=\"badge badge-success\"><a href=\"#\"><i class=\"icon-refresh icon-white\"></i></a></span>";
-                           		
-                            
-                    echo "</div>";
-                    echo "</center>";
+					foreach ($content2 as $rows2) 
+					{
+						if($rows['device_id'] == $rows2['device_id'])
+						{
+							echo "<div class=\"". $rows2['tmp_middleiconcolor'] ."\">";
+							echo "<i class=\"". $rows2['tmp_middleicon'] ."\"></i>";
+							//echo "<span class=\"plus\">+</span>";
+							echo "<span class=\"percent\">". $rows2['tmp_actualpcon'] ."W</span>";
+		                    echo "<input type=\"hidden\" value=\"". $rows2['tmp_pconstatus'] ."\" class=\"". $rows2['tmp_roundcolor'] ."\" />";	
+							
+							echo "</div>";
+		                    echo "<div class=\"row\">";
+		                    echo "<center>";
+		                    echo "<div class=\"span12\" id=\"on_off_switch_icon\" >";
+		                    
+							
+							
+							$on_off_val = "";
+							
+							if($rows2['control_status'] == 1)
+							{
+								$on_off_val = "Checked";
+								echo "<div class=\"switch\"   data-on=\"success\" data-off=\"danger\">";
+								echo "<input type=\"checkbox\" " . $on_off_val . " class=\"onoff_btn\" seq=\"" . $rows2['device_id'] . "\" md=\"" . $rows2['maindevice_id'] . "\"/>";
+								echo "</div>";
+							}
+		                    else 
+		                    {
+								if($rows2['control_status'] == 0)
+								{
+									$on_off_val = "";
+									echo "<div class=\"switch\"   data-on=\"success\" data-off=\"danger\">";
+									echo "<input type=\"checkbox\" " . $on_off_val . " class=\"onoff_btn\" seq=\"" . $rows2['device_id'] . "\" md=\"" . $rows2['maindevice_id'] . "\"/>";
+									echo "</div>";
+								}
+							}
+		                    //echo "<input type=\"checkbox\" " . $on_off_val . " class=\"onoff_btn\" seq=\"" . $rows2['device_id'] . "\" md=\"" . $rows2['maindevice_id'] . "\"/>";
+							
+							
+		                   	//echo "<input type=\"checkbox\" checked />";
+		                    
+		                                 
+		                    echo "</div>";
+		                    echo "</center>";
+		                    echo "</div>";
+		                    echo "<div class=\"row\">";
+		                    
+		                    echo "<center>";
+		                    echo "<div class=\"span12\" id=\"sub_device_icons\">";
+		                    echo "<span class=\"". $rows2['tmp_badgewarn'] ."\"><a data-placement=\"bottom\" data-toggle=\"tooltip\" href=\"#\" data-original-title=\"". $rows2['tmp_badgewarnmsg'] ."\"><i class=\"icon-warning-sign icon-white\"></i></a></span>";
+		                    echo "<span class=\"badge badge-important\"><a href=\"#\"><i class=\"icon-ok icon-white\"></i></a></span>";
+		                    echo "<span class=\"badge badge-success\"><a href=\"#\"><i class=\"icon-refresh icon-white\"></i></a></span>";
+		                           		
+		                            
+		                    echo "</div>";
+		                    echo "</center>";
+						}
+					}
+										
+                    
                     echo "</div>";
                     echo "</div>";
                     echo "</div>";
@@ -335,7 +373,7 @@
 	</div><!--/.fluid-container-->
 	
 	<script type="text/javascript" charset="utf-8">
-	
+	$('a').tooltip();
 			$(document).ready(function(){
 				//$('#subDeviceModal').modal(options)
 				 
@@ -356,10 +394,11 @@
 								control: '0'
 							};
 					}
+										
 				        
 				        $.ajax({
 				                type: "POST",
-				                url: "<?php echo site_url('device_on_off/switch_device'); ?>",
+				                url: "<?php echo base_url().'index.php/device_on_off/switch_device'; ?>",
 								dataType: 'json',
 				                data: form_data,
 				                success: function(msg){

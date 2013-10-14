@@ -4,14 +4,15 @@ class device_on_off extends CI_Controller
 {
 	function index($maindevice_id)
 	{
-		$maindevice_id = $this->encrypt_data->decode($maindevice_id);
 		
+		$maindevice_id = $this->encrypt_data->decode($maindevice_id);
+		//echo $maindevice_id; die();
 		$this->load->model('deviceonoff_model');
 		$result = $this->deviceonoff_model->get_subdevices($maindevice_id);	
 		$result2 = $this->deviceonoff_model->get_subdevices_control($maindevice_id);	
+		$result_bc = $this->deviceonoff_model->get_breadcrumb($maindevice_id);
 		
-		
-		$data = array('content'=>$result,'content2'=>$result2,'user_roles_arr'=>$this->session->userdata('user_roles'));
+		$data = array('content'=>$result,'content2'=>$result2,'content3'=>$result_bc,'user_roles_arr'=>$this->session->userdata('user_roles'));
 		
 		if(!($this->session->userdata('is_logged_in')))
 		{
