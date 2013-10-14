@@ -59,7 +59,7 @@
 			
 			</div>
                      
-                     
+            <br>        
 			<div class="row-fluid">
 				
 				<!--<?php
