@@ -65,7 +65,7 @@
   <center><h2>Main Devices</h2>
   <!--<span class="label label-success">Active</span>-->
   </center>
-     <img src="<?php echo base_url(); ?>img/main_device.png" alt="">
+     <img src="<?php echo base_url(); ?>img/main_device2.png" alt="">
       <div class="caption">
         <!--<h3>Company Package</h3>
         <p>Domore Technology Office Area</p>-->
