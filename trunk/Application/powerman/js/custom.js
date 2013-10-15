@@ -720,6 +720,7 @@ function charts() {
 		update();
 	}
 }
+/*
 function basic_charts(){
 	
         $('#charts').highcharts({
@@ -778,4 +779,4 @@ function basic_charts(){
    
     
 
-}
+}*/
