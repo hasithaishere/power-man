@@ -87,20 +87,19 @@
                 marginBottom: 25
             },
             title: {
-                text: 'Monthly Average Voltage Consumption',
+                text: '<?php echo $headtext;?>',
                 x: -20 //center
             },
             subtitle: {
-                text: 'Domore Office',
+                text: 'Location Base',
                 x: -20
             },
             xAxis: {
-                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+                categories: <?php echo json_encode($xtitle);?>
             },
             yAxis: {
                 title: {
-                    text: 'Voltage (w)'
+                    text: 'Wattage (KW)'
                 },
                 plotLines: [{
                     value: 0,
@@ -109,7 +108,7 @@
                 }]
             },
             tooltip: {
-                valueSuffix: 'W'
+                valueSuffix: 'KW'
             },
             legend: {
                 layout: 'vertical',
@@ -119,25 +118,28 @@
                 y: 100,
                 borderWidth: 0
             },
-            series: [{
-                name: 'Location 01',
-                data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
-            }, {
-                name: 'Location 02',
-                data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
-            }, {
-                name: 'Location 03',
-                data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
-            }, {
-                name: 'Location 04',
-                data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
-            }]
+            
+            <?php
+            	echo "series: [";
+            
+				$datastring = "";
+				//print_r($mapdata);
+				foreach($mapdata as $level2)
+				{
+					foreach($level2 as $key => $val)
+					{
+						$datastring .= "{ name: '" . $key . "', data: " . json_encode($val) . "},";
+					}
+				}
+				$datastring = rtrim($datastring,',');
+				$datastring = str_replace("\"", "'", $datastring);
+				echo $datastring;
+            	echo "]";
+            	
+            ?>
         });
-   
-    
 
-}	
-	
+}
 	</script>
 
 	

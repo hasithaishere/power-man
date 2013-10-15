@@ -1,6 +1,6 @@
 <?php
 
-class Power_monitoring extends CI_Controller
+class power_monitoring extends CI_Controller
 {
 	function index()
 	{
@@ -9,8 +9,10 @@ class Power_monitoring extends CI_Controller
 	
 	function loc_y($user_id)
 	{
-		$this->load->model('power_monotoring_model');
-		$result = $this->power_monitoring_model->loc_y_data($user_id);
+		$this->load->model('power_monitoring_model');
+		$data = $this->power_monitoring_model->loc_y_data($user_id);
+		
+		$this->load->view('power_monitoring',$data);
 		
 	}
 	
