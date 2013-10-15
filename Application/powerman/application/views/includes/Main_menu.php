@@ -30,6 +30,8 @@
 						</li>
                         <?php // if(in_array(5,$user_roles_arr))
 						//{?>
+                        
+                        
 						<li>
 							<a class="dropmenu" href="#"><i class="icon-star icon-white"></i><span class="hidden-tablet"> Settings</span></a>
 							<ul>
@@ -43,7 +45,10 @@
                         
                         <?php //if(in_array(9,$user_roles_arr) || in_array(11,$user_roles_arr))
 						// {?>
-						<li><a href="#"><i class="icon-font icon-white"></i><span class="hidden-tablet"> Reports</span></a></li>
+                        
+                        
+                        
+						<li><a href="<?php echo base_url(); ?>reports"><i class="icon-font icon-white"></i><span class="hidden-tablet"> Reports</span></a></li>
 						<?php // } ?>
                         <!--<li><a href="#"><i class="icon-picture icon-white"></i><span class="hidden-tablet"> Accessories</span></a></li>
 						<li><a href="#"><i class="icon-align-justify icon-white"></i><span class="hidden-tablet"> Online User</span></a></li>-->						<?php // if(in_array(13,$user_roles_arr))
