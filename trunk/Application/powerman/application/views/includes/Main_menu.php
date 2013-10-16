@@ -53,7 +53,7 @@
                         <!--<li><a href="#"><i class="icon-picture icon-white"></i><span class="hidden-tablet"> Accessories</span></a></li>
 						<li><a href="#"><i class="icon-align-justify icon-white"></i><span class="hidden-tablet"> Online User</span></a></li>-->						<?php // if(in_array(13,$user_roles_arr))
 						// {?>
-						<li><a href="#"><i class="icon-calendar icon-white"></i><span class="hidden-tablet"> Suggestions</span></a></li>
+						<li><a href="<?php echo base_url(); ?>Suggestions"><i class="icon-calendar icon-white"></i><span class="hidden-tablet"> Suggestions</span></a></li>
 				  <?php // }?>
                         <!--<li><a href="#"><i class="icon-th icon-white"></i><span class="hidden-tablet"> Grid</span></a></li>
 						<li><a href="#"><i class="icon-folder-open icon-white"></i><span class="hidden-tablet"> File Manager</span></a></li>-->

@@ -5,19 +5,21 @@ class add_newPackage extends CI_Controller
 	function index()
 	{
 	
-		//$this->load->model('add_newPackage_model');
-
-		//$new_packages = $this->add_newPackage_model->get_packages();
-		//$data['packages'] = $new_packages;
+		
+>>>>>>> .r83
 		if(!($this->session->userdata('is_logged_in')))
 		{
+
 			$this->load->view('access_denied');
 			//$this->load->view('add_newPackage');
+>>>>>>> .r83
 		}
 		else 
 		{
+
 			$this->load->view('add_newPackage'); 
 			//$this->load->view('access_denied');
+>>>>>>> .r83
 		}
 		
 				
