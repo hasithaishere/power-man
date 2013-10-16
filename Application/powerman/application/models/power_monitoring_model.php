@@ -128,7 +128,7 @@ class power_monitoring_model extends CI_Model
 				
 					//$query1_p1 = rtrim($query1_p1,'OR');
 					$query1 = "SELECT SUM(pcon) AS totalpcon,MONTH(log_on) AS new_logon FROM power_spl_hour WHERE " . $query1_p1 . " AND YEAR(log_on) = '". $year ."' GROUP BY YEAR(log_on),MONTH(log_on) ORDER BY log_on ASC";
-					//echo $query1;die();
+					//echo $query1."<br><hr>";//die();
 					$result3 = $this->db->query($query1)->result_array();
 				
 					foreach($result3 as $result3_row)
@@ -137,13 +137,13 @@ class power_monitoring_model extends CI_Model
 						$tmp_new_logon = $result3_row['new_logon'];
 					}
 				
-				}
+				}//die();
 				$tmp_resultarr[array_search($tmp_new_logon, $tmp_monthlist2)] = $tmp_tot_pcon/1000;
 				
-			$tmp_powercon[] = array($rows1['name']=>$tmp_resultarr);
-			unset($tmp_resultarr);	
+				
 			}
-			
+			$tmp_powercon[] = array($rows1['name']=>$tmp_resultarr);
+			unset($tmp_resultarr);
 			//print_r($tmp_resultarr);echo "<br>";
 		}
 	
@@ -195,23 +195,6 @@ class power_monitoring_model extends CI_Model
 			
 			if(!empty($result2))
 			{
-				/*foreach($result2 as $rows2)
-				{
-					$query1_p1 .= " maindevice_id = " . "'" . $rows2['device_id'] . "' OR";
-				}
-				
-				$query1_p1 = rtrim($query1_p1,'OR');
-				$query1 = "SELECT SUM(pcon) AS totalpcon,DAYOFMONTH(log_on) AS new_logon FROM power_spl_hour WHERE " . $query1_p1 . " GROUP BY YEAR(log_on),MONTH(log_on),DAYOFMONTH(log_on) ORDER BY log_on ASC";
-				//echo $query1;die();
-				$result3 = $this->db->query($query1)->result_array();
-				
-				foreach($result3 as $result3_row)
-				{
-					$tmp_resultarr[array_search($result3_row['new_logon'], $tmp_daylist2)] = floatval($result3_row['totalpcon'])/1000;
-				}
-				//$tmp_powercon = array();
-				*/
-				
 				
 				
 				$tmp_tot_pcon = 0;
@@ -237,8 +220,7 @@ class power_monitoring_model extends CI_Model
 				}
 				
 				
-			$tmp_powercon[] = array($rows1['name']=>$tmp_resultarr);
-			unset($tmp_resultarr);	
+				
 				//die();
 				
 				
@@ -247,6 +229,8 @@ class power_monitoring_model extends CI_Model
 				
 				
 			}
+			$tmp_powercon[] = array($rows1['name']=>$tmp_resultarr);
+			unset($tmp_resultarr);
 			//$tmp_powercon[] = array($rows1['name']=>$tmp_resultarr);
 			//print_r($tmp_resultarr);echo "<br>";
 		}

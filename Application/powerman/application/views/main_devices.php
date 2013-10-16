@@ -70,7 +70,8 @@
                   	echo "<div class=\"caption\">";
                     echo "<h3>" . $rows['device_id'] . "</h3>";
                     echo "<p>" . $rows['device_description'] . "</p>";
-                    echo "<a href=\"" . base_url() . "device_on_off/index/" . $this->encrypt_data->encode($rows['device_id']) . "\" class=\"btn btn-success\">Main Device</a>";
+                    echo "<a href=\"" . base_url() . "device_on_off/index/" . $this->encrypt_data->encode($rows['device_id']) . "\" class=\"btn btn-success\">Main Device</a><span> </span>";
+                  	echo "<a href=\"#showfilter_option\" role=\"button\" class=\"btn btn-info filterbtn\" data-toggle=\"modal\" ><i class=\"icon-signal icon-white\"></i></a>";
                   	echo "</div></div></div>";
 					
 					if($i == 3)
@@ -141,7 +142,113 @@
 				
 	</div><!--/.fluid-container-->
 
+		<script type="text/javascript" charset="utf-8">
+		$(document).ready(function(){
+			$('.filterbtn').click(function(){
+				$('#showfilter_option').appendTo("body");
+				//$("#showfilter_option").css("z-index", "1500");
+			});
+			
+			var currentYear = (new Date).getFullYear();
+			var currentMonth = (new Date).getMonth();
+
+			$("#month_select").val(currentMonth+1);
+			$("#year_select").val(currentYear);
+			
+			$("#month_select").attr("disabled","disabled");
+			$("#year_select").attr("disabled","disabled");
+			
+			$("#rb_year").change(function(){
+				$("#year_select").attr("disabled","disabled");
+				$("#month_select").attr("disabled","disabled");
+			});
+			
+			$("#rb_month").change(function(){
+				$("#year_select").removeAttr("disabled");
+				$("#month_select").attr("disabled","disabled");
+			});
+			
+			$("#rb_day").change(function(){
+				$("#year_select").removeAttr("disabled");
+				$("#month_select").removeAttr("disabled");
+			});
+			
+		});
 	
+	
+	</script>
+	
+ <!-- Modals Start -->
+ 
+		<div id="showfilter_option" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<form class="form-horizontal" action="<?php echo base_url();?>index.php/main_devices/filterReport/<?php echo $location_id;?>" method="post">
+		<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		<h3 id="myModalLabel">Filter Power Monitoring</h3>
+		</div>
+		<div class="modal-body">
+		<p>Please select filtering option. According to your selection all the main devices' power consumption will display.</p>
+		
+		<div>
+             	<label for="head_msg" style="font-weight:600;">Group By</label>
+        </div>
+		
+		<div>
+             	<label class="radio">
+				<input type="radio" name="groupby_rb" id="rb_year" value="1" checked>
+				Yearly
+				</label>
+				<label class="radio">
+				<input type="radio" name="groupby_rb" id="rb_month" value="2">
+				Monthly
+				</label>
+				<label class="radio">
+				<input type="radio" name="groupby_rb" id="rb_day" value="3">
+				Daily
+				</label>
+				<label class="radio">
+				<input type="radio" name="groupby_rb" id="rb_hour" value="4" disabled="disabled">
+				Hourly
+				</label>
+        </div>
+        <label>According to gouping selection please fill year and month when it requires.</label>
+        <div>
+            <label for="head_msg" style="font-weight:600;">Year</label>
+            <select name="year_select" id="year_select">
+            	<?php
+            		for($i=1900;$i<=2100;$i++)
+					{
+						echo "<option value=\"". $i ."\">". $i ."</option>";
+					}            		
+            	?>
+            </select>
+        </div>
+        <div>
+            <label for="head_msg" style="font-weight:600;">Month</label>
+            <select name="month_select" id="month_select">
+                  <option value="1">January</option>
+                  <option value="2">February</option>
+                  <option value="3">March</option>
+                  <option value="4">April</option>
+                  <option value="5">May</option>
+                  <option value="6">June</option>
+                  <option value="7">July</option>
+                  <option value="8">August</option>
+                  <option value="9">September</option>
+                  <option value="10">October</option>
+                  <option value="11">November</option>
+                  <option value="12">December</option>
+            </select>
+        </div>
+        
+			
+		<div class="modal-footer">
+		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+		<button class="btn btn-primary" aria-hidden="true" id="model_runfilter" type="submit">Run Filter &raquo;</button>
+		</div>
+		</form>
+		</div>
+<!-- Modals End -->
 	
 	
 </body>

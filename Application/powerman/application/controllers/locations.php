@@ -18,5 +18,38 @@ class Locations extends CI_Controller
 		{
 			$this->load->view('locations',$data);
 		}
-	}	
+	}
+	
+	function filterReport()
+	{
+		$tmp_group = $this->input->post('groupby_rb');
+		$tmp_year = $this->input->post('year_select');
+		$tmp_month = $this->input->post('month_select');
+		$user_id = $this->session->userdata('user_id');
+		
+		if($tmp_group == 1)
+		{
+			redirect(base_url()."index.php/power_monitoring/loc_y/".$user_id);
+		}
+		else 
+		{
+			if($tmp_group == 2)
+			{
+				redirect(base_url()."index.php/power_monitoring/loc_m/".$user_id."/".$tmp_year);
+			}
+			else 
+			{
+				if($tmp_group == 3)
+				{
+					redirect(base_url()."index.php/power_monitoring/loc_d/".$user_id."/".$tmp_year."/".$tmp_month);
+				}
+				else 
+				{
+					redirect('locations');
+				}
+			}
+		}
+		
+	}
+	
 }
