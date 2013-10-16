@@ -4,8 +4,12 @@ class power_monitoring extends CI_Controller
 {
 	function index()
 	{
-		$this->load->view('power_monitoring');
+		//$this->load->view('power_monitoring');
+		redirect(base_url()."index.php/power_monitoring/loc_y/".$this->session->userdata('user_id'));
+		
 	}
+	
+	//------------------------------------------------------------------------------------------
 	
 	function loc_y($user_id)
 	{

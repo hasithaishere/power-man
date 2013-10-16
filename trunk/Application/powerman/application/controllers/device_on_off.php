@@ -12,7 +12,7 @@ class device_on_off extends CI_Controller
 		$result2 = $this->deviceonoff_model->get_subdevices_control($maindevice_id);	
 		$result_bc = $this->deviceonoff_model->get_breadcrumb($maindevice_id);
 		
-		$data = array('content'=>$result,'content2'=>$result2,'content3'=>$result_bc,'user_roles_arr'=>$this->session->userdata('user_roles'));
+		$data = array('content'=>$result,'content2'=>$result2,'content3'=>$result_bc,'user_roles_arr'=>$this->session->userdata('user_roles'),'maindevice_id'=>$maindevice_id);
 		
 		if(!($this->session->userdata('is_logged_in')))
 		{
@@ -92,6 +92,38 @@ class device_on_off extends CI_Controller
 	{
 		$this->load->model('deviceonoff_model');
 		$this->deviceonoff_model->switch_device();
+	}
+	
+	function filterReport($maindevice_id)
+	{
+		$tmp_group = $this->input->post('groupby_rb');
+		$tmp_year = $this->input->post('year_select');
+		$tmp_month = $this->input->post('month_select');
+		$user_id = $this->session->userdata('user_id');
+		
+		if($tmp_group == 1)
+		{
+			redirect(base_url()."index.php/power_monitoring/sd_y/".$user_id."/".$maindevice_id);
+		}
+		else 
+		{
+			if($tmp_group == 2)
+			{
+				redirect(base_url()."index.php/power_monitoring/sd_m/".$user_id."/".$maindevice_id."/".$tmp_year);
+			}
+			else 
+			{
+				if($tmp_group == 3)
+				{
+					redirect(base_url()."index.php/power_monitoring/sd_d/".$user_id."/".$maindevice_id."/".$tmp_year."/".$tmp_month);
+				}
+				else 
+				{
+					redirect('locations');
+				}
+			}
+		}
+		
 	}
 	
 	
