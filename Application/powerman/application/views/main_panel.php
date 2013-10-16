@@ -67,6 +67,7 @@
                                <h3><a href="">GENERATE REPORTS</a></h3>
                             <p>Generate the status of installed location, area, sensors and devices. </p>
                             </div>
+                            
                         </div>
 			<hr>
 			

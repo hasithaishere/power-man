@@ -4,11 +4,7 @@ class Upgrade_Package extends CI_Controller
 {
 	function index()
 	{
-		//$this->load->model('upgrade_package_model');
-
-		//$new_packages = $this->upgrade_package_model->upgrade_package();
 		
-		//$data['packages'] = $new_packages;
 		if(!($this->session->userdata('is_logged_in')))
 		{
 			$this->load->view('access_denied');
@@ -18,20 +14,7 @@ class Upgrade_Package extends CI_Controller
 			$this->load->view('Upgrade_Package',array('error' => ' ' ));
 		}
 	}
-	/*
-	function upgrade_Package()
-	{
-		//$this->load->model('upgrade_package_model');
-		$this->load->model('upgrade_package_model');
-		if($query = $this->upgrade_package_model->upgrade_package())
-	{
-		$this->load->view('Upgrade_Package');
-	}
-		else
-		{
-		$this->load->view('access_denied');
-		}
-	}*/
+	
 	
 	function upgrade()
 	{
@@ -52,7 +35,6 @@ class Upgrade_Package extends CI_Controller
 			$this->load->model('upgrade_package_model');
 			if($query = $this->upgrade_package_model->upgrade_packageM())
 			{
-				//$this->load->view('Upgrade_Package');
 				redirect('Upgrade_Package');
 			}
 			
