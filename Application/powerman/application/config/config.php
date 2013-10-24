@@ -15,6 +15,7 @@
 |
 */
 $config['base_url']	= 'http://powerman.hp';
+/*$config['base_url']	= 'http://localhost/powerman';*/
 $config['server_root']	= $_SERVER['DOCUMENT_ROOT'];
 
 $config['admin_email']	= 'ruslpowerman@gmail.com';
