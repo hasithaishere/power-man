@@ -410,11 +410,11 @@
 							        //});
 									if(msg.r1 == true)
 									{
-										alert('OK');										
+										alert('Signel sent to the devices successfully.');										
 									}
 									else
 									{
-										alert('Not OK');
+										alert('Signel sending to device unsccessfull.');
 									}
 									
 									//$('#btn_changepass').prop("disabled", true);
