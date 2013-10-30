@@ -5,21 +5,20 @@ class add_newPackage extends CI_Controller
 	function index()
 	{
 	
-		
-//>>>>>>> .r83
+
 		if(!($this->session->userdata('is_logged_in')))
 		{
 
 			$this->load->view('access_denied');
 			//$this->load->view('add_newPackage');
-//>>>>>>> .r83
+
 		}
 		else 
 		{
 
 			$this->load->view('add_newPackage'); 
 			//$this->load->view('access_denied');
-//>>>>>>> .r83
+
 		}
 		
 				

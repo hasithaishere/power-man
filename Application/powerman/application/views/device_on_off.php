@@ -40,6 +40,7 @@
 					<li>
 						<a href="<?php echo base_url(); ?>device_on_off">Sub Device Controlling</a>
 					</li>
+                    
 				</ul>
 				
 			</div>
@@ -225,9 +226,13 @@
 		                    echo "<div class=\"span12\" id=\"sub_device_icons\">";
 		                    echo "<span class=\"". $rows2['tmp_badgewarn'] ."\"><a data-placement=\"bottom\" data-toggle=\"tooltip\" href=\"#\" data-original-title=\"". $rows2['tmp_badgewarnmsg'] ."\"><i class=\"icon-warning-sign icon-white\"></i></a></span>";
 		                    echo "<span class=\"badge badge-important\"><a href=\"#\"><i class=\"icon-ok icon-white\"></i></a></span>";
+							
+							
+							
 		                    echo "<span class=\"badge badge-info\"><a href=\"#showfilter_option\" data-toggle=\"modal\" class=\"filterbtn\"><i class=\"icon-signal icon-white\"></i></a></span>";
-		                           		
-		                            
+		                    
+							 echo "<span class=\"badge badge-info\"><a href=\"#\"><i class=\"icon-calendar icon-white\"></i></a></span>";
+							
 		                    echo "</div>";
 		                    echo "</center>";
 						}

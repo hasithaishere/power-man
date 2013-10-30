@@ -17,11 +17,13 @@ $(document).ready( function () {
 	$("#overlay").delay(1250).fadeOut(500);
 	
 	template_functions();
+	
 	charts();
 	circle_progess();
 	basic_charts();
 	
     $('.datatable').dataTable();
+	
 	
 	//$('#subDeviceModal').modal(options);
   
