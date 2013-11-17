@@ -32,11 +32,11 @@ class deviceonoff_model extends CI_Model
 			$tmp_deviceid = $rows['device_id'];
 			
 			//SELECT power_define_device.normal_pcon FROM power_user_subdevices,power_define_device WHERE power_user_subdevices.device_type = power_define_device.id AND power_user_subdevices.device_id = '1D723F69'
-			$result2 = $this->db->query("SELECT power_define_device.normal_pcon FROM power_user_subdevices,power_define_device WHERE power_user_subdevices.device_type = power_define_device.id AND power_user_subdevices.device_id = '". $tmp_deviceid ."'")->result_array();
+			$result2 = $this->db->query("SELECT power_define_device.max_pcon FROM power_user_subdevices,power_define_device WHERE power_user_subdevices.device_type = power_define_device.id AND power_user_subdevices.device_id = '". $tmp_deviceid ."'")->result_array();
 			$tmp_normalpcon = 0;
 			foreach($result2 as $rows2)
 			{
-				$tmp_normalpcon = $rows2['normal_pcon'];
+				$tmp_normalpcon = $rows2['max_pcon'];
 			}
 			$tmp_actualpcon = $rows['pcon'];
 			$tmp_pconstatus = intval(floatval($tmp_actualpcon)/floatval($tmp_normalpcon)*100);
