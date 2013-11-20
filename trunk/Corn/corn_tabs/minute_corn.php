@@ -42,7 +42,7 @@ include dirname(__FILE__).'/config.php';
 				
 	while($row1 = mysql_fetch_array($retval1, MYSQL_ASSOC))
 	{
-		$sql2 = "SELECT device_id, FROM power_user_subdevices WHERE maindevice_id = '" . $row1['device_id'] . "'";
+		$sql2 = "SELECT device_id,device_type FROM power_user_subdevices WHERE maindevice_id = '" . $row1['device_id'] . "'";
 
 		$retval2 = mysql_query( $sql2, $conn );
 		
@@ -75,7 +75,7 @@ include dirname(__FILE__).'/config.php';
 				
 				/*-----Function's Start Call - Malfucntion, -----*/
 				
-				malfunction_alert_generator($row3['totalpcon'],$row2['device_id'],$row1['device_id'],$current_logtime,$conn);
+				malfunction_alert_generator($row3['totalpcon'],$row2['device_id'],$row1['device_id'],$row2['device_type'],$current_logtime,$conn);
 				
 				/*-----Function's Stop Call - Malfucntion, -----*/
 			}
@@ -116,10 +116,10 @@ include dirname(__FILE__).'/config.php';
 	
 	//-----Malfuction Detect Method--------START
 	
-	function malfunction_alert_generator($pcon,$device_id,$maindevice_id,$alert_on,$conn)
+	function malfunction_alert_generator($pcon,$device_id,$maindevice_id,$device_type,$alert_on,$conn)
 	{
 		$sql10 = "SELECT * FROM power_define_device WHERE id = (SELECT device_type FROM power_user_subdevices WHERE device_id = '". $device_id ."' AND maindevice_id = '". $maindevice_id ."')";
-
+		
 		$retval10 = mysql_query( $sql10, $conn );
 		
 		if(! $retval10 )
@@ -144,8 +144,8 @@ include dirname(__FILE__).'/config.php';
 				}
 				else 
 				{
-					$sql12 = "SELECT id FROM power_alert_temp WHERE alert_count >= '". $row10['alert_level_count'] ."' AND device_id = '". $device_id ."' AND maindevice_id = '". $maindevice_id ."' AND alert_type_id = '1')";
-
+					$sql12 = "SELECT id FROM power_alert_temp WHERE alert_count >= '". $row10['alert_level_count'] ."' AND device_id = '". $device_id ."' AND maindevice_id = '". $maindevice_id ."' AND alert_type_id = '1'";
+					
 					$retval12 = mysql_query( $sql12, $conn );
 					
 					if(! $retval12 )
@@ -168,7 +168,7 @@ include dirname(__FILE__).'/config.php';
 						//-----Alert Required Data ------- END
 						
 						//-----Get Main Device Data--------START
-						$sql13 = "SELECT * FROM power_user_device WHERE device_id = '". $maindevice_id ."')";
+						$sql13 = "SELECT * FROM power_user_device WHERE device_id = '". $maindevice_id ."'";
 
 						$retval13 = mysql_query( $sql13, $conn );
 						
@@ -185,7 +185,7 @@ include dirname(__FILE__).'/config.php';
 						//-----Get Main Device Data--------END
 						
 						//-----Get Main Device Location Data--------START
-						$sql14 = "SELECT * FROM power_location WHERE id = '". $tmp_alert_location_id ."')";
+						$sql14 = "SELECT * FROM power_location WHERE id = '". $tmp_alert_location_id ."'";
 
 						$retval14 = mysql_query( $sql13, $conn );
 						
@@ -202,7 +202,7 @@ include dirname(__FILE__).'/config.php';
 						//-----Get Main Device Location Data--------END
 						
 						//-----Get SubDevice Data--------START
-						$sql15 = "SELECT * FROM power_user_subdevices WHERE device_id = '". $device_id ."')";
+						$sql15 = "SELECT * FROM power_user_subdevices WHERE device_id = '". $device_id ."'";
 
 						$retval15 = mysql_query( $sql15, $conn );
 						
@@ -227,7 +227,23 @@ include dirname(__FILE__).'/config.php';
 						$sql16 = "INSERT INTO power_alert_main(device_id,maindevice_id,alert_discri,alert_priority,alert_type_id,created_by,created_on) VALUES ('". $device_id ."','". $maindevice_id ."','". $tmp_alert_string . "','High','1','1000','". $alert_on ."')";
 						
 						$retval16 = mysql_query( $sql16, $conn );
-	
+						
+							/*-------Malfunction Sugestion - START-------*/
+							
+							$tmp_device_detail = "Device : Location : " . $tmp_alert_location1 . "-" . $tmp_alert_location2 . " , Main Device : " . $tmp_alert_device_title . " , Sub Device : " . $tmp_alert_subdevice_title;
+							$tmp_device_detail = mysql_real_escape_string($tmp_device_detail);
+							malfunction_sug_generator($maindevice_id,$device_type,'1',$tmp_device_detail,$alert_on,$conn);
+							
+							/*--------Malfunction Sugestion - END--------*/
+							
+						
+							/*-------Malfunction SMS Send - START-------*/
+							
+							malfunction_send_sms($maindevice_id, $tmp_alert_string, $alert_on, $conn);
+							
+							/*--------Malfunction SMS Send - END--------*/
+							
+						
 						if(! $retval16 )
 						{
 						  die('Could not enter data: ' . mysql_error());
@@ -253,11 +269,96 @@ include dirname(__FILE__).'/config.php';
 			}
 		}
 	}
+	
 	//-----Malfuction Detect Method--------END
+	
+	//-----Malfuction SMS Alert Method--------START
+	
+	function malfunction_send_sms($maindevice_id,$message,$send_on,$conn)
+	{
+		$sql18 = "SELECT malf_sms,user_id FROM power_alert_config WHERE user_id = (SELECT power_users_id FROM power_user_device WHERE device_id = '". $maindevice_id ."')";
+
+		$retval18 = mysql_query( $sql18, $conn );
+					
+		if(! $retval18 )
+		{
+			die('Could not get data: ' . mysql_error());
+		}
+					
+		while($row18 = mysql_fetch_array($retval18, MYSQL_ASSOC))
+		{
+			if($row18['malf_sms'] == 1)
+			{
+				$sql19 = "SELECT phoneno FROM power_users WHERE id = '". $row18['user_id'] ."'";
+						
+				$retval19 = mysql_query( $sql19, $conn );
+	
+				if(! $retval19 )
+				{
+					die('Could not enter data: ' . mysql_error());
+				}
+				
+				while($row19 = mysql_fetch_array($retval19, MYSQL_ASSOC))
+				{
+					$sql20 = "INSERT INTO power_sms_send (message,phone_no,created_by,created_on) VALUES ('". $message ."','". $row19['phoneno'] ."','1000','". $send_on ."')";
+					
+					$retval20 = mysql_query( $sql20, $conn );
+		
+					if(! $retval20 )
+					{
+						die('Could not enter data: ' . mysql_error());
+					}
+				}				
+			}
+		}
+	}
+
+	
+	//-----Malfuction SMS Alert Method--------END
+	
 	
 	//-----Malfuction Sugestions Method--------START
 	
+	function malfunction_sug_generator($maindevice_id,$device_type,$alert_type_id,$tmp_device_detail,$alert_on,$conn)
+	{
+		$sql21 = "SELECT malf_sug,user_id FROM power_alert_config WHERE user_id = (SELECT power_users_id FROM power_user_device WHERE device_id = '". $maindevice_id ."')";
+
+		$retval21 = mysql_query( $sql21, $conn );
+					
+		if(! $retval21 )
+		{
+			die('Could not get data: ' . mysql_error());
+		}
+					
+		while($row21 = mysql_fetch_array($retval21, MYSQL_ASSOC))
+		{
+			if($row21['malf_sug'] == 1)
+			{
+				$sql22 = "SELECT sug_discri FROM power_define_sugestions WHERE alert_type_id = '". $alert_type_id ."' AND device_type = '". $device_type ."'";
+						
+				$retval22 = mysql_query( $sql22, $conn );
 	
+				if(! $retval22 )
+				{
+					die('Could not enter data: ' . mysql_error());
+				}
+				
+				while($row22 = mysql_fetch_array($retval22, MYSQL_ASSOC))
+				{
+					$tmp_discription = $row22['sug_discri'] . $tmp_device_detail;
+					
+					$sql23 = "INSERT INTO power_alert_sugestions (maindevice_id,sug_discri,alert_type_id,created_by,created_on) VALUES ('". $maindevice_id ."','". $tmp_discription ."','". $alert_type_id ."','1000','". $alert_on ."')";
+					
+					$retval23 = mysql_query( $sql23, $conn );
+		
+					if(! $retval23 )
+					{
+						die('Could not enter data: ' . mysql_error());
+					}
+				}				
+			}
+		}
+	}
 	
 	//-----Malfuction Sugestions Method--------END
 	
