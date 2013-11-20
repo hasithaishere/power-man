@@ -16,7 +16,9 @@ include dirname(__FILE__).'/config.php';
 	
 	//malfunction_alert_generator(10,"1D723F69","ses001",$current_logtime,$conn);
 	
-	malfunction_sug_generator("ses001", "1", "1", "hhhhaaaaa", $current_logtime,$conn);
+	//malfunction_sug_generator("ses001", "1", "1", "hhhhaaaaa", $current_logtime,$conn);
+	
+	timeexceed_alert_generator(70, "ses001", "1D723F69", $current_logtime, "Thesjfdsbnljvblscjvb nvslvjn xljvbnvb", $conn);
 	
 	function malfunction_send_sms($maindevice_id,$message,$send_on,$conn)
 	{
@@ -235,4 +237,90 @@ include dirname(__FILE__).'/config.php';
 			}
 		}
 	}
+
+
+	function timeexceed_alert_generator($pcon,$maindevice_id,$device_id,$log_on,$device_info,$conn)
+	{
+		if($pcon > SDIGNORE)
+		{		
+			$sql24 = "SELECT TIMESTAMPDIFF(SECOND,(SELECT log_on FROM power_spl_minute WHERE log_on < '". $log_on ."' AND pcon < '". SDIGNORE ."' AND device_id = '". $device_id ."' AND maindevice_id  = '". $maindevice_id ."' ORDER BY log_on DESC LIMIT 1),'". $log_on ."') AS diff_time";
+							
+			$retval24 = mysql_query( $sql24, $conn );
+		
+			if(! $retval24 )
+			{
+				die('Could not enter data: ' . mysql_error());
+			}
+					
+			while($row24 = mysql_fetch_array($retval24, MYSQL_ASSOC))
+			{
+				$tmp_time_diff = $row24['dif_time'];
+				
+				$tmp_alert_string = "This device exceed it normal execution time. Currently it worked ". gmdate("H:i:s", $tmp_time_diff) ."Hours. Device Info : ". $device_info;
+				
+				$sql25 = "INSERT INTO power_alert_main(device_id,maindevice_id,alert_discri,alert_priority,alert_type_id,created_by,created_on) VALUES ('". $device_id ."','". $maindevice_id ."','". $tmp_alert_string . "','High','3','1000','". $alert_on ."')";
+						
+				$retval25 = mysql_query( $sql25, $conn );
+				
+				if(! $retval25 )
+				{
+					die('Could not enter data: ' . mysql_error());
+				}
+				else 
+				{
+					timeexceed_alert_sms($maindevice_id, $tmp_alert_string, $log_on, $conn);
+				}
+				
+			}
+		}
+		
+	}
+	
+	//-----Maximum Time Period Exceed Alert--------END
+	
+	//-----Maximum Time Period Exceed Alert SMS--------START
+	
+	function timeexceed_alert_sms($maindevice_id,$message,$send_on,$conn)
+	{
+		$sql26 = "SELECT time_warn_sms,user_id FROM power_alert_config WHERE user_id = (SELECT power_users_id FROM power_user_device WHERE device_id = '". $maindevice_id ."')";
+
+		$retval26 = mysql_query( $sql26, $conn );
+					
+		if(! $retval26 )
+		{
+			die('Could not get data: ' . mysql_error());
+		}
+					
+		while($row26 = mysql_fetch_array($retval26, MYSQL_ASSOC))
+		{
+			if($row26['time_warn_sms'] == 1)
+			{
+				$sql27 = "SELECT phoneno FROM power_users WHERE id = '". $row26['user_id'] ."'";
+						
+				$retval27 = mysql_query( $sql27, $conn );
+	
+				if(! $retval27 )
+				{
+					die('Could not enter data: ' . mysql_error());
+				}
+				
+				while($row27 = mysql_fetch_array($retval27, MYSQL_ASSOC))
+				{
+					$sql28 = "INSERT INTO power_sms_send (message,phone_no,created_by,created_on) VALUES ('". $message ."','". $row27['phoneno'] ."','1000','". $send_on ."')";
+					
+					$retval28 = mysql_query( $sql28, $conn );
+		
+					if(! $retval28 )
+					{
+						die('Could not enter data: ' . mysql_error());
+					}
+				}				
+			}
+		}
+	}
+
+	
+	//-----Maximum Time Period Exceed Alert SMS--------END
+
+
 ?>
