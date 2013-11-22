@@ -80,16 +80,16 @@ border:1px solid #cecece;
 
 
 /*-----------------------Upgrade Form-----------------------------------*/
-#upgrade_form{
+#change_password{
 	padding:0 10px 10px;
 }
-#upgrade_form label{
+#change_password label{
 	display:block;
 	color:#797979;
 	font-weight:700;
 	line-height:1.4em
 }
-#upgrade_form input{
+#change_password input{
 	width:220px;
 	padding:6px;
 	color:#949494;
@@ -97,11 +97,11 @@ border:1px solid #cecece;
 	font-size:11px;
 	border:1px solid #cecece;
 }
-#upgrade_form input.error{
+#change_password input.error{
 	background:#f8dbdb;
 	border-color:#e77776;
 }
-#upgrade_form text{
+#change_password text{
 width:550px;
 height:80px;
 padding:6px;
@@ -111,24 +111,24 @@ font-style:italic;
 font-size:12px;
 border:1px solid #cecece;
 }
-#upgrade_form textarea.error{
+#change_password textarea.error{
 	background:#f8dbdb;
 	border-color:#e77776;
 }
-#upgrade_form div{
+#change_password div{
 	margin-bottom:15px;
 }
-#upgrade_form div span{
+#change_password div span{
 	margin-left:10px;
 	color:#b1b1b1;
 	font-size:11px;
 	font-style:italic;
 }
-#upgrade_form div span.error{
+#change_password div span.error{
 	color:#e46c6e;
 }
 
-#upgrade_form #upgrade{
+#change_password #upgrade{
 	background:#6f9ff1;
 	color:#fff;
 	font-weight:700;
@@ -136,9 +136,75 @@ border:1px solid #cecece;
 	border:0;
 	cursor:pointer;
 }
-#upgrade_form #upgrade:hover{
+#change_password #upgrade:hover{
 	background:#79a7f1;
 }
+
+
+
+
+
+
+#basic_profile{
+	padding:0 10px 10px;
+}
+#basic_profile label{
+	display:block;
+	color:#797979;
+	font-weight:700;
+	line-height:1.4em
+}
+#basic_profile input{
+	width:220px;
+	padding:6px;
+	color:#949494;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	border:1px solid #cecece;
+}
+#basic_profile input.error{
+	background:#f8dbdb;
+	border-color:#e77776;
+}
+#basic_profile text{
+width:550px;
+height:80px;
+padding:6px;
+color:#adaeae;
+font-family:Arial, Helvetica, sans-serif;
+font-style:italic;
+font-size:12px;
+border:1px solid #cecece;
+}
+#basic_profile textarea.error{
+	background:#f8dbdb;
+	border-color:#e77776;
+}
+#basic_profile div{
+	margin-bottom:15px;
+}
+#basic_profile div span{
+	margin-left:10px;
+	color:#b1b1b1;
+	font-size:11px;
+	font-style:italic;
+}
+#basic_profile div span.error{
+	color:#e46c6e;
+}
+
+#basic_profile #upgrade{
+	background:#6f9ff1;
+	color:#fff;
+	font-weight:700;
+	font-style:normal;
+	border:0;
+	cursor:pointer;
+}
+#basic_profile #upgrade:hover{
+	background:#79a7f1;
+}
+
 /*-----------------------Upgrade Form-----------------------------------*/
 
 .modal-body .intro{

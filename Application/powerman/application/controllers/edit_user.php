@@ -41,7 +41,7 @@ class edit_user extends CI_Controller
 		
 		if($this->form_validation->run() == FALSE)
 		{
-			$this->load->view('create_user');	
+			$this->load->view('edit_user/index/'.$this->encrypt_data->encode($user_id));	
 		}
 		else 
 		{
