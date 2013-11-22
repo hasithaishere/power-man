@@ -23,6 +23,11 @@ $(document).ready(function() {
 	var pass2Details = $("#pass2Details");
 	var message = $("#message");
 	
+	//--------User Profile Edit --------START
+	var basic_profile = $("#basic_profile");
+	var change_password = $("#change_password");
+	//--------User Profile Edit --------END
+	
 	fname.blur(validateFname);
 	lname.blur(validateLname);
 	name.blur(validateName);
@@ -48,6 +53,22 @@ $(document).ready(function() {
 	
 	form.submit(function(){
 			if(validateName() & validateEmail() & validatPass1() & validatPass2() & validateMessage()){
+			return true;
+			}else{
+				return false;
+			}
+		});
+	
+	basic_profile.submit(function(){
+			if(validateFname() & validateLname() & validateName() & validateAddress() & validateCity() & validateProvince() & validateZipcode() & validateEmail()){
+			return true;
+			}else{
+				return false;
+			}
+		});
+		
+	change_password.submit(function(){
+			if(validatePass1() & validatePass2()){
 			return true;
 			}else{
 				return false;
