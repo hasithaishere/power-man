@@ -51,7 +51,7 @@
 					</div>
 					<div class="box-content">
 						
-			<form method="post" id="basic_profile" action="<?php echo base_url();?>index.php/edit_user/update_user/<?php echo $userdata[0]['id'];?>">
+			<form method="post" id="basic_profile" action="<?php echo base_url();?>index.php/edit_user/update_user_details/<?php echo $userdata[0]['id'];?>">
         	<fieldset>
         	
         	<div class="control-group">
@@ -152,9 +152,23 @@
                 <span id="emailDetails">So I can get back to you</span>
                 </div>
              </div>
-					
-								<button type="submit" class="btn btn-info">Save changes</button>
-					
+			<div class="control-group">
+				<div class="controls">	
+						<button type="submit" class="btn btn-info">Save changes</button>
+				</div>
+            </div>
+            <?php
+            	if($success_update == 1)
+				{
+					echo "<div class=\"control-group\"><div class=\"controls\"><div class=\"alert alert-success\">". $success_update_msg . "</div></div>";
+				}
+            ?>
+            
+			<div class="control-group">
+				<div class="controls">	
+		             	<?php echo validation_errors('<div class="alert alert-danger">');?>
+		   		</div>
+		   	</div>
 					
 					</fieldset>
 					</form>
@@ -175,7 +189,7 @@
 					</div>
 					<div class="box-content">
 						
-			<form method="post" id="change_password" action="<?php echo base_url();?>index.php/edit_user/update_user/<?php echo $userdata[0]['id'];?>">
+			<form method="post" id="change_password" action="<?php echo base_url();?>index.php/edit_user/update_user_password/<?php echo $userdata[0]['id'];?>">
         	<fieldset>
         	
         	<div class="control-group">
@@ -186,28 +200,30 @@
              <div class="control-group">
              	<label class="control-label" for="pass1">Password</label>
              	<div class="controls">
-					<input id="pass1" name="pass1" type="password" <?php echo "value=\"" . $userdata[0]['password'] . "\"";?>/>
+					<input id="pass1" name="pass1" type="password" <?php echo "value=\"**********\"";?>/>
                 	<span id="pass1Details">8 characters or more please</span>
              	</div>
              </div>
              <div class="control-group">
              	<label class="control-label" for="pass2">Confirm Password</label>
 				<div class="controls">
-					<input id="pass2" name="pass2" type="password" <?php echo "value=\"" . $userdata[0]['password'] . "\"";?>/>
+					<input id="pass2" name="pass2" type="password" <?php echo "value=\"**********\"";?>/>
 	                <span id="pass2Details">Same as above</span>
                 </div>
              </div>
-        	
-        	
-					
-								<button type="submit" class="btn btn-info" id="update_password">Save changes</button>
-					
+        	 <div class="control-group">
+				<div class="controls">
+        			<button type="submit" class="btn btn-info" id="update_password">Save changes</button>
+        		</div>
+             </div>
+			<?php
+            	if($success_updatepass == 1)
+				{
+					echo "<div class=\"control-group\"><div class=\"controls\"><div class=\"alert alert-success\">". $success_updatepass_msg . "</div></div>";
+				}
+            ?>	
 					
 					</fieldset>
-					
-					<div>
-		             	<?php echo validation_errors('<div class="alert alert-danger">');?>
-		             </div>
 					
 					</form>
 					
@@ -407,24 +423,24 @@
 	<script type="text/javascript" charset="utf-8">
 			$(document).ready(function(){
 				
-				$("#pass1").attr('readonly','readonly');
-				$("#pass2").attr('readonly','readonly');
+				$("#pass1").attr('disabled','disabled');
+				$("#pass2").attr('disabled','disabled');
 				$("#update_password").attr('disabled','disabled');
 				
 				$("#is_change_pass").change(function(){
 					
 					if($("#is_change_pass").is(':checked'))
 					{
-						$("#pass1").removeAttr('readonly');
-						$("#pass2").removeAttr('readonly');
+						$("#pass1").removeAttr('disabled');
+						$("#pass2").removeAttr('disabled');
 						$("#update_password").removeAttr('disabled');
 						$("#pass1").val("");
 						$("#pass2").val("");
 					}
 					else
 					{
-						$("#pass1").attr('readonly','readonly');
-						$("#pass2").attr('readonly','readonly');
+						$("#pass1").attr('disabled','disabled');
+						$("#pass2").attr('disabled','disabled');
 						$("#pass1").val("************");
 						$("#pass2").val("************");
 						$("#update_password").attr('disabled','disabled');

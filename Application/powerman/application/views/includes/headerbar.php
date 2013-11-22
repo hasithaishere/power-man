@@ -107,7 +107,7 @@
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
-								<li><a href="#"><i class="icon-user"></i> Profile</a></li>
+								<li><a href="<?php echo base_url(); ?>edit_user/index/<?php echo $this->encrypt_data->encode($this->session->userdata('user_id'))?>"><i class="icon-user"></i> Profile</a></li>
 								<li><a href="<?php echo base_url(); ?>signout"><i class="icon-off"></i> Logout</a></li>
 							</ul>
 						</li>

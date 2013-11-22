@@ -13,8 +13,8 @@ $(document).ready(function() {
 	var sms_amountDetails = $("#sms_amountDetails");
 	var duration = $("#duration");
 	var durationDetails = $("#durationDetails");
-	//var eDuration = $("#eDuration");
-	//var expire_durationDetails = $("#expire_durationDetails");
+	var eDuration = $("#eDuration");
+	var expire_durationDetails = $("#expire_durationDetails");
 	
 	nPackage.blur(validate_nPackage);
 	description.blur(validate_description);
@@ -22,7 +22,7 @@ $(document).ready(function() {
 	sDevices.blur(validate_sDevices);
 	smsAmount.blur(validate_smsAmount);
 	duration.blur(validate_duration);
-	//eDuration.blur(validate_eDuration);
+	eDuration.blur(validate_eDuration);
 	
 	
 	nPackage.keyup(validate_nPackage);
@@ -31,7 +31,7 @@ $(document).ready(function() {
 	sDevices.keyup(validate_sDevices);
 	smsAmount.keyup(validate_smsAmount);
 	duration.keyup(validate_duration);
-	//eDuration.keyup(validate_eDuration);
+	eDuration.keyup(validate_eDuration);
 	
 	
 	
@@ -78,7 +78,71 @@ $(document).ready(function() {
 		}
 	}
 
-	function validate_mDevices(){
+/*-----------------Prevent Typing Non-number Values - START ----------------------*/
+
+   $('#mDevices').keypress(function(event){
+
+       if(event.which != 8 && isNaN(String.fromCharCode(event.which))){
+           event.preventDefault(); //stop character from entering input
+       }
+
+   });
+   
+   $('#sDevices').keypress(function(event){
+
+       if(event.which != 8 && isNaN(String.fromCharCode(event.which))){
+           event.preventDefault(); //stop character from entering input
+       }
+
+   });
+   
+   $('#smsAmount').keypress(function(event){
+
+       if(event.which != 8 && isNaN(String.fromCharCode(event.which))){
+           event.preventDefault(); //stop character from entering input
+       }
+
+   });
+   
+   $('#duration').keypress(function(event){
+
+       if(event.which != 8 && isNaN(String.fromCharCode(event.which))){
+           event.preventDefault(); //stop character from entering input
+       }
+
+   });
+   
+   $('#eDuration').keypress(function(event){
+
+       if(event.which != 8 && isNaN(String.fromCharCode(event.which))){
+           event.preventDefault(); //stop character from entering input
+       }
+
+   });
+   
+/*-----------------Prevent Typing Non-number Values - START ----------------------*/
+
+function validate_mDevices(){
+		if(mDevices.val().length<1)
+		{
+			mDevices.addClass("error");
+			mDeviceDetails.text("Enter more than one main device.");
+			mDeviceDetails.addClass("error");
+			return false;
+			
+		}
+		else
+		{
+			mDevices.removeClass("error");
+			mDeviceDetails.text("Number of main devices in this package.");
+			mDeviceDetails.removeClass("error");
+			return true;
+			
+		}
+	}
+
+
+	/*function validate_mDevices(){
 		
 		$(function(){
 			$('#mDevices').keydown(function(e) {
@@ -117,8 +181,27 @@ $(document).ready(function() {
 			})
 		
 				
-	}
+	}*/
 
+	function validate_sDevices(){
+		if(sDevices.val().length<1)
+		{
+			sDevices.addClass("error");
+			sDeviceDetails.text("Enter more than one sub device per main device.");
+			sDeviceDetails.addClass("error");
+			return false;
+			
+		}
+		else
+		{
+			sDevices.removeClass("error");
+			sDeviceDetails.text("Number of sub devices per main device in this package.");
+			sDeviceDetails.removeClass("error");
+			return true;
+			
+		}
+	}
+/*
 	function validate_sDevices(){
 		
 		$(function(){
@@ -159,7 +242,28 @@ $(document).ready(function() {
 		
 				
 	}
+*/
 
+	function validate_smsAmount(){
+		if(smsAmount.val().length<1)
+		{
+			smsAmount.addClass("error");
+			sms_amountDetails.text("Enter more than one per package.");
+			sms_amountDetails.addClass("error");
+			return false;
+			
+		}
+		else
+		{
+			smsAmount.removeClass("error");
+			sms_amountDetails.text("Amount of SMSs allowed to transmit in this package.");
+			sms_amountDetails.removeClass("error");
+			return true;
+			
+		}
+	}
+
+/*
 	function validate_smsAmount(){
 		
 		$(function(){
@@ -200,7 +304,28 @@ $(document).ready(function() {
 		
 				
 	}
+*/
 
+	function validate_duration(){
+		if(duration.val().length<1)
+		{
+			duration.addClass("error");
+			durationDetails.text("Enter more than a day per package.");
+			durationDetails.addClass("error");
+			return false;
+			
+		}
+		else
+		{
+			duration.removeClass("error");
+			durationDetails.text("Number for days that the packge will activate.");
+			durationDetails.removeClass("error");
+			return true;
+			
+		}
+	}
+
+/*
 	function validate_duration(){
 		
 		$(function(){
@@ -242,7 +367,27 @@ $(document).ready(function() {
 				
 	}
 	
+*/
 
+	function validate_eDuration(){
+		if(eDuration.val().length<1)
+		{
+			eDuration.addClass("error");
+			expire_durationDetails.text("Enter more than a day per package.");
+			expire_durationDetails.addClass("error");
+			return false;
+			
+		}
+		else
+		{
+			eDuration.removeClass("error");
+			expire_durationDetails.text("Number for days that the syatem show expiring alert.");
+			expire_durationDetails.removeClass("error");
+			return true;
+			
+		}
+	}
+/*
 	function validate_eDuration(){
 		
 		var dtValue = eDuration.val();
@@ -276,9 +421,9 @@ $(document).ready(function() {
     });
     trigger ? $add.attr('disabled', true) : $add.removeAttr('disabled');
 	});
-	
+	*/
 });
-<!--------------------------------------------------------------------------------------------------------------------------------->
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		//$(function(){
 			//$('#eDuration').keydown(function(e) {
 				//if (e.shiftKey || e.ctrlKey || e.altKey) 
