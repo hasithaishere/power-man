@@ -76,7 +76,12 @@
               <div>
              	<input id="add" name="add" type="submit" value="Add package" />
              </div>
-             
+             <?php
+             	if($is_success == 1)
+				{
+					echo "<div class=\"control-group\"><div class=\"controls\"><div class=\"alert alert-success\">". $success_msg . "</div></div>";
+				}
+             ?>
               <div>
              	<?php echo validation_errors('<div class="alert alert-danger">');?>
              </div>

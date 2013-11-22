@@ -60,7 +60,7 @@ $(document).ready(function() {
 		});
 	
 	basic_profile.submit(function(){
-			if(validateFname() & validateLname() & validateName() & validateAddress() & validateCity() & validateProvince() & validateZipcode() & validateEmail()){
+			if(validateFname() & validateLname() & validateName() & validateAddress() & validateCity() & validateProvince() & validateEmail()){
 			return true;
 			}else{
 				return false;
