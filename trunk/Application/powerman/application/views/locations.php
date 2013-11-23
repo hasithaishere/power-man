@@ -61,7 +61,7 @@
               		echo "<center><h3>" . $rows['name'] . "</h3>";
               		echo "<span class=\"label label-success\">Active</span>";
               		echo "</center>";
-                  	echo "<img width=\"128px\" height=\"128px\" src=\"". base_url() . "img/upload_path/" . $rows['image_url'] ."\" alt=\"\">";
+                  	echo "<img width=\"128px\" height=\"128px\" style=\"width:128px;height:128px;\" src=\"". base_url() . "img/upload_path/" . $rows['image_url'] ."\" alt=\"\">";
                   	echo "<div class=\"caption\">";
                     echo "<h3>" . $rows['sub_name'] . "</h3>";
                     echo "<p>" . $rows['description'] . "</p>";

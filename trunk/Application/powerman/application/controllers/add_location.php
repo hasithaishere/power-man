@@ -10,9 +10,12 @@ class add_location extends CI_Controller
 		}
 		else 
 		{
-			
+			$data['success_addlocation'] = 0;
+			$data['success_addlocation_msg'] = "";
+			$data['error'] = 0;
+			$data['error_msg'] = "";
 			//$this->load->view('add_location');
-			$this->load->view('add_location', array('error' => ' ' ));
+			$this->load->view('add_location', $data);
 		}
 		
 	}	
@@ -35,13 +38,18 @@ class add_location extends CI_Controller
 		$this->load->library('upload', $config);
 
 		
-
-		
 		if (  !$this->form_validation->run() || !$this->upload->do_upload() )
 		{
-			$error = array('error' => $this->upload->display_errors());
-			//$this->load->view('add_location');
-			$this->load->view('add_location', $error);
+			$data['success_addlocation'] = 0;
+			$data['success_addlocation_msg'] = "";
+			//$data['error'] = 0;
+			//if(!$this->upload->do_upload())
+			//{
+				$data['error'] = 1;
+				$data['error_msg'] = $this->upload->display_errors();
+			//}
+						
+			$this->load->view('add_location', $data);
 		}
 		else
 		{
@@ -52,14 +60,38 @@ class add_location extends CI_Controller
 			$this->load->model('add_location_model');
 			if($query = $this->add_location_model->add_location($data))
 			{
-				
-				redirect('locations');
+				$this->session->set_flashdata('update_token', time());
+				redirect('add_location/success');
 			}
 			//$data = array('upload_data' => $this->add_location->data());
 
 			//$this->load->view('upload_success', $data);
 		}
-	} 
+	}
+
+
+	function success()
+	{
+		if( ! $this->session->flashdata('update_token'))
+        {
+            redirect("locations");
+        }
+		
+		if(!($this->session->userdata('is_logged_in')))
+		{
+			$this->load->view('access_denied');
+		}
+		else 
+		{
+			$data['success_addlocation'] = 1;
+			$data['success_addlocation_msg'] = "Location successfully added.";
+			$data['error'] = 0;
+			$data['error_msg'] = 0;
+			$this->load->view('add_location',$data);
+			
+		}
+		
+	}
 /*		
 	function add_new_location()
 	{
