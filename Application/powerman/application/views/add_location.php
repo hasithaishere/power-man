@@ -51,17 +51,7 @@
 		
 <div id="container">
 	<h1>Create a New Location</h1>
-    
-     <?php if(validation_errors()):?>
-                <div class='alert alert-error span12'><?php echo validation_errors(); ?></div>
-                 
-                <?php endif;?>
-                
-                <?php echo "<div class=\"alert alert-error span12\">".$error."</div>";?>
-                
-      
-              
-              
+
                 <hr>
                 
                  <?php
@@ -103,9 +93,30 @@
             </div>
              </div>            
                         
-             
+             <div>
              <input type="submit" id="save_location" class="btn btn-success" value="Save Location" />
+           	 </div>
+           	 <br>
            <!--  <a id="save_location" href="#" role="button" class="btn btn-primary"><i class="icon-share icon-white"></i><span class="break"></span> Save Location</a>-->
+          
+          	<div>
+          		<?php if(validation_errors()):?>
+                	<div class='alert alert-error span12'><?php echo validation_errors(); ?></div>
+            	<?php endif;?>	
+          	</div>
+          	<?php
+            	if($success_addlocation == 1)
+				{
+					echo "<div><div class=\"alert alert-success span12\">". $success_addlocation_msg . "</div></div>";
+				}
+          	?>
+          	
+          	<?php
+            	if($error == 1)
+				{
+					echo "<div><div class=\"alert alert-error span12\">". $error_msg . "</div></div>";
+				}
+          	?>
           
              </form>
              

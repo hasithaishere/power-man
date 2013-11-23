@@ -50,19 +50,19 @@
 				
 		
 <div id="container">
-	<h1>Create a New Main Device</h1>
+	<h1>Add New Main Device</h1>
     
-     <?php if(validation_errors()):?>
+     <!--<?php if(validation_errors()):?>
                 <div class='alert alert-error span12'><?php echo validation_errors(); ?></div>
                  
-                <?php endif;?>
+             <?php endif;?>-->
 
                 <hr>
                 
-                 <?php
+                 <!--<?php
 				 $attributes = array('id' => 'add_mainDevice_form');
-				  echo form_open('add_newMainDevice/add_new_maindevice', $attributes);?>
-    	<!--<form method="post" id="add_location_form" action="<?php echo base_url();?>add_location/add_new_location" >-->
+				  echo form_open('add_newMainDevice/add_new_maindevice', $attributes);?>-->
+    	<form method="post" id="add_mainDevice_form" action="<?php echo base_url() . "add_newmaindevice/add_maindevice/" . $location_id;?>" >
         	<div>
             	<label for="main_device_title">Device Title </label>
                 <input id="main_device_title" name="main_device_title" type="text" />
@@ -88,36 +88,50 @@
              </div>
              
             <div>
-            <select name="device_type">
+            	<label for="main_device_description">Select Main Device Type</label>
+            <select name="device_type" id="maindevice_type">
             
 			<?php
 			
 				foreach($content as $rows)
 				{
-				   echo '<option value="'.$rows['id'].'">'.$rows['device_type'].'</option>';
+				   echo '<option value="'.$rows['id'].'" img_path="'.$rows['image_path'].'" url="'.$rows['ins_url'].'">'.$rows['name'].'</option>';
 				}
 			?>
 			</select>
              
                 <span id="main_device_type_Details">What's your Main Device Type?</span>  
                 </div>
-          <div> 
+          	<div> 
              
              <div>
-             <?php  ?>
-             <img src="<?php echo base_url() .$rows['image_path'];?>" class="img-rounded" />
-            </div>
+				<label for="main_device_description">Image Preview</label>
+             	<a href="#" id="maindevice_link" target="_blank" data-toggle="tooltip" title="Click here to find about this device."><img src="<?php echo base_url() . "img/no+image.gif";?>" class="img-rounded" id="maindevice_imageholder" /></a>
+             </div>
             </div>
              </div>            
-                        
-             
+             <input type="hidden" id="hidden_imagepath" name="hidden_imagepath" value="" />           
+          <div>   
              <input type="submit" id="save_mainDevice" class="btn btn-success" value="Save Main Device" />
            <!--  <a id="save_location" href="#" role="button" class="btn btn-primary"><i class="icon-share icon-white"></i><span class="break"></span> Save Location</a>-->
+          </div>
+          <br>
+          <div>
+          	<?php if(validation_errors()):?>
+                <div class='alert alert-error span12'><?php echo validation_errors(); ?></div>
+                 
+            <?php endif;?>
+          </div>
+          <?php
+            	if($success_adddevice == 1)
+				{
+					echo "<div><div class=\"alert alert-success span12\">". $success_adddevice_msg . "</div></div>";
+				}
+          ?>
           
-             </form>
+          </form>
              
-             
-                <hr>
+          <hr>
              
  </div>	
            
@@ -132,6 +146,22 @@
 		<!-- end: footer-->
 				
 	</div><!--/.fluid-container-->
+	
+	<script type="text/javascript" charset="utf-8">
+			$(document).ready(function(){
+				$("#maindevice_imageholder").attr('src', "<?php echo base_url()."img/";?>" + $('#maindevice_type :selected').attr('img_path'));
+				$("#maindevice_link").attr('href',$('#maindevice_type :selected').attr('url'));
+				$("#hidden_imagepath").val($('#maindevice_type :selected').attr('img_path'));
+				
+				$('#maindevice_type').change(function() {
+				   // assign the value to a variable, so you can test to see if it is working
+				    $("#maindevice_imageholder").attr('src', "<?php echo base_url()."img/";?>" + $('#maindevice_type :selected').attr('img_path'));
+				    $("#maindevice_link").attr('href',$('#maindevice_type :selected').attr('url'));
+				    $("#hidden_imagepath").val($('#maindevice_type :selected').attr('img_path'));
+				});
+			
+			});
+	</script>
 	
 	
 </body>
