@@ -1,5 +1,5 @@
 <?php
-class add_newMainDevice_model extends CI_Model
+class add_newmaindevice_model extends CI_Model
 {
 
 function get_dropdown_list()

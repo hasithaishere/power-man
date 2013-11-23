@@ -10,11 +10,11 @@ class add_newmaindevice extends CI_Controller
 		}
 		else 
 		{
-			$this->load->model('add_newMainDevice_model');
+			$this->load->model('add_newmaindevice_model');
 			$result = $this->add_newMainDevice_model->get_dropdown_list();	
 			$data = array('content'=>$result);
 			
-			$this->load->view('add_newMainDevice',$data);
+			$this->load->view('add_newmaindevice',$data);
 			
 		}
 		
