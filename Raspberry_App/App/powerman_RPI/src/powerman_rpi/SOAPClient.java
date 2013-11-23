@@ -532,5 +532,29 @@ public class SOAPClient {
         }
         
     }
+    
+    /*-------------- START - Clear Old Data ----------------*/
+    
+    public static void clearDB(DBConnector db_con)
+    {
+        try 
+        {
+            
+            String Query1 = "DELETE FROM power_subdevice_powerlog WHERE log_on < (NOW() - INTERVAL 5 MINUTE)";
+            String Query2 = "DELETE FROM power_device_powerlog WHERE log_on < (NOW() - INTERVAL 5 MINUTE)";
+            String Query3 = "DELETE FROM power_send_out WHERE log_on < (NOW() - INTERVAL 5 MINUTE) AND send_status = '1'";
+        
+            db_con.change(Query1);
+            db_con.change(Query2);
+            db_con.change(Query3);
+            
+        }
+        catch (Exception e) 
+        {
+            elog.save_log("SOAP Request Error (ClearDB) : " + e);
+        }
+    }
+    
+    /*--------------- END - Clear Old Data -----------------*/
    
 }

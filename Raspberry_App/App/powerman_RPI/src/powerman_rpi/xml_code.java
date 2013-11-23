@@ -79,6 +79,12 @@ public class xml_code {
             String query1 = "INSERT INTO power_device_powerlog (pcon,log_on,device_id,mac) VALUES ";
             String query2 = "INSERT INTO power_subdevice_powerlog (device_id,pcon,temp,control_status,log_on,token,mainDevice_id) VALUES ";
 
+            //---Query - Ignore New Sub Device Conflict ---
+            
+            String query3_0 = "INSERT IGNORE INTO power_subdevice_control (device_id, mainDevice_id) VALUES ";
+            
+            //---------------------------------------------
+            
             //---Query(UPDATE)----
             String query3 = "UPDATE power_subdevice_control SET control_on = '" + log_on + "', mainDevice_id = '" + main_device_id + "', control_status = CASE device_id";
             String query3_p2 = " pcon = CASE device_id";
@@ -159,6 +165,7 @@ public class xml_code {
                     query3 += " WHEN '" + xpath.evaluate("/frm/ack/id_"+i, document) + "' THEN '" + tmp_cs + "'";
                     query3_p3 += "'" + xpath.evaluate("/frm/ack/id_"+i, document) + "',";
 
+                    query3_0 += "('"+ xpath.evaluate("/frm/ack/id_"+i, document) + "','" + main_device_id + "'),";
 
                     //System.out.println("++++++++");
                 }
@@ -169,6 +176,9 @@ public class xml_code {
 
             query1 += "('"+ main_pcon + "','" + log_on + "','" + main_device_id + "','" + mac + "')";
             query2 = query2.substring(0, query2.length()-1); 
+            
+            query3_0 = query3_0.substring(0, query3_0.length()-1); 
+            
             query3 += " END,";
             query3_p2 += "END, ";
             query3_p3 = query3_p3.substring(0, query3_p3.length()-1)+")";
@@ -185,6 +195,7 @@ public class xml_code {
 
             db_con.change(query1);
             db_con.change(query2);
+            db_con.change(query3_0);
             db_con.change(query3);
 
             //--------- End Execute Query-------
