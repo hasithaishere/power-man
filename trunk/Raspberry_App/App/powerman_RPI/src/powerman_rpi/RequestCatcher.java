@@ -123,6 +123,7 @@ class thread_pushData extends Thread
             {
                 //System.out.println("1");
                 soapc_temp.createSOAPRequest_pushData(db_contemp);
+                soapc_temp.clearDB(db_contemp);
                 sleep(15000);
             }
         } 
