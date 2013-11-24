@@ -2,7 +2,7 @@
 <html lang="en">
 <head>	
  <?php include 'includes/head.php'; ?>	
- 		<!--<script src="<?php echo base_url();?>js/add_location.js"></script>-->
+ 		<script src="<?php echo base_url();?>js/add_newsubdevices.js"></script>
 </head>
 
 <body>
