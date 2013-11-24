@@ -58,6 +58,7 @@
         <script src="<?php echo base_url();?>js/custom-login-form.js"></script>
         <script src="<?php echo base_url();?>js/upgrade-form.js"></script>
         <script src="<?php echo base_url();?>js/add_newPackage_form.js"></script>
+  
       <script src="<?php echo base_url();?>js/highcharts.js"></script>
 	
 		

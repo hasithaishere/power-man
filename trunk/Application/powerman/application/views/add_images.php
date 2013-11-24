@@ -92,7 +92,7 @@
 			
             <div class="row-fluid sortable">		
 				<div class="box span12">
-					<div class="box-header" style="margin-bottom:5px;" data-original-title>
+					<div class="" style="margin-bottom:5px;" data-original-title>
        
                
 					<div class="box-content">
