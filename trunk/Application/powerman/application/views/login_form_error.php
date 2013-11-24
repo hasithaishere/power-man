@@ -60,7 +60,7 @@
 				<div class="login-box">
               <center>  <div id="company-logo"><img src="<?php echo base_url();?>img/login-bg.png" /></div> </center>
 					<div class="icons">
-						<a href="index.html"><i class="icon-home"></i></a>
+						<a href=""><i class="icon-home"></i></a>
 						<a href="#"><i class="icon-cog"></i></a>
 					</div>
 					<h2>Login to Your Account</h2>
@@ -94,7 +94,7 @@
 					<hr>
 					<h3>Forgot Password?</h3>
 					<p>
-						No problem, <a href="#">click here</a> to get a new password.
+						No problem, <a href="<?php echo base_url(); ?>forget_password">click here</a> to get a new password.
 					</p>	
 				</div><!--/span-->
 			</div><!--/row-->
