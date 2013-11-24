@@ -64,7 +64,7 @@
             	
 				<div class="box span12">
               
-               <div align="center"><h2>Add a New Schedule</h2></div>
+               <div><h2>Add a New Schedule</h2></div>
                <form class="form-horizontal well">
                   <div class="control-group">
                     <label class="control-label" for="Device_id">Device ID</label>
@@ -84,7 +84,7 @@
                   <label class="control-label" for="schedule_date">Schedule Date</label>
                   <div class="controls">
                       <div class="input-append date" id="datetimepicker1">
-                        <input value="24/11/2013 11:42:00" data-format="dd/MM/yyyy hh:mm:ss" type="text">
+                        <input value="" data-format="yyyy-MM-dd hh:mm:ss" type="text">
                         <span class="add-on">
                           <i class="icon-time" data-date-icon="icon-calendar" data-time-icon="icon-time">
                           </i>
@@ -108,12 +108,12 @@
                  <label class="control-label" for="schedule_action">Action</label>
                  <div class="controls">
                   <label class="radio">
-                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                  Switch ON
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="1" checked>
+                  <span class="label label-success">Switch ON</span>
                 </label>
                 <label class="radio">
-                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                  Switch OFF
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="0">
+                  <span class="label label-important">Switch OFF</span>
                 </label>
                   </div>
                   </div>
@@ -121,61 +121,77 @@
                   
                   <div class="control-group">
                     <div class="controls">
-					 <button type="submit" class="btn">Set Schedule</button>
+					 <button type="submit" class="btn btn-info">Set Schedule</button>
                     </div>
                   </div>
                 </form>
                
         
 					<div class="box-header" style="margin-bottom:5px;" data-original-title>
-						
-						
+					<h2 style="font-weight: 700;">Currently available schedules</h2>						
 					</div>
 					<div class="box-content">
 				
 						<table class="table table-striped table-bordered bootstrap-datatable datatable">
 						  <thead>
 							  <tr>
-                              	<th>Device ID</th>
-								  <th>Scheduled Date</th>
-								  <th>Scheduled Time</th>
-								  <th>Scheduling Date</th>
-								  <th>Scheduling Time</th>
-                                  <th>Schedule To</th>
-                                  <th>Scheduling Status</th>
-                                  <th>Device Status</th>
-								  <th>Control</th>
+								  <th>Schedule Set Time</th>
+								  <th>Schedule Execute Time</th>
+                                  <th>Execution Status</th>
+                                  <th>Control Status</th>
+								  <th>Action</th>
 							  </tr>
 						  </thead>   
 						  <tbody>
-							<tr>
-                            <td>0005</td>
-								<td>26/10/2013</td>
-								<td class="center">11.00 p.m</td>
-								<td class="center">28/10/2013</td>
-								<td class="center">2.00 p.m</td>
-                                <td class="center">Switch Off</td>
-                                <td class="center">
-									<span class="label label-info">Pending</span>
-								</td>
-                                <td class="center">
-									<span class="label label-success">ON</span>
-								</td>
-								<td class="center">
-                                <div class="btn-group">
-                                	<a href="#" class="btn btn-info"><i class="icon-edit icon-white"></i></a>
-                                     <a href="#" data-toggle="dropdown" class="btn btn-info dropdown-toggle"><span class="caret"></span></a>
-                                     <ul style="min-width:88px;" class="dropdown-menu">
-                                     	<li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
-                                        <li><a href=""><i class="icon-ban-circle"></i> Enable</a></li>
-                                        <li class="divider"></li>
-                                        <li><a class="" href=""><i class="icon-trash"></i> Delete</a></li>
-                                        </ul>
-                                        </div>
+						  	
+						  	<?php
+
+									foreach($content as $rows)
+									{
+						  	
+										echo "<tr>";
+										echo "<td class=\"center\">". $rows['control_on'] ."</td>";
+										echo "<td class=\"center\">". $rows['schedule_on'] ."</td>";
+                                		
+                                		echo "<td class=\"center\">";
+                                		if(strtotime("now")<strtotime($rows['schedule_on']))
+                                		{
+                                			echo "<span class=\"label label-info\">Pending</span>";
+                                		}
+										else
+										{
+											echo "<span class=\"label label-success\">Completed</span>";
+										}
+										echo "</td>";
 									
-				
-								</td>
-							</tr>
+								
+                                		echo "<td class=\"center\">";
+										if($rows['control_status']==1)
+										{
+											echo "<span class=\"label label-success\">ON</span>";
+										}
+										elseif ($rows['control_status']==0) 
+										{
+											echo "<span class=\"label label-important\">OFF</span>";
+										}
+										echo "</td>";
+								
+										echo "<td class=\"center\">";
+                                		echo "<div class=\"btn-group\">";
+                                		echo "<a href=\"#\" class=\"btn btn-info\"><i class=\"icon-edit icon-white\"></i></a>";
+                                     	echo "<a href=\"#\" data-toggle=\"dropdown\" class=\"btn btn-info dropdown-toggle\"><span class=\"caret\"></span></a>";
+                                     	echo "<ul style=\"min-width:88px;\" class=\"dropdown-menu\">";
+                                     	echo "<li><a href=\"#\"><i class=\"icon-pencil\"></i> Edit</a></li>";
+                                        echo "<li><a href=\"#\"><i class=\"icon-ban-circle\"></i> Enable</a></li>";
+                                        echo "<li class=\"divider\"></li>";
+                                        echo "<li><a class=\"\" href=\"#\"><i class=\"icon-trash\"></i> Delete</a></li>";
+                                        echo "</ul>";
+                                        echo "</div>";
+										echo "</td>";
+										echo "</tr>";
+							
+									}
+							?>
 							
                             </tbody>
                         </table>
