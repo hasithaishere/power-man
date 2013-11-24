@@ -60,39 +60,39 @@
 				<div class="login-box">
               <center>  <div id="company-logo"><img src="<?php echo base_url();?>img/login-bg.png" /></div> </center>
 					<div class="icons">
-						<a href="#"><i class="icon-home"></i></a>
+						<a href="index.html"><i class="icon-home"></i></a>
 						<a href="#"><i class="icon-cog"></i></a>
 					</div>
-					<h2>Login to Your Account</h2>
-					<form class="form-horizontal" action="<?php echo base_url();?>index.php/login/validate_user" method="post">
+					<h2>Forget Your Password ?</h2>
+					<form class="form-horizontal" action="" method="post">
 						<fieldset>
 							
-							<div class="input-prepend" title="Username">
-								<span class="add-on"><i class="icon-user"></i></span>
-								<input class="input-large span10" name="username" id="username" type="text" placeholder="Type Username"/>
+							<div class="input-prepend" title="Email">
+								<span class="add-on"><i class="icon-envelope"></i></span>
+								<input class="input-large span10" name="email" id="email" type="text" placeholder="Type Your Email Address here"/>
 							</div>
 							<div class="clearfix"></div>
-
+<!--
 							<div class="input-prepend" title="Password">
 								<span class="add-on"><i class="icon-lock"></i></span>
 								<input class="input-large span10" name="password" id="password" type="password" placeholder="Type Password"/>
 							</div>
 							<div class="clearfix"></div>
 							
-							<label class="remember" for="remember"><input type="checkbox" id="remember" />Remember me</label>
+							<label class="remember" for="remember"><input type="checkbox" id="remember" />Remember me</label> -->
 
 							<div class="button-login">	
-								<button type="submit" class="btn btn-success"><i class="icon-off icon-white"></i> Login</button>
+								<button type="submit" class="btn btn-success"><i class="icon-off icon-white"></i> Submit</button>
 							</div>
 							<div class="clearfix"></div>
 					</form>
-					<hr>
+				<!--	<hr>
 					<h3>Forgot Password?</h3>
 					<p>
-						No problem, <a href="<?php echo base_url(); ?>forget_password">click here</a> to get a new password.
-					</p>	
-				</div><!--/span-->
-			</div><!--/row-->
+						No problem, <a href="#">click here</a> to get a new password.
+					</p>-->	
+				</div>
+			</div>
 			
 				</div><!--/fluid-row-->
 				

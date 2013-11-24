@@ -60,39 +60,47 @@
 				<div class="login-box">
               <center>  <div id="company-logo"><img src="<?php echo base_url();?>img/login-bg.png" /></div> </center>
 					<div class="icons">
-						<a href="#"><i class="icon-home"></i></a>
+						<a href="index.html"><i class="icon-home"></i></a>
 						<a href="#"><i class="icon-cog"></i></a>
 					</div>
-					<h2>Login to Your Account</h2>
-					<form class="form-horizontal" action="<?php echo base_url();?>index.php/login/validate_user" method="post">
+                    <p><div class="alert alert-success">You are Successfully reset the process </div></p>
+		
+					<h2>Set Your New Password here</h2>
+                    
+					<form class="form-horizontal" action="" method="post">
 						<fieldset>
 							
-							<div class="input-prepend" title="Username">
-								<span class="add-on"><i class="icon-user"></i></span>
-								<input class="input-large span10" name="username" id="username" type="text" placeholder="Type Username"/>
+							<div class="input-prepend" title="new_password">
+								<span class="add-on"><i class="icon-lock"></i></span>
+								<input class="input-large span10" name="new_password" id="new_password" type="text" placeholder="New Passowrd"/>
+							</div>
+                            <div class="input-prepend" title="confirm_new_Password">
+								<span class="add-on"><i class="icon-ok"></i></span>
+								<input class="input-large span10" name="confirm_new_Password" id="confirm_new_Password" type="password" placeholder="Confirm New Password"/>
 							</div>
 							<div class="clearfix"></div>
-
+                            
+<!--
 							<div class="input-prepend" title="Password">
 								<span class="add-on"><i class="icon-lock"></i></span>
 								<input class="input-large span10" name="password" id="password" type="password" placeholder="Type Password"/>
 							</div>
 							<div class="clearfix"></div>
 							
-							<label class="remember" for="remember"><input type="checkbox" id="remember" />Remember me</label>
+							<label class="remember" for="remember"><input type="checkbox" id="remember" />Remember me</label> -->
 
 							<div class="button-login">	
 								<button type="submit" class="btn btn-success"><i class="icon-off icon-white"></i> Login</button>
 							</div>
 							<div class="clearfix"></div>
 					</form>
-					<hr>
+				<!--	<hr>
 					<h3>Forgot Password?</h3>
 					<p>
-						No problem, <a href="<?php echo base_url(); ?>forget_password">click here</a> to get a new password.
-					</p>	
-				</div><!--/span-->
-			</div><!--/row-->
+						No problem, <a href="#">click here</a> to get a new password.
+					</p>-->	
+				</div>
+			</div>
 			
 				</div><!--/fluid-row-->
 				

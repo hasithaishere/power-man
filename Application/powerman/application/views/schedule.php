@@ -5,6 +5,7 @@
  
 <link rel="stylesheet" href="<?php echo base_url();?>css/datepicker.css" type="text/css">  
 <link type="text/css" href="<?php echo base_url();?>css/bootstrap-timepicker.min.css" />
+<link type="text/css" href="<?php echo base_url();?>css/timepicker.min.css" />
 
 <script  type="text/javascript" src="<?php echo base_url();?>js/bootstrap-datepicker.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>js/bootstrap-timepicker.min.js"></script>
@@ -13,6 +14,7 @@
 $(document).ready(function(){
 			
 			$('#dp3').datepicker();
+		//	$('#time').timepicker();
 			
 			
 		}); 
@@ -51,7 +53,7 @@ $(document).ready(function(){
 						<a href="<?php echo base_url(); ?>main_panel">Home</a> <span class="divider">/</span>
 					</li>
                     <li>
-						<a href="<?php echo base_url(); ?>users_details">All Users</a>
+						<a href="<?php echo base_url(); ?>users_details">Schedule</a>
 					</li>
                     
 					
@@ -87,7 +89,7 @@ $(document).ready(function(){
                   <label class="control-label" for="schedule_date">Schedule Date</label>
                   <div class="controls">
                   <div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">                  
-                    <input size="16" type="text" value="12-02-2012" readonly="readonly">
+                    <input size="16" type="text" value="12-02-2012" readonly>
                     <span class="add-on"><i class="icon-th"></i></span>
                     </div>
                     </div>
@@ -96,8 +98,8 @@ $(document).ready(function(){
                   <div class="control-group">
                   <label class="control-label" for="schedule_time">Schedule Time</label>
                   <div class="controls">
-                        <div class="input-append bootstrap-timepicker">
-                <input id="timepicker1" type="text" class="input-small">
+                        <div class="input-append bootstrap-timepicker" id="time">
+                <input id="timepicker1" type="text" class="input-small timepicker" ">
                 <span class="add-on"><i class="icon-time"></i></span>
                 </div>
                 </div>
