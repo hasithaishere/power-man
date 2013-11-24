@@ -14,5 +14,13 @@ class report_template extends CI_Controller
 		
 	}
 	
+	function create_it()
+	{
+		$output = shell_exec("wkhtmltopdf http://powerman.hp/report_template /home/hasitha/projects/test123.pdf");
+		$output = shell_exec("chmod -R 777 /home/hasitha/projects/test123.pdf");
+		echo $output;
+
+	}
+	
 	
 }

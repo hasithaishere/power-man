@@ -1,6 +1,6 @@
 <?php
 
-class forgetpassword_email_template extends CI_Controller
+class Forgetpassword_Email_Template extends CI_Controller
 {
 	function index()
 	{/*
