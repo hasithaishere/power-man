@@ -3,14 +3,20 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Domore Power Consumption Report</title>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>js/jquery-1.10.1.min.js"></script>
 <script type="text/javascript">
 $(function () {
         $('#container1').highcharts({
+
             chart: {
                 type: 'line',
                 marginRight: 130,
-                marginBottom: 25
+                marginBottom: 25,
+                
+                animation: {
+                duration: 0
+            }
+                
             },
             title: {
                 text: 'Monthly Average Temperature',
@@ -45,6 +51,15 @@ $(function () {
                 y: 100,
                 borderWidth: 0
             },
+            
+            plotOptions: {
+            series: {
+                 	enableMouseTracking: false,
+					shadow: false,
+					animation: false
+            }
+        	},
+            
             series: [{
                 name: 'Tokyo',
                 data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
