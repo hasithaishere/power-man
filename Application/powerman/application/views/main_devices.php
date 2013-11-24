@@ -47,7 +47,7 @@
 			
                      
 			<div class="row-fluid">
-<a href="<?php echo base_url(); ?>add_newMainDevice" role="button" class="btn btn-success"><i class="icon-plus-sign icon-white"></i><span class="break"></span> ADD Main Device</a>
+				<a href="<?php echo base_url()."add_newmaindevice/index/".$location_id; ?>" role="button" class="btn btn-success"><i class="icon-plus-sign icon-white"></i><span class="break"></span> Add Main Device</a>
                 <hr>
 
 

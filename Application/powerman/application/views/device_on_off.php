@@ -54,7 +54,7 @@
 			
                      <div class="row-fluid">
                      
-				<a href="<?php echo base_url(); ?>sub_devices" role="button" class="btn btn-success" data-toggle="modal">Add Sub Device</a>
+				<a href="<?php echo base_url()."add_newsubdevice/index/".$maindevice_id; ?>" role="button" class="btn btn-success" data-toggle="modal"><i class="icon-plus-sign icon-white"></i><span class="break"></span> Add Sub Device</a>
                 
 			
 			

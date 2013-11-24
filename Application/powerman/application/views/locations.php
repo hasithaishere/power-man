@@ -45,7 +45,7 @@
 			
                      
 			<div class="row-fluid">
-				<a href="<?php echo base_url(); ?>add_location" role="button" class="btn btn-success"><i class="icon-plus-sign icon-white"></i><span class="break"></span> ADD New Location</a>
+				<a href="<?php echo base_url(); ?>add_location" role="button" class="btn btn-success"><i class="icon-plus-sign icon-white"></i><span class="break"></span> Add New Location</a>
                 <hr>
 			<?php
 				$i = 0;

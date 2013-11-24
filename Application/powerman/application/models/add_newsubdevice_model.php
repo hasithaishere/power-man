@@ -39,7 +39,7 @@ class add_newsubdevice_model extends CI_Model
 				'device_type' => $this->input->post('device_housetype'),
 				'users_id' => $this->session->userdata('user_id'),
 				'maindevice_id' => $maindevice_id,
-				'powerdevice_type' => $this->session->userdata('device_type'),
+				'powerdevice_type' => $this->input->post('device_type'),
 				'image_url' => $this->input->post('hidden_imagepath')
 			
 			);
