@@ -30,7 +30,7 @@
 			
 			}else{
 				
-				$("input[type=submit]").attr("disabled", "disabled");
+			//	$("input[type=submit]").attr("disabled", "disabled");
 				return false;
 				
 			}
@@ -141,7 +141,8 @@ $(function() {
     $('#image').checkFileType({
         allowedExtensions: ['jpg', 'jpeg','png','gif'],
         success: function() {
-			   $send = $('#save_location');    
+			
+			  $send = $('#save_location');    
 	$send.attr('disabled', false);
 	
 	

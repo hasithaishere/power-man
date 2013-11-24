@@ -3,23 +3,17 @@
 <head>	
  <?php include 'includes/head.php'; ?>
  
-<link rel="stylesheet" href="<?php echo base_url();?>css/datepicker.css" type="text/css">  
-<link type="text/css" href="<?php echo base_url();?>css/bootstrap-timepicker.min.css" />
-<link type="text/css" href="<?php echo base_url();?>css/timepicker.min.css" />
+<link rel="stylesheet" href="<?php echo base_url();?>css/bootstrap-datetimepicker.css" type="text/css">  
 
-<script  type="text/javascript" src="<?php echo base_url();?>js/bootstrap-datepicker.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>js/bootstrap-timepicker.min.js"></script>
+
+
 
 <script type="text/javascript">
-$(document).ready(function(){
-			
-			$('#dp3').datepicker();
-		//	$('#time').timepicker();
-			
-			
-		}); 
-        
-
+  $(function() {
+    $('#datetimepicker1').datetimepicker({
+      language: 'pt-BR'
+    });
+  });
 </script>
 
 
@@ -85,16 +79,21 @@ $(document).ready(function(){
                     </div>
                   </div>
                   
+           
                   <div class="control-group">
                   <label class="control-label" for="schedule_date">Schedule Date</label>
                   <div class="controls">
-                  <div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">                  
-                    <input size="16" type="text" value="12-02-2012" readonly>
-                    <span class="add-on"><i class="icon-th"></i></span>
-                    </div>
+                      <div class="input-append date" id="datetimepicker1">
+                        <input value="24/11/2013 11:42:00" data-format="dd/MM/yyyy hh:mm:ss" type="text">
+                        <span class="add-on">
+                          <i class="icon-time" data-date-icon="icon-calendar" data-time-icon="icon-time">
+                          </i>
+                        </span>
+                      </div>
+                  
                     </div>
         </div>
-        			 
+        		<!--	 
                   <div class="control-group">
                   <label class="control-label" for="schedule_time">Schedule Time</label>
                   <div class="controls">
@@ -103,7 +102,7 @@ $(document).ready(function(){
                 <span class="add-on"><i class="icon-time"></i></span>
                 </div>
                 </div>
-                </div>
+                </div>-->
                   
                  <div class="control-group"> 
                  <label class="control-label" for="schedule_action">Action</label>
@@ -196,6 +195,7 @@ $(document).ready(function(){
 		
 		<!-- start: footer-->
 		<?php include 'includes/footer.php'; ?>
+        <script type="text/javascript" src="<?php echo base_url();?>js/bootstrap-datetimepicker.js"></script> 
 		<!-- end: footer-->
 		</div>		
 	</div><!--/.fluid-container-->

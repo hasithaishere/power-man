@@ -84,7 +84,7 @@ $(document).ready(function() {
 			return false;
 		}else{
 			fname.removeClass("error");
-			nameDetails.text("What's your Last name?");
+			nameDetails.text("What's your First name?");
 			nameDetails.removeClass("error");
 			return true;
 			
