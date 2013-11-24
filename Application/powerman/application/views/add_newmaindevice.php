@@ -2,7 +2,7 @@
 <html lang="en">
 <head>	
  <?php include 'includes/head.php'; ?>	
- 		<!--<script src="<?php echo base_url();?>js/add_location.js"></script>-->
+ 		<script src="<?php echo base_url();?>js/add_newMainDevice.js"></script>
 </head>
 
 <body>
@@ -31,10 +31,10 @@
 						<a href="<?php echo base_url(); ?>main_panel">Home</a> <span class="divider">/</span>
 					</li>
 					<li>
-						<a href="<?php echo base_url(); ?>locations">Locations</a> <span class="divider">/</span>
+						<a href="<?php echo base_url(); ?>main_devices">Main Device</a> <span class="divider">/</span>
 					</li>
                     <li>
-						<a href="<?php echo base_url(); ?>add_location">Add Main Device</a>
+						<a href="<?php echo base_url(); ?>add_newmaindevice">Add Main Device</a>
 					</li>
 				</ul>
 				
@@ -59,9 +59,9 @@
 
                 <hr>
                 
-                 <!--<?php
-				 $attributes = array('id' => 'add_mainDevice_form');
-				  echo form_open('add_newMainDevice/add_new_maindevice', $attributes);?>-->
+                <?php
+				// $attributes = array('id' => 'add_mainDevice_form');
+				 // echo form_open('add_newMainDevice/add_new_maindevice', $attributes);?>
     	<form method="post" id="add_mainDevice_form" action="<?php echo base_url() . "add_newmaindevice/add_maindevice/" . $location_id;?>" >
         	<div>
             	<label for="main_device_title">Device Title </label>
