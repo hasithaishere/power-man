@@ -12,7 +12,7 @@ class add_newsubdevice extends CI_Controller
 		{
 			$this->load->model('add_newsubdevice_model');
 			$result = $this->add_newsubdevice_model->get_dropdown_devicetypelist();
-			$result2 = $this->add_newsubdevice_model->get_dropdown_newdevicelist();
+			$result2 = $this->add_newsubdevice_model->get_dropdown_newdevicelist($maindevice_id);
 			$result3 = $this->add_newsubdevice_model->get_dropdown_homedevicelist();
 			$data = array('content'=>$result,'newdevice'=>$result2,'content2'=>$result3,'maindevice_id'=>$maindevice_id);
 			
