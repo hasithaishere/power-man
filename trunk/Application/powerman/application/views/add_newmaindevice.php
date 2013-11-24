@@ -2,7 +2,9 @@
 <html lang="en">
 <head>	
  <?php include 'includes/head.php'; ?>	
+
  		<script src="<?php echo base_url();?>js/add_newMainDevice.js"></script>
+        
 </head>
 
 <body>
@@ -77,18 +79,18 @@
              
              <div>
             	<label for="main_device_serialno">Device Serial No </label>
-                <input id="main_device_serialno" name="main_device_serialno" type="text" />
+                <input class="numeric" id="main_device_serialno" name="main_device_serialno" type="text"/>
                 <span id="main_device_serialnoDetails">What's your Device Serial No?</span>
              </div>
              
              <div>
             	<label for="main_device_description">Description </label>
-                <textarea name="main_device_description" id="location_description" cols="45" rows="5" tabindex="1"></textarea>
+                <textarea name="main_device_description" id="main_device_description" cols="45" rows="5" tabindex="1"></textarea>
                 <span id="main_device_descriptionDetails">Description about the new Main Device?</span>
              </div>
              
             <div>
-            	<label for="main_device_description">Select Main Device Type</label>
+            	<label for="maindevice_type">Select Main Device Type</label>
             <select name="device_type" id="maindevice_type">
             
 			<?php
