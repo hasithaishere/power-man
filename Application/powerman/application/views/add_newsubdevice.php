@@ -61,18 +61,25 @@
                 
                  <!--<?php
 				 $attributes = array('id' => 'add_mainDevice_form');
-				  echo form_open('add_newMainDevice/add_new_maindevice', $attributes);?>-->
+				  echo form_open('add_newMainDevice/add_new_maindevice', $attributes);?>
     	<form method="post" id="add_subDevice_form" action="<?php echo base_url() . "add_newsubdevice/add_subdevice/" . $maindevice_id;?>" >
+        	-->
+        	<?php
+            	if(count($newdevice) == 0)
+				{
+					echo "<div><div class=\"alert alert-error span12\">No new physically paired sub device, Please pair a new sub device physically before adding to system.</div></div>";
+					echo "<form method=\"post\" id=\"add_subDevice_form\">";
+				}
+				else 
+				{
+					echo "<form method=\"post\" id=\"add_subDevice_form\" action=\"" . base_url() . "add_newsubdevice/add_subdevice/" . $maindevice_id . "\">";
+				}
+          	?>
+        	
         	<div>
             	<label for="sub_device_title">Device Title </label>
                 <input id="sub_device_title" name="sub_device_title" type="text" />
                 <span id="sub_device_titleDetails">What's your Sub-Device Title?</span>
-             </div>
-             
-             <div>
-            	<label for="sub_device_id">Device ID </label>
-                <input id="sub_device_id" name="main_device_id" type="text" />
-                <span id="sub_device_idDetails">What's your Device ID?</span>
              </div>
              
              <div>
@@ -161,8 +168,18 @@
              <!----------------- This Part For Selecting Household Type - END ------------------>
                         
              <input type="hidden" id="hidden_imagepath" name="hidden_imagepath" value="" />           
-          <div>   
-             <input type="submit" id="save_subDevice" class="btn btn-success" value="Save Sub-Device" />
+          <div> 
+          	<?php
+            	if(count($newdevice) == 0)
+				{
+					echo "<input type=\"submit\" id=\"save_subDevice\" class=\"btn btn-success\" value=\"Save Sub-Device\" disabled=\"disabled\"/>";
+				}
+				else 
+				{
+					echo "<input type=\"submit\" id=\"save_subDevice\" class=\"btn btn-success\" value=\"Save Sub-Device\" />";
+				}
+          	?>  
+             
            <!--  <a id="save_location" href="#" role="button" class="btn btn-primary"><i class="icon-share icon-white"></i><span class="break"></span> Save Location</a>-->
           </div>
           <br>
