@@ -63,8 +63,8 @@
 						<a href="index.html"><i class="icon-home"></i></a>
 						<a href="#"><i class="icon-cog"></i></a>
 					</div>
-					<h2>Forget Your Password ?</h2>
-					<form class="form-horizontal" action="" method="post">
+					<h2 style="width: 80%; text-align: justify;color: #B1B1B1;font-size: 13px;font-style: italic;">Do you forget password? Please type your authorized email address and click submit.</h2>
+					<form class="form-horizontal" action="<?php echo base_url();?>forget_password/send_email" method="post">
 						<fieldset>
 							
 							<div class="input-prepend" title="Email">
@@ -85,6 +85,24 @@
 								<button type="submit" class="btn btn-success"><i class="icon-off icon-white"></i> Submit</button>
 							</div>
 							<div class="clearfix"></div>
+							<?php
+							
+							if($error_status == 1)
+							{
+								echo "<br><div class=\"alert alert-error\">". $error_msg . "</div>";
+							}
+
+							if($success_status == 1)
+							{
+								echo "<br><div class=\"alert alert-success\">". $success_msg . "</div>";
+							}
+							
+							if(validation_errors())
+							{
+								echo "<br><div class=\"alert alert-error\">".validation_errors()."</div>";
+							}
+							
+							?>
 					</form>
 				<!--	<hr>
 					<h3>Forgot Password?</h3>

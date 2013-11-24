@@ -63,16 +63,16 @@
 						<a href="index.html"><i class="icon-home"></i></a>
 						<a href="#"><i class="icon-cog"></i></a>
 					</div>
-                    <p><div class="alert alert-success">You are Successfully reset the process </div></p>
+                    <!--<p><div class="alert alert-success">You are Successfully reset the process </div></p>-->
 		
-					<h2>Set Your New Password here</h2>
+					<h2 style="width: 80%; text-align: justify;color: #B1B1B1;font-size: 13px;font-style: italic;">You are on board to recover your password, please type your new password.</h2>
                     
-					<form class="form-horizontal" action="" method="post">
+					<form class="form-horizontal" action="<?php echo base_url()."change_password/change/".$token."/".$user_id;?>" method="post">
 						<fieldset>
 							
 							<div class="input-prepend" title="new_password">
 								<span class="add-on"><i class="icon-lock"></i></span>
-								<input class="input-large span10" name="new_password" id="new_password" type="text" placeholder="New Passowrd"/>
+								<input class="input-large span10" name="new_password" id="new_password" type="password" placeholder="New Passowrd"/>
 							</div>
                             <div class="input-prepend" title="confirm_new_Password">
 								<span class="add-on"><i class="icon-ok"></i></span>
@@ -90,9 +90,12 @@
 							<label class="remember" for="remember"><input type="checkbox" id="remember" />Remember me</label> -->
 
 							<div class="button-login">	
-								<button type="submit" class="btn btn-success"><i class="icon-off icon-white"></i> Login</button>
+								<button type="submit" class="btn btn-success" id="btn_changepassword"><i class="icon-off icon-white"></i> Change Password</button>
 							</div>
 							<div class="clearfix"></div>
+							<div id="error_holder">
+								
+							</div>
 					</form>
 				<!--	<hr>
 					<h3>Forgot Password?</h3>
@@ -109,6 +112,46 @@
 	<!-- start: JavaScript-->
 
 		<script src="<?php echo base_url(); ?>js/jquery-1.9.1.min.js"></script>
+		
+		<script type="text/javascript" charset="utf-8">
+			$(document).ready(function(){
+				$("#btn_changepassword").attr('disabled','disabled');
+				$("#confirm_new_Password").attr('disabled','disabled');
+				$("#new_password").keyup(function(){
+					if($("#new_password").val().length<8)
+					{
+						$("#error_holder").html("<h2 style=\"width: 80%; text-align: justify;color: #B94A48;font-size: 13px;font-style: italic;\">Password is too short, minimun 8 characters</h2>");
+						$("#btn_changepassword").attr('disabled','disabled');
+						$("#confirm_new_Password").attr('disabled','disabled');
+					}
+					else
+					{
+						$("#error_holder").empty();
+						//$("#btn_changepassword").removeAttr('disabled');
+						$("#confirm_new_Password").removeAttr('disabled');
+					}
+				});
+				
+				$("#confirm_new_Password").keyup(function(){
+					if($("#new_password").val()!=$("#confirm_new_Password").val())
+					{
+						$("#error_holder").html("<h2 style=\"width: 80%; text-align: justify;color: #B94A48;font-size: 13px;font-style: italic;\">Password not match.</h2>");
+						$("#btn_changepassword").attr('disabled','disabled');
+						//$("#confirm_new_Password").attr('disabled','disabled');
+					}
+					else
+					{
+						$("#error_holder").empty();
+						$("#btn_changepassword").removeAttr('disabled');
+						//$("#confirm_new_Password").removeAttr('disabled');
+					}
+				});
+				
+			});
+		</script>
+		
+		
+		
 	<script src="<?php echo base_url(); ?>js/jquery-migrate-1.0.0.min.js"></script>
 	
 		<script src="<?php echo base_url(); ?>js/jquery-ui-1.10.0.custom.min.js"></script>
