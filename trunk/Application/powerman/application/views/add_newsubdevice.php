@@ -67,7 +67,10 @@
         	<?php
             	if(count($newdevice) == 0)
 				{
-					echo "<div><div class=\"alert alert-error span12\">No new physically paired sub device, Please pair a new sub device physically before adding to system.</div></div>";
+					if(!$success_addsubdevice == 1)
+					{
+						echo "<div><div class=\"alert alert-error span12\">No new physically paired sub device, Please pair a new sub device physically before adding to system.</div></div>";
+					}
 					echo "<form method=\"post\" id=\"add_subDevice_form\">";
 				}
 				else 

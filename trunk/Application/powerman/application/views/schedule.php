@@ -75,7 +75,7 @@
                   <div class="control-group">
                     <label class="control-label" for="Deviece_name">Device Name</label>
                     <div class="controls">
-                      <input type="password" id="Device_name">
+                      <input type="text" id="Device_name">
                     </div>
                   </div>
                   
