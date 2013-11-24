@@ -72,6 +72,7 @@
 	<script src="<?php echo base_url();?>js/jquery.flot.pie.min.js"></script>
 	<script src="<?php echo base_url();?>js/jquery.flot.stack.js"></script>
 	<script src="<?php echo base_url();?>js/jquery.flot.resize.min.js"></script>
+    <script src="<?php echo base_url();?>js/jquery.cookie.js"></script>
 	
 		<script src="<?php echo base_url();?>js/jquery.chosen.min.js"></script>
 	
