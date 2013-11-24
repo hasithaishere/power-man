@@ -95,13 +95,13 @@
 			
 				foreach($newdevice as $rows)
 				{
-				   echo '<option value="'.$rows['device_id '].'" added_on="'.$rows['added_on'].'">'.$rows['device_id '].'</option>';
+				   echo '<option value="'.$rows['device_id'].'" added_on="'.$rows['added_on'].'">'.$rows['device_id'].'</option>';
 				}
 			?>
 			</select>
-             
+             	<span id="sub_device_type_Details" class="undefine_addedon"></span> 
                 <span id="sub_device_type_Details">What's your Sub Device ID?</span>  
-                </div>
+            </div>
           	
           	<!----------------- This Part For Selecting Device Type - START ------------------>
           	
@@ -132,6 +132,7 @@
              <!----------------- This Part For Selecting Device Type - END ------------------>
              
              <!----------------- This Part For Selecting Household Type - START ------------------>
+             <br>
              <div>    
             <div>
             	<label for="sub_device_description">Select Househald Device - Subdevice Used</label>
@@ -156,7 +157,7 @@
              </div>
             </div>
              </div>
-             
+             <br>
              <!----------------- This Part For Selecting Household Type - END ------------------>
                         
              <input type="hidden" id="hidden_imagepath" name="hidden_imagepath" value="" />           
@@ -197,13 +198,24 @@
 			$(document).ready(function(){
 				$("#subdevice_imageholder").attr('src', "<?php echo base_url()."img/";?>" + $('#subdevice_type :selected').attr('img_path'));
 				$("#subdevice_link").attr('href',$('#subdevice_type :selected').attr('url'));
-				$("#hidden_imagepath").val($('#subdevice_type :selected').attr('img_path'));
+				$("#hidden_imagepath").val($('#subdevice_housetype :selected').attr('img_path'));
+				$(".undefine_addedon").text("Added On : "+$("#subdevice_id :selected").attr('added_on')+" |");
+				$("#subhomedevice_imageholder").attr('src', "<?php echo base_url()."img/";?>" + $('#subdevice_housetype :selected').attr('img_path'));
 				
 				$('#subdevice_type').change(function() {
 				   // assign the value to a variable, so you can test to see if it is working
 				    $("#subdevice_imageholder").attr('src', "<?php echo base_url()."img/";?>" + $('#subdevice_type :selected').attr('img_path'));
-				    $("#subdevice_link").attr('href',$('#subdevice_type :selected').attr('url'));
-				    $("#hidden_imagepath").val($('#subdevice_type :selected').attr('img_path'));
+				    $("#subdevice_link").attr('href',$('#subdevice_type :selected').attr('url'));				    
+				});
+				
+				$('#subdevice_id').change(function() {
+					$(".undefine_addedon").text("Added On : "+$("#subdevice_id :selected").attr('added_on')+" |");
+				});
+				
+				$('#subdevice_housetype').change(function() {
+				   // assign the value to a variable, so you can test to see if it is working
+				    $("#subhomedevice_imageholder").attr('src', "<?php echo base_url()."img/";?>" + $('#subdevice_housetype :selected').attr('img_path'));
+				    $("#hidden_imagepath").val($('#subdevice_housetype :selected').attr('img_path'));
 				});
 			
 			});

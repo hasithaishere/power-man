@@ -2,23 +2,28 @@
 class add_newsubdevice_model extends CI_Model
 {
 /////////START EDIT//////////
-	function get_dropdown_list()
+	function get_dropdown_devicetypelist()
     {
-    	$this->db->where('device_type','1');
+    	$this->db->where('device_type','2');
 		$this->db->where('status','1');
 		$result = $this->db->get('power_device')->result_array();
 		return $result;
-		/* 
-        $results = $this->db->get('power_device');
-		return $results;
-           if ($query->num_rows >= 1)
-            {
-                foreach($query->result_array() as $row)
-                {
-                    $data[$row['deviceId']]=$row['device_type'];
-                }
-                return $data;
-            }*/
+    }
+	
+	function get_dropdown_newdevicelist($maindevice_id)
+    {
+    	$this->db->where('maindevice_id',$maindevice_id);
+		$this->db->where('status','1');
+		$this->db->order_by("added_on ", "desc"); 
+		$result = $this->db->get(' power_undefine_devices')->result_array();
+		return $result;
+    }
+	
+	function get_dropdown_homedevicelist()
+    {
+		$this->db->where('status','1');
+		$result = $this->db->get('power_define_device')->result_array();
+		return $result;
     }
 	
 	function add_new_maindevice($location_id)

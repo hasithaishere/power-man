@@ -274,6 +274,17 @@ border:1px solid #cecece;
 	color:#e46c6e;
 }
 
+/*--------------------------Add_new_sub_device---------------------------------*/
+#add_subDevice_form div span{
+	margin-left:10px;
+	color:#b1b1b1;
+	font-size:11px;
+	font-style:italic;
+}
+#add_subDevice_form div span.error{
+	color:#e46c6e;
+}
+
 /*-----------------------Add_new_package Form-----------------------------------*/
 #add_newPackage_form{
 	padding:0 10px 10px;
