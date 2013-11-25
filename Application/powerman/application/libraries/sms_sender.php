@@ -3,7 +3,7 @@
 class sms_sender {
 
     public function send_sms($data)
-    {
+    {/*
 		// get CodeIgniter instance
         $CI = &get_instance();
  
@@ -57,6 +57,7 @@ class sms_sender {
 				}
 		}
 		
+*/
 
 
 
@@ -64,15 +65,14 @@ class sms_sender {
 
 
 
+		$server_url = "https://groupsms.etisalat.lk/sendsms.php?USER=Domore&PWD=Domore@123&NUM=".$data['phone_no']."&MSG=".urlencode($data['message']);
 
 
 
 
 
 
-
-
-/* TEMPORARY SHUT DOWN DUE TO CURL ERRORS Commented
+/* TEMPORARY SHUT DOWN DUE TO CURL ERRORS Commented*/
 		$ch = curl_init();
         curl_setopt($ch, CURLOPT_HEADER, 0);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('HTTP/1.1 200 OK', 'Status: 200 Success'));
@@ -89,7 +89,7 @@ class sms_sender {
         }else
             return TRUE;
 
- */
+ 
  		//return TRUE;
     }
 
