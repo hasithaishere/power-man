@@ -92,35 +92,6 @@ class add_location extends CI_Controller
 		}
 		
 	}
-/*		
-	function add_new_location()
-	{
-		$this->load->library('form_validation');
-		
-		$this->form_validation->set_rules('location_name','First Name','trim|required');
-		$this->form_validation->set_rules('sub_name','Sub Name','trim|required');
-		$this->form_validation->set_rules('location_description','Description','trim|required');
-		//$this->form_validation->set_rules('image', 'Image Upload', 'callback__image_upload');
-		
-		
-				
-		if($this->form_validation->run() == FALSE)
-		{
-			$this->load->view('add_location');
-			
-			
-		}
-		else 
-		{
-			
-			$this->load->model('add_location_model');
-			if($query = $this->add_location_model->add_location())
-			{
-				
-				redirect('locations');
-			}	
-		}
-		
-	}*/
+
 	
 }

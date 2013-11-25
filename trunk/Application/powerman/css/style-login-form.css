@@ -345,3 +345,26 @@ border:1px solid #cecece;
 #add_newPackage_form #add:hover{
 	background:#79a7f1;
 }
+/*-----------------define device --------------------------- */
+
+#define_device_form div span{
+	margin-left:10px;
+	color:#b1b1b1;
+	font-size:11px;
+	font-style:italic;
+}
+#define_device_form div span.error{
+	color:#e46c6e;
+}
+
+/*-----------------power device --------------------------- */
+
+#power_device_form div span{
+	margin-left:10px;
+	color:#b1b1b1;
+	font-size:11px;
+	font-style:italic;
+}
+#power_device_form div span.error{
+	color:#e46c6e;
+}
