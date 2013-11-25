@@ -75,7 +75,7 @@
             <div>
             	<label for="Device_name">Device Name </label>
                 <input id="Device_name" name="Device_name" type="text" />
-                <span id="Device_nameDetails">What's your Location name?</span>
+                <span id="Device_nameDetails">What's your Device name?</span>
              </div>
              
             
@@ -86,7 +86,7 @@
              </div>
              
              <div>
-             <label for="imageUpload">Location Image </label>
+             <label for="imageUpload">Device Image </label>
             <div class="fileupload fileupload-new" data-provides="fileupload">
             <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;"><img src="<?php echo base_url();?>img/no+image.gif" /></div>
             <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
@@ -107,6 +107,27 @@
            	 </div>
            	 <br>
            <!--  <a id="save_location" href="#" role="button" class="btn btn-primary"><i class="icon-share icon-white"></i><span class="break"></span> Save Location</a>-->
+       
+       <div>
+          		<?php if(validation_errors()):?>
+                	<div class='alert alert-error span12'><?php echo validation_errors(); ?></div>
+            	<?php endif;?>	
+          	</div>
+          	<?php
+            	if($success_addpowerdevice == 1)
+				{
+					echo "<div><div class=\"alert alert-success span12\">". $success_addpowerdevice_msg . "</div></div>";
+				}
+          	?>
+          	
+          	<?php
+            	if($error == 1)
+				{
+					echo "<div><div class=\"alert alert-error span12\">". $error_msg . "</div></div>";
+				}
+          	?>
+       
+       
        
           
              </form>
