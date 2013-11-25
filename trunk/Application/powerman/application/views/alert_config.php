@@ -53,18 +53,18 @@
 				<div class="box span12">
               		<div><h2>Alert Configuration</h2></div><br/>
                     
-                    	<!--<form method="post" id="add_location_form" action="<?php echo base_url();?>add_location/add_new_location" >-->
-            
+                    <form method="post" id="add_location_form" action="<?php echo base_url();?>alert_config/set_alert_config" >
+
             				<div class="control-group">
 								<label class="control-label"><h4>SMS Alert Settings</h4> </label>
 								<div class="controls">
 								  <label class="radio">
-									<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+									<input type="radio" name="optionsRadios" id="optionsRadios1" value="1" checked="">
 									Switch ON
 								  </label>
 								  
 								  <label class="radio">
-									<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+									<input type="radio" name="optionsRadios" id="optionsRadios2" value="0">
 									Switch OFF
 								  </label>
 								</div>
@@ -75,12 +75,12 @@
 								<label class="control-label"><h4>SMS Suggestion Alert Settings</h4> </label>
 								<div class="controls">
 								  <label class="radio">
-									<input type="radio" name="optionsRadios2" id="optionsRadios1" value="option1" checked="">
+									<input type="radio" name="optionsRadios2" id="optionsRadios1" value="1" checked="">
 									Switch ON
 								  </label>
 								  <div style="clear:both"></div>
 								  <label class="radio">
-									<input type="radio" name="optionsRadios2" id="optionsRadios2" value="option2">
+									<input type="radio" name="optionsRadios2" id="optionsRadios2" value="0">
 									Switch OFF
 								  </label>
 								</div>
@@ -91,12 +91,12 @@
 								<label class="control-label"><h4>Time warning</h4> </label>
 								<div class="controls">
 								  <label class="radio">
-									<input type="radio" name="optionsRadios3" id="optionsRadios1" value="option1" checked="">
+									<input type="radio" name="optionsRadios3" id="optionsRadios1" value="1" checked="">
 									Switch ON
 								  </label>
 								  <div style="clear:both"></div>
 								  <label class="radio">
-									<input type="radio" name="optionsRadios3" id="optionsRadios2" value="option2">
+									<input type="radio" name="optionsRadios3" id="optionsRadios2" value="0">
 									Switch OFF
 								  </label>
 								</div>
@@ -108,12 +108,12 @@
 								<label class="control-label"><h4>Time warning SMS</h4> </label>
 								<div class="controls">
 								  <label class="radio">
-									<input type="radio" name="optionsRadios4" id="optionsRadios1" value="option1" checked="">
+									<input type="radio" name="optionsRadios4" id="optionsRadios1" value="1" checked="">
 									Switch ON
 								  </label>
 								  <div style="clear:both"></div>
 								  <label class="radio">
-									<input type="radio" name="optionsRadios4" id="optionsRadios2" value="option2">
+									<input type="radio" name="optionsRadios4" id="optionsRadios2" value="0">
 									Switch OFF
 								  </label>
 								</div>
@@ -125,12 +125,12 @@
 								<label class="control-label"><h4>Normal Suggestion SMS</h4> </label>
 								<div class="controls">
 								  <label class="radio">
-									<input type="radio" name="optionsRadios5" id="optionsRadios1" value="option1" checked="">
+									<input type="radio" name="optionsRadios5" id="optionsRadios1" value="1" checked="">
 									Switch ON
 								  </label>
 								  <div style="clear:both"></div>
 								  <label class="radio">
-									<input type="radio" name="optionsRadios5" id="optionsRadios2" value="option2">
+									<input type="radio" name="optionsRadios5" id="optionsRadios2" value="0">
 									Switch OFF
 								  </label>
 								</div>
@@ -141,12 +141,12 @@
 								<label class="control-label"><h4>Mulfunction Suggestions</h4> </label>
 								<div class="controls">
 								  <label class="radio">
-									<input type="radio" name="optionsRadios6" id="optionsRadios1" value="option1" checked="">
+									<input type="radio" name="optionsRadios6" id="optionsRadios1" value="1" checked="">
 									Switch ON
 								  </label>
 								  <div style="clear:both"></div>
 								  <label class="radio">
-									<input type="radio" name="optionsRadios6" id="optionsRadios2" value="option2">
+									<input type="radio" name="optionsRadios6" id="optionsRadios2" value="0">
 									Switch OFF
 								  </label>
 								</div>
@@ -162,6 +162,15 @@
              <input type="submit" id="save_configuration" class="btn btn-success" value="Save Configuration" />
            	 </div>
            	 <br>
+           <?php
+             	if($is_success == 1)
+				{
+					echo "<div class=\"control-group\"><div class=\"controls\"><div class=\"alert alert-success\">". $success_msg . "</div></div>";
+				}
+             ?>
+              <div>
+             	<?php echo validation_errors('<div class="alert alert-danger">');?>
+             </div>
           
           
          

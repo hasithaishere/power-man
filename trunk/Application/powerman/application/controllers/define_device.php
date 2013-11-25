@@ -26,10 +26,10 @@ class define_device extends CI_Controller
 		
 		$this->form_validation->set_rules('device_name','Device Name','trim|required');
 		$this->form_validation->set_rules('device_description','Device Description','trim|required');
-		$this->form_validation->set_rules('device_max_volt','Device Maximum Voltage','trim|required');
-		$this->form_validation->set_rules('device_max_time','Device Maximum Usage Time','trim|required');
-		$this->form_validation->set_rules('alert_level_count','Maximum Alert level','trim|required');
-		$this->form_validation->set_rules('alert_level_precentage','Maximum Alert level Precentage','trim|required');
+		$this->form_validation->set_rules('device_max_volt','Device Maximum Voltage','trim|required|numeric');
+		$this->form_validation->set_rules('device_max_time','Device Maximum Usage Time','trim|required|numeric');
+		$this->form_validation->set_rules('alert_level_count','Maximum Alert level','trim|required|numeric');
+		$this->form_validation->set_rules('alert_level_precentage','Maximum Alert level Precentage','trim|required|numeric');
 		
 		$this->form_validation->set_rules('image', 'Image Upload', 'callback__image_upload');
 		
