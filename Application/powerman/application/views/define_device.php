@@ -58,7 +58,7 @@
     	<!--<form method="post" id="add_location_form" action="<?php echo base_url();?>add_location/add_new_location" >-->
         	<div>
             	<label for="device_name">Device Name </label>
-                <input id="device_name" name="location_name" type="text" />
+                <input id="device_name" name="device_name" type="text" />
                 <span id="device_nameDetails">What's your Device name?</span>
              </div>
 
@@ -115,6 +115,24 @@
            	 </div>
            	 <br>
            <!--  <a id="save_location" href="#" role="button" class="btn btn-primary"><i class="icon-share icon-white"></i><span class="break"></span> Save Location</a>-->
+            	<div>
+          		<?php if(validation_errors()):?>
+                	<div class='alert alert-error span12'><?php echo validation_errors(); ?></div>
+            	<?php endif;?>	
+          	</div>
+          	<?php
+            	if($success_add_definedevice == 1)
+				{
+					echo "<div><div class=\"alert alert-success span12\">". $success_add_definedevice_msg . "</div></div>";
+				}
+          	?>
+          	
+          	<?php
+            	if($error == 1)
+				{
+					echo "<div><div class=\"alert alert-error span12\">". $error_msg . "</div></div>";
+				}
+          	?>
           
           
           
