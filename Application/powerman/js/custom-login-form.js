@@ -38,6 +38,7 @@ $(document).ready(function() {
 	email.blur(validateEmail);
 	pass1.blur(validatePass1);
 	pass2.blur(validatePass2);
+	email.blur(is_unique_email);
 	
 	fname.keyup(validateFname);
 	lname.keyup(validateLname);
@@ -46,9 +47,10 @@ $(document).ready(function() {
 	city.keyup(validateCity);
 	province.keyup(validateProvince);
 	zipcode.keyup(validateZipcode);
-	email.keyup(validateEmail);
+	//email.keyup(validateEmail);
 	pass1.keyup(validatePass1);
 	pass2.keyup(validatePass2);
+	email.keyup(is_unique_email);
 	
 	
 	form.submit(function(){
@@ -104,6 +106,37 @@ $(document).ready(function() {
 			return true;
 			
 		}
+	}
+	
+	function is_unique_email()
+	{
+		var form_data = {
+			email: $("#email").val()
+		};
+		
+		$.ajax({
+		type: "POST",
+		url: "http://powerman.hp/create_user/is_unique_email",
+		dataType: 'json',
+		data: form_data,
+		success: function(msg){
+
+			if(msg.r1 != true)
+			{
+				email.removeClass("error");
+				emailDetails.text("So I can get back to you");
+				emailDetails.removeClass("error");
+				return true;	
+			}else{
+				email.addClass("error");
+				emailDetails.text("This email already use by another user.");
+				emailDetails.addClass("error");
+				return false;	
+			}
+										
+										//$('#btn_changepass').prop("disabled", true);
+		}
+		});
 	}
 	
 	function validateName(){

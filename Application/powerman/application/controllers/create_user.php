@@ -49,6 +49,16 @@ class create_user extends CI_Controller
 		}
 		
 	}
+
+	function is_unique_email()
+	{
+		$this->load->model('create_user_model');
+		
+		//$data = array('email' => $this->input->post('email'));
+		
+		$result = $this->create_user_model->is_unique_email();
+		
+	}
 	
 	
 }
