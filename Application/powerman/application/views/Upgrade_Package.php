@@ -60,7 +60,7 @@
 						}
 					}
 				?>
-        	<p>Please select and request a new package which you want to update or extend.</p>
+        	<p>Please select and request a new package which you want to update or extend. If you upgrade / extend the upgrading cost will be added to your monthly domore power care bill.</p>
              <div>
             	<label for="package_name">Current Package</label>
                 <input id="package_name" name="package_name" type="text" readonly="readonly" value="<?php echo $tmp_oldpackage;?>" />
