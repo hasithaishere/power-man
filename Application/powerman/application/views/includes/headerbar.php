@@ -18,7 +18,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="brand" href="index.html"> <img alt="Dashboard" src="<?php echo base_url(); ?>img/new.png" /> <span class="hidden-phone">Power Man</span></a>
+				<a class="brand" href="<?php echo base_url(); ?>main_panel"> <img alt="Dashboard" src="<?php echo base_url(); ?>img/new.png" /> <span class="hidden-phone">Power Man</span></a>
                                 <?php             
         $user_id = $this->session->userdata('user_id');
 		$result = $this->db->query("SELECT COUNT(*) as countall FROM power_user_device,power_alert_main WHERE power_user_device.device_id = power_alert_main.maindevice_id AND power_alert_main.status = '1' AND power_alert_main.notified = '0' AND power_user_device.power_users_id = '".$user_id."'")->result_array();
@@ -114,7 +114,7 @@
                         
 						<li class="dropdown hidden-phone">
 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="icon-tasks icon-white"></i> <span class="label label-warning hidden-phone"><?php echo $countval2;?></span>
+								<i class="icon-tasks icon-white"></i> <span class="label label-success hidden-phone"><?php echo $countval2;?></span>
 							</a>
 							<ul class="dropdown-menu notifications">
 								<li>
