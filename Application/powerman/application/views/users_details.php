@@ -109,7 +109,7 @@
 												echo "<td class=\"center\"><span class=\"label label-important\">Deactive</span></td>";
 											}*/
 											
-											echo "<td class=\"center\"><a class=\"btn btn-success check_pc\" href=\"#\" user_id=\"". $rows['id'] ."\" style=\"margin-right: 2px;\"><i class=\"icon-zoom-in icon-white\"></i></a>";
+											echo "<td class=\"center\">";
 											
 											echo "<div class=\"btn-group\">";
 									        echo "<a class=\"btn btn-info\" href=\"#\"><i class=\"icon-edit icon-white\"></i></a>";
