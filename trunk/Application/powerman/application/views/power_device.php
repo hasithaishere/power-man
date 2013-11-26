@@ -2,7 +2,7 @@
 <html lang="en">
 <head>	
  <?php include 'includes/head.php'; ?>	
- 		<script src="<?php echo base_url();?>js/add_location.js"></script>
+ 		<script src="<?php echo base_url();?>js/power_device.js"></script>
 </head>
 
 <body>
@@ -82,7 +82,7 @@
               <div>
             	<label for="Device_url">Instruction Url </label>
                 <textarea name="Device_url" id="Device_url" cols="45" rows="5" tabindex="1"></textarea>
-                <span id="Device_urlDetails">Description about the device?</span>
+                <span id="Device_urlDetails">Url which gave a description about the device</span>
              </div>
              
              <div>
@@ -136,29 +136,7 @@
                 <hr>
              
  </div>	
-           
-		<!-- <div class="row">
-            
-            
-             <div class="box span3">
-              <div class="thumbnail" id="add_thumbnail">
-              <center><h3>Add New Location</h3>
-              
-              </center>
-                 <img src="<?php echo base_url(); ?>img/add.jpg" alt="">
-                  <div class="caption"> 
-                    
-                  <center><a href="#add_new_location" role="button" class="btn btn-primary" data-toggle="modal"><i class="icon-plus-sign icon-white"></i><span class="break"></span> ADD Location</a></center>
-                   
-                  </div>
-                </div>
-              </div>
-              
-              
-            </div>
-              
-              
-			<hr>-->
+       
 			
 			
 		

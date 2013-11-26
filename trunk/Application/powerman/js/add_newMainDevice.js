@@ -46,6 +46,32 @@ main_device_title.keyup(validateLocationname);
 				
 			}
 		});
+		
+		
+/*-----------------Prevent Typing Non-number Values - START ----------------------*/
+
+   $('#main_device_serialno').keypress(function(event){
+
+       if(event.which != 8 && isNaN(String.fromCharCode(event.which))){
+           event.preventDefault(); //stop character from entering input
+       
+	   
+		
+			main_device_serialno.addClass("error");
+			main_device_serialnoDetails.text("Type only numbers.");
+			main_device_serialnoDetails.addClass("error");
+			return false;
+			
+		}
+		
+	   
+	   
+	   
+	   
+	   
+	   
+
+   });		
  
  function validateLocationname(){
 		if(main_device_title.val().length<5){

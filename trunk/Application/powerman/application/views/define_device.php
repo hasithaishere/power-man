@@ -2,7 +2,7 @@
 <html lang="en">
 <head>	
  <?php include 'includes/head.php'; ?>	
- 		<!--<script src="<?php echo base_url();?>js/add_location.js"></script>-->
+ 		<script src="<?php echo base_url();?>js/define_device.js"></script>
 </head>
 
 <body>
@@ -69,13 +69,13 @@
              </div>
              
               <div>
-            	<label for="device_max_volt">Maximum Voltage </label>
-                <input id="device_max_volt" name="device_max_volt" type="text" />
-                <span id="device_max_voltDetails">What's your maximum voltage of the device?</span>
+            	<label for="device_max_Wattage">Maximum Wattage (W) </label>
+                <input id="device_max_Wattage" name="device_max_Wattage" type="text" />
+                <span id="device_max_WattageDetails">What's your maximum voltage of the device?</span>
              </div>
              
              <div>
-            	<label for="device_max_time">Maximum Time of Usage </label>
+            	<label for="device_max_time">Maximum Time of Usage  (Seconds) </label>
                 <input id="device_max_time" name="device_max_time" type="text" />
                 <span id="device_max_timeDetails">What's your maximum usage time of the device?</span>
              </div>
@@ -89,7 +89,7 @@
               <div>
             	<label for="alert_level_precentage">Maximum Alert level Precentage </label>
                 <input id="alert_level_precentage" name="alert_level_precentage" type="text" />
-                <span id="alert_level_precentageDetails">How much precentage of usage is exceed before giving an alert?</span>
+                <span id="alert_level_precentageDetails">How much precentage of usage has to exceed before giving an alert?</span>
              </div>
              
              

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>	
  <?php include 'includes/head.php'; ?>	
- 		<script src="<?php echo base_url();?>js/add_newsubdevices.js"></script>
+ 		<script src="<?php echo base_url();?>js/add_newsubdevice.js"></script>
 </head>
 
 <body>
@@ -93,7 +93,7 @@
              
              <div>
             	<label for="sub_device_description">Description </label>
-                <textarea name="sub_device_description" id="location_description" cols="45" rows="5" tabindex="1"></textarea>
+                <textarea name="sub_device_description" id="sub_device_description" cols="45" rows="5" tabindex="1"></textarea>
                 <span id="sub_device_descriptionDetails">Description about the new Sub Device?</span>
              </div>
             

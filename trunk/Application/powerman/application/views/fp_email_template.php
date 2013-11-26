@@ -92,32 +92,19 @@ p {margin:0; padding:0}
                 	<td style="font-size:6px; line-height:6px;" width="528">&nbsp;</td>
                 </tr>
                
+                
                 <tr>
-                    <td class="welcomeContent" style="color:#3f3f3f; font-family:Helvetica, Arial, sans-serif; font-size:18px; line-height:22px; border-bottom:1px solid #e4e4e4;" align="left" width="528">Forget Password ?  <br><br></td>
+                    <td class="welcomeContent" style="color:#3f3f3f; font-family:Helvetica, Arial, sans-serif; font-size:18px; line-height:22px; border-bottom:1px solid #e4e4e4;" align="left" width="528">Forgot Password ?<br><br></td>
                 </tr>
                 <tr>
                 	<td style="font-size:14px; line-height:18px;" width="528">&nbsp;</td>
                 </tr>
-                
-                	
-                <tr>
-                	<td width="528">
-                    	<table border="0" cellpadding="0" cellspacing="0">
-                        	<tbody><tr>
-                            <!--	<td rowspan="2" class="promoImage" align="left" width="54"><a href="#"><img src="img/welcome-icon-jobmail.png" alt="Email code" title="Email code" class="promoImage" border="0" height="42" width="40"></a></td>
-                            	<td class="promoContent" style="color:#111111; font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:18px; font-weight:bold;" align="left" width="300px">To reset the process</td>-->
-                            </tr>
-                            <tr>
-                            	<td class="promoContent" style="color:#111111; font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:18px;" align="left" width="160px"><a href="<?php echo $url;?>" target="_blank"><img src="<?php echo base_url();?>img/fp_img/click-button.png" alt="Go to My Account" title="Go to My Account" class="account-cta" border="0"></a></td>
-                                <td class="promoContent" style="color:#111111; font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:18px; font-weight:bold;" align="left" width="300px">To reset the process</td>
-                            </tr>
-                        </tbody></table>
-                    </td>
-                </tr>
-                <tr>
-                	<td style="font-size:20px; line-height:28px;" width="528">&nbsp;</td>
-                </tr>
                
+                
+                
+               
+               
+                <tr>
                 	<td width="528">
                     	<table border="0" cellpadding="0" cellspacing="0">
                         	<tbody><tr>
@@ -125,7 +112,7 @@ p {margin:0; padding:0}
                             	<td class="promoContent" style="color:#111111; font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:18px; font-weight:bold;" align="left" width="474">Our Service Information</td>
                             </tr>
                             <tr>
-                            	<td class="promoContent" style="color:#111111; font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:18px;" align="left" width="474">Save your time and check us from your <a href="#" style="color:#0066cc; text-decoration:none;">mobile</a>, tablet and desktop!</td>
+                            	<td class="promoContent" style="color:#111111; font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:18px;" align="left" width="474">Click on "Go to My Account" to reset your login</td>
                             </tr>
                         </tbody></table>
                     </td>
@@ -144,8 +131,8 @@ p {margin:0; padding:0}
                                <br>
                                 Customer Service Manager<br><br>Domore Technologies(Pvt) Limited
                                 </td>
-                                <!--<td style="vertical-align:top;" align="right" width="228">
-                                    <a href="http://www.powermanonline.tk/login.php" target="_blank"><img src="img/account-button.png" alt="Go to My Account" title="Go to My Account" class="account-cta" border="0" height="53" width="166"></a></td> -->
+                                <td style="vertical-align:top;" align="right" width="228">
+                                    <a href="http://www.powermanonline.tk/login.php" target="_blank"><img src="<?php echo base_url();?>img/fp_img/account-button.png" alt="Go to My Account" title="Go to My Account" class="account-cta" border="0" height="53" width="166"></a></td>
                          	</tr>
                          </tbody></table>
                      </td>
@@ -154,7 +141,7 @@ p {margin:0; padding:0}
                 </tr>
             </tbody></table>
         </td>
-        <!--<td width="36">&nbsp;</td>
+        <td width="36">&nbsp;</td>
     </tr>
     <!-- FOOTER -->
     <tr>
