@@ -48,118 +48,82 @@
 			<!-- end: Quick button Menu -->
                         <hr>
 			
-            <div class="row-fluid sortable">	
+            <div class="row-fluid sortable" style="margin-top: -14px ! important;">	
+            	
+            	<h2 >Alert Configuration</h2><hr>
             	
 				<div class="box span12">
-              		<div><h2>Alert Configuration</h2></div><br/>
+              		
                     
                     <form method="post" id="add_location_form" action="<?php echo base_url();?>alert_config/set_alert_config" >
 
-            				<div class="control-group">
-								<label class="control-label"><h4>SMS Alert Settings</h4> </label>
-								<div class="controls">
-								  <label class="radio">
-									<input type="radio" name="optionsRadios" id="optionsRadios1" value="1" checked="">
-									Switch ON
-								  </label>
-								  
-								  <label class="radio">
-									<input type="radio" name="optionsRadios" id="optionsRadios2" value="0">
-									Switch OFF
-								  </label>
-								</div>
-							  </div>
-                              
-                              <br/>
+						<div class="control-group">
+								<label class="control-label"><h4>Web Alerts Activation</h4> </label>
+						</div>
+			
                               <div class="control-group">
-								<label class="control-label"><h4>SMS Suggestion Alert Settings</h4> </label>
 								<div class="controls">
-								  <label class="radio">
-									<input type="radio" name="optionsRadios2" id="optionsRadios1" value="1" checked="">
-									Switch ON
-								  </label>
-								  <div style="clear:both"></div>
-								  <label class="radio">
-									<input type="radio" name="optionsRadios2" id="optionsRadios2" value="0">
-									Switch OFF
-								  </label>
+								  	<label class="radio">
+										<input type="checkbox" name="web_exceed_alert" id="web_exceed_alert" value="1" <?php echo $web_exceed_alert;?>>
+										Exceed Time Web Alert Settings
+								 	</label>
+								</div>
+							  </div>
+							  
+							  <div class="control-group">
+								<div class="controls">
+								  	<label class="radio">
+										<input type="checkbox" name="web_malf_alert" id="web_malf_alert" value="1" <?php echo $web_malf_alert;?>>
+										Malfunction Sugestions Web Alert Settings
+								 	</label>
+								</div>
+							  </div>
+						<br>
+						<div class="control-group">
+								<label class="control-label"><h4>SMS Alerts Activation</h4> </label>
+						</div>
+
+							<div class="control-group">
+								<div class="controls">
+								  	<label class="radio">
+										<input type="checkbox" name="sms_normal_sug" id="sms_normal_sug" value="1" <?php echo $sms_normal_sug;?>>
+										Normal Sugestions SMS Settings
+								 	</label>
+								</div>
+							  </div>
+
+            				<div class="control-group">
+								<div class="controls">
+								  	<label class="radio">
+										<input type="checkbox" name="sms_malf_alert" id="sms_malf_alert" value="1" <?php echo $sms_malf_alert;?>>
+										Malfunction SMS Alert Settings
+								 	</label>
+								</div>
+							  </div>
+          
+                              <div class="control-group">
+								<div class="controls">
+								  	<label class="radio">
+										<input type="checkbox" name="sms_malfsug_alert" id="sms_malfsug_alert" value="1" <?php echo $sms_malfsug_alert;?>>
+										Malfunction Sugestions SMS Alert Settings
+								 	</label>
 								</div>
 							  </div>
                               
-                              <br/>
-                               <div class="control-group">
-								<label class="control-label"><h4>Time warning</h4> </label>
+                              <div class="control-group">
 								<div class="controls">
-								  <label class="radio">
-									<input type="radio" name="optionsRadios3" id="optionsRadios1" value="1" checked="">
-									Switch ON
-								  </label>
-								  <div style="clear:both"></div>
-								  <label class="radio">
-									<input type="radio" name="optionsRadios3" id="optionsRadios2" value="0">
-									Switch OFF
-								  </label>
+								  	<label class="radio">
+										<input type="checkbox" name="sms_exceed_alert" id="sms_exceed_alert" value="1" <?php echo $sms_exceed_alert;?>>
+										Exceed Time SMS Alert Settings
+								 	</label>
 								</div>
 							  </div>
-                              
-                              
-                              <br/>
-                               <div class="control-group">
-								<label class="control-label"><h4>Time warning SMS</h4> </label>
-								<div class="controls">
-								  <label class="radio">
-									<input type="radio" name="optionsRadios4" id="optionsRadios1" value="1" checked="">
-									Switch ON
-								  </label>
-								  <div style="clear:both"></div>
-								  <label class="radio">
-									<input type="radio" name="optionsRadios4" id="optionsRadios2" value="0">
-									Switch OFF
-								  </label>
-								</div>
-							  </div>
-             
-             
-             			<br/>
-                               <div class="control-group">
-								<label class="control-label"><h4>Normal Suggestion SMS</h4> </label>
-								<div class="controls">
-								  <label class="radio">
-									<input type="radio" name="optionsRadios5" id="optionsRadios1" value="1" checked="">
-									Switch ON
-								  </label>
-								  <div style="clear:both"></div>
-								  <label class="radio">
-									<input type="radio" name="optionsRadios5" id="optionsRadios2" value="0">
-									Switch OFF
-								  </label>
-								</div>
-							  </div>
-             
-             		<br/>
-                               <div class="control-group">
-								<label class="control-label"><h4>Mulfunction Suggestions</h4> </label>
-								<div class="controls">
-								  <label class="radio">
-									<input type="radio" name="optionsRadios6" id="optionsRadios1" value="1" checked="">
-									Switch ON
-								  </label>
-								  <div style="clear:both"></div>
-								  <label class="radio">
-									<input type="radio" name="optionsRadios6" id="optionsRadios2" value="0">
-									Switch OFF
-								  </label>
-								</div>
-							  </div>
-             
-             
-             
-             
-             
-             
-                        
-             <div>
-             <input type="submit" id="save_configuration" class="btn btn-success" value="Save Configuration" />
+                              <input type="hidden" id="checkbox_val" name="checkbox_val" />             
+             <br>           
+             <div class="control-group">
+				<div class="controls">
+             		<input type="submit" id="save_configuration" class="btn btn-success" value="Save Configuration" />
+           	 	</div>
            	 </div>
            	 <br>
            <?php
@@ -168,12 +132,6 @@
 					echo "<div class=\"control-group\"><div class=\"controls\"><div class=\"alert alert-success\">". $success_msg . "</div></div>";
 				}
              ?>
-              <div>
-             	<?php echo validation_errors('<div class="alert alert-danger">');?>
-             </div>
-          
-          
-         
           
              </form>
    

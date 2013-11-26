@@ -151,13 +151,13 @@
 	
 	<script type="text/javascript" charset="utf-8">
 			$(document).ready(function(){
-				$("#maindevice_imageholder").attr('src', "<?php echo base_url()."img/";?>" + $('#maindevice_type :selected').attr('img_path'));
+				$("#maindevice_imageholder").attr('src', "<?php echo base_url()."img/power_device/";?>" + $('#maindevice_type :selected').attr('img_path'));
 				$("#maindevice_link").attr('href',$('#maindevice_type :selected').attr('url'));
 				$("#hidden_imagepath").val($('#maindevice_type :selected').attr('img_path'));
 				
 				$('#maindevice_type').change(function() {
 				   // assign the value to a variable, so you can test to see if it is working
-				    $("#maindevice_imageholder").attr('src', "<?php echo base_url()."img/";?>" + $('#maindevice_type :selected').attr('img_path'));
+				    $("#maindevice_imageholder").attr('src', "<?php echo base_url()."img/power_device/";?>" + $('#maindevice_type :selected').attr('img_path'));
 				    $("#maindevice_link").attr('href',$('#maindevice_type :selected').attr('url'));
 				    $("#hidden_imagepath").val($('#maindevice_type :selected').attr('img_path'));
 				});

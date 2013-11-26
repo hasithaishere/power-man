@@ -16,52 +16,78 @@ class alert_config extends CI_Controller
 		}
 		else 
 		{
+			$this->load->model('alert_config_model'); 
+			$result = $this->alert_config_model->get_config();
+			
+			$data = null;
+			
+			foreach($result as $result_rows)
+			{
+				$data['web_exceed_alert'] = "";
+				$data['web_malf_alert'] = "";
+				$data['sms_normal_sug'] = "";
+				$data['sms_malf_alert'] = "";
+				$data['sms_malfsug_alert'] = "";
+				$data['sms_exceed_alert'] = "";
+				
+				if($result_rows['time_warn'] == 1)
+				{
+					$data['web_exceed_alert'] = "checked";
+				}
+				
+				if($result_rows['malf_sug'] == 1)
+				{
+					$data['web_malf_alert'] = "checked";
+				}
+				
+				if($result_rows['normal_sug_sms'] == 1)
+				{
+					$data['sms_normal_sug'] = "checked";
+				}
+				
+				if($result_rows['malf_sms'] == 1)
+				{
+					$data['sms_malf_alert'] = "checked";
+				}
+				
+				if($result_rows['malf_sug_sms'] == 1)
+				{
+					$data['sms_malfsug_alert'] = "checked";
+				}
+				
+				if($result_rows['time_warn_sms'] == 1)
+				{
+					$data['sms_exceed_alert'] = "checked";
+				}
+				
+			}
 
-			$data = array(
-				'is_success' =>  0,
-				'success_msg' => ""
-			);
+			$data['is_success'] = 0;
+			$data['success_msg'] = "";
 
 			$this->load->view('alert_config',$data); 
 			//$this->load->view('access_denied');
 
-		}
-		
-				
+		}	
 	}
+	
 	function set_alert_config()
 	{
-		$this->load->library('form_validation');
+		$this->load->model('alert_config_model'); 
 		
-		$this->form_validation->set_rules('optionsRadios','SMS Alert Setting','trim|required');
-		$this->form_validation->set_rules('optionsRadios2','SMS Suggestion Alert Settings','trim|required');
-		$this->form_validation->set_rules('optionsRadios3','Time warning','trim|required');
-		$this->form_validation->set_rules('optionsRadios4','Time warning SMS','trim|required');
-		$this->form_validation->set_rules('optionsRadios5','Normal Suggestion SMS','trim|required');
-		$this->form_validation->set_rules('optionsRadios6','Mulfunction Suggestions','trim|required');
-		
-		//regex_match[(0[1-9]|1[0-9]|2[0-9]|3(0|1))-(0[1-9]|1[0-2])-\d{4}]
-		if($this->form_validation->run() == FALSE)
+		if($query = $this->alert_config_model->alert_config())
 		{
-			$this->load->view('alert_config');	
-		}
-		else
-		{
-			$this->load->model('alert_config_model');
-
-			if($query = $this->alert_config_model->alert_config())
-			{
-				$this->session->set_flashdata('update_token', time());
-          		redirect('alert_config/success');
+			$this->session->set_flashdata('update_token', time());
+          	redirect('alert_config/success');
 				
-			}
-			
-		}
-	
+		}		
+
 	}
 
 	function success()
 	{
+		$this->load->model('alert_config_model'); 
+		
 		if( ! $this->session->flashdata('update_token'))
         {
             redirect("alert_config");
@@ -77,14 +103,57 @@ class alert_config extends CI_Controller
 		}
 		else 
 		{
-			$data = array(
-				'is_success' =>  1,
-				'success_msg' => "Alert Configuration is successfully added."
-			);
+			
+			$result = $this->alert_config_model->get_config();
+			
+			$data = null;
+			
+			foreach($result as $result_rows)
+			{
+				$data['web_exceed_alert'] = "";
+				$data['web_malf_alert'] = "";
+				$data['sms_normal_sug'] = "";
+				$data['sms_malf_alert'] = "";
+				$data['sms_malfsug_alert'] = "";
+				$data['sms_exceed_alert'] = "";
+				
+				if($result_rows['time_warn'] == 1)
+				{
+					$data['web_exceed_alert'] = "checked";
+				}
+				
+				if($result_rows['malf_sug'] == 1)
+				{
+					$data['web_malf_alert'] = "checked";
+				}
+				
+				if($result_rows['normal_sug_sms'] == 1)
+				{
+					$data['sms_normal_sug'] = "checked";
+				}
+				
+				if($result_rows['malf_sms'] == 1)
+				{
+					$data['sms_malf_alert'] = "checked";
+				}
+				
+				if($result_rows['malf_sug_sms'] == 1)
+				{
+					$data['sms_malfsug_alert'] = "checked";
+				}
+				
+				if($result_rows['time_warn_sms'] == 1)
+				{
+					$data['sms_exceed_alert'] = "checked";
+				}
+				
+			}
+
+			$data['is_success'] = 1;
+			$data['success_msg'] = "Alert Configuration is successfully added.";
 
 			$this->load->view('alert_config',$data); 
-			//$this->load->view('access_denied');
-
+			
 		}		
 				
 	}
