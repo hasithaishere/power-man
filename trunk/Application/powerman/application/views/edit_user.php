@@ -246,7 +246,7 @@
              		<form method="post" id="contact_form" action="<?php echo base_url();?>index.php/edit_user/update_user/<?php echo $userdata[0]['id'];?>">
         			<fieldset>
 							<div class="controls">
-						<a class="btn btn-info btn-setting" href="#">Change Package</a>
+						<a class="btn btn-info btn-setting" href="<?php echo base_url();?>Upgrade_Package">Change Package</a>
                 	<span id="change_package">Click here to change the power package.</span>
              	</div>						
 							

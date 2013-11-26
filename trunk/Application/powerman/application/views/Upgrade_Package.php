@@ -63,13 +63,13 @@
         	<p>Please select and request a new package which you want to update or extend. If you upgrade / extend the upgrading cost will be added to your monthly domore power care bill.</p>
              <div>
             	<label for="package_name">Current Package</label>
-                <input id="package_name" name="package_name" type="text" readonly="readonly" value="<?php echo $tmp_oldpackage;?>" />
+                <input id="package_name" name="package_name" type="text" readonly value="<?php echo $tmp_oldpackage;?>" />
                 <span id="package_name">The package which you currently using</span>  
              </div>
              
              <div>
             	<label for="expired_on">Expired On</label>
-                <input id="expired_on" name="expired_on" type="text" readonly="readonly" value="<?php echo $old_package[0]['expired_on'];?>" />
+                <input id="expired_on" name="expired_on" type="text" readonly value="<?php echo $old_package[0]['expired_on'];?>" />
                 <span id="expired_on_Details">The package which you currently using</span>  
              </div>
              
@@ -88,7 +88,7 @@
                 </select>
                 <span id="NPackage_Details">What's your New package name?</span>  
           		<input type="hidden" name="old_package_id" value="<?php echo $old_package[0]['id'];?>" />
-             
+             </div>
              <div>
              	<input id="upgrade_package" name="upgrade_package" type="submit" class="btn btn-success" value="Upgrade / Extend" />
              </div>
@@ -115,3 +115,4 @@
     
 </body>
 </html>
+
