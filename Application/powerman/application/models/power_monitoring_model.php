@@ -452,7 +452,7 @@ class power_monitoring_model extends CI_Model
 			//print_r($tmp_resultarr);echo "<br>";
 		//}
 	
-		$tmp_mainreturnarr = array('headtext'=>'Monthly Average Power Consumption','xtitle'=>$tmp_daylist,'mapdata'=>$tmp_powercon);
+		$tmp_mainreturnarr = array('headtext'=>'Daily Average Power Consumption','xtitle'=>$tmp_daylist,'mapdata'=>$tmp_powercon);
 		
 		return $tmp_mainreturnarr;
 		//print_r($tmp_mainreturnarr);echo "<br>";die();

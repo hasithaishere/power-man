@@ -115,6 +115,7 @@ h3{
 hr{
 	color:#CCC;
 	opacity:0.9;
+	margin:10% 0 5%;
 }
 
 
@@ -129,23 +130,24 @@ hr{
 <div id="header" style="height:69px;background-color:#CCC;" align="left"><img src="<?php echo base_url();?>img/report_img/header.png" /><div id="location" style="position:relative;top:-60px;left:0px;" align="right"><h3>Area:Rathmalana</h3></div></div>
 
 <div id="report-topic" style="height:30px;background:url(<?php echo base_url();?>img/report_img/header-bg.png) repeat-x;"><h5><h5>Total Consumption of the Last Month(01/10/2013 - 31/10/2013) </h5> </h5></div>
+<script src="<?php echo base_url();?>js/highcharts.js"></script>
+<!--     --Finished Header--     -->
 
-<div id="content">
-<div class="row" style="margin-top:15px;">
+
+<div id="content"><!-- Report Body - Start -->
+
+
+<div class="row" style="margin-top:15px;"><!-- Location Place Holder - Start -->
+	
 <div class="content-left-topic" style="width:150px;height:300px;margin-top:40px;">Total Consumption of the Locations </div>
 <div class="content-left-topic" style="width:450px;height:300px;">
-
-
-<script src="<?php echo base_url();?>js/highcharts.js"></script>
-
-
-<div id="container1" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
-
-
-
-
+<!-- Hichart - Start -->
+<div id="container1" style="min-width: 600px; height: 400px; margin: 0 auto"></div>
+<!-- Hichart - End -->
 </div>
-<div class="content-left-topic" style="width:200px;height:300px;"><div class="total">Total consumption of the Area : <span id="exceed" style="color:#F00;"> 150KW(exceed the limit)</span></div>
+
+
+<!--<div class="content-left-topic" style="width:200px;height:300px;"><div class="total">Total consumption of the Area : <span id="exceed" style="color:#F00;"> 150KW(exceed the limit)</span></div>
 
 <div class="location-by-location" style="margin-top:20px;">
 <div id="location01">Location 01 : <span>30KW</span></div>
@@ -157,13 +159,14 @@ hr{
 </div>
 <div class="suggestions" style="color:#6C3;"><h5>Suggestions:</h5></div>
 <div id="descriotion" style="margin-top:10px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget dapibus turpis. Nullam mauris tellus, rhoncus eu convallis vitae, adipiscing id sapien. Sed laoreet neque id ipsum hendrerit, ut porta metus lacinia.  </div>
-        </div>
+</div>-->
 
-</div>
+</div><!-- Location Place Holder - End -->
 
+<!-- row started -->
 <hr class="space20" />
 <hr/>
-<!-- row started -->
+
 <div class="row" style="margin-top:15px;">
 <div class="content-left-topic" style="width:150px;height:300px;margin-top:40px;">Total Consumption of the Location 01 </div>
 <div class="content-left-topic" style="width:450px;height:300px;"><img src="<?php echo base_url();?>img/report_img/report2.png" /></div>
@@ -209,7 +212,7 @@ hr{
 
 
 
-</div>
+</div><!-- Report Body - Stop -->
 
 <div id="footer" style="height:67px;background-color:#ddd;clear:both;border-bottom:5px solid #69ae0e;color:#69ae0e;padding:3px;">
 <div id="copyright" style="float:left;font-weight:bold;width:500px;margin-top:53px;">Domore Technologies (Pvt) Limited</div>
