@@ -60,5 +60,21 @@ class create_user_model extends CI_Model
 
 		return $result;
 	}
+	
+	function is_unique_email()
+	{
+		$this->db->where('email',$this->input->post('email'));
+		$result = $this->db->get('power_users');
+		
+		if($result->num_rows >= 1)
+		{
+			echo json_encode(array('r1' => TRUE));
+		}
+		else
+		{
+			echo json_encode(array('r1' => FALSE));
+		}
+		
+	}
 
 }
