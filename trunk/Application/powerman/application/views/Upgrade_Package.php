@@ -87,7 +87,7 @@
 
                 </select>
                 <span id="NPackage_Details">What's your New package name?</span>  
-          		<input type="hidden" name="old_package_id" value="<?php echo $old_package[0]['id'];?>" />>
+          		<input type="hidden" name="old_package_id" value="<?php echo $old_package[0]['id'];?>" />
              
              <div>
              	<input id="upgrade_package" name="upgrade_package" type="submit" class="btn btn-success" value="Upgrade / Extend" />
