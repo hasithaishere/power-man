@@ -216,15 +216,15 @@
 	
 	<script type="text/javascript" charset="utf-8">
 			$(document).ready(function(){
-				$("#subdevice_imageholder").attr('src', "<?php echo base_url()."img/";?>" + $('#subdevice_type :selected').attr('img_path'));
+				$("#subdevice_imageholder").attr('src', "<?php echo base_url()."img/power_device/";?>" + $('#subdevice_type :selected').attr('img_path'));
 				$("#subdevice_link").attr('href',$('#subdevice_type :selected').attr('url'));
 				$("#hidden_imagepath").val($('#subdevice_housetype :selected').attr('img_path'));
 				$(".undefine_addedon").text("Added On : "+$("#subdevice_id :selected").attr('added_on')+" |");
-				$("#subhomedevice_imageholder").attr('src', "<?php echo base_url()."img/";?>" + $('#subdevice_housetype :selected').attr('img_path'));
+				$("#subhomedevice_imageholder").attr('src', "<?php echo base_url()."img/define_device/";?>" + $('#subdevice_housetype :selected').attr('img_path'));
 				
 				$('#subdevice_type').change(function() {
 				   // assign the value to a variable, so you can test to see if it is working
-				    $("#subdevice_imageholder").attr('src', "<?php echo base_url()."img/";?>" + $('#subdevice_type :selected').attr('img_path'));
+				    $("#subdevice_imageholder").attr('src', "<?php echo base_url()."img/power_device/";?>" + $('#subdevice_type :selected').attr('img_path'));
 				    $("#subdevice_link").attr('href',$('#subdevice_type :selected').attr('url'));				    
 				});
 				
@@ -234,7 +234,7 @@
 				
 				$('#subdevice_housetype').change(function() {
 				   // assign the value to a variable, so you can test to see if it is working
-				    $("#subhomedevice_imageholder").attr('src', "<?php echo base_url()."img/";?>" + $('#subdevice_housetype :selected').attr('img_path'));
+				    $("#subhomedevice_imageholder").attr('src', "<?php echo base_url()."img/define_device/";?>" + $('#subdevice_housetype :selected').attr('img_path'));
 				    $("#hidden_imagepath").val($('#subdevice_housetype :selected').attr('img_path'));
 				});
 			

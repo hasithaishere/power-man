@@ -46,71 +46,59 @@
 
 
 <div id="container">
-	<h1>Request for Upgrade Package</h1>
-    <div>
-             	<?php if(validation_errors()):?>
-                <div class='alert alert-error span12'><?php echo validation_errors(); ?></div>
-                 
-                <?php endif;?>
-             </div>
-    	<form method="post" id="upgrade_form" action="<?php echo base_url();?>index.php/Upgrade_Package/upgrade">
+	<h1>Request for Upgrade / Extend Package</h1>
+  
+    	<form method="post" id="upgrade_formnew" action="<?php echo base_url();?>index.php/Upgrade_Package/upgrade">
         
-        	<div>
-                <label for="cpackage">Current Package</label>
-                <select name="pack1" id="pack1">
-                <option value="home">Home Edition</option>
-                <option value="business">Small Business Edition</option>
-                <option value="company" >Company Edition</option>
-
-            </select>
-                <span id="CPackage_Details">What's your current package name?</span>
-            </div>
+        		<?php
+					$tmp_oldpackage = "";
+					foreach($packages as $rows)
+					{
+						if($old_package[0]['package_id'] == $rows['id'])
+						{
+							$tmp_oldpackage = $rows['name'];
+						}
+					}
+				?>
+        	<p>Please select and request a new package which you want to update or extend.</p>
+             <div>
+            	<label for="package_name">Current Package</label>
+                <input id="package_name" name="package_name" type="text" readonly="readonly" value="<?php echo $tmp_oldpackage;?>" />
+                <span id="package_name">The package which you currently using</span>  
+             </div>
              
              <div>
-            	<label for="s_number">Serial No </label>
-                <input id="s_number" name="s_number" type="text" />
-                <span id="s_number_Details">What's your current packages' serial number?</span>  
+            	<label for="expired_on">Expired On</label>
+                <input id="expired_on" name="expired_on" type="text" readonly="readonly" value="<?php echo $old_package[0]['expired_on'];?>" />
+                <span id="expired_on_Details">The package which you currently using</span>  
+             </div>
+             
+             <div>
+                <label for="newpackage">New Package</label>
+                <select name="newpackage" id="newpackage">
                 
-             </div>
-             
-              <div>
-            	<label for="description">Description </label>
-                <textarea name="description" id="description" cols="45" rows="5" tabindex="1"></textarea>
-                <span id="descriptionDetails">Reason for changing package</span>
-             </div>
-             
-             <div>
-                <label for="npackage">New Package Type</label>
-                <select name="pack2" id="pack2">
-                <option value="business">Small Business Edition</option>
-                <option value="company" >Company Edition</option>
-                <option value="home">Home Edition</option>
+                <?php
+				
+					foreach($packages as $rows)
+					{
+						echo "<option value=\"" . $rows['id'] . "\">" . $rows['name'] . "</option>";
+					}
+				?>
 
                 </select>
                 <span id="NPackage_Details">What's your New package name?</span>  
-          <div>          
-            <span id="spryselect1">
-                <label>Number of devices</label>
-            <select name="devices" id="select">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-            </select>
-             
-          <span class="selectRequiredMsg">Please select an item.</span></span>
-             </div>
+          		<input type="hidden" name="old_package_id" value="<?php echo $old_package[0]['id'];?>" />>
              
              <div>
-             	<input id="upgrade" name="upgrade" type="submit" value="Upgrade" />
+             	<input id="upgrade_package" name="upgrade_package" type="submit" class="btn btn-success" value="Upgrade / Extend" />
              </div>
-             
+             <br>
+             	<?php
+	            	if($success_upgrade == 1)
+					{
+						echo "<div><div class=\"alert alert-success span12\">". $success_upgrade_msg . "</div></div>";
+					}
+          		?>
              </form>
 
 </div>
@@ -124,14 +112,6 @@
 	</div><!--/.fluid-container-->
 
 
-	
-	
-    <script type="text/javascript">
-	
-<!--
-var spryselect1 = new Spry.Widget.ValidationSelect("spryselect1");
-//-->
-    </script>
     
 </body>
 </html>
