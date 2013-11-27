@@ -46,8 +46,8 @@
             <div class="row-fluid sortable">		
 				<div class="box span12">
 					<div class="" style="margin-bottom:5px;" data-original-title>
-						<a href="#" class="btn btn-primary"><i class="icon-plus-sign icon-white"></i><span class="break"></span> Notify All</a>
-                        <a href="#" class="btn btn-primary"><i class="icon-plus-sign icon-white"></i><span class="break"></span> Selected Notify</a>
+					<!--	<a href="#" class="btn btn-primary"><i class="icon-plus-sign icon-white"></i><span class="break"></span> Notify All</a>
+                        <a href="#" class="btn btn-primary"><i class="icon-plus-sign icon-white"></i><span class="break"></span> Selected Notify</a> -->
 						
 					</div>
 					<div class="box-content">

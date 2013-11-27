@@ -15,13 +15,13 @@
     
     
     
-    
+    <?php if(in_array(2,$this->session->userdata('user_roles')))echo "
 
-				<a href="<?php echo base_url(); ?>users_details" class="quick-button span2">
-					<i class="fa-icon-group"></i>
+				<a href=\"".base_url()."users_details\" class=\"quick-button span2\">
+					<i class=\"fa-icon-group\"></i>
 					<p>Users</p>
-					<span class="notification"><?php echo $countval3;?></span>
-				</a>
+					<span class=\"notification\">". $countval3."</span>
+				</a>";?>
 				<a href="<?php echo base_url(); ?>edit_user/index/hhXAaMJXNvvfrV1R2N5t9kYsLgKmaQ8H2IKjsgEh4Lw" class="quick-button span2">
 					<i class="fa-icon-user"></i>
 					<p>User Profile</p>

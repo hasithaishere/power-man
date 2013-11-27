@@ -132,7 +132,7 @@ p {margin:0; padding:0}
                                 Customer Service Manager<br><br>Domore Technologies(Pvt) Limited
                                 </td>
                                 <td style="vertical-align:top;" align="right" width="228">
-                                    <a href="http://www.powermanonline.tk/login.php" target="_blank"><img src="<?php echo base_url();?>img/fp_img/account-button.png" alt="Go to My Account" title="Go to My Account" class="account-cta" border="0" height="53" width="166"></a></td>
+                                    <a href="<?php echo $url;?>" target="_blank"><img src="<?php echo base_url();?>img/fp_img/account-button.png" alt="Go to My Account" title="Go to My Account" class="account-cta" border="0" height="53" width="166"></a></td>
                          	</tr>
                          </tbody></table>
                      </td>
