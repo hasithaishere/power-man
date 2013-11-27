@@ -2,7 +2,7 @@
 <html lang="en">
 <head>	
  <?php include 'includes/head.php'; ?>	
- 		<script src="<?php echo base_url();?>js/power_device.js"></script>
+ 		
 </head>
 
 <body>
@@ -146,35 +146,80 @@
                             
                           </tr>
                           
-                          
-                          
-                          
-                          
-                          
-                          
                           </tbody>
                           </table>
-                          
-             <div>
-            	<label for="month">Month </label>
-                <input id="month" name="month" type="text" />
+                <h1>Select the month and the year to generate the electricity bill.</h1>    <br/>      
+               <form method="post" id="add_subDevice_form" action="<?php echo base_url();?>electricity_bill_calculator/calculate">       
+              <div>
+            	<label for="year_description" style="font-weight: 700;">Year</label>
+            <select name="year" id="year">
+            
+			<?php
+				$i = 1900;
+				while ($i<=2100) 
+				{
+					if($i == date("Y"))
+					{
+						echo '<option value="'. $i .'" selected="selected">'. $i .'</option>';
+					}
+					else
+					{
+						echo '<option value="'. $i .'">'. $i .'</option>';
+					}
+				   $i++;
+				}
+			?>
+			</select>
+                <span id="sub_device_type_Details">What is the year you want ?</span>  
+            </div>
+          	
+          	<!----------------- This Part For Selecting Device Type - START ------------------>
+          	
+          	<div>    
+            <div>
+            	<label for="month_description" style="font-weight: 700;">Month</label>
+            <select name="month" id="subdevice_type">
+            
+			<?php
+			
+				$m = 1;
+				while ($m<=12) 
+				{
+					if($m == date("m"))
+					{
+						echo '<option value="'. $m .'" selected="selected">'. date("F", mktime(0, 0, 0, $m, 10)) .'</option>';
+					}
+					else
+					{
+						echo '<option value="'. $m .'">'. date("F", mktime(0, 0, 0, $m, 10)) .'</option>';
+					}
+				   $m++;
+				}
+			?>
+			</select>
+             
+                <span id="sub_device_type_Details">What is the month you want ?</span>  
+                </div>
+          	
+             </div>
+    
             
              </div>
              
              <div>
             	<label for="units">Total Units(Kwh) </label>
-                <input id="units" name="units" type="text" />
+                <input id="units" name="units" type="text" value="<?php echo $units;?>" />
                 
              </div>
              
              <div>
             	<label for="cost">Total Cost(Rs) </label>
-                <input id="cost" name="cost" type="text" />
+                <input id="cost" name="cost" type="text" value="<?php echo $price;?>" />
                 
              </div>
+			<input type="submit" id="generate_report" class="btn btn-success" value="Monthly Electricity Bill Amount" />
 
-
-
+</form>
 
 
 	

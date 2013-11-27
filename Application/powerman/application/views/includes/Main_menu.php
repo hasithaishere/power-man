@@ -64,6 +64,8 @@
 						<?php // } ?>
                        					
 						<li><a href="<?php echo base_url(); ?>suggestion_notifications"><i class="icon-cog icon-white"></i><span class="hidden-tablet"> Suggestions</span></a></li>
+                        
+                        <li><a href="<?php echo base_url(); ?>electricity_bill_calculator"><i class="icon-list icon-white"></i><span class="hidden-tablet"> Electricity Bill Calculator</span></a></li>
 				  <?php // }?>
                       
 					</ul>
