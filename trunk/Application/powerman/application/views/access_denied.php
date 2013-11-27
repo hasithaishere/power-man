@@ -41,7 +41,7 @@
 	<!-- end: Favicon -->
 	
 			<style type="text/css">
-			body { background: url(<?php echo base_url(); ?>img/bg-login.jpg) !important; }
+			body { background: url(<?php echo base_url(); ?>img/bg.jpg) !important; }
 		</style>
 		
 		
@@ -54,6 +54,7 @@
 					
 			<div class="row-fluid">
 				<div class="login-box">
+                <center>  <div id="company-logo"><img src="<?php echo base_url();?>img/login-bg.png"></div> </center>
 					<div class="icons">
 						<a href="index.html"><i class="icon-home"></i></a>
 						<a href="#"><i class="icon-cog"></i></a>
@@ -62,13 +63,13 @@
 					<form class="form-horizontal" action="<?php echo base_url();?>login" method="post">
 						<fieldset>
 							<div class="clearfix"></div>
-							<p>You don't have to permission to access this page. please login to access this of contact administrator for further informations.</p>
+							<h2 style="width: 80%; text-align: justify;color: #B1B1B1;font-size: 13px;font-style: italic;">You don't have  permission to access this page. please login to access this of contact administrator for further informations.</h2>
 							<div class="clearfix"></div>
 							
 							
 							<hr>
 							<div class="button-login2">	
-								<button type="submit" class="btn btn-primary">Back</button>
+								<button type="submit" class="btn btn-success">Back</button>
 							</div>
 							<div class="clearfix"></div>
 							
