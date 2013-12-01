@@ -16,7 +16,7 @@ class forget_password_model extends CI_Model
 			
 			foreach($result as $rows)
 			{
-				$receiver = $rows['fname'] . " " . $rows['fname'];
+				$receiver = $rows['fname'] . " " . $rows['lname'];
 				$user_id = $rows['id'];
 				$user_password = $rows['password'];
 			}

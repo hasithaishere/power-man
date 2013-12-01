@@ -31,7 +31,7 @@ main_device_title.keyup(validateLocationname);
   main_device_serialno.keyup(validateserialno);
  
  
- $("input[type=submit]").attr("disabled", "disabled");
+ //$("input[type=submit]").attr("disabled", "disabled");
 	
  
  lform.submit(function(){
