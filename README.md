@@ -19,7 +19,7 @@ The aim of this project is to develop a system for monitoring and controlling th
 
 1. Indicate the amount of electricity units consumed.
 2. Reduce the electricity wastage.
-3. ave energy and cut off the customers’ electricity cost.
+3. Manage energy and cut off the customers’ electricity cost.
 4. Define electricity gaining limits for specific equipment.
 5. Controlling that equipment remotely.
 
